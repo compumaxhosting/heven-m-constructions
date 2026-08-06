@@ -10,6 +10,7 @@ import PortfolioPage from './app/portfolio/page';
 import ProjectDetailPage from './app/project-detail/page';
 import ShowcasePage from './app/showcase/page';
 import ContactPage from './app/contact/page';
+import BlogPage from './app/blog/page';
 import NotFoundPage from './app/not-found/page';
 import { PageTransition } from './components/PageTransition';
 import ScrollUpButton from './components/ScrollUpButton';
@@ -36,6 +37,7 @@ function Layout() {
           <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="/portfolio/:id" element={<ProjectDetailPage />} />
           <Route path="/showcase" element={<ShowcasePage />} />
+          <Route path="/blog" element={<BlogPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

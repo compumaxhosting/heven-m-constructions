@@ -1,4 +1,5 @@
 import { useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 // Using warm interior images that match the original site's aesthetic
 import asset6 from '../assets/asset-6.jpeg';
@@ -36,7 +37,7 @@ export default function Hero() {
     <section
       id="top"
       ref={ref}
-      className="relative overflow-hidden pt-36 pb-28 sm:pt-44 sm:pb-36"
+      className="relative overflow-hidden pt-48 pb-28 sm:pt-60 sm:pb-36 lg:pt-64"
       style={{
         backgroundColor: '#F6F4EE',
         backgroundImage: [
@@ -101,18 +102,18 @@ export default function Hero() {
             where craft is quiet and material speaks.
           </p>
           <div className="flex flex-wrap items-center gap-4">
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-forest px-6 py-3 text-sm font-medium text-linen transition-transform hover:scale-[1.03] active:scale-[0.97]"
             >
               Begin a project <span aria-hidden="true">→</span>
-            </a>
-            <a
-              href="#work"
-              className="inline-flex items-center gap-1 text-sm text-forest-deep hover:text-forest transition-colors"
+            </Link>
+            <Link
+              to="/portfolio"
+              className="inline-flex items-center gap-1 text-sm font-medium text-forest-deep hover:text-forest transition-colors"
             >
-              See the work
-            </a>
+              See the work →
+            </Link>
           </div>
         </div>
 

@@ -13,42 +13,42 @@ const serviceDetails = [
   {
     num: '01',
     title: 'Whole-Home Additions',
-    description: 'Full-scope structural expansions and rebuilds of primary residences. We integrate new square footage flawlessly into the original architecture.',
+    description: 'Full-scope primary residence expansions, expanding overall footprint and adding new levels to existing luxury homes.',
     img: asset1,
     tag: 'Residential',
   },
   {
     num: '02',
     title: 'Design Build',
-    description: 'A holistic architectural approach where design and construction happen under one roof. We draft, engineer, and build as one unified team.',
+    description: 'Integrated architecture, engineering, and construction under one roof from concept to final walkthrough.',
     img: asset2,
     tag: 'Process',
   },
   {
     num: '03',
     title: 'Value Engineering',
-    description: 'Strategic analysis of materials and methods to maximize architectural impact while strictly managing budgets and timelines.',
+    description: 'Strategic material selection, cost analysis, and structural optimization to maximize architectural impact within budget.',
     img: asset3,
-    tag: 'Process',
+    tag: 'Consulting',
   },
   {
     num: '04',
     title: 'Additions',
-    description: 'Structurally integrated additions — second stories, detached studios, and ADUs — designed to read as natural extensions of the property.',
+    description: 'Second stories, sunrooms, extended living spaces, and guest house units seamlessly joined to your home.',
     img: asset4,
-    tag: 'Residential',
+    tag: 'Expansion',
   },
   {
     num: '05',
     title: 'Boutique Offices',
-    description: 'Owner-run practices, creative studios, and small firms. We build commercial interiors that feel like a direct reflection of your brand.',
+    description: 'Owner-run creative studios, executive suites, and small firm headquarters built to elevate brand presence.',
     img: asset5,
     tag: 'Commercial',
   },
   {
     num: '06',
     title: 'Construct Veterinary Hospital',
-    description: 'Specialized animal hospitals and clinical suites. Code-compliant, acoustically considered, highly durable, and human-warm.',
+    description: 'State-of-the-art animal hospitals, clinical surgical suites, and specialized veterinary care facilities.',
     img: asset6,
     tag: 'Specialty',
   },
@@ -71,7 +71,7 @@ export default function ServicesPage() {
       >
         {/* Top Left Bright Glow */}
         <div className="pointer-events-none absolute -top-48 -left-48 h-[650px] w-[650px] rounded-full bg-gradient-to-br from-[#e58a5b] to-[#f3cbab] opacity-55 blur-[130px]" />
-        
+
         {/* Top Right Bright Glow */}
         <div className="pointer-events-none absolute -top-48 -right-48 h-[650px] w-[650px] rounded-full bg-gradient-to-bl from-[#9dbd90] to-[#c7e3bb] opacity-50 blur-[130px]" />
 

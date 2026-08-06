@@ -20,6 +20,7 @@ const footerLinks = {
     { label: 'About', href: '/about' },
     { label: 'Services', href: '/services' },
     { label: 'Portfolio', href: '/portfolio' },
+    { label: 'Blog', href: '/blog' },
     { label: 'Contact', href: '/contact' },
   ],
 };
@@ -27,7 +28,7 @@ const footerLinks = {
 const socials = [
   {
     label: 'Instagram',
-    href: 'https://instagram.com',
+    href: 'https://www.instagram.com/havenmconstruction/',
     bgClass: 'bg-gradient-to-tr from-[#f9ce3f] via-[#e1306c] to-[#833ab4] text-white',
     svg: (
       <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -38,7 +39,7 @@ const socials = [
   },
   {
     label: 'Facebook',
-    href: 'https://facebook.com',
+    href: 'https://www.facebook.com/profile.php?id=61592782718700',
     bgClass: 'bg-[#1877f2] text-white',
     svg: (
       <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
@@ -58,11 +59,27 @@ const socials = [
   },
   {
     label: 'TikTok',
-    href: 'https://tiktok.com',
-    bgClass: 'bg-[#010101] text-white',
+    href: 'https://www.tiktok.com/@havenmconstruction?lang=en',
+    bgClass: 'bg-[#000000] text-white',
     svg: (
-      <svg className="h-4 w-4" viewBox="0 0 24 24">
-        <path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-1.01-.01.55-.02 1.09-.02 1.64 0 2.29-.28 4.61-1.35 6.64-1.19 2.24-3.41 3.97-5.91 4.54-2.49.57-5.19.16-7.39-1.17-2.19-1.31-3.77-3.63-4.26-6.17-.55-2.85.12-5.93 1.83-8.29C1.29 4.3 3.6 2.87 6.24 2.45c1.88-.29 3.81-.08 5.58.64.03.65.03 1.3.01 1.95-.9-.45-1.92-.62-2.92-.51-1.25.13-2.46.77-3.26 1.75-.85 1.05-1.17 2.46-.92 3.8.27 1.5 1.25 2.86 2.61 3.51.98.47 2.08.61 3.16.44 1.22-.2 2.34-.96 2.94-2.04.4-.72.58-1.55.57-2.38V.02z" fill="#fff" />
+      <svg className="h-4 w-4 overflow-visible" viewBox="0 0 24 24">
+        {/* Cyan Offset Layer */}
+        <path
+          d="M12.525 0h3.08c0 3.32 2.5 5.86 5.86 5.86v3.2a8.88 8.88 0 0 1-5.86-2.14v8.52a6.44 6.44 0 1 1-6.44-6.44c.48 0 .94.06 1.38.16V12.4a3.22 3.22 0 1 0 1.98 2.98V0z"
+          fill="#25F4EE"
+          transform="translate(-0.4, -0.3)"
+        />
+        {/* Red/Magenta Offset Layer */}
+        <path
+          d="M12.525 0h3.08c0 3.32 2.5 5.86 5.86 5.86v3.2a8.88 8.88 0 0 1-5.86-2.14v8.52a6.44 6.44 0 1 1-6.44-6.44c.48 0 .94.06 1.38.16V12.4a3.22 3.22 0 1 0 1.98 2.98V0z"
+          fill="#FE2C55"
+          transform="translate(0.4, 0.3)"
+        />
+        {/* White Core Layer */}
+        <path
+          d="M12.525 0h3.08c0 3.32 2.5 5.86 5.86 5.86v3.2a8.88 8.88 0 0 1-5.86-2.14v8.52a6.44 6.44 0 1 1-6.44-6.44c.48 0 .94.06 1.38.16V12.4a3.22 3.22 0 1 0 1.98 2.98V0z"
+          fill="#FFFFFF"
+        />
       </svg>
     ),
   },
