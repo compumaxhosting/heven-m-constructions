@@ -1,14 +1,17 @@
-import { Link } from 'react-router-dom';
-import { projects } from '../data/projectsData';
+import { Link } from "react-router-dom";
+import { projects } from "../data/projectsData";
 
 const featured = projects.slice(0, 3);
 
 export default function PortfolioSection() {
   return (
-    <section id="work" className="mesh-sage relative overflow-hidden py-28 sm:py-40">
+    <section
+      id="work"
+      className="mesh-sage relative overflow-hidden py-28 sm:py-40"
+    >
       {/* Top Right Green Glow */}
       <div className="pointer-events-none absolute -top-40 -right-48 h-[650px] w-[650px] rounded-full bg-gradient-to-bl from-[#9dbd90] to-[#c7e3bb] opacity-45 blur-[130px]" />
-      
+
       {/* Bottom Left Orange Glow */}
       <div className="pointer-events-none absolute -bottom-48 -left-40 h-[650px] w-[650px] rounded-full bg-gradient-to-tr from-[#e58a5b] to-[#f3cbab] opacity-45 blur-[130px]" />
 
@@ -20,15 +23,18 @@ export default function PortfolioSection() {
             <span className="inline-block h-px w-10 bg-forest/60 sm:bg-olive/60" />
             02 — Selected work
           </div>
-          
+
           <div className="col-span-12 lg:col-span-8 overflow-hidden py-2 -my-2">
             <h2 className="font-display text-[clamp(2rem,7vw,6rem)] leading-[1.05] sm:leading-[0.95] tracking-[-0.02em] text-forest origin-left">
-              A portfolio measured in <span className="italic text-clay">rooms</span>, not square feet.
+              A portfolio measured in{" "}
+              <span className="italic text-clay">rooms</span>, not square feet.
             </h2>
           </div>
 
           <p className="col-span-12 max-w-md text-sm sm:text-base text-forest lg:col-span-4">
-            We specialize in high-end commercial and residential work, delivering bespoke architectural and interior design solutions tailored to your unique vision.
+            We specialize in high-end commercial and residential work,
+            delivering bespoke architectural and interior design solutions
+            tailored to your unique vision.
           </p>
         </header>
 
@@ -38,18 +44,31 @@ export default function PortfolioSection() {
               to={`/portfolio/${featured[0].id}`}
               className="group relative overflow-hidden rounded-[24px] aspect-[4/3] lg:aspect-auto h-full w-full block bg-forest/10"
             >
-              <img src={featured[0].heroImage} alt={featured[0].title} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.06]" />
+              <img
+                src={featured[0].heroImage}
+                alt={featured[0].title}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.06]"
+              />
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </Link>
           </div>
 
           {featured.slice(1).map((project) => (
-            <div key={project.id} className="lg:col-span-4 h-full overflow-hidden rounded-[24px]">
+            <div
+              key={project.id}
+              className="lg:col-span-4 h-full overflow-hidden rounded-[24px]"
+            >
               <Link
                 to={`/portfolio/${project.id}`}
                 className="group relative overflow-hidden rounded-[24px] aspect-[4/5] lg:aspect-auto h-full w-full block bg-forest/10"
               >
-                <img src={project.heroImage} alt={project.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.06]" />
+                <img
+                  src={project.heroImage}
+                  alt={project.title}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.06]"
+                />
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </Link>
             </div>
