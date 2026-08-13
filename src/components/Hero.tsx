@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { useRef } from 'react';
+=======
+import { useRef, useEffect } from 'react';
+>>>>>>> a777eac29863e22b4200eaa336915bdd7f804442
 import { Link } from 'react-router-dom';
 
 // Using warm interior images that match the original site's aesthetic
@@ -82,6 +86,7 @@ export default function Hero() {
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Sidebar — 3 cols: description + CTAs */}
           <div className="col-span-12 flex flex-col justify-start gap-8 lg:col-span-3 lg:pt-0 lg:gap-20">
             <p className="max-w-xs text-[17px] leading-relaxed text-forest-deep">
@@ -102,6 +107,44 @@ export default function Hero() {
                 See the work →
               </Link>
             </div>
+=======
+        {/* Headline — 9 cols */}
+        <h1
+          data-animate
+          className="font-display col-span-12 text-[clamp(2.5rem,9.5vw,10rem)] leading-[0.92] tracking-[-0.03em] text-forest lg:col-span-9"
+          style={{ opacity: 0, transform: 'translateY(40px)' }}
+        >
+          Built
+          <span className="mx-3 inline-block align-middle text-clay sm:mx-5">·</span>
+          <span className="italic text-terracotta">with</span>
+          <br />
+          intention.
+        </h1>
+
+        {/* Sidebar — 3 cols: description + CTAs */}
+        <div
+          data-animate
+          className="col-span-12 flex flex-col justify-start gap-8 lg:col-span-3 lg:pt-0 lg:gap-20"
+          style={{ opacity: 0, transform: 'translateY(20px)' }}
+        >
+          <p className="max-w-xs text-[17px] leading-relaxed text-forest-deep">
+            Haven M Construction designs and builds refined residential and commercial spaces
+            where craft is quiet and material speaks.
+          </p>
+          <div className="flex flex-wrap items-center gap-4">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-forest px-6 py-3 text-sm font-medium text-linen transition-transform hover:scale-[1.03] active:scale-[0.97]"
+            >
+              Begin a project <span aria-hidden="true">→</span>
+            </Link>
+            <Link
+              to="/portfolio"
+              className="inline-flex items-center gap-1 text-sm font-medium text-forest-deep hover:text-forest transition-colors"
+            >
+              See the work →
+            </Link>
+>>>>>>> a777eac29863e22b4200eaa336915bdd7f804442
           </div>
         </div>
 

@@ -62,7 +62,11 @@ const socials = [
     href: 'https://www.tiktok.com/@havenmconstruction?lang=en',
     bgClass: 'bg-[#000000] text-white',
     svg: (
+<<<<<<< HEAD
       <svg className="h-6 w-6 overflow-visible" viewBox="0 0 24 24">
+=======
+      <svg className="h-4 w-4 overflow-visible" viewBox="0 0 24 24">
+>>>>>>> a777eac29863e22b4200eaa336915bdd7f804442
         {/* Cyan Offset Layer */}
         <path
           d="M12.525 0h3.08c0 3.32 2.5 5.86 5.86 5.86v3.2a8.88 8.88 0 0 1-5.86-2.14v8.52a6.44 6.44 0 1 1-6.44-6.44c.48 0 .94.06 1.38.16V12.4a3.22 3.22 0 1 0 1.98 2.98V0z"
