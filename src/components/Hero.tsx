@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { useRef } from 'react';
-=======
-import { useRef, useEffect } from 'react';
->>>>>>> a777eac29863e22b4200eaa336915bdd7f804442
 import { Link } from 'react-router-dom';
 
 // Using warm interior images that match the original site's aesthetic
@@ -39,13 +35,13 @@ export default function Hero() {
       }}
     >
       {/* Top Left Bright Glow */}
-      <div 
-        className="pointer-events-none absolute -top-48 -left-48 h-[650px] w-[650px] rounded-full bg-gradient-to-br from-[#e58a5b] to-[#f3cbab] opacity-55 blur-[130px]" 
+      <div
+        className="pointer-events-none absolute -top-48 -left-48 h-[650px] w-[650px] rounded-full bg-gradient-to-br from-[#e58a5b] to-[#f3cbab] opacity-55 blur-[130px]"
       />
 
       {/* Top Right Bright Glow */}
-      <div 
-        className="pointer-events-none absolute -top-48 -right-48 h-[650px] w-[650px] rounded-full bg-gradient-to-bl from-[#9dbd90] to-[#c7e3bb] opacity-50 blur-[130px]" 
+      <div
+        className="pointer-events-none absolute -top-48 -right-48 h-[650px] w-[650px] rounded-full bg-gradient-to-bl from-[#9dbd90] to-[#c7e3bb] opacity-50 blur-[130px]"
       />
 
       {/* Subtle SVG grid overlay */}
@@ -80,13 +76,10 @@ export default function Hero() {
               </div>
             </div>
             <div className="overflow-hidden py-2 -my-2">
-              <div className="origin-bottom-left">
-                intention.
-              </div>
+              <div className="origin-bottom-left">intention.</div>
             </div>
           </div>
 
-<<<<<<< HEAD
           {/* Sidebar — 3 cols: description + CTAs */}
           <div className="col-span-12 flex flex-col justify-start gap-8 lg:col-span-3 lg:pt-0 lg:gap-20">
             <p className="max-w-xs text-[17px] leading-relaxed text-forest-deep">
@@ -107,44 +100,6 @@ export default function Hero() {
                 See the work →
               </Link>
             </div>
-=======
-        {/* Headline — 9 cols */}
-        <h1
-          data-animate
-          className="font-display col-span-12 text-[clamp(2.5rem,9.5vw,10rem)] leading-[0.92] tracking-[-0.03em] text-forest lg:col-span-9"
-          style={{ opacity: 0, transform: 'translateY(40px)' }}
-        >
-          Built
-          <span className="mx-3 inline-block align-middle text-clay sm:mx-5">·</span>
-          <span className="italic text-terracotta">with</span>
-          <br />
-          intention.
-        </h1>
-
-        {/* Sidebar — 3 cols: description + CTAs */}
-        <div
-          data-animate
-          className="col-span-12 flex flex-col justify-start gap-8 lg:col-span-3 lg:pt-0 lg:gap-20"
-          style={{ opacity: 0, transform: 'translateY(20px)' }}
-        >
-          <p className="max-w-xs text-[17px] leading-relaxed text-forest-deep">
-            Haven M Construction designs and builds refined residential and commercial spaces
-            where craft is quiet and material speaks.
-          </p>
-          <div className="flex flex-wrap items-center gap-4">
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-forest px-6 py-3 text-sm font-medium text-linen transition-transform hover:scale-[1.03] active:scale-[0.97]"
-            >
-              Begin a project <span aria-hidden="true">→</span>
-            </Link>
-            <Link
-              to="/portfolio"
-              className="inline-flex items-center gap-1 text-sm font-medium text-forest-deep hover:text-forest transition-colors"
-            >
-              See the work →
-            </Link>
->>>>>>> a777eac29863e22b4200eaa336915bdd7f804442
           </div>
         </div>
 
@@ -197,16 +152,12 @@ export default function Hero() {
         {/* Stats row */}
         <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
           {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="glass rounded-2xl px-5 py-4"
-            >
+            <div key={stat.label} className="glass rounded-2xl px-5 py-4">
               <div className="font-display text-3xl text-forest">{stat.value}</div>
               <div className="mt-1 text-[11px] uppercase tracking-[0.22em] text-olive">{stat.label}</div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

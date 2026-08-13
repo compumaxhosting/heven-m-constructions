@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './app/home/page';
@@ -23,7 +22,7 @@ function ScrollToTop() {
   return null;
 }
 
-import Lenis from 'lenis';
+
 
 function Layout() {
   const location = useLocation();
@@ -47,8 +46,8 @@ function Layout() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </PageTransition>
-      <Footer />
       <ScrollUpButton />
+      <Footer />
     </div>
   );
 }

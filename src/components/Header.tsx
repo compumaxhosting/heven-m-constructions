@@ -16,33 +16,16 @@ const links = [
 
 const socialLinks = [
   {
-<<<<<<< HEAD
     href: "https://www.facebook.com/profile.php?id=61592782718700",
     label: "Facebook",
     bgClass: "",
     whileHover: { scale: 1.15, y: -2, rotate: 3 },
     icon: (
-      <svg className="h-4 w-4 text-[#1877f2]" fill="currentColor" viewBox="0 0 24 24">
-=======
-    href: "https://www.instagram.com/havenmconstruction/",
-    label: "Instagram",
-    bgClass: "bg-gradient-to-tr from-[#f9ce3f] via-[#e1306c] to-[#833ab4] text-white shadow-xs hover:shadow-pink-500/20",
-    whileHover: { scale: 1.18, y: -2, rotate: -6 },
-    icon: (
-      <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01" />
-      </svg>
-    ),
-  },
-  {
-    href: "https://www.facebook.com/profile.php?id=61592782718700",
-    label: "Facebook",
-    bgClass: "bg-[#1877f2] text-white shadow-xs hover:shadow-blue-500/20",
-    whileHover: { scale: 1.15, y: -2, rotate: 3 },
-    icon: (
-      <svg className="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24">
->>>>>>> a777eac29863e22b4200eaa336915bdd7f804442
+      <svg
+        className="h-4 w-4 text-[#1877f2]"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
         <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
       </svg>
     ),
@@ -61,7 +44,13 @@ const socialLinks = [
             <stop stopColor="#f9ce3f" offset="100%" />
           </linearGradient>
         </svg>
-        <svg className="h-4 w-4" fill="none" stroke="url(#ig-grad)" strokeWidth="2" viewBox="0 0 24 24">
+        <svg
+          className="h-4 w-4"
+          fill="none"
+          stroke="url(#ig-grad)"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+        >
           <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
           <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01" />
         </svg>
@@ -71,17 +60,14 @@ const socialLinks = [
   {
     href: "https://x.com",
     label: "X",
-<<<<<<< HEAD
     bgClass: "",
     whileHover: { scale: 1.15, y: -2, rotate: -3 },
     icon: (
-      <svg className="h-3.5 w-3.5 text-white" fill="currentColor" viewBox="0 0 24 24">
-=======
-    bgClass: "bg-black text-white border border-white/20 shadow-xs",
-    whileHover: { scale: 1.15, y: -2, rotate: -3 },
-    icon: (
-      <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 24 24">
->>>>>>> a777eac29863e22b4200eaa336915bdd7f804442
+      <svg
+        className="h-3.5 w-3.5 text-white"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
       </svg>
     ),
@@ -89,24 +75,12 @@ const socialLinks = [
   {
     href: "https://www.tiktok.com/@havenmconstruction?lang=en",
     label: "TikTok",
-<<<<<<< HEAD
     bgClass: "",
-=======
-    bgClass: "bg-[#000000] text-white shadow-xs",
->>>>>>> a777eac29863e22b4200eaa336915bdd7f804442
     whileHover: { scale: 1.18, y: -2, rotate: 8 },
     icon: (
       <svg className="h-3.5 w-3.5 overflow-visible" viewBox="0 0 24 24">
         {/* Cyan Offset Layer */}
-<<<<<<< HEAD
 
-=======
-        <path
-          d="M12.525 0h3.08c0 3.32 2.5 5.86 5.86 5.86v3.2a8.88 8.88 0 0 1-5.86-2.14v8.52a6.44 6.44 0 1 1-6.44-6.44c.48 0 .94.06 1.38.16V12.4a3.22 3.22 0 1 0 1.98 2.98V0z"
-          fill="#25F4EE"
-          transform="translate(-0.4, -0.3)"
-        />
->>>>>>> a777eac29863e22b4200eaa336915bdd7f804442
         {/* Red/Magenta Offset Layer */}
         <path
           d="M12.525 0h3.08c0 3.32 2.5 5.86 5.86 5.86v3.2a8.88 8.88 0 0 1-5.86-2.14v8.52a6.44 6.44 0 1 1-6.44-6.44c.48 0 .94.06 1.38.16V12.4a3.22 3.22 0 1 0 1.98 2.98V0z"
@@ -145,7 +119,7 @@ export default function Header() {
       return;
     }
     prevPathname.current = location.pathname;
-    
+
     setIsTransitioning(true);
     const timer = setTimeout(() => {
       setIsTransitioning(false);
@@ -159,14 +133,11 @@ export default function Header() {
     document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
 
-<<<<<<< HEAD
     // Pause Lenis smooth scroll if it exists
     if ((window as any).lenis) {
       (window as any).lenis.stop();
     }
 
-=======
->>>>>>> a777eac29863e22b4200eaa336915bdd7f804442
     const blockTouch = (e: TouchEvent) => {
       const drawer = document.getElementById("mobile-menu-drawer");
       if (drawer && drawer.contains(e.target as Node)) return;
@@ -195,51 +166,36 @@ export default function Header() {
     setTimeout(() => setCopiedEmail(false), 2200);
   };
 
-  const isProjectDetail = location.pathname.startsWith("/portfolio/") && location.pathname !== "/portfolio";
+  const isProjectDetail =
+    location.pathname.startsWith("/portfolio/") &&
+    location.pathname !== "/portfolio";
   const showSolidBackground = scrolled || isTransitioning || isProjectDetail;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-[999] pointer-events-none">
       {/* Pixel-Perfect Ultra-Luxury Dark Top Bar */}
-<<<<<<< HEAD
       <div className="pointer-events-auto relative w-full bg-[linear-gradient(to_right,#9e462a,#1c3c2b,#0d1f16)] sm:bg-[linear-gradient(to_right,#0d1f16,#1c3c2b,#9e462a,#1c3c2b,#0d1f16)] text-linen px-3 sm:px-8 py-2.5 shadow-md backdrop-blur-xl border-b border-white/15 overflow-hidden">
-=======
-      <div className="pointer-events-auto relative w-full bg-gradient-to-r from-[#0d1f16] via-[#1c3c2b] via-[#9e462a] via-[#1c3c2b] to-[#0d1f16] text-linen px-3 sm:px-8 py-2.5 shadow-md backdrop-blur-xl border-b border-white/15 overflow-hidden">
->>>>>>> a777eac29863e22b4200eaa336915bdd7f804442
         {/* Ambient warm color gradient sheen overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/10 via-amber-400/15 via-terracotta/20 to-emerald-400/10 pointer-events-none mix-blend-screen" />
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/10 via-amber-400/15 to-emerald-400/10 pointer-events-none mix-blend-screen" />
 
         {/* Metallic gold & terracotta hairline border */}
-        <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-amber-200/70 via-terracotta/90 to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-amber-200/70 to-transparent pointer-events-none" />
 
-<<<<<<< HEAD
         <div className="relative mx-auto flex max-w-7xl flex-wrap items-center justify-center sm:justify-between gap-y-2.5 gap-x-3 text-xs">
-=======
-        <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-3 text-xs">
->>>>>>> a777eac29863e22b4200eaa336915bdd7f804442
           {/* Left side: Contact Pills */}
           <div className="flex items-center gap-2 sm:gap-3.5 flex-wrap">
-
             {/* Direct Phone Pill Button */}
             <a
               href="tel:+12012643506"
-<<<<<<< HEAD
               className="group flex sm:inline-flex items-center justify-center sm:gap-2 h-10 w-10 sm:h-auto sm:w-auto rounded-full bg-gradient-to-tr from-terracotta to-amber-600 sm:bg-none sm:bg-white/[0.1] hover:bg-white/[0.2] shadow-[0_4px_12px_rgba(0,0,0,0.4)] sm:shadow-xs border border-white/40 sm:border sm:border-white/20 sm:pl-1.5 sm:pr-3 sm:py-1 text-xs font-sans text-linen transition-all duration-300 hover:border-forest active:scale-95 hover:shadow-[0_0_16px_rgba(42,75,60,0.5)]"
               title="Call Haven M Construction: (201) 264-3506"
             >
               <div className="flex sm:h-6 sm:w-6 items-center justify-center rounded-full text-white sm:bg-terracotta sm:text-white sm:shadow-xs group-hover:bg-forest group-hover:text-white transition-all duration-300 shrink-0 animate-[pulse_2s_ease-in-out_infinite] sm:animate-none">
                 <Phone className="h-5 w-5 sm:h-3.5 sm:w-3.5 group-hover:rotate-12 transition-transform shrink-0" />
               </div>
-              <span className="hidden sm:inline font-semibold tracking-tight text-linen group-hover:text-white">(201) 264-3506</span>
-=======
-              className="group inline-flex items-center gap-2 rounded-full bg-white/[0.1] hover:bg-white/[0.2] border border-white/20 pl-1.5 pr-3 py-1 text-xs font-sans text-linen transition-all duration-300 hover:border-forest active:scale-95 shadow-xs hover:shadow-[0_0_16px_rgba(42,75,60,0.5)]"
-              title="Call Haven M Construction: (201) 264-3506"
-            >
-              <div className="flex h-6 w-6 items-center justify-center rounded-full bg-terracotta text-white shadow-xs group-hover:bg-forest group-hover:text-white transition-all duration-300 shrink-0">
-                <Phone className="h-3.5 w-3.5 group-hover:rotate-12 transition-transform shrink-0" />
-              </div>
-              <span className="font-semibold tracking-tight text-linen group-hover:text-white">(201) 264-3506</span>
->>>>>>> a777eac29863e22b4200eaa336915bdd7f804442
+              <span className="hidden sm:inline font-semibold tracking-tight text-linen group-hover:text-white">
+                (201) 264-3506
+              </span>
             </a>
 
             {/* Direct Email Pill Button with One-Click Copy */}
@@ -252,7 +208,9 @@ export default function Header() {
                 <div className="flex h-6 w-6 items-center justify-center rounded-full bg-terracotta text-white shadow-xs group-hover:bg-forest group-hover:text-white transition-all duration-300 shrink-0">
                   <Mail className="h-3.5 w-3.5 group-hover:-translate-y-0.5 transition-transform shrink-0" />
                 </div>
-                <span className="font-semibold tracking-tight text-linen group-hover:text-white">gus@havenmconstruction.com</span>
+                <span className="font-semibold tracking-tight text-linen group-hover:text-white">
+                  gus@havenmconstruction.com
+                </span>
 
                 <button
                   type="button"
@@ -274,11 +232,7 @@ export default function Header() {
           </div>
 
           {/* Right side: Social Media Icons (Clean Row without Box) */}
-<<<<<<< HEAD
           <div className="flex items-center gap-3 sm:gap-3">
-=======
-          <div className="flex items-center gap-2">
->>>>>>> a777eac29863e22b4200eaa336915bdd7f804442
             {socialLinks.map(({ href, label, icon, bgClass, whileHover }) => (
               <motion.a
                 key={label}
@@ -286,11 +240,7 @@ export default function Header() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={label}
-<<<<<<< HEAD
                 className={`flex h-10 w-10 sm:h-8 sm:w-8 items-center justify-center rounded-full hover:bg-white/10 transition-colors [&>svg]:scale-[1.5] sm:[&>svg]:scale-[1.25] ${bgClass}`}
-=======
-                className={`flex h-6 w-6 items-center justify-center rounded-full shadow-xs ${bgClass}`}
->>>>>>> a777eac29863e22b4200eaa336915bdd7f804442
                 whileHover={whileHover}
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: "spring", stiffness: 600, damping: 25 }}
@@ -303,22 +253,20 @@ export default function Header() {
       </div>
 
       {/* Main Luxury Floating Header Bar */}
-<<<<<<< HEAD
-      <div className={`relative z-50 transition-all duration-500 ${showSolidBackground ? "px-2 sm:px-4 pt-0" : "px-3 sm:px-6 pt-2.5 sm:pt-3"}`}>
+      <div
+        className={`relative z-50 transition-all duration-500 ${showSolidBackground ? "px-2 sm:px-4 pt-0" : "px-3 sm:px-6 pt-2.5 sm:pt-3"}`}
+      >
         <div
-          className={`pointer-events-auto mx-auto flex items-center justify-between gap-3 max-w-7xl px-4 py-2 sm:px-7 transition-all duration-500 ${showSolidBackground
-            ? "rounded-t-none rounded-b-[2.5rem] bg-[#F5F2EC]/95 border border-white/60 border-t-0 text-forest shadow-[0_12px_30px_-12px_rgba(35,67,58,0.16)] backdrop-blur-xl"
-            : "rounded-[2.5rem] bg-transparent border-transparent text-forest shadow-none backdrop-blur-none"
-=======
-      <div className="px-3 pt-2.5 sm:px-6 sm:pt-3">
-        <div
-          className={`pointer-events-auto mx-auto flex items-center justify-between gap-3 max-w-7xl rounded-full px-4 py-2 sm:px-7 transition-all duration-300 ${showSolidBackground
-            ? "bg-[#F5F2EC]/90 border border-white/60 text-forest shadow-[0_12px_30px_-12px_rgba(35,67,58,0.16)] backdrop-blur-xl"
-            : "bg-transparent border-transparent text-forest shadow-none backdrop-blur-none"
->>>>>>> a777eac29863e22b4200eaa336915bdd7f804442
-            }`}
+          className={`pointer-events-auto mx-auto flex items-center justify-between gap-3 max-w-7xl px-4 py-2 sm:px-7 transition-all duration-500 ${
+              showSolidBackground
+                ? "rounded-t-none rounded-b-[2.5rem] bg-white/30 border border-white/8 border-t-0 text-forest shadow-[0_8px_32px_-8px_rgba(35,67,58,0.12)] backdrop-blur-xl"
+              : "rounded-[2.5rem] bg-transparent border-transparent text-forest shadow-none backdrop-blur-none"
+          }`}
         >
-          <Link to="/" className="flex min-w-0 items-center gap-3 shrink-0 py-0.5">
+          <Link
+            to="/"
+            className="flex min-w-0 items-center gap-3 shrink-0 py-0.5"
+          >
             <img
               src={havenLogo}
               alt="Haven M Construction"
@@ -336,16 +284,21 @@ export default function Header() {
                   <Link
                     key={l.to}
                     to={l.to}
-                    className={`relative rounded-full px-4 py-2 text-sm font-medium transition-colors ${isActive
-                      ? "text-forest font-semibold"
-                      : "text-forest/75 hover:text-forest"
-                      }`}
+                    className={`relative rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
+                            isActive
+                              ? "text-forest font-bold"
+                              : "text-forest/75 hover:text-forest"
+                          }`}
                   >
                     {isActive && (
                       <motion.div
                         layoutId="active-nav-pill"
                         className="absolute inset-0 rounded-full bg-forest/10 border border-forest/15 shadow-xs"
-                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 380,
+                          damping: 30,
+                        }}
                       />
                     )}
                     <span className="relative z-10">{l.label}</span>
@@ -358,39 +311,31 @@ export default function Header() {
             <button
               onClick={() => setOpen((v) => !v)}
               aria-label="Toggle Menu"
-              className={`pointer-events-auto relative flex items-center justify-center h-10 w-10 rounded-full border transition-all duration-500 overflow-hidden active:scale-95 lg:hidden shrink-0 ${open
-<<<<<<< HEAD
-                ? "bg-forest border-forest text-linen"
-=======
-                ? "bg-forest border-forest text-[#F5F2EC]"
->>>>>>> a777eac29863e22b4200eaa336915bdd7f804442
-                : "bg-forest/10 border-forest/20 text-forest"
-                }`}
+              className={`pointer-events-auto relative flex items-center justify-center h-10 w-10 rounded-full border transition-all duration-500 overflow-hidden active:scale-95 lg:hidden shrink-0 ${
+                open
+                  ? "bg-forest border-forest text-linen"
+                  : "bg-forest/10 border-forest/20 text-forest"
+              }`}
             >
               <div className="flex flex-col gap-[6px] items-center justify-center w-full h-full">
                 <span
-<<<<<<< HEAD
-                  className={`block h-[2px] w-5 rounded-full transition-all duration-500 ease-[cubic-bezier(0.87,0,0.13,1)] ${open ? 'translate-y-[8px] rotate-[225deg] bg-linen' : 'bg-forest'
-                    }`}
+                  className={`block h-[2px] w-5 rounded-full transition-all duration-500 ease-[cubic-bezier(0.87,0,0.13,1)] ${
+                    open
+                      ? "translate-y-[8px] rotate-[225deg] bg-linen"
+                      : "bg-forest"
+                  }`}
                 />
                 <span
-                  className={`block h-[2px] w-5 rounded-full transition-all duration-300 ease-out ${open ? 'opacity-0 scale-x-0 bg-linen' : 'bg-forest'
-                    }`}
+                  className={`block h-[2px] w-5 rounded-full transition-all duration-300 ease-out ${
+                    open ? "opacity-0 scale-x-0 bg-linen" : "bg-forest"
+                  }`}
                 />
                 <span
-                  className={`block h-[2px] w-5 rounded-full transition-all duration-500 ease-[cubic-bezier(0.87,0,0.13,1)] ${open ? '-translate-y-[8px] -rotate-[225deg] bg-linen' : 'bg-forest'
-=======
-                  className={`block h-[2px] w-5 rounded-full transition-all duration-500 ease-[cubic-bezier(0.87,0,0.13,1)] ${open ? 'translate-y-[8px] rotate-[225deg] bg-[#F5F2EC]' : 'bg-forest'
-                    }`}
-                />
-                <span
-                  className={`block h-[2px] w-5 rounded-full transition-all duration-300 ease-out ${open ? 'opacity-0 scale-x-0 bg-[#F5F2EC]' : 'bg-forest'
-                    }`}
-                />
-                <span
-                  className={`block h-[2px] w-5 rounded-full transition-all duration-500 ease-[cubic-bezier(0.87,0,0.13,1)] ${open ? '-translate-y-[8px] -rotate-[225deg] bg-[#F5F2EC]' : 'bg-forest'
->>>>>>> a777eac29863e22b4200eaa336915bdd7f804442
-                    }`}
+                  className={`block h-[2px] w-5 rounded-full transition-all duration-500 ease-[cubic-bezier(0.87,0,0.13,1)] ${
+                    open
+                      ? "-translate-y-[8px] -rotate-[225deg] bg-linen"
+                      : "bg-forest"
+                  }`}
                 />
               </div>
             </button>
@@ -415,7 +360,9 @@ export default function Header() {
               <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-forest-deep">
                 NAVIGATION MENU
               </span>
-              <span className="font-mono text-xs text-forest-deep">HAVEN M</span>
+              <span className="font-mono text-xs text-forest-deep">
+                HAVEN M
+              </span>
             </div>
 
             {/* Mobile Nav Links */}
@@ -432,10 +379,11 @@ export default function Header() {
                     <Link
                       to={l.to}
                       onClick={() => setOpen(false)}
-                      className={`group flex items-center justify-between rounded-2xl px-4 py-3.5 transition-all ${isActive
-                        ? "bg-forest/10 text-forest border border-forest/20 font-semibold"
-                        : "hover:bg-forest/5 text-forest hover:text-forest"
-                        }`}
+                      className={`group flex items-center justify-between rounded-2xl px-4 py-3.5 transition-all ${
+                        isActive
+                          ? "bg-forest/10 text-forest border border-forest/20 font-semibold"
+                          : "hover:bg-forest/5 text-forest hover:text-forest"
+                      }`}
                     >
                       <div className="flex items-center gap-4">
                         <span className="font-mono text-xs text-forest/60 group-hover:text-forest">
@@ -446,8 +394,9 @@ export default function Header() {
                         </span>
                       </div>
                       <ArrowRight
-                        className={`h-5 w-5 transition-transform group-hover:translate-x-1 ${isActive ? "text-forest" : "opacity-40"
-                          }`}
+                        className={`h-5 w-5 transition-transform group-hover:translate-x-1 ${
+                          isActive ? "text-forest" : "opacity-40"
+                        }`}
                       />
                     </Link>
                   </motion.div>
@@ -462,11 +411,16 @@ export default function Header() {
               </div>
               <div className="flex flex-wrap gap-2.5">
                 {socialLinks.map(({ href, label, icon, whileHover }) => {
-                  const mobileBgClass = 
-                    label === 'Instagram' ? 'bg-gradient-to-tr from-[#f9ce3f] via-[#e1306c] to-[#833ab4] text-white shadow-[#e1306c]/10' :
-                    label === 'Facebook' ? 'bg-[#1877f2] text-white shadow-[#1877f2]/10' :
-                    label === 'X' ? 'bg-black text-white shadow-black/10' :
-                    label === 'TikTok' ? 'bg-black text-white shadow-black/10' : '';
+                  const mobileBgClass =
+                    label === "Instagram"
+                      ? "bg-gradient-to-tr from-[#f9ce3f] via-[#e1306c] to-[#833ab4] text-white shadow-[#e1306c]/10"
+                      : label === "Facebook"
+                        ? "bg-[#1877f2] text-white shadow-[#1877f2]/10"
+                        : label === "X"
+                          ? "bg-black text-white shadow-black/10"
+                          : label === "TikTok"
+                            ? "bg-black text-white shadow-black/10"
+                            : "";
                   return (
                     <motion.a
                       key={label}
@@ -476,22 +430,49 @@ export default function Header() {
                       aria-label={label}
                       className={`flex h-9 w-9 items-center justify-center rounded-full transition-all duration-300 shadow-sm ${mobileBgClass}`}
                       whileHover={whileHover}
-                      transition={{ type: "spring", stiffness: 320, damping: 16 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 320,
+                        damping: 16,
+                      }}
                     >
-                      {label === 'Facebook' ? (
-                        <svg className="h-4 w-4 text-white animate-none" fill="currentColor" viewBox="0 0 24 24">
+                      {label === "Facebook" ? (
+                        <svg
+                          className="h-4 w-4 text-white animate-none"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
                           <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
                         </svg>
-                      ) : label === 'X' ? (
-                        <svg className="h-3.5 w-3.5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      ) : label === "X" ? (
+                        <svg
+                          className="h-3.5 w-3.5 text-white"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
                           <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                         </svg>
-                      ) : label === 'Instagram' ? (
-                        <svg className="h-4 w-4 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                          <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                      ) : label === "Instagram" ? (
+                        <svg
+                          className="h-4 w-4 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          viewBox="0 0 24 24"
+                        >
+                          <rect
+                            width="20"
+                            height="20"
+                            x="2"
+                            y="2"
+                            rx="5"
+                            ry="5"
+                          />
                           <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01" />
                         </svg>
-                      ) : icon}
+                      ) : (
+                        icon
+                      )}
                     </motion.a>
                   );
                 })}
@@ -502,7 +483,6 @@ export default function Header() {
             <div className="mt-4 border-t border-forest/10 pt-4 flex flex-col gap-2.5">
               <a
                 href="tel:+12012643506"
-<<<<<<< HEAD
                 className="flex items-center justify-between rounded-2xl bg-forest/10 border border-forest/20 p-3 sm:p-3.5 text-forest transition-all hover:bg-forest hover:text-linen group gap-2"
               >
                 <div className="flex items-center gap-2 sm:gap-3 min-w-0">
@@ -514,28 +494,11 @@ export default function Header() {
                       Call Us Directly
                     </span>
                     <span className="font-mono text-[11px] sm:text-sm font-bold tracking-tight whitespace-nowrap">
-=======
-                className="flex items-center justify-between rounded-2xl bg-forest/10 border border-forest/20 p-3.5 text-forest transition-all hover:bg-forest hover:text-linen group"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-forest text-linen group-hover:bg-linen group-hover:text-forest transition-colors">
-                    <Phone className="h-4 w-4" />
-                  </div>
-                  <div className="flex flex-col text-left">
-                    <span className="text-[10px] uppercase tracking-wider font-semibold opacity-70">
-                      Call Us Directly
-                    </span>
-                    <span className="font-mono text-sm font-bold tracking-tight">
->>>>>>> a777eac29863e22b4200eaa336915bdd7f804442
                       (201) 264-3506
                     </span>
                   </div>
                 </div>
-<<<<<<< HEAD
                 <span className="shrink-0 text-[10px] sm:text-xs font-semibold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-forest text-linen group-hover:bg-linen group-hover:text-forest transition-colors">
-=======
-                <span className="text-xs font-semibold px-3 py-1.5 rounded-full bg-forest text-linen group-hover:bg-linen group-hover:text-forest transition-colors">
->>>>>>> a777eac29863e22b4200eaa336915bdd7f804442
                   Call Now
                 </span>
               </a>
