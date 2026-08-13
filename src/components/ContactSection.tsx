@@ -1,32 +1,8 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
   const ref = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            el.querySelectorAll<HTMLElement>('[data-reveal]').forEach((item, i) => {
-              setTimeout(() => {
-                item.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                item.style.opacity = '1';
-                item.style.transform = 'translateY(0)';
-              }, i * 200);
-            });
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -51,12 +27,9 @@ export default function ContactSection() {
             </div>
 
             <h2
-              data-reveal
               className="font-display leading-[1.1] tracking-[-0.02em] text-forest"
               style={{
                 fontSize: 'clamp(2rem, 6vw, 5.5rem)',
-                opacity: 0,
-                transform: 'translateY(30px)',
               }}
             >
               Tell us about the{' '}
@@ -88,10 +61,8 @@ export default function ContactSection() {
 
           {/* ── Right: form ── */}
           <form
-            data-reveal
             onSubmit={handleSubmit}
             className="glass min-w-0 rounded-[20px] sm:rounded-[28px] p-5 sm:p-8 lg:p-10"
-            style={{ opacity: 0, transform: 'translateY(40px)' }}
           >
             {submitted ? (
               <div className="flex h-full min-h-[300px] flex-col items-center justify-center gap-4 text-center">

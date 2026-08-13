@@ -117,10 +117,10 @@ export default function ShowcasePage() {
           <div className="flex items-center gap-3 mb-6">
             <div className="h-px w-12 bg-forest/30" />
             <span className="font-mono text-sm tracking-[0.2em] uppercase text-forest/70">
-              Visuals
+
             </span>
           </div>
-          <h1 className="font-display text-5xl sm:text-7xl text-forest mb-8 leading-tight">
+          <h1 className="font-display text-5xl sm:text-7xl text-forest pt-12 sm:pt-16 mb-10 leading-tight">
             Our Showcase
           </h1>
           <p className="text-xl text-forest/70 font-light">
@@ -136,11 +136,10 @@ export default function ShowcasePage() {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-6 py-2 rounded-full font-mono text-sm uppercase tracking-wider transition-all duration-300 ${
-                filter === cat 
-                  ? "bg-forest text-linen shadow-lg scale-105" 
-                  : "bg-forest/5 text-forest hover:bg-forest/10"
-              }`}
+              className={`px-6 py-2 rounded-full font-mono text-sm uppercase tracking-wider transition-all duration-300 ${filter === cat
+                ? "bg-forest text-linen shadow-lg scale-105"
+                : "bg-forest/5 text-forest hover:bg-forest/10"
+                }`}
             >
               {cat}
             </button>
@@ -161,7 +160,7 @@ export default function ShowcasePage() {
               onClick={() => setActiveMedia(item)}
             >
               {item.type === 'video' ? (
-                <video 
+                <video
                   src={item.videoUrl}
                   autoPlay
                   muted
@@ -170,14 +169,14 @@ export default function ShowcasePage() {
                   className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none"
                 />
               ) : (
-                <img 
-                  src={item.src} 
-                  alt={item.title} 
+                <img
+                  src={item.src}
+                  alt={item.title}
                   className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               )}
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-              
+
               <div className="absolute inset-0 p-6 flex flex-col justify-between pointer-events-none">
                 <div className="self-end opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <div className="h-10 w-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white shadow-lg">
@@ -194,7 +193,7 @@ export default function ShowcasePage() {
       {typeof document !== 'undefined' && createPortal(
         <AnimatePresence>
           {activeMedia && (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -203,8 +202,8 @@ export default function ShowcasePage() {
             >
               {/* Cinematic Vignette */}
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(20,39,28,0.7)_100%)] pointer-events-none" />
-              
-              <motion.button 
+
+              <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
@@ -237,8 +236,8 @@ export default function ShowcasePage() {
                   </motion.button>
                 </>
               )}
-              
-              <motion.div 
+
+              <motion.div
                 initial={{ opacity: 0, scale: 0.9, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 10 }}
@@ -246,15 +245,15 @@ export default function ShowcasePage() {
                 className="relative flex items-center justify-center w-full max-w-7xl h-[85vh] z-[99999] mx-4"
               >
                 {activeMedia.type === 'video' ? (
-                  <video 
-                    src={activeMedia.videoUrl} 
-                    controls 
-                    autoPlay 
+                  <video
+                    src={activeMedia.videoUrl}
+                    controls
+                    autoPlay
                     className="w-auto h-auto max-w-full max-h-full object-contain rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
                   />
                 ) : (
-                  <img 
-                    src={activeMedia.src} 
+                  <img
+                    src={activeMedia.src}
                     alt={activeMedia.title}
                     className="w-auto h-auto max-w-full max-h-full object-contain rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
                   />

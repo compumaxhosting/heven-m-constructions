@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { processSteps } from '../data/siteData';
 
 import asset7 from '../assets/asset-7.jpeg';
@@ -6,30 +6,6 @@ const BLUEPRINT_IMG = asset7;
 
 export default function ProcessSection() {
   const ref = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            el.querySelectorAll<HTMLElement>('[data-step]').forEach((item, i) => {
-              setTimeout(() => {
-                item.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                item.style.opacity = '1';
-                item.style.transform = 'translateY(0)';
-              }, i * 150);
-            });
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section id="process" ref={ref} className="mesh-forest grain relative overflow-hidden py-28 text-linen sm:py-40">
@@ -58,9 +34,7 @@ export default function ProcessSection() {
           {processSteps.map((step) => (
             <div
               key={step.num}
-              data-step
               className="relative rounded-[24px] border border-linen/15 bg-linen/[0.04] p-7 backdrop-blur-sm transition-colors hover:border-clay/60"
-              style={{ opacity: 0, transform: 'translateY(40px)' }}
             >
               <div className="font-mono text-[11px] uppercase tracking-[0.28em] text-clay">{step.num}</div>
               <div className="font-display mt-6 text-4xl">{step.title}</div>

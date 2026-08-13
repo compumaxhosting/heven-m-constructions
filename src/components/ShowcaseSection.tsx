@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { ArrowRight, Play, Image as ImageIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -37,34 +36,18 @@ export default function ShowcaseSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="flex items-center gap-3 mb-6"
-            >
+            <div className="flex items-center gap-3 mb-6">
               <div className="h-px w-12 bg-clay" />
               <span className="font-mono text-sm tracking-[0.2em] uppercase text-clay">
                 Our Visuals
               </span>
-            </motion.div>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="font-display text-4xl sm:text-5xl md:text-6xl text-white"
-            >
+            </div>
+            <h2 className="font-display text-4xl sm:text-5xl md:text-6xl text-white">
               Experience our work in motion.
-            </motion.h2>
+            </h2>
           </div>
           
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
+          <div>
             <Link 
               to="/showcase" 
               className="group flex items-center gap-3 text-linen hover:text-clay transition-colors"
@@ -74,17 +57,13 @@ export default function ShowcaseSection() {
                 <ArrowRight className="w-5 h-5" />
               </div>
             </Link>
-          </motion.div>
+          </div>
         </div>
 
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-          {showcaseItems.map((item, index) => (
-            <motion.div
+          {showcaseItems.map((item) => (
+            <div
               key={item.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.15 }}
               className="relative group rounded-3xl overflow-hidden cursor-pointer break-inside-avoid transform-gpu"
             >
               <Link to="/showcase" className="absolute inset-0 z-20" />
@@ -113,7 +92,7 @@ export default function ShowcaseSection() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

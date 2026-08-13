@@ -3,10 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import havenLogo from "../assets/haven-logo.png";
 
-const EASE = [0.22, 1, 0.36, 1]; // Very snappy and smooth ease-out
-const DURATION = 0.35;
-const EXIT_DURATION = 0.2;
-const DELAY = 0.1;
+// Snappy cubic bezier curve optimized for 0.6s
+const EASE_IN_OUT = [0.22, 1, 0.36, 1];
+
+const DURATION = 0.6;       // 0.6s main reveal
+const EXIT_DURATION = 0.4;  // 0.4s curtain close
 
 export function PageTransition({ children }: { children: ReactNode }) {
     const location = useLocation();
@@ -17,7 +18,7 @@ export function PageTransition({ children }: { children: ReactNode }) {
     }, [location.pathname]);
 
     return (
-        <div className="relative min-h-screen">
+        <div className="relative min-h-screen overflow-hidden">
             <AnimatePresence mode="wait" initial={false}>
                 <motion.div
                     key={location.pathname}
@@ -31,26 +32,23 @@ export function PageTransition({ children }: { children: ReactNode }) {
                         variants={{
                             initial: {
                                 opacity: 0,
-                                y: 30,
-                                scale: 0.98,
+                                y: 14,
                             },
                             animate: {
                                 opacity: 1,
                                 y: 0,
-                                scale: 1,
                                 transition: {
                                     duration: DURATION,
-                                    delay: DELAY,
-                                    ease: EASE,
+                                    delay: 0.1,
+                                    ease: EASE_IN_OUT,
                                 },
                             },
                             exit: {
-                                opacity: 1,
-                                y: -20,
-                                scale: 0.98,
+                                opacity: 0,
+                                y: -10,
                                 transition: {
-                                    duration: 0.5,
-                                    ease: EASE,
+                                    duration: EXIT_DURATION,
+                                    ease: EASE_IN_OUT,
                                 },
                             },
                         }}
@@ -64,18 +62,17 @@ export function PageTransition({ children }: { children: ReactNode }) {
                         variants={{
                             initial: { y: "0%" },
                             animate: {
-                                y: ["0%", "0%", "-100%"],
+                                y: "-100%",
                                 transition: {
                                     duration: DURATION,
-                                    times: [0, 0.1, 1],
-                                    ease: EASE,
+                                    ease: EASE_IN_OUT,
                                 },
                             },
                             exit: {
-                                y: ["-100%", "0%"],
+                                y: "0%",
                                 transition: {
                                     duration: EXIT_DURATION,
-                                    ease: EASE,
+                                    ease: EASE_IN_OUT,
                                 },
                             },
                         }}
@@ -89,18 +86,17 @@ export function PageTransition({ children }: { children: ReactNode }) {
                         variants={{
                             initial: { y: "0%" },
                             animate: {
-                                y: ["0%", "0%", "100%"],
+                                y: "100%",
                                 transition: {
                                     duration: DURATION,
-                                    times: [0, 0.1, 1],
-                                    ease: EASE,
+                                    ease: EASE_IN_OUT,
                                 },
                             },
                             exit: {
-                                y: ["100%", "0%"],
+                                y: "0%",
                                 transition: {
                                     duration: EXIT_DURATION,
-                                    ease: EASE,
+                                    ease: EASE_IN_OUT,
                                 },
                             },
                         }}
@@ -109,23 +105,25 @@ export function PageTransition({ children }: { children: ReactNode }) {
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,184,134,0.12),transparent_60%)]" />
                     </motion.div>
 
-                    {/* Big Center Logo */}
+                    {/* Center Logo Fade & Scale */}
                     <motion.div
                         variants={{
                             initial: { opacity: 1, scale: 1 },
                             animate: {
-                                opacity: [1, 1, 1, 0],
-                                scale: [1, 1, 1, 1.05],
+                                opacity: 0,
+                                scale: 1.03,
                                 transition: {
-                                    duration: DURATION,
-                                    times: [0, 0.1, 0.2, 1],
-                                    ease: EASE,
+                                    duration: DURATION * 0.7,
+                                    ease: EASE_IN_OUT,
                                 },
                             },
                             exit: {
-                                opacity: [0, 1],
-                                scale: [0.95, 1],
-                                transition: { duration: EXIT_DURATION, ease: EASE },
+                                opacity: 1,
+                                scale: 1,
+                                transition: {
+                                    duration: EXIT_DURATION,
+                                    ease: EASE_IN_OUT,
+                                },
                             },
                         }}
                         className="fixed inset-0 z-[102] flex items-center justify-center pointer-events-none p-4 transform-gpu"

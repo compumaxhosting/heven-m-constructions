@@ -113,7 +113,7 @@ export default function AboutPage() {
               Reclaiming the <span className="italic text-terracotta">master builder</span> tradition.
             </motion.h2>
             <motion.p variants={fadeInUp} className="text-[17px] leading-relaxed text-forest-deep mb-6">
-              Gustavo Mendez started Haven M after a decade working for a large general contractor where he watched good design get lost in sub-contractor hand-offs. His answer was a studio that keeps every trade in-house — carpenters, tile setters, finishers, and painters who share a singular standard of excellence.
+              Gus Martino started Haven M after a decade working for a large general contractor where he watched good design get lost in sub-contractor hand-offs. His answer was a studio that keeps every trade in-house — carpenters, tile setters, finishers, and painters who share a singular standard of excellence.
             </motion.p>
             <motion.p variants={fadeInUp} className="text-[17px] leading-relaxed text-forest-deep mb-10">
               Today Haven M works on fewer than fifteen projects a year. Each is led by a principal from the very first sketch to the final polish of the hardware. We move intentionally, ensuring that every detail reflects our commitment to enduring quality.
@@ -173,7 +173,7 @@ export default function AboutPage() {
                 "We don't just build spaces; we craft environments that breathe, age, and adapt with the people who inhabit them."
               </blockquote>
               <cite className="text-sm font-medium uppercase tracking-[0.2em] text-olive not-italic">
-                — Gustavo Mendez, Founder
+                — Gus Martino, Founder
               </cite>
             </motion.div>
           </div>

@@ -1,32 +1,8 @@
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { testimonials } from '../data/siteData';
 
 export default function TestimonialsSection() {
   const ref = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            el.querySelectorAll<HTMLElement>('[data-testimonial]').forEach((item, i) => {
-              setTimeout(() => {
-                item.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                item.style.opacity = '1';
-                item.style.transform = 'translateY(0)';
-              }, i * 180);
-            });
-            observer.disconnect();
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section ref={ref} className="relative overflow-hidden bg-linen py-28 sm:py-36">
@@ -40,9 +16,7 @@ export default function TestimonialsSection() {
           {testimonials.map((t, i) => (
             <figure
               key={i}
-              data-testimonial
               className={`relative rounded-[24px] p-8 ${t.dark ? 'bg-forest text-linen' : 'bg-card text-forest'}`}
-              style={{ opacity: 0, transform: 'translateY(40px)' }}
             >
               <div className={`font-display text-6xl leading-none ${t.dark ? 'text-clay' : 'text-terracotta'}`}>
                 &ldquo;

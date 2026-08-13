@@ -3,8 +3,8 @@ import { MapPin, Mail, Phone, Clock } from 'lucide-react';
 
 const contactInfo = [
   { icon: MapPin, label: 'Studio', value: 'Verona, NJ 07044', sub: 'By appointment only' },
-  { icon: Mail, label: 'Email', value: 'gus@havenmconstruction.com', sub: 'We reply within 2 business days' },
-  { icon: Phone, label: 'Phone', value: '201 264-3506', sub: 'Mon–Fri, 8am–6pm ET' },
+  { icon: Mail, label: 'Email', value: 'gus@havenmconstruction.com', href: 'mailto:gus@havenmconstruction.com', sub: 'We reply within 2 business days' },
+  { icon: Phone, label: 'Phone', value: '201 264-3506', href: 'tel:+12012643506' },
   { icon: Clock, label: 'Season', value: 'Now booking for 2026', sub: 'Limited availability' },
 ];
 
@@ -55,15 +55,34 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Info */}
           <div className="col-span-1 lg:col-span-4 space-y-8">
-            {contactInfo.map(({ icon: Icon, label, value, sub }) => (
-              <div key={label} className="flex gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-forest/5 border border-forest/10">
-                  <Icon size={16} className="text-clay" />
-                </div>
+            {contactInfo.map(({ icon: Icon, label, value, sub, href }) => (
+              <div key={label} className="flex gap-4 group">
+                {href ? (
+                  <a
+                    href={href}
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-forest/5 border border-forest/10 group-hover:bg-forest transition-colors duration-300"
+                    title={`Connect via ${label}`}
+                  >
+                    <Icon size={16} className="text-clay group-hover:text-linen transition-colors duration-300" />
+                  </a>
+                ) : (
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-forest/5 border border-forest/10">
+                    <Icon size={16} className="text-clay" />
+                  </div>
+                )}
                 <div>
                   <div className="text-[10px] uppercase tracking-[0.28em] text-olive mb-1">{label}</div>
-                  <div className="font-display text-lg text-forest break-all">{value}</div>
-                  <div className="text-xs text-forest/60 mt-0.5">{sub}</div>
+                  {href ? (
+                    <a
+                      href={href}
+                      className="font-display text-lg text-forest hover:text-clay transition-colors hover:underline underline-offset-4 break-all block"
+                    >
+                      {value}
+                    </a>
+                  ) : (
+                    <div className="font-display text-lg text-forest break-all">{value}</div>
+                  )}
+                  {sub && <div className="text-xs text-forest/60 mt-0.5">{sub}</div>}
                 </div>
               </div>
             ))}
