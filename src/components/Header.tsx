@@ -258,9 +258,9 @@ export default function Header() {
       >
         <div
           className={`pointer-events-auto mx-auto flex items-center justify-between gap-3 max-w-7xl px-4 py-2 sm:px-7 transition-all duration-500 ${
-              showSolidBackground
-                ? "rounded-t-none rounded-b-[2.5rem] bg-white/30 border border-white/8 border-t-0 text-forest shadow-[0_8px_32px_-8px_rgba(35,67,58,0.12)] backdrop-blur-xl"
-              : "rounded-[2.5rem] bg-transparent border-transparent text-forest shadow-none backdrop-blur-none"
+                showSolidBackground
+                  ? "rounded-t-none rounded-b-[2.5rem] bg-white/30 border border-transparent border-t-0 text-forest shadow-[0_8px_32px_-8px_rgba(35,67,58,0.12)] backdrop-blur-xl"
+                  : "rounded-[2.5rem] bg-transparent border-transparent text-forest shadow-none backdrop-blur-none"
           }`}
         >
           <Link
