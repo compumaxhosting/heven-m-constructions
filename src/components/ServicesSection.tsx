@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { services } from '../data/siteData';
 
 export default function ServicesSection() {
@@ -25,9 +26,10 @@ export default function ServicesSection() {
 
         <div className="grid gap-px overflow-hidden rounded-[28px] bg-forest/10 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <article
+            <Link
+              to={service.link || "/services"}
               key={service.num}
-              className="group relative min-h-[260px] bg-linen p-8 transition-colors duration-300 hover:bg-pale-sage"
+              className="group relative min-h-[260px] bg-linen p-8 transition-colors duration-300 hover:bg-pale-sage block"
             >
               <div className="flex items-center justify-between">
                 <span className="rounded-full border border-forest/15 px-3 py-1 text-[10px] uppercase tracking-[0.24em] text-forest-deep">
@@ -40,7 +42,7 @@ export default function ServicesSection() {
               <div className="pointer-events-none absolute right-6 bottom-6 translate-y-2 text-forest opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                 →
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

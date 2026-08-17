@@ -57,36 +57,42 @@ export const services = [
     category: 'Residential',
     title: 'Whole-Home Additions',
     description: 'Full-scope primary residence expansions, expanding overall footprint and adding new levels to existing luxury homes.',
+    link: '/services/whole-home-additions',
   },
   {
     num: '02',
     category: 'Process',
     title: 'Design Build',
     description: 'Integrated architecture, engineering, and construction under one roof from concept to final walkthrough.',
+    link: '/design-build-construction-nj',
   },
   {
     num: '03',
     category: 'Consulting',
     title: 'Value Engineering',
     description: 'Strategic material selection, cost analysis, and structural optimization to maximize architectural impact within budget.',
+    link: '/services',
   },
   {
     num: '04',
     category: 'Expansion',
     title: 'Additions',
     description: 'Second stories, sunrooms, extended living spaces, and guest house units seamlessly joined to your home.',
+    link: '/services/whole-home-additions',
   },
   {
     num: '05',
     category: 'Commercial',
     title: 'Boutique Offices',
     description: 'Owner-run creative studios, executive suites, and small firm headquarters built to elevate brand presence.',
+    link: '/services/boutique-office-construction',
   },
   {
     num: '06',
     category: 'Specialty',
     title: 'Construct Veterinary Hospital',
     description: 'State-of-the-art animal hospitals, clinical surgical suites, and specialized veterinary care facilities.',
+    link: '/veterinary-hospital-construction-nj',
   },
 ];
 

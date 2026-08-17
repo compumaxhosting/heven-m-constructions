@@ -16,6 +16,7 @@ const serviceDetails = [
     description: 'Full-scope primary residence expansions, expanding overall footprint and adding new levels to existing luxury homes.',
     img: asset1,
     tag: 'Residential',
+    link: '/services/whole-home-additions',
   },
   {
     num: '02',
@@ -23,6 +24,7 @@ const serviceDetails = [
     description: 'Integrated architecture, engineering, and construction under one roof from concept to final walkthrough.',
     img: asset2,
     tag: 'Process',
+    link: '/design-build-construction-nj',
   },
   {
     num: '03',
@@ -44,6 +46,7 @@ const serviceDetails = [
     description: 'Owner-run creative studios, executive suites, and small firm headquarters built to elevate brand presence.',
     img: asset5,
     tag: 'Commercial',
+    link: '/services/boutique-office-construction',
   },
   {
     num: '06',
@@ -51,6 +54,7 @@ const serviceDetails = [
     description: 'State-of-the-art animal hospitals, clinical surgical suites, and specialized veterinary care facilities.',
     img: asset6,
     tag: 'Specialty',
+    link: '/veterinary-hospital-construction-nj',
   },
 ];
 
@@ -107,8 +111,8 @@ export default function ServicesPage() {
                   </div>
                   <h2 className="font-display text-3xl sm:text-4xl leading-tight text-forest mb-4">{service.title}</h2>
                   <p className="text-[15px] leading-relaxed text-forest-deep mb-6">{service.description}</p>
-                  <Link to="/contact" className="inline-flex items-center gap-2 text-sm font-medium text-forest hover:text-clay transition-colors">
-                    Start this project <span aria-hidden="true">→</span>
+                  <Link to={service.link || "/contact"} className="inline-flex items-center gap-2 text-sm font-medium text-forest hover:text-clay transition-colors">
+                    {service.link ? "View service" : "Start this project"} <span aria-hidden="true">→</span>
                   </Link>
                 </div>
               </div>
