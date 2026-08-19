@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 import asset6 from '../assets/asset-6.jpeg';
 import img31 from '../assets/31.jpeg';
 import asset5 from '../assets/asset-5.jpeg';
-import heroImage from '../assets/hero.jpeg';
+import asset8 from '../assets/asset-8.jpeg';
 
-const HERO_IMG = heroImage;
+const HERO_IMG = asset8;
 const CLINIC_IMG = img31;
 const OFFICE_IMG = asset5;
 
@@ -114,18 +114,6 @@ export default function Hero() {
                 alt="Sunlit residence interior — Ridgemont Residence"
                 className="h-full w-full object-cover origin-center"
               />
-              {/* Bottom overlay */}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0F2018]/80 via-[#0F2018]/20 to-transparent p-5 sm:p-6 text-linen">
-                <div className="flex items-end justify-between">
-                  <div>
-                    <div className="text-[10px] uppercase tracking-[0.28em] opacity-75 mb-1">Featured</div>
-                    <div className="font-display text-xl sm:text-2xl leading-tight">The Ridgemont Residence</div>
-                  </div>
-                  <div className="glass-dark hidden rounded-full px-4 py-2 text-xs sm:block whitespace-nowrap">
-                    Whole-home renovation · 6,200 sqft
-                  </div>
-                </div>
-              </div>
             </figure>
           </div>
 

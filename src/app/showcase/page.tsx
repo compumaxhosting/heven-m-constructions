@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 
 import asset1 from "../../assets/asset-1.jpeg";
-import asset3 from "../../assets/asset-3.jpeg";
+import asset3 from "../../assets/31.jpeg";
 import asset4 from "../../assets/asset-4.jpeg";
 import asset5 from "../../assets/asset-5.jpeg";
 import asset6 from "../../assets/asset-6.jpeg";
@@ -14,16 +14,12 @@ import addition2 from "../../assets/2.jpeg";
 import addition3 from "../../assets/3.jpeg";
 import addition4 from "../../assets/4.jpeg";
 import addition5 from "../../assets/5.jpeg";
+import addition6 from "../../assets/6.jpeg";
+import addition7 from "../../assets/7.jpeg";
+import beforeImage from "../../assets/before.jpeg";
+import afterImage from "../../assets/after.jpeg";
 
 const showcaseData = [
-  {
-    id: 1,
-    title: "Cinematic Walkthrough",
-    category: "Architecture",
-    type: "video",
-    src: asset1, // Video thumbnail or poster
-    videoUrl: video1
-  },
   {
     id: 3,
     title: "Urban Commercial Complex",
@@ -48,54 +44,101 @@ const showcaseData = [
   {
     id: 6,
     title: "Open Concept Office",
-    category: "Commercial",
+    category: "Residential Additions",
     type: "image",
     src: asset6,
   },
   {
     id: 7,
     title: "Addition Foundation",
-    category: "Architecture",
+    category: "Residential Additions",
     type: "image",
     src: addition1,
   },
   {
     id: 8,
     title: "Masonry and Waterproofing",
-    category: "Architecture",
+    category: "Residential Additions",
     type: "image",
     src: addition2,
   },
   {
     id: 9,
     title: "Second-Story Framing",
-    category: "Architecture",
+    category: "Residential Additions",
     type: "image",
     src: addition3,
   },
   {
     id: 10,
     title: "Timber Frame Construction",
-    category: "Architecture",
+    category: "Residential Additions",
     type: "image",
     src: addition4,
   },
   {
     id: 11,
     title: "Completed Home Addition",
-    category: "Architecture",
+    category: "Residential Additions",
     type: "image",
     src: addition5,
   },
+  {
+    id: 12,
+    title: "Completed Residential Addition",
+    category: "Residential Additions",
+    type: "image",
+    src: addition6,
+  },
+  {
+    id: 13,
+    title: "Residential Addition Detail",
+    category: "Residential Additions",
+    type: "image",
+    src: addition7,
+  },
+  {
+    id: 14,
+    title: "Home Before Construction",
+    category: "Before & After",
+    type: "image",
+    src: beforeImage,
+  },
+  {
+    id: 15,
+    title: "Home After Construction",
+    category: "Before & After",
+    type: "image",
+    src: afterImage,
+  },
+  {
+    id: 1,
+    title: "Cinematic Walkthrough",
+    category: "Commercial",
+    type: "video",
+    src: asset1,
+    videoUrl: video1,
+  },
 ];
+
+const showcaseOrder = [14, 3, 12, 5, 15, 7, 4, 10, 6, 13, 8, 11, 9, 1];
 
 export default function ShowcasePage() {
   const [filter, setFilter] = useState("All");
   const [activeMedia, setActiveMedia] = useState<any>(null);
 
-  const categories = ["All", "Architecture", "Interior Design", "Commercial"];
+  const categories = [
+    "All",
+    "Residential Additions",
+    "Before & After",
+    "Architecture",
+    "Interior Design",
+    "Commercial",
+  ];
 
-  const filteredData = filter === "All" ? showcaseData : showcaseData.filter(item => item.category === filter);
+  const filteredData = showcaseData
+    .filter(item => filter === "All" || item.category === filter)
+    .sort((first, second) => showcaseOrder.indexOf(first.id) - showcaseOrder.indexOf(second.id));
 
   const activeIndex = filteredData.findIndex(item => item.id === activeMedia?.id);
 

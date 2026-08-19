@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
-import addition1 from "../assets/1.jpeg";
-import addition2 from "../assets/2.jpeg";
-import addition3 from "../assets/3.jpeg";
-import addition5 from "../assets/5.jpeg";
+import addition6 from "../assets/6.jpeg";
+import beforeImage from "../assets/before.jpeg";
+import afterImage from "../assets/after.jpeg";
 
-const additionProgressImages = [
-  { src: addition5, alt: 'Completed residential home addition' },
-  { src: addition1, alt: 'Home addition framing above the foundation' },
-  { src: addition2, alt: 'New masonry foundation under construction' },
-  { src: addition3, alt: 'Second-story home addition framing' },
+const featuredImage = { src: addition6, alt: 'Completed residential project' };
+const beforeAfterImages = [
+  { src: beforeImage, alt: 'Home before the addition project' },
+  { src: afterImage, alt: 'Home after the addition project' },
 ];
 
 export default function PortfolioSection() {
@@ -39,25 +37,27 @@ export default function PortfolioSection() {
             </h2>
           </div>
 
-          <p className="col-span-12 max-w-md text-sm sm:text-base text-forest lg:col-span-4">
+          <p className="col-span-12 max-w-md text-sm leading-relaxed sm:text-base text-forest lg:col-span-4 lg:mb-8">
             We specialize in high-end commercial and residential work,
             delivering bespoke architectural and interior design solutions
-            tailored to your unique vision.
+            tailored to your unique vision. From thoughtful additions and
+            refined renovations to complete spaces built from the ground up,
+            every project is shaped around how you live, work, and gather.
           </p>
         </header>
 
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-12 lg:auto-rows-[190px]">
-          <figure className="group relative overflow-hidden rounded-[24px] aspect-[4/3] lg:col-span-8 lg:row-span-3 lg:aspect-auto bg-forest/10">
+          <figure className="group relative overflow-hidden rounded-[24px] aspect-[4/3] lg:col-span-8 lg:row-span-4 lg:aspect-auto bg-forest/10">
             <img
-              src={additionProgressImages[0].src}
-              alt={additionProgressImages[0].alt}
+              src={featuredImage.src}
+              alt={featuredImage.alt}
               loading="lazy"
-              className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.06]"
+              className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
             />
           </figure>
 
-          {additionProgressImages.slice(1).map((image) => (
-            <figure key={image.src} className="group relative overflow-hidden rounded-[20px] aspect-[4/3] lg:col-span-4 lg:aspect-auto bg-forest/10">
+          {beforeAfterImages.map((image) => (
+            <figure key={image.src} className="group relative overflow-hidden rounded-[20px] aspect-[4/3] lg:col-span-4 lg:row-span-2 lg:aspect-auto bg-forest/10">
               <img
                 src={image.src}
                 alt={image.alt}
