@@ -347,10 +347,10 @@ export default function Header() {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, y: -20, scale: 0.97 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -15, scale: 0.97 }}
-            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
             className="pointer-events-auto mx-auto mt-3 max-w-7xl max-h-[calc(100dvh-160px)] overflow-y-auto rounded-3xl bg-[#F5F2EC] border border-forest/20 p-6 text-forest shadow-[0_25px_60px_-15px_rgba(35,67,58,0.25)] lg:hidden"
             id="mobile-menu-drawer"
             data-lenis-prevent
@@ -370,12 +370,7 @@ export default function Header() {
               {links.map((l, index) => {
                 const isActive = location.pathname === l.to;
                 return (
-                  <motion.div
-                    key={l.to}
-                    initial={{ opacity: 0, x: -15 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.04 * index, duration: 0.25 }}
-                  >
+                  <div key={l.to}>
                     <Link
                       to={l.to}
                       onClick={() => setOpen(false)}
@@ -399,7 +394,7 @@ export default function Header() {
                         }`}
                       />
                     </Link>
-                  </motion.div>
+                  </div>
                 );
               })}
             </nav>
