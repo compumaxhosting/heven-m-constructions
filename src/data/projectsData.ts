@@ -5,6 +5,11 @@ import asset4 from '../assets/asset-4.jpeg';
 import asset5 from '../assets/asset-5.jpeg';
 import asset6 from '../assets/asset-6.jpeg';
 import asset7 from '../assets/asset-7.jpeg';
+import addition1 from '../assets/1.jpeg';
+import addition2 from '../assets/2.jpeg';
+import addition3 from '../assets/3.jpeg';
+import addition4 from '../assets/4.jpeg';
+import addition5 from '../assets/5.jpeg';
 
 export interface Project {
   id: string;
@@ -23,7 +28,7 @@ export interface Project {
   color: string;
 }
 
-export const projects: Project[] = [
+const legacyProjects: Project[] = [
   {
     id: 'ridgemont-architectural-villa',
     title: 'Ridgemont Architectural Villa',
@@ -164,6 +169,94 @@ export const projects: Project[] = [
     ],
     color: 'sage',
   },
+];
+
+const addedProjects: Project[] = [
+  {
+    id: 'ridgewood-home-addition',
+    title: 'Ridgewood Home Addition',
+    location: 'Ridgewood, NJ',
+    year: 2025,
+    category: 'Residential',
+    tag: 'Addition · Foundation',
+    description: 'A carefully integrated home addition, from new foundation walls through the finished exterior.',
+    longDescription: 'This residential addition grew from a demanding structural connection to the existing home. Our team coordinated excavation, masonry, framing, roofing, and exterior finishes so the new space feels like it has always belonged to the house.',
+    sqft: '1,400',
+    duration: '8 months',
+    scope: 'Foundation, structural addition, framing, exterior finishes',
+    heroImage: addition1,
+    galleryImages: [addition2, addition3, addition4],
+    color: 'clay',
+  },
+  {
+    id: 'ridgewood-foundation-work',
+    title: 'Ridgewood Foundation Work',
+    location: 'Ridgewood, NJ',
+    year: 2025,
+    category: 'Residential',
+    tag: 'Addition · Masonry',
+    description: 'Precision masonry and waterproofing work forming the durable base of a larger living space.',
+    longDescription: 'The project began below grade, where careful excavation and new masonry established the footprint for the addition. We kept the existing home protected throughout construction while building a strong, dry foundation prepared for the next phase.',
+    sqft: '1,400',
+    duration: '8 months',
+    scope: 'Excavation, concrete foundation, block masonry, waterproofing',
+    heroImage: addition2,
+    galleryImages: [addition1, addition3, addition4],
+    color: 'sage',
+  },
+  {
+    id: 'ridgewood-second-story-framing',
+    title: 'Ridgewood Second-Story Framing',
+    location: 'Ridgewood, NJ',
+    year: 2025,
+    category: 'Residential',
+    tag: 'Addition · Framing',
+    description: 'A new upper level taking shape over the original home with generous daylight and purposeful rooflines.',
+    longDescription: 'Once the structure was ready, the addition quickly became legible in timber. New floor and roof framing created a generous second level while preserving the proportions and character of the original home at street level.',
+    sqft: '1,400',
+    duration: '8 months',
+    scope: 'Structural framing, roof framing, window openings, weatherproofing',
+    heroImage: addition3,
+    galleryImages: [addition4, addition2, addition5],
+    color: 'forest',
+  },
+  {
+    id: 'ridgewood-timber-frame-build',
+    title: 'Ridgewood Timber Frame Build',
+    location: 'Ridgewood, NJ',
+    year: 2025,
+    category: 'Residential',
+    tag: 'Addition · Structure',
+    description: 'A close look at the structural craft behind a full-scale residential expansion.',
+    longDescription: 'With the framing complete, the new addition opened up into a sequence of bright, flexible rooms. Every opening, roof transition, and connection was laid out to support the finished home and its everyday use.',
+    sqft: '1,400',
+    duration: '8 months',
+    scope: 'Structural carpentry, rooflines, sheathing, construction coordination',
+    heroImage: addition4,
+    galleryImages: [addition3, addition2, addition5],
+    color: 'terracotta',
+  },
+  {
+    id: 'ridgewood-finished-residence',
+    title: 'Ridgewood Finished Residence',
+    location: 'Ridgewood, NJ',
+    year: 2025,
+    category: 'Residential',
+    tag: 'Addition · Completed',
+    description: 'A bright, finished residence that expands the home without losing its familiar neighborhood character.',
+    longDescription: 'The completed addition brings a generous new footprint, abundant windows, and a carefully matched exterior to the original residence. The result is more room for the people who live here and a finished facade that feels settled into its block.',
+    sqft: '1,400',
+    duration: '8 months',
+    scope: 'Complete addition, siding, windows, trim, landscaping coordination',
+    heroImage: addition5,
+    galleryImages: [addition4, addition3, addition1],
+    color: 'sage',
+  },
+];
+
+export const projects: Project[] = [
+  ...legacyProjects,
+  ...addedProjects.filter((project) => project.id === 'ridgewood-timber-frame-build'),
 ];
 
 export const categories = ['All', 'Residential', 'Commercial', 'Veterinary'] as const;

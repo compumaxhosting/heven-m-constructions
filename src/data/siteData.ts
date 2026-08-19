@@ -1,10 +1,3 @@
-export const stats = [
-  { value: '30', label: 'Years building' },
-  { value: '180+', label: 'Homes & spaces' },
-  { value: '42', label: 'Craftspeople' },
-  { value: '9.8', label: 'Avg. client rating' },
-];
-
 export const pillars = [
   {
     num: '01',
@@ -71,14 +64,14 @@ export const services = [
     category: 'Consulting',
     title: 'Value Engineering',
     description: 'Strategic material selection, cost analysis, and structural optimization to maximize architectural impact within budget.',
-    link: '/services',
+    link: '/services/value-engineering',
   },
   {
     num: '04',
     category: 'Expansion',
     title: 'Additions',
     description: 'Second stories, sunrooms, extended living spaces, and guest house units seamlessly joined to your home.',
-    link: '/services/whole-home-additions',
+    link: '/services/additions',
   },
   {
     num: '05',

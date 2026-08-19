@@ -21,169 +21,218 @@ export default function BoutiqueOfficeConstructionPage() {
   return (
     <main className="bg-[#F6F4EE] min-h-screen selection:bg-terracotta/20 selection:text-forest-deep">
 
-      {/* --- HERO SECTION --- */}
-      <section className="relative overflow-hidden pt-44 pb-32 sm:pt-52"
-        style={{
-          backgroundImage: [
-            'radial-gradient(circle at 15% 50%, rgba(210,125,85,0.12) 0%, transparent 50%)',
-            'radial-gradient(circle at 85% 30%, rgba(138,168,125,0.12) 0%, transparent 50%)',
-          ].join(', ')
-        }}
-      >
-        <div className="pointer-events-none absolute -top-48 -left-48 h-[650px] w-[650px] rounded-full bg-gradient-to-br from-[#e58a5b] to-[#f3cbab] opacity-40 blur-[130px]" />
-        <div className="pointer-events-none absolute top-1/4 -right-48 h-[650px] w-[650px] rounded-full bg-gradient-to-bl from-[#9dbd90] to-[#c7e3bb] opacity-40 blur-[130px]" />
+      {/* --- HERO SECTION (Additions Style) --- */}
+      <section className="relative overflow-hidden pt-40 pb-24 sm:pt-64 sm:pb-40 bg-[#F6F4EE]">
+        {/* Subtle Architectural Grid Background */}
+        <div className="absolute inset-0 pointer-events-none opacity-[0.04]"
+          style={{ backgroundImage: 'linear-gradient(to right, #233528 1px, transparent 1px), linear-gradient(to bottom, #233528 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
-        {/* Subtle grid pattern */}
-        <div className="pointer-events-none absolute inset-0 opacity-[0.03] mix-blend-multiply"
-          style={{ backgroundImage: 'linear-gradient(#2c402c 1px, transparent 1px), linear-gradient(90deg, #2c402c 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        {/* Ambient Glows */}
+        <div className="pointer-events-none absolute -top-[10%] -left-[10%] w-[60vw] h-[100%] bg-gradient-to-r from-[#d27d55]/60 via-[#e58a5b]/20 to-transparent blur-[100px]" />
+        <div className="pointer-events-none absolute -top-[10%] -right-[10%] w-[60vw] h-[100%] bg-gradient-to-l from-[#8aa87d]/60 via-[#9dbd90]/20 to-transparent blur-[100px]" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-8 relative z-10">
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-4xl">
-            <motion.div variants={fadeIn} className="flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-olive mb-8">
-              <span className="inline-block h-px w-10 bg-olive/60" /> Commercial Services
+
+            <motion.div variants={fadeIn} className="mb-6 flex justify-start">
+              <Link to="/services" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-forest hover:text-terracotta transition-colors font-medium bg-[#F6F4EE] hover:bg-white/40 backdrop-blur-sm px-5 py-2.5 rounded-full border border-forest/10 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
+                Back to Services
+              </Link>
             </motion.div>
-            <motion.h1 variants={fadeIn} className="font-display text-[clamp(3rem,8vw,7.5rem)] leading-[0.92] tracking-[-0.03em] text-forest mb-8">
-              Boutique Office <br className="hidden md:block" />
-              <span className="italic text-terracotta font-normal">Construction</span>
+
+            <motion.div variants={fadeIn} className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-forest/15 bg-white/50 backdrop-blur-md mb-8">
+              <span className="w-2 h-2 rounded-full bg-terracotta animate-pulse" />
+              <span className="text-[11px] uppercase tracking-[0.2em] text-forest-deep font-medium">Verona, NJ & North Jersey</span>
+            </motion.div>
+
+            <motion.h1 variants={fadeIn} className="font-display text-[clamp(3rem,9vw,7.5rem)] text-forest leading-[0.95] tracking-[-0.04em] mb-8">
+              Boutique Office <br />
+              <span className="italic text-terracotta">Construction</span>
             </motion.h1>
-            <motion.p variants={fadeIn} className="text-xl sm:text-[22px] text-forest-deep/90 max-w-2xl leading-[1.6] font-light">
+
+            <motion.p variants={fadeIn} className="text-[18px] sm:text-[22px] leading-[1.6] text-forest-deep/80 font-light mb-6">
               Distinctive Office Spaces Built Around Your Business in New Jersey.
             </motion.p>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* --- INTRO TEXT BLOCK --- */}
-      <section className="py-24 bg-white/40 border-y border-forest/5 relative">
-        <div className="mx-auto max-w-3xl px-4 sm:px-8 text-center relative z-10">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}>
-            <motion.p variants={fadeIn} className="text-[20px] sm:text-[24px] leading-[1.7] text-forest-deep mb-8 font-light">
-              Your office should do more than provide a place to work. It should reflect your brand, support your team, and create the right experience for clients and visitors.
-            </motion.p>
-            <motion.div variants={fadeIn} className="h-px w-24 bg-terracotta/30 mx-auto mb-8" />
-            <motion.p variants={fadeIn} className="text-[17px] leading-[1.8] text-forest-deep/80">
+            <motion.p variants={fadeIn} className="text-[16px] sm:text-[18px] leading-[1.8] text-forest-deep/80 font-light mb-10">
               Haven M Construction provides boutique office construction and renovation services from Verona, New Jersey, serving Bergen, Essex, Morris, Union, and Passaic Counties. We help business owners create polished, functional spaces for creative studios, executive offices, professional practices, and small firm headquarters.
             </motion.p>
+
+            <motion.div variants={fadeIn} className="flex flex-wrap items-center gap-3">
+              <span className="text-[12px] uppercase tracking-[0.2em] text-forest/50 font-medium mr-2">Serving:</span>
+              {[
+                { name: 'Bergen', path: '/boutique-office-construction-bergen-county-nj' },
+                { name: 'Essex', path: '/boutique-office-construction-essex-county-nj' },
+                { name: 'Morris', path: '/boutique-office-construction-morris-county-nj' },
+                { name: 'Passaic', path: '/boutique-office-construction-passaic-county-nj' },
+                { name: 'Union', path: '/boutique-office-construction-union-county-nj' },
+              ].map((county) => (
+                <Link
+                  key={county.name}
+                  to={county.path}
+                  className="group flex items-center gap-2 rounded-full border border-forest/15 bg-white/40 backdrop-blur-sm px-5 py-2.5 text-[14px] font-medium text-forest transition-all hover:bg-forest hover:text-linen hover:border-forest shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_20px_rgba(35,53,40,0.15)]"
+                >
+                  {county.name}
+                  <span className="text-terracotta group-hover:text-terracotta transition-transform duration-300 -rotate-45 group-hover:rotate-0 inline-block">→</span>
+                </Link>
+              ))}
+            </motion.div>
+
           </motion.div>
         </div>
       </section>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-8 py-24 sm:py-32 space-y-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-8 py-12 sm:py-20 space-y-20 sm:space-y-32">
 
         {/* --- WHAT IS BOUTIQUE OFFICE / PROJECTS GRID --- */}
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-          <motion.div variants={fadeIn} className="bg-linen p-10 sm:p-14 rounded-[32px] flex flex-col justify-center border border-white shadow-[0_8px_30px_rgb(0,0,0,0.02)]">
-            <h2 className="font-display text-4xl sm:text-5xl text-forest mb-8 leading-[1.1] tracking-[-0.02em]">
-              What Is a <br /><span className="italic text-terracotta">Boutique Office?</span>
-            </h2>
-            <div className="space-y-6 text-forest-deep/90 text-[17px] leading-[1.7] font-light">
-              <p>A boutique office is a smaller, thoughtfully designed professional workspace where layout, materials, lighting, finishes, and brand identity all work together.</p>
-              <p>Unlike a standardized office build-out, a boutique office is planned around the business using the space.</p>
-              <p>That can mean a refined reception area, private executive office, collaborative workspace, client meeting room, studio environment, or a combination of several functions.</p>
-            </div>
-          </motion.div>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-forest rounded-[32px] sm:rounded-[40px] p-8 sm:p-16 lg:p-24 relative overflow-hidden shadow-2xl w-full">
+          <div className="pointer-events-none absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full bg-olive/20 blur-[100px]" />
+          <div className="pointer-events-none absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-terracotta/20 blur-[100px]" />
 
-          <motion.div variants={fadeIn} className="bg-sand p-10 sm:p-14 rounded-[32px] border border-white shadow-[0_8px_30px_rgb(0,0,0,0.02)] relative overflow-hidden">
-            <div className="absolute top-0 right-0 p-8 opacity-10">
-              <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="49" stroke="currentColor" strokeWidth="2" />
-                <path d="M50 0V100M0 50H100" stroke="currentColor" strokeWidth="2" />
-              </svg>
-            </div>
-            <h2 className="font-display text-3xl sm:text-4xl text-forest mb-8 leading-[1.1] tracking-[-0.02em] relative z-10">
-              Construction & Renovation
-            </h2>
-            <p className="text-forest-deep text-[16px] leading-[1.7] mb-8 relative z-10">
-              Haven M construction can help transform an existing commercial space into an office designed around your business needs. Projects may include:
-            </p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mb-10 relative z-10">
-              {[
-                'Executive offices', 'Creative studios', 'Professional offices',
-                'Small firm headquarters', 'Client reception areas', 'Private meeting rooms',
-                'Conference rooms', 'Open workspaces', 'Office renovations',
-                'Interior build-outs', 'Custom improvements'
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-forest-deep/90 text-[15px]">
-                  <span className="text-olive mt-1.5 w-1.5 h-1.5 rounded-full bg-olive flex-shrink-0"></span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="pt-6 border-t border-forest/10 relative z-10">
-              <p className="text-forest-deep/70 text-[14px] leading-relaxed italic">
-                The exact scope depends on the property, business requirements, and proposed design.
-              </p>
-            </div>
-          </motion.div>
-        </motion.div>
-
-        {/* --- DESIGNED AROUND YOUR BUSINESS --- */}
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="max-w-5xl mx-auto">
-          <motion.div variants={fadeIn} className="text-center mb-12">
-            <h2 className="font-display text-4xl sm:text-5xl text-forest mb-6 tracking-[-0.02em]">
-              Designed Around <span className="italic text-terracotta">Your Business</span>
-            </h2>
-            <p className="text-[18px] text-forest-deep/80 max-w-2xl mx-auto">Every business uses its space differently.</p>
-          </motion.div>
-
-          <motion.div variants={fadeIn} className="bg-white/60 backdrop-blur-md rounded-[32px] p-10 sm:p-16 border border-white shadow-[0_10px_40px_rgb(0,0,0,0.03)]">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6 text-[16.5px] leading-[1.8] text-forest-deep/90 font-light pr-4">
-                <p>A creative studio may need flexible work areas and strong lighting. A professional practice may prioritize privacy and client comfort. An executive office may require a more refined environment for meetings and presentations.</p>
-                <p>We consider how the space needs to function before construction begins. Important considerations can include:</p>
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div className="lg:col-span-5">
+              <motion.div variants={fadeIn} className="flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-terracotta mb-8">
+                <span className="inline-block h-px w-10 bg-terracotta/60" /> Commercial Construction
+              </motion.div>
+              <motion.h2 variants={fadeIn} className="font-display text-4xl sm:text-5xl text-linen mb-8 tracking-[-0.02em]">
+                Designed Around <br /><span className="italic text-terracotta">Your Business</span>
+              </motion.h2>
+              <div className="space-y-6 text-[17px] leading-[1.8] text-linen/70 font-light">
+                <motion.p variants={fadeIn}>
+                  A boutique office is a smaller, thoughtfully designed professional workspace where layout, materials, lighting, finishes, and brand identity all work together.
+                </motion.p>
+                <motion.p variants={fadeIn} className="text-[16px] leading-[1.8] text-linen/90 font-medium border-t border-white/10 pt-6">
+                  Unlike a standardized office build-out, a boutique office is planned around the business using the space—from a refined reception area to private executive office and client meeting rooms.
+                </motion.p>
               </div>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-4">
-                {[
-                  'Workspace layout', 'Client circulation', 'Privacy',
-                  'Storage', 'Lighting', 'Electrical requirements',
-                  'Technology needs', 'Flooring', 'Walls and partitions',
-                  'Ceilings', 'Finishes', 'Reception areas',
-                  'Meeting spaces', 'Accessibility'
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-forest-deep text-[15px]">
-                    <span className="text-terracotta/70 w-1.5 h-1.5 rounded-full bg-terracotta/70 flex-shrink-0"></span> {item}
-                  </li>
-                ))}
-              </ul>
             </div>
-          </motion.div>
+
+            <div className="lg:col-span-7">
+              <motion.div variants={fadeIn} className="bg-white/5 backdrop-blur-sm p-8 rounded-[24px] sm:rounded-[32px] border border-white/10 shadow-sm">
+                <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-terracotta mb-6">Construction & renovation projects may include:</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    'Executive offices', 'Creative studios', 'Professional offices',
+                    'Small firm headquarters', 'Client reception areas', 'Private meeting rooms',
+                    'Conference rooms', 'Open workspaces', 'Office renovations',
+                    'Interior build-outs', 'Custom improvements', 'Brand-aligned finishes'
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm transition-colors hover:bg-white/10">
+                      <div className="w-1.5 h-1.5 rounded-full bg-terracotta/80 flex-shrink-0" />
+                      <span className="text-[15px] text-linen/90 leading-[1.6]">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </div>
         </motion.div>
 
-        {/* --- STRONGER CLIENT EXPERIENCE --- */}
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-forest rounded-[32px] p-10 sm:p-20 text-center relative overflow-hidden shadow-2xl">
-          <div className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-terracotta opacity-20 blur-[100px]" />
-          <div className="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-olive opacity-20 blur-[100px]" />
+        {/* --- OFFICE TYPES (3-Col Cards) --- */}
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-forest rounded-[32px] sm:rounded-[40px] p-8 sm:p-16 lg:p-24 relative overflow-hidden shadow-2xl w-full">
+          <div className="pointer-events-none absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full bg-olive/20 blur-[100px]" />
+          <div className="pointer-events-none absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-terracotta/20 blur-[100px]" />
 
-          <motion.h2 variants={fadeIn} className="font-display text-4xl sm:text-[3.5rem] text-linen mb-8 leading-[1.1] tracking-[-0.02em] relative z-10">
-            Create a Stronger <br className="hidden sm:block" /><span className="italic text-terracotta">Client Experience</span>
-          </motion.h2>
-          <motion.div variants={fadeIn} className="space-y-6 text-[18px] leading-[1.8] text-linen/80 max-w-3xl mx-auto relative z-10 font-light">
-            <p>Your office is often part of your brand.</p>
-            <p>The entrance, reception area, meeting rooms, finishes, lighting, and overall environment can influence how clients experience your business.</p>
-            <p>A well-planned boutique office can help create a professional environment that feels intentional rather than generic.</p>
-            <div className="pt-10 mt-10 border-t border-linen/10">
-              <p className="font-display text-[22px] sm:text-[26px] italic text-linen leading-snug">
-                "The goal is not simply to make an office look attractive. It is to make the space work for your business while creating the right impression."
-              </p>
+          <div className="relative z-10">
+            <motion.div variants={fadeIn} className="flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-terracotta mb-8">
+              <span className="inline-block h-px w-10 bg-terracotta/60" /> Office Types
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+              <motion.div variants={fadeIn} className="relative rounded-[24px] border border-linen/10 bg-linen/[0.03] p-8 backdrop-blur-sm transition-colors hover:border-terracotta/50 group flex flex-col">
+                <div className="font-mono text-[11px] uppercase tracking-[0.28em] text-terracotta/80 mb-6 group-hover:text-terracotta transition-colors">Type 01</div>
+                <h3 className="font-display text-[26px] text-linen mb-4">Executive Offices</h3>
+                <div className="h-px w-10 bg-linen/20 mb-6" />
+                <p className="text-linen/70 text-[15px] leading-[1.7] font-light mb-8 flex-grow">
+                  A refined environment for senior leadership, client meetings, and focused work. The right layout balances privacy with accessibility—often including a private entrance, meeting area, and executive-appropriate finishes.
+                </p>
+                <div className="border-t border-linen/10 pt-6">
+                  <p className="text-[12px] text-terracotta font-medium tracking-[0.1em] uppercase mb-4">Considered For:</p>
+                  <div className="flex flex-wrap gap-2">
+                    {['Private offices', 'Client meetings', 'Presentations', 'Leadership spaces'].map(item => (
+                      <span key={item} className="px-3 py-1 bg-linen/5 border border-linen/10 rounded-full text-[13px] text-linen/80">{item}</span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div variants={fadeIn} className="relative rounded-[24px] border border-linen/10 bg-linen/[0.03] p-8 backdrop-blur-sm transition-colors hover:border-terracotta/50 group flex flex-col">
+                <div className="font-mono text-[11px] uppercase tracking-[0.28em] text-terracotta/80 mb-6 group-hover:text-terracotta transition-colors">Type 02</div>
+                <h3 className="font-display text-[26px] text-linen mb-4">Creative Studios</h3>
+                <div className="h-px w-10 bg-linen/20 mb-6" />
+                <p className="text-linen/70 text-[15px] leading-[1.7] font-light flex-grow">
+                  Creative agencies, design studios, and content producers need flexible, well-lit spaces that adapt to multiple uses. Strong lighting, adaptable layouts, and durable finishes are essential planning considerations.
+                </p>
+              </motion.div>
+
+              <motion.div variants={fadeIn} className="relative rounded-[24px] border border-linen/10 bg-linen/[0.03] p-8 backdrop-blur-sm transition-colors hover:border-terracotta/50 group flex flex-col">
+                <div className="font-mono text-[11px] uppercase tracking-[0.28em] text-terracotta/80 mb-6 group-hover:text-terracotta transition-colors">Type 03</div>
+                <h3 className="font-display text-[26px] text-linen mb-4">Professional Practices</h3>
+                <div className="h-px w-10 bg-linen/20 mb-6" />
+                <p className="text-linen/70 text-[15px] leading-[1.7] font-light mb-8 flex-grow">
+                  Law firms, consulting practices, and financial advisors require privacy, confidentiality, and a polished impression. The right construction balances client-facing spaces with efficient staff areas.
+                </p>
+                <div className="border-t border-linen/10 pt-6">
+                  <p className="text-[14px] leading-[1.7] text-linen/90 font-medium">
+                    The space should reflect your brand and support your day-to-day operations without compromise.
+                  </p>
+                </div>
+              </motion.div>
             </div>
-          </motion.div>
+          </div>
+        </motion.div>
+
+        {/* --- WHY BOUTIQUE OFFICES MATTER (Light bg-linen) --- */}
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-linen rounded-[32px] sm:rounded-[40px] p-8 sm:p-16 lg:p-24 relative overflow-hidden shadow-sm border border-white">
+          <div className="max-w-4xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+            <div className="lg:col-span-6">
+              <motion.h2 variants={fadeIn} className="font-display text-4xl sm:text-5xl text-forest mb-8 tracking-[-0.02em]">
+                Create a Stronger <span className="italic text-terracotta">Client Experience</span>
+              </motion.h2>
+              <motion.div variants={fadeIn} className="space-y-6 text-[18px] leading-[1.8] text-forest-deep/80 font-light mb-8">
+                <p className="font-medium text-forest-deep">Your office is often part of your brand.</p>
+                <p>The entrance, reception area, meeting rooms, finishes, lighting, and overall environment can influence how clients experience your business.</p>
+                <p>A well-planned boutique office can help create a professional environment that feels intentional rather than generic.</p>
+              </motion.div>
+            </div>
+
+            <div className="lg:col-span-6">
+              <motion.div variants={fadeIn} className="bg-white/60 backdrop-blur-sm p-8 sm:p-10 rounded-[24px] sm:rounded-[32px] border border-white shadow-sm">
+                <div className="grid grid-cols-1 gap-y-3 gap-x-6">
+                  {[
+                    'Your current workspace no longer reflects your brand.',
+                    'You need private space for client meetings.',
+                    'Your team needs a focused, professional environment.',
+                    'You want a space designed around how you actually work.',
+                    'You are expanding and need purpose-built space.',
+                    'A generic office build-out doesn\'t fit your business.',
+                    'You want construction coordinated around your business needs.'
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3 text-[14px] text-forest-deep/90 py-2 border-b border-forest/5 last:border-0">
+                      <span className="text-terracotta mt-1">✦</span> <span className="flex-1">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </div>
         </motion.div>
 
         {/* --- CONSTRUCTION PROCESS --- */}
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-forest rounded-[40px] p-10 sm:p-16 lg:p-24 relative overflow-hidden shadow-2xl w-full">
-          {/* Cinematic background elements */}
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-forest rounded-[32px] sm:rounded-[40px] p-8 sm:p-16 lg:p-24 relative overflow-hidden shadow-2xl w-full">
           <div className="pointer-events-none absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full bg-olive/20 blur-[100px]" />
           <div className="pointer-events-none absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-terracotta/20 blur-[100px]" />
-          
+
           <div className="relative z-10">
             <motion.div variants={fadeIn} className="flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-terracotta mb-8">
               <span className="inline-block h-px w-10 bg-terracotta/60" /> Our Process
             </motion.div>
-            
+
             <motion.h2 variants={fadeIn} className="font-display text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.05] text-linen mb-16 tracking-[-0.02em] max-w-2xl">
-              Seven movements from <span className="italic text-terracotta">concept</span> to final walkthrough.
+              Seven steps from <span className="italic text-terracotta">concept</span> to final walkthrough.
             </motion.h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
               {[
                 { title: 'Consultation', desc: 'We learn about your business, your space, your goals, and how you want the finished office to function.' },
@@ -194,7 +243,7 @@ export default function BoutiqueOfficeConstructionPage() {
                 { title: 'Construction', desc: 'The planned improvements are built and coordinated through the construction phase.' },
                 { title: 'Final Completion', desc: 'The finished space is reviewed and prepared for use.', full: true },
               ].map((step, i) => (
-                <motion.div variants={fadeIn} key={i} className={`relative rounded-[24px] border border-linen/10 bg-linen/[0.03] p-8 backdrop-blur-sm transition-colors hover:border-terracotta/50 group ${step.full ? 'md:col-span-2 lg:col-span-1 xl:col-span-2' : ''}`}>
+                <motion.div variants={fadeIn} key={i} className={`relative rounded-[24px] border border-linen/10 bg-linen/[0.03] p-8 backdrop-blur-sm transition-colors hover:border-terracotta/50 group ${(step as { full?: boolean }).full ? 'md:col-span-2 lg:col-span-1 xl:col-span-2' : ''}`}>
                   <div className="font-mono text-[11px] uppercase tracking-[0.28em] text-terracotta/80 mb-6 group-hover:text-terracotta transition-colors">Step 0{i + 1}</div>
                   <h3 className="font-display text-[26px] text-linen mb-4">{step.title}</h3>
                   <div className="h-px w-10 bg-linen/20 mb-4" />
@@ -205,169 +254,12 @@ export default function BoutiqueOfficeConstructionPage() {
           </div>
         </motion.div>
 
-        {/* --- RENOVATION VS NEW BUILD --- */}
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-stretch bg-linen rounded-[32px] overflow-hidden border border-white shadow-[0_8px_30px_rgb(0,0,0,0.02)]">
-          <div className="col-span-1 lg:col-span-7 p-10 sm:p-16">
-            <h2 className="font-display text-4xl sm:text-5xl text-forest mb-8 leading-[1.1] tracking-[-0.02em]">
-              Renovation vs. <br /><span className="italic text-terracotta">New Build-Out</span>
-            </h2>
-            <div className="space-y-6 text-[17px] leading-[1.8] text-forest-deep/90 mb-10 font-light">
-              <p>You may not need to start with an empty commercial space. An existing office can often be transformed through a carefully planned renovation.</p>
-              <p className="font-medium text-forest">Depending on the property, the project could involve:</p>
-            </div>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 mb-10">
-              {[
-                'Reconfiguring rooms', 'Adding private offices', 'Creating a reception area',
-                'Improving lighting', 'Updating finishes', 'Installing new flooring',
-                'Modifying walls', 'Improving meeting spaces', 'Updating electrical systems',
-                'Efficient work areas'
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-forest-deep/90 text-[15px]">
-                  <span className="text-terracotta/70 mt-1.5 w-1.5 h-1.5 rounded-full bg-terracotta/70 flex-shrink-0"></span> {item}
-                </li>
-              ))}
-            </ul>
-            <div className="pt-8 border-t border-forest/10">
-              <p className="italic text-forest-deep/80 text-[15px] leading-relaxed">
-                The right approach depends on the existing space and your business requirements.
-              </p>
-            </div>
-          </div>
-          <div className="col-span-1 lg:col-span-5 h-full min-h-[300px] bg-sand relative overflow-hidden flex items-center justify-center p-12">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(229,138,91,0.15)_0%,transparent_70%)]" />
-            <div className="relative z-10 w-full aspect-square border border-forest/10 rounded-full flex items-center justify-center p-8">
-              <div className="w-full h-full border border-forest/20 rounded-full flex items-center justify-center p-8">
-                <div className="w-full h-full bg-forest/5 rounded-full backdrop-blur-sm" />
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* --- SMALL BUSINESSES & COST --- */}
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-          <motion.div variants={fadeIn} className="bg-white/50 backdrop-blur-sm p-10 sm:p-14 rounded-[32px] border border-white shadow-[0_8px_30px_rgb(0,0,0,0.02)] flex flex-col">
-            <h2 className="font-display text-4xl text-forest mb-8 tracking-[-0.02em]">
-              For <span className="italic text-terracotta">Small Businesses</span>
-            </h2>
-            <div className="space-y-5 text-[16.5px] leading-[1.8] text-forest-deep/90 mb-10 flex-grow font-light">
-              <p>Boutique offices are often designed around the people who actually run the business.</p>
-              <p>For owner-operated companies and small firms, that can mean creating a workspace that balances professionalism with personality.</p>
-              <p className="font-medium text-forest pt-2">The right layout can provide space for:</p>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4 mt-4">
-                {[
-                  'Focused individual work', 'Team collaboration', 'Private conversations',
-                  'Client meetings', 'Presentations', 'Storage & Admin work'
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-[14.5px]">
-                    <span className="text-olive/80 w-1.5 h-1.5 rounded-full bg-olive/80 flex-shrink-0"></span> {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="pt-8 border-t border-forest/10">
-              <p className="text-[18px] font-display italic text-forest text-center leading-snug">
-                A smaller office does not have to feel ordinary.
-              </p>
-            </div>
-          </motion.div>
-
-          <motion.div variants={fadeIn} className="bg-sand p-10 sm:p-14 rounded-[32px] border border-white shadow-[0_8px_30px_rgb(0,0,0,0.02)] flex flex-col">
-            <h2 className="font-display text-4xl text-forest mb-8 tracking-[-0.02em]">
-              How Much Does it <span className="italic text-terracotta">Cost?</span>
-            </h2>
-            <div className="space-y-5 text-[16.5px] leading-[1.8] text-forest-deep/90 mb-10 flex-grow font-light">
-              <p>There is no standard price for a boutique office project.</p>
-              <p>Costs depend on factors such as:</p>
-              <ul className="grid grid-cols-2 gap-x-4 gap-y-3 mt-4 text-[14px]">
-                {[
-                  'Size of the space', 'Existing condition', 'Layout changes', 'Wall construction',
-                  'Electrical work', 'Lighting', 'Plumbing', 'HVAC', 'Flooring', 'Millwork',
-                  'Doors & hardware', 'Fixtures & Finishes', 'Permits & inspections'
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-2">
-                    <span className="text-terracotta/50 w-1 h-1 rounded-full bg-terracotta flex-shrink-0"></span> {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="pt-8 border-t border-forest/10">
-              <p className="text-[14.5px] italic text-forest-deep/80 leading-relaxed text-center">
-                A project-specific scope and estimate are the best way to understand the expected investment.
-              </p>
-            </div>
-          </motion.div>
-        </motion.div>
-
-        {/* --- WHO CAN BENEFIT --- */}
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="max-w-5xl mx-auto text-center">
-          <motion.h2 variants={fadeIn} className="font-display text-4xl sm:text-5xl text-forest mb-12 tracking-[-0.02em]">
-            Who Can Benefit From a <br className="hidden sm:block" /><span className="italic text-terracotta">Boutique Office?</span>
-          </motion.h2>
-          <motion.div variants={fadeIn} className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10">
-            {[
-              'Creative agencies', 'Design studios', 'Consulting firms',
-              'Professional practices', 'Financial & advisory firms',
-              'Small law firms', 'Real estate offices', 'Architecture studios',
-              'Executive offices', 'Owner-operated businesses', 'Growing companies'
-            ].map((item, i) => (
-              <span key={i} className="px-6 py-3 rounded-full bg-white/80 border border-white text-forest-deep text-[15px] shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_4px_20px_rgb(0,0,0,0.06)] hover:-translate-y-0.5 transition-all cursor-default">
-                {item}
-              </span>
-            ))}
-          </motion.div>
-          <motion.p variants={fadeIn} className="text-[19px] italic text-forest font-medium max-w-2xl mx-auto">
-            The space should be designed around the actual way your business operates.
-          </motion.p>
-        </motion.div>
-
-        {/* --- TIMELINE & LOCATION --- */}
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-          <motion.div variants={fadeIn} className="bg-white/40 p-10 sm:p-14 rounded-[32px] flex flex-col relative overflow-hidden border border-white">
-            <h2 className="font-display text-4xl text-forest mb-8 leading-[1.1] tracking-[-0.02em] relative z-10">
-              How Long Does a <br /><span className="italic text-terracotta">Renovation Take?</span>
-            </h2>
-            <div className="space-y-5 text-[16px] leading-[1.8] text-forest-deep/90 mb-10 flex-grow relative z-10 font-light">
-              <p>The timeline depends on the size and complexity of the project.</p>
-              <p>A straightforward office renovation may require a different schedule than a complete commercial build-out involving extensive electrical, mechanical, plumbing, or structural work.</p>
-              <p>Planning, permitting, material availability, site conditions, and design changes can also affect the schedule.</p>
-            </div>
-            <div className="mt-auto pt-8 border-t border-forest/10 relative z-10">
-              <p className="text-[14px] italic text-forest-deep/80 leading-relaxed text-center">
-                A project-specific timeline should be established before construction begins.
-              </p>
-            </div>
-          </motion.div>
-
-          <motion.div variants={fadeIn} className="bg-linen p-10 sm:p-14 rounded-[32px] flex flex-col relative overflow-hidden border border-white shadow-[0_8px_30px_rgb(0,0,0,0.02)]">
-            <h2 className="font-display text-4xl text-forest mb-8 tracking-[-0.02em] relative z-10">
-              Serving <span className="italic text-terracotta">North Jersey</span>
-            </h2>
-            <div className="space-y-6 text-[16px] leading-[1.8] text-forest-deep/90 mb-10 flex-grow relative z-10 font-light">
-              <p>Haven M Construction is based in Verona, New Jersey and serves businesses throughout:</p>
-              <ul className="grid grid-cols-2 gap-y-4 gap-x-4 mt-2">
-                {[
-                  'Bergen County', 'Essex County', 'Morris County', 'Union County', 'Passaic County'
-                ].map((county, i) => (
-                  <li key={i} className="flex items-center gap-3 text-[15px]">
-                    <span className="text-olive w-1.5 h-1.5 rounded-full bg-olive flex-shrink-0"></span> {county}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="mt-auto pt-8 border-t border-forest/10 relative z-10">
-              <p className="text-[13px] italic text-forest-deep/70 leading-relaxed text-center">
-                Local commercial construction requirements can vary by municipality and property. The applicable building, zoning, permitting, accessibility, and occupancy requirements should be evaluated for each project.
-              </p>
-            </div>
-          </motion.div>
-        </motion.div>
-
         {/* --- FAQ --- */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           <div className="lg:col-span-5">
             <motion.div variants={fadeIn} className="sticky top-32 lg:pr-8">
               <h2 className="font-display text-4xl sm:text-[3.5rem] leading-[1.05] text-forest mb-6 tracking-[-0.02em]">
-                Frequently Asked <br className="hidden lg:block"/><span className="italic text-terracotta">Questions</span>
+                Frequently Asked <br className="hidden lg:block" /><span className="italic text-terracotta">Questions</span>
               </h2>
               <div className="w-16 h-px bg-terracotta/30 mb-8" />
               <p className="text-[17px] sm:text-[19px] leading-[1.7] text-forest-deep/80 font-light mb-8">
@@ -375,7 +267,7 @@ export default function BoutiqueOfficeConstructionPage() {
               </p>
             </motion.div>
           </div>
-          
+
           <div className="lg:col-span-7">
             <div className="border-t border-forest/15">
               {[
@@ -390,7 +282,7 @@ export default function BoutiqueOfficeConstructionPage() {
                 const isOpen = openFaq === i;
                 return (
                   <motion.div variants={fadeIn} key={i} className="border-b border-forest/10 overflow-hidden">
-                    <button 
+                    <button
                       onClick={() => setOpenFaq(isOpen ? null : i)}
                       className="w-full text-left py-6 sm:py-8 flex items-start sm:items-center justify-between focus:outline-none group gap-6"
                     >
@@ -399,11 +291,11 @@ export default function BoutiqueOfficeConstructionPage() {
                       </h3>
                       <span className={`flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-forest/15 flex items-center justify-center text-forest transition-transform duration-500 ease-[cubic-bezier(0.2,0.65,0.3,0.9)] mt-1 sm:mt-0 ${isOpen ? 'rotate-45 bg-forest/5' : ''}`}>
                         <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5 sm:w-4 sm:h-4">
-                          <path d="M8 1V15M1 8H15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                          <path d="M8 1V15M1 8H15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                         </svg>
                       </span>
                     </button>
-                    <motion.div 
+                    <motion.div
                       initial={false}
                       animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
                       transition={{ duration: 0.4, ease: [0.2, 0.65, 0.3, 0.9] }}
@@ -419,68 +311,86 @@ export default function BoutiqueOfficeConstructionPage() {
           </div>
         </motion.div>
 
-        {/* --- SERVICE AREAS LINKS --- */}
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="max-w-7xl mx-auto mt-16 pt-16 border-t border-forest/10">
-          <motion.div variants={fadeIn} className="text-center mb-10">
-            <h2 className="font-display text-3xl sm:text-4xl text-forest tracking-[-0.02em]">
-              Explore by <span className="italic text-terracotta">County</span>
-            </h2>
-          </motion.div>
-          <motion.div variants={fadeIn} className="flex flex-wrap justify-center gap-4">
-            {[
-              { name: 'Bergen County', path: '/boutique-office-construction-bergen-county-nj' },
-              { name: 'Essex County', path: '/boutique-office-construction-essex-county-nj' },
-              { name: 'Morris County', path: '/boutique-office-construction-morris-county-nj' },
-              { name: 'Passaic County', path: '/boutique-office-construction-passaic-county-nj' },
-              { name: 'Union County', path: '/boutique-office-construction-union-county-nj' },
-            ].map((county) => (
-              <Link 
-                key={county.name} 
-                to={county.path}
-                className="px-6 py-3 rounded-full border border-forest/20 text-forest hover:bg-forest hover:text-linen hover:border-forest transition-all duration-300 text-[15px]"
-              >
-                {county.name}
-              </Link>
-            ))}
-          </motion.div>
+        {/* --- SERVICE AREAS LINKS (Additions County Grid Style) --- */}
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-[#F6F4EE] rounded-[32px] sm:rounded-[40px] p-8 sm:p-16 lg:p-20 relative overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.04)] border border-forest/5">
+          <div className="absolute inset-0 pointer-events-none opacity-[0.04]" style={{ backgroundImage: 'linear-gradient(to right, #233528 1px, transparent 1px), linear-gradient(to bottom, #233528 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+
+          <div className="pointer-events-none absolute top-0 left-0 w-[50%] h-[100%] bg-gradient-to-r from-[#d27d55]/40 via-[#e58a5b]/10 to-transparent blur-[80px]" />
+          <div className="pointer-events-none absolute top-0 right-0 w-[50%] h-[100%] bg-gradient-to-l from-[#8aa87d]/40 via-[#9dbd90]/10 to-transparent blur-[80px]" />
+
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            <div className="lg:col-span-5">
+              <motion.div variants={fadeIn} className="flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-terracotta mb-6">
+                <span className="inline-block h-px w-10 bg-terracotta/60" /> Service Areas
+              </motion.div>
+              <motion.h2 variants={fadeIn} className="font-display text-[2.5rem] sm:text-5xl text-forest mb-6 tracking-[-0.02em] leading-[1.05]">
+                Serving New Jersey's <br /><span className="italic text-terracotta">Premier Communities</span>
+              </motion.h2>
+              <motion.p variants={fadeIn} className="text-[17px] leading-[1.8] text-forest-deep/80 font-light mb-6">
+                Haven M Construction provides boutique office construction services for businesses throughout Northern New Jersey:
+              </motion.p>
+            </div>
+
+            <div className="lg:col-span-7 lg:mt-6">
+              <motion.div variants={fadeIn} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  { title: 'Bergen County', link: '/boutique-office-construction-bergen-county-nj' },
+                  { title: 'Essex County', link: '/boutique-office-construction-essex-county-nj' },
+                  { title: 'Morris County', link: '/boutique-office-construction-morris-county-nj' },
+                  { title: 'Passaic County', link: '/boutique-office-construction-passaic-county-nj' },
+                  { title: 'Union County', link: '/boutique-office-construction-union-county-nj' },
+                ].map((item, i) => (
+                  <Link
+                    key={i}
+                    to={item.link}
+                    className="group relative overflow-hidden rounded-[24px] border border-forest/10 bg-[#F6F4EE]/50 backdrop-blur-sm p-6 sm:p-7 transition-all hover:bg-white hover:border-terracotta/30 hover:shadow-[0_8px_30px_rgba(210,125,85,0.08)] flex items-center justify-between"
+                  >
+                    <span className="relative z-10 text-[18px] sm:text-[19px] font-display text-forest group-hover:text-terracotta transition-colors">
+                      {item.title}
+                    </span>
+                    <span className="relative z-10 w-10 h-10 rounded-full border border-forest/15 flex items-center justify-center text-forest/50 group-hover:bg-terracotta group-hover:text-white group-hover:border-terracotta transition-all duration-500 ease-out -rotate-45 group-hover:rotate-0">
+                      →
+                    </span>
+                  </Link>
+                ))}
+              </motion.div>
+            </div>
+          </div>
         </motion.div>
 
       </div>
 
-      {/* --- CTA SECTION --- */}
-      <section className="bg-forest py-24 sm:py-32 rounded-t-[40px] sm:rounded-t-[60px] relative overflow-hidden">
-        {/* Subtle background glow in CTA */}
+      {/* --- CTA SECTION (Additions Style) --- */}
+      <section className="bg-forest py-16 sm:py-24 rounded-t-[40px] sm:rounded-t-[60px] relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-64 bg-terracotta opacity-[0.07] blur-[100px] pointer-events-none" />
 
         <div className="mx-auto max-w-4xl px-4 sm:px-8 text-center relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer}>
-            <motion.h2 variants={fadeIn} className="font-display text-[clamp(2.5rem,6vw,4.5rem)] text-linen mb-8 leading-[1.05] tracking-[-0.02em]">
+            <motion.div variants={fadeIn} className="flex justify-center mb-6">
+              <span className="px-4 py-1.5 rounded-full bg-terracotta/10 border border-terracotta/20 text-[12px] uppercase tracking-[0.2em] text-terracotta font-medium">
+                Ready to Build Your Office?
+              </span>
+            </motion.div>
+            <motion.h2 variants={fadeIn} className="font-display text-[clamp(2.5rem,6vw,4.5rem)] text-linen mb-6 leading-[1.05] tracking-[-0.02em]">
               Build an Office That <br className="hidden sm:block" /><span className="italic text-terracotta">Represents Your Business</span>
             </motion.h2>
-            <motion.div variants={fadeIn} className="space-y-6 text-[18px] sm:text-[20px] leading-[1.7] text-linen/70 mb-14 max-w-2xl mx-auto font-light">
+            <motion.div variants={fadeIn} className="space-y-6 text-[18px] sm:text-[20px] leading-[1.7] text-linen/70 mb-10 max-w-2xl mx-auto font-light">
               <p>Your workspace should feel like it belongs to your business—not like a generic office.</p>
-              <p>Whether you need a refined executive suite, creative studio, professional practice, or small firm headquarters, Haven M Construction can help coordinate the project from planning through construction.</p>
+              <p>Contact Hevan M Constructions to discuss your boutique office project in Verona or elsewhere in North Jersey.</p>
             </motion.div>
 
-            <motion.div variants={fadeIn} className="mb-16">
-              <p className="text-[17px] text-linen font-medium mb-8">Ready to create a better office?</p>
+            <motion.div variants={fadeIn}>
               <Link to="/contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-terracotta px-10 py-5 text-[16px] font-medium text-white transition-transform hover:scale-[1.03] shadow-[0_10px_30px_rgba(210,125,85,0.3)]">
                 Contact Us to Discuss Your Project →
               </Link>
             </motion.div>
 
-            <motion.div variants={fadeIn} className="pt-12 mt-12 border-t border-linen/10 flex justify-center">
-               <Link to="/services" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-forest hover:text-terracotta transition-colors font-medium bg-[#F6F4EE] px-6 py-3 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.2)]">
-                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-                 Back to All Services
-               </Link>
+            <motion.div variants={fadeIn} className="pt-12 mt-12 border-t border-linen/10 flex flex-col items-center gap-4 text-linen/40 text-[14px]">
+              <p className="font-medium text-linen/80">Hevan M Constructions</p>
+              <p>Verona, New Jersey</p>
+              <p className="italic">Serving Bergen, Essex, Morris, Union & Passaic Counties</p>
             </motion.div>
 
-            <motion.div variants={fadeIn} className="pt-10 border-t border-linen/10">
-              <p className="text-[12px] sm:text-[13px] text-linen/50 uppercase tracking-[0.2em] leading-loose">
-                Based in Verona, NJ <span className="mx-2 opacity-50">|</span> Serving Bergen, Essex, Morris, Union & Passaic Counties
-              </p>
-            </motion.div>
           </motion.div>
         </div>
       </section>

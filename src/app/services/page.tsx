@@ -1,20 +1,19 @@
 import { services } from '../../data/siteData';
 import ProcessSection from '../../components/ProcessSection';
-import ContactSection from '../../components/ContactSection';
 import { Link } from 'react-router-dom';
-import asset1 from '../../assets/asset-1.jpeg';
 import asset2 from '../../assets/asset-2.jpeg';
-import asset3 from '../../assets/asset-3.jpeg';
 import asset4 from '../../assets/asset-4.jpeg';
 import asset5 from '../../assets/asset-5.jpeg';
 import asset6 from '../../assets/asset-6.jpeg';
+import addition4 from '../../assets/4.jpeg';
+import addition5 from '../../assets/5.jpeg';
 
 const serviceDetails = [
   {
     num: '01',
     title: 'Whole-Home Additions',
     description: 'Full-scope primary residence expansions, expanding overall footprint and adding new levels to existing luxury homes.',
-    img: asset1,
+    img: addition4,
     tag: 'Residential',
     link: '/services/whole-home-additions',
   },
@@ -30,8 +29,9 @@ const serviceDetails = [
     num: '03',
     title: 'Value Engineering',
     description: 'Strategic material selection, cost analysis, and structural optimization to maximize architectural impact within budget.',
-    img: asset3,
+    img: addition5,
     tag: 'Consulting',
+    link: '/services/value-engineering',
   },
   {
     num: '04',
@@ -39,6 +39,7 @@ const serviceDetails = [
     description: 'Second stories, sunrooms, extended living spaces, and guest house units seamlessly joined to your home.',
     img: asset4,
     tag: 'Expansion',
+    link: '/services/additions',
   },
   {
     num: '05',
@@ -100,16 +101,20 @@ export default function ServicesPage() {
             {serviceDetails.map((service, i) => (
               <div key={service.num} className={`grid grid-cols-1 lg:grid-cols-12 gap-8 items-center ${i % 2 !== 0 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
                 <div className="col-span-1 lg:col-span-6">
-                  <figure className="aspect-[16/10] overflow-hidden rounded-[24px]">
-                    <img src={service.img} alt={service.title} className="h-full w-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" />
-                  </figure>
+                  <Link to={service.link || "/contact"} className="block overflow-hidden rounded-[24px]">
+                    <figure className="aspect-[16/10] overflow-hidden">
+                      <img src={service.img} alt={service.title} className="h-full w-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" />
+                    </figure>
+                  </Link>
                 </div>
                 <div className="col-span-1 lg:col-span-6 lg:px-8">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="rounded-full border border-forest/15 px-3 py-1 text-[10px] uppercase tracking-[0.24em] text-forest-deep">{service.tag}</span>
                     <span className="font-mono text-xs text-clay">{service.num}</span>
                   </div>
-                  <h2 className="font-display text-3xl sm:text-4xl leading-tight text-forest mb-4">{service.title}</h2>
+                  <Link to={service.link || "/contact"} className="block group/title">
+                    <h2 className="font-display text-3xl sm:text-4xl leading-tight text-forest mb-4 group-hover/title:text-clay transition-colors">{service.title}</h2>
+                  </Link>
                   <p className="text-[15px] leading-relaxed text-forest-deep mb-6">{service.description}</p>
                   <Link to={service.link || "/contact"} className="inline-flex items-center gap-2 text-sm font-medium text-forest hover:text-clay transition-colors">
                     {service.link ? "View service" : "Start this project"} <span aria-hidden="true">→</span>

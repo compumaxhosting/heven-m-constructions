@@ -1,273 +1,194 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-
-const fadeIn = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.2, 0.65, 0.3, 0.9] } }
-};
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.15 }
-  }
-};
+import {
+  ServicePageWrapper,
+  PremiumHero,
+  ContentWrapper,
+  CinematicCard,
+  GlassCard,
+  PremiumCTA,
+  fadeIn,
+  staggerContainer
+} from '../../../../components/ServiceLayouts';
 
 export default function VeterinaryHospitalMorrisCountyPage() {
   const [openFaq, setOpenFaq] = React.useState<number | null>(0);
 
   return (
-    <main className="bg-[#F6F4EE] min-h-screen selection:bg-terracotta/20 selection:text-forest-deep">
+    <ServicePageWrapper>
+      <PremiumHero
+        badge="MORRIS COUNTY, NJ"
+        title={<>Veterinary Hospital Construction in <br /><span className="italic text-terracotta">Morris County, NJ</span></>}
+        description="Construction That Supports Veterinary Care. A veterinary facility has to work as a healthcare environment and a practical workplace. Hevan M Constructions provides veterinary hospital construction and renovation services in Morris County, NJ, serving veterinary practices from our Verona, New Jersey location."
+        servingLabel="Back to:"
+        servingLinks={[
+          { name: 'All Veterinary Hospital', path: '/veterinary-hospital-construction-nj' }
+        ]}
+      />
 
-      {/* --- HERO SECTION --- */}
-      <section className="relative overflow-hidden pt-44 pb-32 sm:pt-52"
-        style={{
-          backgroundImage: 'radial-gradient(circle at 50% 0%, rgba(35,53,40,0.03) 0%, transparent 70%)'
-        }}
-      >
-        <div className="absolute inset-0 pointer-events-none opacity-[0.015]" 
-             style={{ backgroundImage: 'linear-gradient(to right, #233528 1px, transparent 1px), linear-gradient(to bottom, #233528 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+      <ContentWrapper>
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-8 text-center relative z-10">
-          <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-4xl mx-auto">
-            <motion.div variants={fadeIn} className="mb-6 flex justify-center">
-               <Link to="/veterinary-hospital-construction-nj" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-forest hover:text-terracotta transition-colors font-medium bg-white/40 backdrop-blur-sm px-5 py-2.5 rounded-full border border-forest/10 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
-                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-                 Back to Main Service
-               </Link>
-            </motion.div>
-
-            <motion.div variants={fadeIn} className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-forest/15 bg-white/50 backdrop-blur-md mb-8">
-              <span className="w-2 h-2 rounded-full bg-terracotta animate-pulse" />
-              <span className="text-[11px] uppercase tracking-[0.2em] text-forest-deep font-medium">Morris County, NJ</span>
-            </motion.div>
-            
-            <motion.h1 variants={fadeIn} className="font-display text-[clamp(2.5rem,6vw,5.5rem)] text-forest leading-[1.05] tracking-[-0.02em] mb-8">
-              Veterinary Hospital Construction in <br className="hidden sm:block" />
-              <span className="italic text-terracotta">Morris County, NJ</span>
-            </motion.h1>
-
-            <motion.p variants={fadeIn} className="text-[18px] sm:text-[22px] leading-[1.6] text-forest-deep/80 font-light mb-12 max-w-2xl mx-auto">
-              Construction That Supports Veterinary Care
-            </motion.p>
-          </motion.div>
-        </div>
-      </section>
-
-      <div className="mx-auto max-w-7xl px-4 sm:px-8 py-12 sm:py-20 space-y-32">
-
-        {/* --- INTRO --- */}
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-          <div className="lg:col-span-5">
-            <motion.div variants={fadeIn} className="relative">
-              <div className="w-16 h-px bg-terracotta/30 mb-8" />
-              <h2 className="font-display text-4xl sm:text-5xl text-forest mb-8 leading-[1.1] tracking-[-0.02em]">
+        {/* --- START WITH THE PRACTICE --- */}
+        <CinematicCard>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div className="lg:col-span-5">
+              <motion.div variants={fadeIn} className="flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-terracotta mb-8">
+                <span className="inline-block h-px w-10 bg-terracotta/60" /> Clinical Construction
+              </motion.div>
+              <motion.h2 variants={fadeIn} className="font-display text-4xl sm:text-5xl text-linen mb-8 tracking-[-0.02em]">
                 Start With the <br /><span className="italic text-terracotta">Practice</span>
-              </h2>
-              <div className="space-y-6 text-[17px] leading-[1.8] text-forest-deep/80 font-light">
-                <p>A veterinary facility has to work as a healthcare environment and a practical workplace.</p>
-                <p>Hevan M Constructions provides veterinary hospital construction and renovation services in Morris County, NJ, serving veterinary practices from our Verona, New Jersey location.</p>
-                <p>Our construction approach focuses on connecting the physical space with the way the veterinary team intends to use it.</p>
-                <p className="pt-2 border-t border-forest/10 font-medium text-forest">Before deciding on finishes or room layouts, consider what the hospital needs to accomplish.</p>
+              </motion.h2>
+              <div className="space-y-6 text-[17px] leading-[1.8] text-linen/70 font-light">
+                <motion.p variants={fadeIn}>
+                  Our construction approach focuses on connecting the physical space with the way the veterinary team intends to use it. Before deciding on finishes or room layouts, consider what the hospital needs to accomplish.
+                </motion.p>
+                <motion.p variants={fadeIn} className="text-[16px] leading-[1.8] text-linen/90 font-medium border-t border-white/10 pt-6">
+                  Facility areas we can help with:
+                </motion.p>
               </div>
-            </motion.div>
+            </div>
+
+            <div className="lg:col-span-7">
+              <motion.div variants={fadeIn} className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                {[
+                  'Examination rooms',
+                  'Treatment stations',
+                  'Surgical areas',
+                  'Recovery',
+                  'Patient hospitalization',
+                  'Diagnostic rooms',
+                  'Pharmacy and storage',
+                  'Reception',
+                  'Client waiting',
+                  'Staff work areas',
+                  'Administrative offices',
+                  'Animal holding'
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm transition-colors hover:bg-white/10">
+                    <div className="w-1.5 h-1.5 rounded-full bg-terracotta/80 flex-shrink-0" />
+                    <span className="text-[15px] text-linen/90 leading-[1.6]">{item}</span>
+                  </div>
+                ))}
+              </motion.div>
+              <motion.p variants={fadeIn} className="mt-6 text-sm text-linen/50 italic text-center">
+                The final layout should reflect the services and workflow of the practice.
+              </motion.p>
+            </div>
           </div>
-          <div className="lg:col-span-7">
-            <motion.div variants={fadeIn} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                'Examination rooms',
-                'Treatment stations',
-                'Surgical areas',
-                'Recovery',
-                'Patient hospitalization',
-                'Diagnostic rooms',
-                'Pharmacy and storage',
-                'Reception',
-                'Client waiting',
-                'Staff work areas',
-                'Administrative offices',
-                'Animal holding'
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-4 p-5 rounded-2xl bg-white/40 border border-white backdrop-blur-sm shadow-[0_4px_20px_rgb(0,0,0,0.02)]">
-                  <div className="w-1.5 h-1.5 rounded-full bg-terracotta/60" />
-                  <span className="text-[15px] text-forest-deep">{item}</span>
-                </div>
-              ))}
-            </motion.div>
-            <motion.p variants={fadeIn} className="mt-6 text-sm text-forest-deep/70 italic text-center">
-              The final layout should reflect the services and workflow of the practice.
-            </motion.p>
-          </div>
-        </motion.div>
+        </CinematicCard>
 
         {/* --- NEW FACILITY & RENOVATION --- */}
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="bg-linen rounded-[40px] p-10 sm:p-16 lg:p-24 relative overflow-hidden shadow-sm border border-white">
-          <div className="max-w-4xl mx-auto relative z-10">
-            <motion.h2 variants={fadeIn} className="font-display text-4xl sm:text-5xl text-forest mb-8 tracking-[-0.02em] text-center">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <motion.div variants={fadeIn}>
+            <div className="w-16 h-px bg-terracotta/30 mb-8" />
+            <h2 className="font-display text-4xl sm:text-5xl text-forest mb-6 tracking-[-0.02em]">
               New Veterinary <span className="italic text-terracotta">Facility Construction</span>
-            </motion.h2>
-            <motion.div variants={fadeIn} className="space-y-6 text-[17px] leading-[1.8] text-forest-deep/80 font-light mb-12 text-center max-w-3xl mx-auto">
-              <p>For a new facility, early planning can establish how clinical, client, staff, and support areas relate to one another. Addressing these questions early can help create a more coherent construction plan.</p>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 text-[15px] text-left pt-6 border-t border-forest/10">
-                {[
-                  'Where should clients enter?', 'How should patients move?', 'Where should treatment occur?',
-                  'How should surgical/recovery connect?', 'Where will equipment be installed?', 'What storage is required?',
-                  'What utilities will each room need?', 'How might the practice grow?'
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="text-terracotta mt-1.5 w-1 h-1 rounded-full bg-terracotta flex-shrink-0"></span> {item}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+            </h2>
+            <p className="text-[17px] leading-[1.8] text-forest-deep/80 font-light mb-6">
+              For a new facility, early planning can establish how clinical, client, staff, and support areas relate to one another. Addressing these questions early can help create a more coherent construction plan.
+            </p>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 text-[15px] text-forest-deep/80 font-light">
+              {['Where should clients enter?', 'How should patients move?', 'Where should treatment occur?', 'How should surgical/recovery connect?', 'Where will equipment be installed?', 'What storage is required?', 'What utilities will each room need?', 'How might the practice grow?'].map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span className="mt-1.5 w-1 h-1 rounded-full bg-terracotta flex-shrink-0"></span> {item}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
 
-            <motion.div variants={fadeIn} className="mt-20 pt-20 border-t border-forest/10 text-center max-w-3xl mx-auto">
-              <h2 className="font-display text-3xl sm:text-4xl text-forest mb-6 tracking-[-0.02em]">
-                Veterinary Clinic <span className="italic text-terracotta">Renovation</span>
-              </h2>
-              <p className="text-[17px] leading-[1.8] text-forest-deep/80 font-light mb-8">
-                Renovation may be appropriate when an existing veterinary location has a good foundation but no longer supports the practice efficiently. The existing structure and infrastructure determine what changes are practical.
-              </p>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 text-[15px] text-left">
-                {[
-                  'Reconfiguring exam rooms', 'Improving treatment areas', 'Creating clinical space',
-                  'Updating reception', 'Improving storage', 'Upgrading finishes',
-                  'Modifying plumbing', 'Improving electrical capacity', 'Updating lighting', 'Adjusting mechanical systems'
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="text-olive mt-1.5 w-1.5 h-1.5 rounded-full bg-olive flex-shrink-0"></span> {item}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          </div>
+          <motion.div variants={fadeIn} className="bg-white/50 backdrop-blur-sm p-8 sm:p-10 rounded-[24px] sm:rounded-[32px] border border-white shadow-sm">
+            <h3 className="font-display text-3xl text-forest mb-6">
+              Veterinary Clinic <span className="italic text-terracotta">Renovation</span>
+            </h3>
+            <p className="text-[15px] leading-[1.7] text-forest-deep/80 font-light mb-6">
+              Renovation may be appropriate when an existing veterinary location has a good foundation but no longer supports the practice efficiently. The existing structure and infrastructure determine what changes are practical.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6">
+              {['Reconfiguring exam rooms', 'Improving treatment areas', 'Creating clinical space', 'Updating reception', 'Improving storage', 'Upgrading finishes', 'Modifying plumbing', 'Improving electrical capacity', 'Updating lighting', 'Adjusting mechanical systems'].map((item, i) => (
+                <div key={i} className="flex items-center gap-3 text-[14px] text-forest-deep/90 py-1 border-b border-forest/5 last:border-0">
+                  <span className="mt-1 w-1.5 h-1.5 rounded-full bg-olive/80 flex-shrink-0"></span> {item}
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </motion.div>
 
         {/* --- EQUIPMENT & MATERIALS --- */}
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          <motion.div variants={fadeIn} className="bg-white/50 backdrop-blur-sm p-10 rounded-[32px] border border-white shadow-sm">
-            <h2 className="font-display text-3xl sm:text-4xl text-forest mb-6 tracking-[-0.02em]">
-              Planning Around <br/><span className="italic text-terracotta">Equipment</span>
-            </h2>
-            <div className="space-y-4 text-[16.5px] leading-[1.8] text-forest-deep/80 font-light mb-6">
-              <p>Veterinary equipment can influence construction.</p>
-              <p>Large or specialized equipment may affect room dimensions, electrical capacity, plumbing, ventilation, structural requirements, access, equipment placement, and storage.</p>
-              <p className="font-medium text-forest pt-2 border-t border-forest/10">Equipment requirements should be identified early enough to coordinate them with the construction plan.</p>
-            </div>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          <motion.div variants={fadeIn} className="bg-white/50 backdrop-blur-sm p-8 sm:p-10 rounded-[24px] sm:rounded-[32px] border border-white shadow-sm flex flex-col">
+            <div className="w-12 h-px bg-terracotta/40 mb-6" />
+            <h3 className="font-display text-3xl text-forest mb-4">Planning Around <br />Equipment</h3>
+            <p className="text-[15px] leading-[1.7] text-forest-deep/80 font-light mb-4 flex-grow">
+              Veterinary equipment can influence construction. Large or specialized equipment may affect room dimensions, electrical capacity, plumbing, ventilation, structural requirements, access, equipment placement, and storage.
+            </p>
+            <p className="text-[14px] font-medium text-forest border-t border-forest/10 pt-4">
+              Equipment requirements should be identified early enough to coordinate them with the construction plan.
+            </p>
           </motion.div>
 
-          <motion.div variants={fadeIn} className="bg-sand rounded-[32px] p-10 sm:p-14 border border-white shadow-[0_8px_30px_rgb(0,0,0,0.02)]">
-            <h2 className="font-display text-3xl sm:text-4xl text-forest mb-6 tracking-[-0.02em]">
-              Durable Materials <br/><span className="italic text-terracotta">for Animal Care</span>
-            </h2>
-            <div className="text-[16px] leading-[1.8] text-forest-deep/90 font-light">
-              <p className="mb-6">Veterinary environments can experience frequent cleaning, moisture, animal traffic, and demanding daily use. Material selection should therefore consider:</p>
-              <ul className="grid grid-cols-2 gap-y-3 gap-x-4 mb-6 text-[14px]">
-                {['Durability', 'Cleanability', 'Moisture exposure', 'Maintenance', 'Safety', 'Expected traffic', 'Intended clinical use'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-2">
-                     <span className="text-terracotta/60 w-1 h-1 rounded-full bg-terracotta flex-shrink-0"></span> {item}
-                  </li>
-                ))}
-              </ul>
-              <p className="italic border-t border-forest/10 pt-6 text-[14px]">Material choices should be appropriate to the specific area rather than applied uniformly throughout the facility.</p>
-            </div>
+          <motion.div variants={fadeIn} className="bg-white/50 backdrop-blur-sm p-8 sm:p-10 rounded-[24px] sm:rounded-[32px] border border-white shadow-sm flex flex-col">
+            <div className="w-12 h-px bg-terracotta/40 mb-6" />
+            <h3 className="font-display text-3xl text-forest mb-4">Durable Materials <br />for Animal Care</h3>
+            <p className="text-[15px] leading-[1.7] text-forest-deep/80 font-light mb-4 flex-grow">
+              Veterinary environments can experience frequent cleaning, moisture, animal traffic, and demanding daily use. Material selection should consider: Durability, Cleanability, Moisture exposure, Maintenance, Safety, Expected traffic, and Intended clinical use.
+            </p>
+            <p className="text-[14px] italic text-forest-deep/70 border-t border-forest/10 pt-4">Material choices should be appropriate to the specific area rather than applied uniformly throughout the facility.</p>
           </motion.div>
-        </motion.div>
-
-        {/* --- COST NOTE --- */}
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="text-center max-w-3xl mx-auto">
-           <motion.h2 variants={fadeIn} className="font-display text-3xl sm:text-4xl text-forest mb-6 tracking-[-0.02em]">
-              Construction Cost in <span className="italic text-terracotta">Morris County</span>
-            </motion.h2>
-            <motion.p variants={fadeIn} className="text-[17px] leading-[1.8] text-forest-deep/80 font-light">
-              Construction costs vary by project. Major cost factors can include facility size, building condition, clinical requirements, structural work, plumbing, electrical systems, HVAC, finishes, equipment coordination, permitting, and construction complexity. For that reason, a detailed scope and property evaluation are more useful than a generic cost-per-square-foot figure.
-            </motion.p>
         </motion.div>
 
         {/* --- FAQ --- */}
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer} className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-          <div className="lg:col-span-5">
-            <motion.div variants={fadeIn} className="sticky top-32 lg:pr-8">
-              <h2 className="font-display text-4xl sm:text-[3.5rem] leading-[1.05] text-forest mb-6 tracking-[-0.02em]">
-                Frequently Asked <br className="hidden lg:block"/><span className="italic text-terracotta">Questions</span>
-              </h2>
-              <div className="w-16 h-px bg-terracotta/30 mb-8" />
-            </motion.div>
-          </div>
-          
-          <div className="lg:col-span-7">
-            <div className="border-t border-forest/15">
-              {[
-                { q: 'Can you build a veterinary hospital from an existing commercial space?', a: "Possibly. The property must be evaluated for its suitability, infrastructure, layout, intended use, and applicable requirements." },
-                { q: 'Can a veterinary clinic be expanded?', a: 'An expansion may be possible when the building and property allow it. Feasibility depends on the existing structure, available space, proposed use, and applicable requirements.' },
-                { q: 'How long does veterinary hospital construction take?', a: 'There is no standard timeline. Design, engineering, permitting, materials, facility size, existing conditions, and construction complexity can all affect the schedule.' },
-                { q: 'What makes veterinary construction different?', a: 'Veterinary facilities combine healthcare functions with animal handling, specialized equipment, client areas, staff workflow, sanitation needs, and durable construction.' },
-                { q: 'How do I begin?', a: 'Start by defining the services you provide, desired facility size, room requirements, equipment, workflow, and future growth plans.' },
-              ].map((faq, i) => {
-                const isOpen = openFaq === i;
-                return (
-                  <motion.div variants={fadeIn} key={i} className="border-b border-forest/10 overflow-hidden">
-                    <button 
-                      onClick={() => setOpenFaq(isOpen ? null : i)}
-                      className="w-full text-left py-6 sm:py-8 flex items-start sm:items-center justify-between focus:outline-none group gap-6"
-                    >
-                      <h3 className="font-display text-[20px] sm:text-[24px] leading-snug text-forest group-hover:text-terracotta transition-colors pt-1 sm:pt-0">
-                        {faq.q}
-                      </h3>
-                      <span className={`flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-forest/15 flex items-center justify-center text-forest transition-transform duration-500 ease-[cubic-bezier(0.2,0.65,0.3,0.9)] mt-1 sm:mt-0 ${isOpen ? 'rotate-45 bg-forest/5' : ''}`}>
-                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5 sm:w-4 sm:h-4">
-                          <path d="M8 1V15M1 8H15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                        </svg>
-                      </span>
-                    </button>
-                    <motion.div 
-                      initial={false}
-                      animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
-                      transition={{ duration: 0.4, ease: [0.2, 0.65, 0.3, 0.9] }}
-                    >
-                      <p className="text-forest-deep/80 text-[16px] sm:text-[17px] leading-[1.8] font-light pb-8 sm:pb-10 pr-4 sm:pr-20">
-                        {faq.a}
-                      </p>
-                    </motion.div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* --- CTA SECTION --- */}
-      <section className="bg-forest py-24 sm:py-32 rounded-t-[40px] sm:rounded-t-[60px] relative overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-64 bg-terracotta opacity-[0.07] blur-[100px] pointer-events-none" />
-
-        <div className="mx-auto max-w-4xl px-4 sm:px-8 text-center relative z-10">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer}>
-            <motion.h2 variants={fadeIn} className="font-display text-[clamp(2.5rem,6vw,4.5rem)] text-linen mb-8 leading-[1.05] tracking-[-0.02em]">
-              Veterinary Hospital Construction in <br className="hidden sm:block" /><span className="italic text-terracotta">Morris County</span>
+        <GlassCard>
+          <div className="max-w-4xl mx-auto relative z-10">
+            <motion.h2 variants={fadeIn} className="font-display text-4xl sm:text-5xl text-forest mb-4 tracking-[-0.02em] text-center">
+              Construction Cost in <span className="italic text-terracotta">Morris County</span>
             </motion.h2>
-            <motion.div variants={fadeIn} className="space-y-6 text-[18px] sm:text-[20px] leading-[1.7] text-linen/70 mb-14 max-w-2xl mx-auto font-light">
-              <p>Hevan M Constructions serves Morris County, NJ from Verona.</p>
-              <p>Planning a new veterinary facility, clinic renovation, or hospital expansion? Contact Hevan M Constructions to discuss your project requirements.</p>
+            <motion.p variants={fadeIn} className="text-[17px] leading-[1.8] text-forest-deep/80 font-light text-center mb-8">
+              Construction costs vary by project. Major cost factors can include facility size, building condition, clinical requirements, structural work, plumbing, electrical systems, HVAC, finishes, equipment coordination, permitting, and construction complexity.
+            </motion.p>
+            <motion.div variants={fadeIn} className="border-t border-forest/10 pt-8">
+              <h3 className="font-display text-2xl text-forest mb-4 text-center">Frequently Asked <span className="italic text-terracotta">Questions</span></h3>
+              <div className="border-t border-forest/15 mt-4">
+                {[
+                  { q: 'Can you build a veterinary hospital from an existing commercial space?', a: "Possibly. The property must be evaluated for its suitability, infrastructure, layout, intended use, and applicable requirements." },
+                  { q: 'Can a veterinary clinic be expanded?', a: 'An expansion may be possible when the building and property allow it. Feasibility depends on the existing structure, available space, proposed use, and applicable requirements.' },
+                  { q: 'How long does veterinary hospital construction take?', a: 'There is no standard timeline. Design, engineering, permitting, materials, facility size, existing conditions, and construction complexity can all affect the schedule.' },
+                  { q: 'What makes veterinary construction different?', a: 'Veterinary facilities combine healthcare functions with animal handling, specialized equipment, client areas, staff workflow, sanitation needs, and durable construction.' },
+                  { q: 'How do I begin?', a: 'Start by defining the services you provide, desired facility size, room requirements, equipment, workflow, and future growth plans.' },
+                ].map((faq, i) => {
+                  const isOpen = openFaq === i;
+                  return (
+                    <div key={i} className="border-b border-forest/10 overflow-hidden">
+                      <button
+                        onClick={() => setOpenFaq(isOpen ? null : i)}
+                        className="w-full text-left py-6 sm:py-8 flex items-start sm:items-center justify-between focus:outline-none group gap-6"
+                      >
+                        <h4 className="font-display text-[18px] sm:text-[22px] leading-snug text-forest group-hover:text-terracotta transition-colors pt-1 sm:pt-0">{faq.q}</h4>
+                        <span className={`flex-shrink-0 w-10 h-10 rounded-full border border-forest/15 flex items-center justify-center text-forest transition-transform duration-500 mt-1 sm:mt-0 ${isOpen ? 'rotate-45 bg-forest/5' : ''}`}>
+                          <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1V15M1 8H15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" /></svg>
+                        </span>
+                      </button>
+                      <motion.div initial={false} animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }} transition={{ duration: 0.4, ease: [0.2, 0.65, 0.3, 0.9] }}>
+                        <p className="text-forest-deep/80 text-[15px] sm:text-[16px] leading-[1.8] font-light pb-8 pr-4 sm:pr-20">{faq.a}</p>
+                      </motion.div>
+                    </div>
+                  );
+                })}
+              </div>
             </motion.div>
+          </div>
+        </GlassCard>
 
-            <motion.div variants={fadeIn} className="mb-16">
-              <Link to="/contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-terracotta px-10 py-5 text-[16px] font-medium text-white transition-transform hover:scale-[1.03] shadow-[0_10px_30px_rgba(210,125,85,0.3)]">
-                Contact Us to Discuss Your Project →
-              </Link>
-            </motion.div>
+      </ContentWrapper>
 
-            <motion.div variants={fadeIn} className="pt-12 mt-12 border-t border-linen/10 flex justify-center">
-               <Link to="/veterinary-hospital-construction-nj" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-forest hover:text-terracotta transition-colors font-medium bg-[#F6F4EE] px-6 py-3 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.2)]">
-                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-                 Back to Main Service
-               </Link>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-    </main>
+      <PremiumCTA
+        title={<>Veterinary Hospital Construction in <br className="hidden sm:block" /><span className="italic text-terracotta">Morris County</span></>}
+        description={
+          <>
+            <p>Hevan M Constructions serves Morris County, NJ from Verona.</p>
+            <p className="font-medium text-linen/90 border-t border-white/10 pt-6 mt-6">Planning a new veterinary facility, clinic renovation, or hospital expansion? Contact Hevan M Constructions to discuss your project requirements.</p>
+          </>
+        }
+      />
+    </ServicePageWrapper>
   );
 }

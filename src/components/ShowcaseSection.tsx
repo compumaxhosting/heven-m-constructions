@@ -1,10 +1,9 @@
 import { ArrowRight, Play, Image as ImageIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import asset1 from "../assets/asset-1.jpeg";
-import asset3 from "../assets/asset-3.jpeg";
-import asset5 from "../assets/asset-5.jpeg";
 import video1 from "../assets/video 1.mp4";
+import addition4 from "../assets/4.jpeg";
+import addition5 from "../assets/5.jpeg";
 
 const showcaseItems = [
   {
@@ -15,15 +14,15 @@ const showcaseItems = [
   },
   {
     id: 2,
-    title: "Luxury Interior Design",
+    title: "Residential Addition Framing",
     type: "image",
-    src: asset5,
+    src: addition4,
   },
   {
     id: 3,
-    title: "Commercial Complex",
+    title: "Completed Home Addition",
     type: "image",
-    src: asset3,
+    src: addition5,
   }
 ];
 
@@ -64,23 +63,25 @@ export default function ShowcaseSection() {
           {showcaseItems.map((item) => (
             <div
               key={item.id}
-              className="relative group rounded-3xl overflow-hidden cursor-pointer break-inside-avoid transform-gpu"
+              className="relative group rounded-3xl overflow-hidden cursor-pointer break-inside-avoid transform-gpu aspect-[4/3]"
             >
               <Link to="/showcase" className="absolute inset-0 z-20" />
               {item.type === 'video' ? (
                 <video 
                   src={item.src}
-                  autoPlay
                   muted
                   loop
                   playsInline
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                   preload="metadata"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               ) : (
                 <img 
                   src={item.src} 
                   alt={item.title} 
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               )}
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />

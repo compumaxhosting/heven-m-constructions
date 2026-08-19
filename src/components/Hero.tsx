@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom';
 import asset6 from '../assets/asset-6.jpeg';
 import img31 from '../assets/31.jpeg';
 import asset5 from '../assets/asset-5.jpeg';
+import heroImage from '../assets/hero.jpeg';
 
-const HERO_IMG = asset6;
+const HERO_IMG = heroImage;
 const CLINIC_IMG = img31;
 const OFFICE_IMG = asset5;
 

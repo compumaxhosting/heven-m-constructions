@@ -9,6 +9,9 @@ import {
   Quote,
   ArrowUpRight,
 } from "lucide-react";
+import asset4 from "../../assets/asset-4.jpeg";
+import asset5 from "../../assets/asset-5.jpeg";
+import asset6 from "../../assets/asset-6.jpeg";
 
 interface BlogPost {
   id: string;
@@ -31,7 +34,7 @@ const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     summary:
       "How Haven M Construction blends modern forms with traditional warmth to create timeless custom homes that feel as grounded as they are inspiring.",
-    image: "/assets/asset-4.jpeg",
+    image: asset4,
     content: [
       "Modern residential architecture is more than just clean lines and large windows; it is an exploration of how light, volume, and material texture interact to create a sense of shelter and home. At Haven M Construction, we believe that a truly custom home must reflect both its geographical landscape and the daily rhythms of the people who inhabit it. This balance is what we call architectural harmony.",
       "One of the most critical aspects of modern design is site orientation. By analyzing how daylight moves across a property, we can position windows and outdoor spaces to maximize natural illumination while managing heat gain. This passive solar design not only lowers energy costs but also establishes a dynamic connection with the surrounding natural elements throughout the changing seasons.",
@@ -47,7 +50,7 @@ const blogPosts: BlogPost[] = [
     readTime: "4 min read",
     summary:
       "Exploring why a unified design-build approach prevents delays, reduces costs, and protects the integrity of every architectural detail.",
-    image: "/assets/asset-5.jpeg",
+    image: asset5,
     content: [
       "In the world of custom home construction, a common point of friction lies in the translation from design drawings to physical structure. Traditional project delivery separates the architect and the builder into distinct entities, which can lead to communication gaps, budget overruns, and compromised details. The solution to this is the design-build model, where designers and craftspeople work in tandem from day one.",
       "When builders participate in the initial design phases, they provide invaluable insights into constructibility and material sourcing. A complex structural connection that looks beautiful on paper might require specialized tooling or have lead times that disrupt the schedule. By identifying these realities early, the design team can refine their approach without losing the original aesthetic intent.",
@@ -63,7 +66,7 @@ const blogPosts: BlogPost[] = [
     readTime: "6 min read",
     summary:
       "How bespoke millwork, deliberate lighting design, and premium materials redefine the modern boutique customer experience.",
-    image: "/assets/asset-6.jpeg",
+    image: asset6,
     content: [
       "For boutique retail, hospitality, and workspace interiors, design is not merely decoration—it is a tangible extension of a brand's identity and values. Unlike large-scale commercial spaces that rely on standard layouts, a boutique environment requires bespoke elements that tell a story, invite exploration, and encourage patrons to linger.",
       "The journey begins with spatial choreographing. A well-designed shop or cafe guides visitors along an intuitive path, utilizing floor materials, color psychology, and physical structures to highlight products or create cozy seating nooks. For instance, in our boutique commercial designs, we often pair custom walnut shelving with soft brass accents, drawing the eye toward display areas while creating a warm, premium atmosphere.",
@@ -86,10 +89,20 @@ export default function BlogPage() {
     activeIdx !== -1 ? blogPosts[(activeIdx + 1) % blogPosts.length] : null;
 
   return (
-    <main className="relative min-h-screen pt-48 pb-32 sm:pt-56 bg-[#F6F4EE]">
+    <main
+      className="relative min-h-screen overflow-hidden pt-48 pb-32 sm:pt-56"
+      style={{
+        backgroundColor: "#F6F4EE",
+        backgroundImage: [
+          "radial-gradient(ellipse 140% 120% at -10% 90%, rgba(210,125,85,0.50) 0%, rgba(210,125,85,0.18) 40%, transparent 70%)",
+          "radial-gradient(ellipse 120% 140% at 110% 10%, rgba(138,168,125,0.45) 0%, rgba(138,168,125,0.15) 40%, transparent 70%)",
+          "radial-gradient(ellipse 70% 70% at 50% 50%, rgba(246,244,238,0.7) 0%, transparent 100%)",
+        ].join(", "),
+      }}
+    >
       {/* Subtle top-left glow */}
-      <div className="pointer-events-none absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-clay/10 blur-[100px]" />
-      <div className="pointer-events-none absolute -bottom-40 right-0 h-[400px] w-[400px] rounded-full bg-teal/10 blur-[100px]" />
+      <div className="pointer-events-none absolute -top-48 -left-48 h-[650px] w-[650px] rounded-full bg-gradient-to-br from-[#e58a5b] to-[#f3cbab] opacity-55 blur-[130px]" />
+      <div className="pointer-events-none absolute -top-48 -right-48 h-[650px] w-[650px] rounded-full bg-gradient-to-bl from-[#9dbd90] to-[#c7e3bb] opacity-50 blur-[130px]" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-5 sm:px-8">
         {!activePost ? (

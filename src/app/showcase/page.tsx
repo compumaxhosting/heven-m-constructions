@@ -4,14 +4,16 @@ import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 
 import asset1 from "../../assets/asset-1.jpeg";
-import asset2 from "../../assets/asset-2.jpeg";
 import asset3 from "../../assets/asset-3.jpeg";
 import asset4 from "../../assets/asset-4.jpeg";
 import asset5 from "../../assets/asset-5.jpeg";
 import asset6 from "../../assets/asset-6.jpeg";
-import asset7 from "../../assets/asset-7.jpeg";
-import asset31 from "../../assets/31.jpeg";
 import video1 from "../../assets/video 1.mp4";
+import addition1 from "../../assets/1.jpeg";
+import addition2 from "../../assets/2.jpeg";
+import addition3 from "../../assets/3.jpeg";
+import addition4 from "../../assets/4.jpeg";
+import addition5 from "../../assets/5.jpeg";
 
 const showcaseData = [
   {
@@ -49,7 +51,42 @@ const showcaseData = [
     category: "Commercial",
     type: "image",
     src: asset6,
-  }
+  },
+  {
+    id: 7,
+    title: "Addition Foundation",
+    category: "Architecture",
+    type: "image",
+    src: addition1,
+  },
+  {
+    id: 8,
+    title: "Masonry and Waterproofing",
+    category: "Architecture",
+    type: "image",
+    src: addition2,
+  },
+  {
+    id: 9,
+    title: "Second-Story Framing",
+    category: "Architecture",
+    type: "image",
+    src: addition3,
+  },
+  {
+    id: 10,
+    title: "Timber Frame Construction",
+    category: "Architecture",
+    type: "image",
+    src: addition4,
+  },
+  {
+    id: 11,
+    title: "Completed Home Addition",
+    category: "Architecture",
+    type: "image",
+    src: addition5,
+  },
 ];
 
 export default function ShowcasePage() {
@@ -106,9 +143,21 @@ export default function ShowcasePage() {
   }, [activeMedia]);
 
   return (
-    <main className="min-h-screen bg-[#F5F2EC] pt-32 pb-24">
+    <main
+      className="relative min-h-screen overflow-hidden pt-32 pb-24"
+      style={{
+        backgroundColor: "#F6F4EE",
+        backgroundImage: [
+          "radial-gradient(ellipse 140% 120% at -10% 90%, rgba(210,125,85,0.50) 0%, rgba(210,125,85,0.18) 40%, transparent 70%)",
+          "radial-gradient(ellipse 120% 140% at 110% 10%, rgba(138,168,125,0.45) 0%, rgba(138,168,125,0.15) 40%, transparent 70%)",
+          "radial-gradient(ellipse 70% 70% at 50% 50%, rgba(246,244,238,0.7) 0%, transparent 100%)",
+        ].join(", "),
+      }}
+    >
+      <div className="pointer-events-none absolute -top-48 -left-48 h-[650px] w-[650px] rounded-full bg-gradient-to-br from-[#e58a5b] to-[#f3cbab] opacity-55 blur-[130px]" />
+      <div className="pointer-events-none absolute -top-48 -right-48 h-[650px] w-[650px] rounded-full bg-gradient-to-bl from-[#9dbd90] to-[#c7e3bb] opacity-50 blur-[130px]" />
       {/* Header Section */}
-      <section className="px-4 sm:px-6 max-w-7xl mx-auto mb-16">
+      <section className="relative z-10 px-4 sm:px-6 max-w-7xl mx-auto mb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -130,7 +179,7 @@ export default function ShowcasePage() {
       </section>
 
       {/* Filter Options */}
-      <section className="px-4 sm:px-6 max-w-7xl mx-auto mb-12">
+      <section className="relative z-10 px-4 sm:px-6 max-w-7xl mx-auto mb-12">
         <div className="flex flex-wrap gap-4">
           {categories.map((cat) => (
             <button
@@ -148,31 +197,31 @@ export default function ShowcasePage() {
       </section>
 
       {/* Showcase Grid */}
-      <section className="px-4 sm:px-6 max-w-7xl mx-auto">
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+      <section className="relative z-10 px-4 sm:px-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filteredData.map((item, index) => (
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
               key={item.id}
-              className="group relative rounded-3xl overflow-hidden cursor-pointer break-inside-avoid transform-gpu"
+              className="group relative aspect-[4/3] rounded-3xl overflow-hidden cursor-pointer transform-gpu"
               onClick={() => setActiveMedia(item)}
             >
               {item.type === 'video' ? (
                 <video
                   src={item.videoUrl}
-                  autoPlay
                   muted
                   loop
                   playsInline
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none"
+                     preload="metadata"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none"
                 />
               ) : (
                 <img
                   src={item.src}
                   alt={item.title}
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               )}
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -248,7 +297,7 @@ export default function ShowcasePage() {
                   <video
                     src={activeMedia.videoUrl}
                     controls
-                    autoPlay
+                     preload="metadata"
                     className="w-auto h-auto max-w-full max-h-full object-contain rounded-xl shadow-[0_20px_60px_rgba(0,0,0,0.8)]"
                   />
                 ) : (

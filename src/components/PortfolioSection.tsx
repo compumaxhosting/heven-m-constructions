@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
-import { projects } from "../data/projectsData";
+import addition1 from "../assets/1.jpeg";
+import addition2 from "../assets/2.jpeg";
+import addition3 from "../assets/3.jpeg";
+import addition5 from "../assets/5.jpeg";
 
-const featured = projects.slice(0, 3);
+const additionProgressImages = [
+  { src: addition5, alt: 'Completed residential home addition' },
+  { src: addition1, alt: 'Home addition framing above the foundation' },
+  { src: addition2, alt: 'New masonry foundation under construction' },
+  { src: addition3, alt: 'Second-story home addition framing' },
+];
 
 export default function PortfolioSection() {
   return (
@@ -38,40 +46,25 @@ export default function PortfolioSection() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:auto-rows-[280px]">
-          <div className="lg:col-span-8 lg:row-span-2 overflow-hidden rounded-[24px]">
-            <Link
-              to={`/portfolio/${featured[0].id}`}
-              className="group relative overflow-hidden rounded-[24px] aspect-[4/3] lg:aspect-auto h-full w-full block bg-forest/10"
-            >
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-12 lg:auto-rows-[190px]">
+          <figure className="group relative overflow-hidden rounded-[24px] aspect-[4/3] lg:col-span-8 lg:row-span-3 lg:aspect-auto bg-forest/10">
+            <img
+              src={additionProgressImages[0].src}
+              alt={additionProgressImages[0].alt}
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.06]"
+            />
+          </figure>
+
+          {additionProgressImages.slice(1).map((image) => (
+            <figure key={image.src} className="group relative overflow-hidden rounded-[20px] aspect-[4/3] lg:col-span-4 lg:aspect-auto bg-forest/10">
               <img
-                src={featured[0].heroImage}
-                alt={featured[0].title}
+                src={image.src}
+                alt={image.alt}
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.06]"
               />
-              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            </Link>
-          </div>
-
-          {featured.slice(1).map((project) => (
-            <div
-              key={project.id}
-              className="lg:col-span-4 h-full overflow-hidden rounded-[24px]"
-            >
-              <Link
-                to={`/portfolio/${project.id}`}
-                className="group relative overflow-hidden rounded-[24px] aspect-[4/5] lg:aspect-auto h-full w-full block bg-forest/10"
-              >
-                <img
-                  src={project.heroImage}
-                  alt={project.title}
-                  loading="lazy"
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.06]"
-                />
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </Link>
-            </div>
+            </figure>
           ))}
         </div>
 

@@ -14,6 +14,8 @@ export default function ProcessSection() {
           src={BLUEPRINT_IMG}
           alt=""
           aria-hidden="true"
+          loading="lazy"
+          decoding="async"
           className="absolute right-[-10%] top-[10%] w-[46%] rotate-[8deg] rounded-3xl opacity-40 mix-blend-luminosity"
         />
       </div>

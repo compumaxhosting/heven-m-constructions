@@ -11,9 +11,6 @@ import ContactSection from '../../components/ContactSection';
 export default function HomePage() {
   return (
     <main>
-      <div className="relative mx-auto grid max-w-7xl grid-cols-12 gap-0">
-        {/* Stats overlaid inside hero */}
-      </div>
       <Hero />
       <Marquee />
       <PracticeSection />

@@ -18,23 +18,35 @@ import DesignBuildMorrisCountyPage from './app/services/design-build/morris-coun
 import DesignBuildPassaicCountyPage from './app/services/design-build/passaic-county/page';
 import DesignBuildUnionCountyPage from './app/services/design-build/union-county/page';
 import WholeHomeAdditionsPage from './app/services/whole-home-additions/page';
+import AdditionsPage from './app/services/additions/page';
 import BoutiqueOfficeConstructionPage from './app/services/boutique-office-construction/page';
 import BergenCountyOfficePage from './app/services/boutique-office-construction/bergen-county/page';
 import EssexCountyOfficePage from './app/services/boutique-office-construction/essex-county/page';
 import MorrisCountyOfficePage from './app/services/boutique-office-construction/morris-county/page';
 import PassaicCountyOfficePage from './app/services/boutique-office-construction/passaic-county/page';
 import UnionCountyOfficePage from './app/services/boutique-office-construction/union-county/page';
-import HomeAdditionsBergenCountyPage from './app/services/whole-home-additions/bergen-county/page';
-import HomeAdditionsEssexCountyPage from './app/services/whole-home-additions/essex-county/page';
-import HomeAdditionsMorrisCountyPage from './app/services/whole-home-additions/morris-county/page';
-import HomeAdditionsPassaicCountyPage from './app/services/whole-home-additions/passaic-county/page';
-import HomeAdditionsUnionCountyPage from './app/services/whole-home-additions/union-county/page';
+import HomeAdditionsBergenCountyPage from './app/services/additions/bergen-county/page';
+import HomeAdditionsEssexCountyPage from './app/services/additions/essex-county/page';
+import HomeAdditionsMorrisCountyPage from './app/services/additions/morris-county/page';
+import HomeAdditionsPassaicCountyPage from './app/services/additions/passaic-county/page';
+import HomeAdditionsUnionCountyPage from './app/services/additions/union-county/page';
+import WholeHomeAdditionsBergenCountyPage from './app/services/whole-home-additions/bergen-county/page';
+import WholeHomeAdditionsEssexCountyPage from './app/services/whole-home-additions/essex-county/page';
+import WholeHomeAdditionsMorrisCountyPage from './app/services/whole-home-additions/morris-county/page';
+import WholeHomeAdditionsPassaicCountyPage from './app/services/whole-home-additions/passaic-county/page';
+import WholeHomeAdditionsUnionCountyPage from './app/services/whole-home-additions/union-county/page';
 import VeterinaryHospitalConstructionPage from './app/services/veterinary-hospital-construction-nj/page';
 import VeterinaryHospitalBergenCountyPage from './app/services/veterinary-hospital-construction-nj/bergen-county/page';
 import VeterinaryHospitalEssexCountyPage from './app/services/veterinary-hospital-construction-nj/essex-county/page';
 import VeterinaryHospitalMorrisCountyPage from './app/services/veterinary-hospital-construction-nj/morris-county/page';
 import VeterinaryHospitalPassaicCountyPage from './app/services/veterinary-hospital-construction-nj/passaic-county/page';
 import VeterinaryHospitalUnionCountyPage from './app/veterinary-hospital-construction-union-county-nj/page';
+import ValueEngineeringPage from './app/services/value-engineering/page';
+import ValueEngineeringBergenCountyPage from './app/services/value-engineering/bergen-county/page';
+import ValueEngineeringEssexCountyPage from './app/services/value-engineering/essex-county/page';
+import ValueEngineeringMorrisCountyPage from './app/services/value-engineering/morris-county/page';
+import ValueEngineeringPassaicCountyPage from './app/services/value-engineering/passaic-county/page';
+import ValueEngineeringUnionCountyPage from './app/services/value-engineering/union-county/page';
 import { PageTransition } from './components/PageTransition';
 import ScrollUpButton from './components/ScrollUpButton';
 
@@ -71,6 +83,12 @@ function Layout() {
           <Route path="/design-build-passaic-county-nj" element={<DesignBuildPassaicCountyPage />} />
           <Route path="/design-build-union-county-nj" element={<DesignBuildUnionCountyPage />} />
           <Route path="/services/whole-home-additions" element={<WholeHomeAdditionsPage />} />
+          <Route path="/whole-home-additions-bergen-county-nj" element={<WholeHomeAdditionsBergenCountyPage />} />
+          <Route path="/whole-home-additions-essex-county-nj" element={<WholeHomeAdditionsEssexCountyPage />} />
+          <Route path="/whole-home-additions-morris-county-nj" element={<WholeHomeAdditionsMorrisCountyPage />} />
+          <Route path="/whole-home-additions-passaic-county-nj" element={<WholeHomeAdditionsPassaicCountyPage />} />
+          <Route path="/whole-home-additions-union-county-nj" element={<WholeHomeAdditionsUnionCountyPage />} />
+          <Route path="/services/additions" element={<AdditionsPage />} />
           <Route path="/services/boutique-office-construction" element={<BoutiqueOfficeConstructionPage />} />
           <Route path="/boutique-office-construction-bergen-county-nj" element={<BergenCountyOfficePage />} />
           <Route path="/boutique-office-construction-essex-county-nj" element={<EssexCountyOfficePage />} />
@@ -88,6 +106,12 @@ function Layout() {
           <Route path="/veterinary-hospital-construction-morris-county-nj" element={<VeterinaryHospitalMorrisCountyPage />} />
           <Route path="/veterinary-hospital-construction-passaic-county-nj" element={<VeterinaryHospitalPassaicCountyPage />} />
           <Route path="/veterinary-hospital-construction-union-county-nj" element={<VeterinaryHospitalUnionCountyPage />} />
+          <Route path="/services/value-engineering" element={<ValueEngineeringPage />} />
+          <Route path="/value-engineering-bergen-county-nj" element={<ValueEngineeringBergenCountyPage />} />
+          <Route path="/value-engineering-essex-county-nj" element={<ValueEngineeringEssexCountyPage />} />
+          <Route path="/value-engineering-morris-county-nj" element={<ValueEngineeringMorrisCountyPage />} />
+          <Route path="/value-engineering-passaic-county-nj" element={<ValueEngineeringPassaicCountyPage />} />
+          <Route path="/value-engineering-union-county-nj" element={<ValueEngineeringUnionCountyPage />} />
           <Route path="/showcase" element={<ShowcasePage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/contact" element={<ContactPage />} />
