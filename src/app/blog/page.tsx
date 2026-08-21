@@ -9,9 +9,9 @@ import {
   Quote,
   ArrowUpRight,
 } from "lucide-react";
-import asset4 from "../../assets/asset-4.jpeg";
-import asset5 from "../../assets/asset-5.jpeg";
-import asset6 from "../../assets/asset-6.jpeg";
+import asset4 from "../../assets/asset-4.webp";
+import asset5 from "../../assets/asset-5.webp";
+import asset6 from "../../assets/asset-6.webp";
 
 interface BlogPost {
   id: string;

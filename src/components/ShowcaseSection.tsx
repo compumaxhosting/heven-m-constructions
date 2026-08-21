@@ -1,9 +1,9 @@
 import { ArrowRight, Play, Image as ImageIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import addition4 from "../assets/4.jpeg";
-import addition5 from "../assets/5.jpeg";
-import addition7 from "../assets/7.jpeg";
+import addition4 from "../assets/4.webp";
+import addition5 from "../assets/5.webp";
+import addition7 from "../assets/7.webp";
 
 const showcaseItems = [
   {

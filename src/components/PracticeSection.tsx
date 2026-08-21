@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { pillars } from '../data/siteData';
 
-import asset6 from '../assets/asset-6.jpeg';
+import asset6 from '../assets/asset-6.webp';
 const CRAFT_IMG = asset6;
 
 export default function PracticeSection() {

@@ -2,10 +2,9 @@ import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 // Using warm interior images that match the original site's aesthetic
-import asset6 from '../assets/asset-6.jpeg';
-import img31 from '../assets/31.jpeg';
-import asset5 from '../assets/asset-5.jpeg';
-import asset8 from '../assets/asset-8.jpeg';
+import img31 from '../assets/31.webp';
+import asset5 from '../assets/asset-5.webp';
+import asset8 from '../assets/asset-8.webp';
 
 const HERO_IMG = asset8;
 const CLINIC_IMG = img31;

@@ -80,7 +80,11 @@ const socialLinks = [
     icon: (
       <svg className="h-3.5 w-3.5 overflow-visible" viewBox="0 0 24 24">
         {/* Cyan Offset Layer */}
-
+        <path
+          d="M12.525 0h3.08c0 3.32 2.5 5.86 5.86 5.86v3.2a8.88 8.88 0 0 1-5.86-2.14v8.52a6.44 6.44 0 1 1-6.44-6.44c.48 0 .94.06 1.38.16V12.4a3.22 3.22 0 1 0 1.98 2.98V0z"
+          fill="#25F4EE"
+          transform="translate(-0.4, -0.3)"
+        />
         {/* Red/Magenta Offset Layer */}
         <path
           d="M12.525 0h3.08c0 3.32 2.5 5.86 5.86 5.86v3.2a8.88 8.88 0 0 1-5.86-2.14v8.52a6.44 6.44 0 1 1-6.44-6.44c.48 0 .94.06 1.38.16V12.4a3.22 3.22 0 1 0 1.98 2.98V0z"

@@ -72,14 +72,16 @@ export default function ContactSection() {
             ) : (
               <div className="grid gap-5">
                 {[
-                  { label: 'Your name', type: 'text', placeholder: 'Ada Lovelace' },
-                  { label: 'Email', type: 'email', placeholder: 'ada@studio.com' },
-                  { label: 'Project location', type: 'text', placeholder: 'City, state' },
+                  { label: 'Your name', name: 'name', type: 'text', placeholder: 'Ada Lovelace', required: true },
+                  { label: 'Email', name: 'email', type: 'email', placeholder: 'ada@studio.com', required: true },
+                  { label: 'Project location', name: 'location', type: 'text', placeholder: 'City, state', required: false },
                 ].map((field) => (
                   <div key={field.label}>
                     <label className="text-[10px] uppercase tracking-[0.28em] text-olive">{field.label}</label>
                     <input
                       type={field.type}
+                      name={field.name}
+                      required={field.required}
                       placeholder={field.placeholder}
                       className="mt-3 w-full rounded-full border border-forest/15 bg-linen/60 px-5 py-3.5 text-sm text-forest placeholder:text-forest/40 focus:border-clay focus:outline-none transition-colors"
                     />
@@ -89,6 +91,8 @@ export default function ContactSection() {
                   <label className="text-[10px] uppercase tracking-[0.28em] text-olive">A few words</label>
                   <textarea
                     rows={4}
+                    name="message"
+                    required
                     placeholder="Tell us about the space, the timeline, the feeling you want."
                     className="mt-3 w-full resize-none rounded-2xl border border-forest/15 bg-linen/60 p-4 text-sm text-forest placeholder:text-forest/40 focus:border-clay focus:outline-none transition-colors"
                   />

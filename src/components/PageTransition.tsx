@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import havenLogo from "../assets/haven-logo.png";
@@ -11,11 +11,6 @@ const EXIT_DURATION = 0.4;  // 0.4s curtain close
 
 export function PageTransition({ children }: { children: ReactNode }) {
     const location = useLocation();
-
-    useEffect(() => {
-        // Instant scroll to top on route change
-        window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-    }, [location.pathname]);
 
     return (
         <div className="relative min-h-screen overflow-hidden">

@@ -1,15 +1,15 @@
-import asset1 from '../assets/asset-1.jpeg';
-import asset2 from '../assets/asset-2.jpeg';
-import asset3 from '../assets/asset-3.jpeg';
-import asset4 from '../assets/asset-4.jpeg';
-import asset5 from '../assets/asset-5.jpeg';
-import asset6 from '../assets/asset-6.jpeg';
-import asset7 from '../assets/asset-7.jpeg';
-import addition1 from '../assets/1.jpeg';
-import addition2 from '../assets/2.jpeg';
-import addition3 from '../assets/3.jpeg';
-import addition4 from '../assets/4.jpeg';
-import addition5 from '../assets/5.jpeg';
+import asset1 from '../assets/asset-1.webp';
+import asset2 from '../assets/asset-2.webp';
+import asset3 from '../assets/asset-3.webp';
+import asset4 from '../assets/asset-4.webp';
+import asset5 from '../assets/asset-5.webp';
+import asset6 from '../assets/asset-6.webp';
+import asset7 from '../assets/asset-7.webp';
+import addition1 from '../assets/1.webp';
+import addition2 from '../assets/2.webp';
+import addition3 from '../assets/3.webp';
+import addition4 from '../assets/4.webp';
+import addition5 from '../assets/5.webp';
 
 export interface Project {
   id: string;

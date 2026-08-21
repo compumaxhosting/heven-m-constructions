@@ -2,8 +2,8 @@ import { motion } from 'framer-motion';
 import { pillars } from '../../data/siteData';
 import { Link } from 'react-router-dom';
 
-import asset4 from '../../assets/asset-4.jpeg';
-import asset5 from '../../assets/asset-5.jpeg';
+import asset4 from '../../assets/asset-4.webp';
+import asset5 from '../../assets/asset-5.webp';
 
 const TEAM_IMG = asset4;
 const MATERIAL_IMG = asset5;

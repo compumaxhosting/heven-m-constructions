@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import addition6 from "../assets/6.jpeg";
-import beforeImage from "../assets/before.jpeg";
-import afterImage from "../assets/after.jpeg";
+import addition6 from "../assets/6.webp";
+import beforeImage from "../assets/before.webp";
+import afterImage from "../assets/after.webp";
 
 const featuredImage = { src: addition6, alt: 'Completed residential project' };
 const beforeAfterImages = [

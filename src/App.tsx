@@ -63,7 +63,7 @@ function ScrollToTop() {
 function Layout() {
   const location = useLocation();
 
- 
+
 
   return (
     <div className="relative min-h-screen bg-background text-foreground">

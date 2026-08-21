@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { processSteps } from '../data/siteData';
 
-import asset7 from '../assets/asset-7.jpeg';
+import asset7 from '../assets/asset-7.webp';
 const BLUEPRINT_IMG = asset7;
 
 export default function ProcessSection() {

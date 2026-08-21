@@ -3,21 +3,28 @@ import { Play, Image as ImageIcon, X, ChevronLeft, ChevronRight } from "lucide-r
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 
-import asset1 from "../../assets/asset-1.jpeg";
-import asset3 from "../../assets/31.jpeg";
-import asset4 from "../../assets/asset-4.jpeg";
-import asset5 from "../../assets/asset-5.jpeg";
-import asset6 from "../../assets/asset-6.jpeg";
+import asset1 from "../../assets/asset-1.webp";
+import asset3 from "../../assets/31.webp";
+import asset4 from "../../assets/asset-4.webp";
+import asset5 from "../../assets/asset-5.webp";
+import asset6 from "../../assets/asset-6.webp";
 import video1 from "../../assets/video 1.mp4";
-import addition1 from "../../assets/1.jpeg";
-import addition2 from "../../assets/2.jpeg";
-import addition3 from "../../assets/3.jpeg";
-import addition4 from "../../assets/4.jpeg";
-import addition5 from "../../assets/5.jpeg";
-import addition6 from "../../assets/6.jpeg";
-import addition7 from "../../assets/7.jpeg";
-import beforeImage from "../../assets/before.jpeg";
-import afterImage from "../../assets/after.jpeg";
+import addition1 from "../../assets/1.webp";
+import addition2 from "../../assets/2.webp";
+import addition3 from "../../assets/3.webp";
+import addition4 from "../../assets/4.webp";
+import addition5 from "../../assets/5.webp";
+import addition6 from "../../assets/6.webp";
+import addition7 from "../../assets/7.webp";
+import beforeImage from "../../assets/before.webp";
+import afterImage from "../../assets/after.webp";
+import int1 from "../../assets/int 1.webp";
+import int2 from "../../assets/int 2.webp";
+import int3 from "../../assets/int 3.webp";
+import int4 from "../../assets/int 4.webp";
+import int5 from "../../assets/int 5.webp";
+import int6 from "../../assets/int 6.webp";
+import int7 from "../../assets/int 7.webp";
 
 const showcaseData = [
   {
@@ -119,9 +126,16 @@ const showcaseData = [
     src: asset1,
     videoUrl: video1,
   },
+  { id: 20, title: "Modern Interior Details", category: "Interior Design", type: "image", src: int1 },
+  { id: 21, title: "Contemporary Living", category: "Interior Design", type: "image", src: int2 },
+  { id: 22, title: "Refined Joinery", category: "Interior Design", type: "image", src: int3 },
+  { id: 23, title: "Elegant Workspace", category: "Interior Design", type: "image", src: int4 },
+  { id: 24, title: "Minimalist Sanctuary", category: "Interior Design", type: "image", src: int5 },
+  { id: 25, title: "Warm Textural Space", category: "Interior Design", type: "image", src: int6 },
+  { id: 26, title: "Bespoke Interior Craft", category: "Interior Design", type: "image", src: int7 },
 ];
 
-const showcaseOrder = [14, 3, 12, 5, 15, 7, 4, 10, 6, 13, 8, 11, 9, 1];
+const showcaseOrder = [14, 3, 12, 5, 20, 21, 22, 15, 7, 23, 24, 4, 10, 25, 26, 6, 13, 8, 11, 9, 1];
 
 export default function ShowcasePage() {
   const [filter, setFilter] = useState("All");

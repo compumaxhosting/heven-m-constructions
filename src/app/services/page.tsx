@@ -1,12 +1,12 @@
 import { services } from '../../data/siteData';
 import ProcessSection from '../../components/ProcessSection';
 import { Link } from 'react-router-dom';
-import asset2 from '../../assets/asset-2.jpeg';
-import asset4 from '../../assets/asset-4.jpeg';
-import asset5 from '../../assets/asset-5.jpeg';
-import asset6 from '../../assets/asset-6.jpeg';
-import addition4 from '../../assets/4.jpeg';
-import addition5 from '../../assets/5.jpeg';
+import asset2 from '../../assets/asset-2.webp';
+import asset4 from '../../assets/asset-4.webp';
+import asset5 from '../../assets/asset-5.webp';
+import asset6 from '../../assets/asset-6.webp';
+import addition4 from '../../assets/4.webp';
+import addition5 from '../../assets/5.webp';
 
 const serviceDetails = [
   {
