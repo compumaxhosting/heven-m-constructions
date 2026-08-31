@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -17,7 +18,7 @@ export default function AdditionsPassaicCountyPage() {
       <PremiumHero 
         badge="PASSAIC COUNTY, NJ"
         title={<>Additions in <br /><span className="italic text-terracotta">Passaic County, NJ</span></>}
-        description="A home can be in the right neighborhood and still stop meeting the needs of the people living in it. Hevan M Constructions builds home additions in Passaic County, NJ, giving homeowners an opportunity to create additional living space without automatically giving up their existing home and location."
+        description="A home can be in the right neighborhood and still stop meeting the needs of the people living in it. Haven M Construction builds home additions in Passaic County, NJ, giving homeowners an opportunity to create additional living space without automatically giving up their existing home and location."
         servingLabel="Back to:"
         servingLinks={[
           { name: 'All Additions', path: '/services/additions' }
@@ -162,8 +163,8 @@ export default function AdditionsPassaicCountyPage() {
         title={<>Create the Space Your <br className="hidden sm:block" /><span className="italic text-terracotta">Home Is Missing</span></>}
         description={
           <>
-            <p>Hevan M Constructions serves homeowners throughout Passaic County, including Wayne, Clifton, Paterson, Little Falls, Totowa, West Milford, Pompton Lakes, Ringwood, and surrounding communities, depending on project scope and availability.</p>
-            <p className="font-medium text-linen/90 border-t border-white/10 pt-6 mt-6">A well-planned addition can make an existing house significantly more functional without requiring a move. Contact Hevan M Constructions to discuss your Passaic County home addition project.</p>
+            <p>Haven M Construction serves homeowners throughout Passaic County, including Wayne, Clifton, Paterson, Little Falls, Totowa, West Milford, Pompton Lakes, Ringwood, and surrounding communities, depending on project scope and availability.</p>
+            <p className="font-medium text-linen/90 border-t border-white/10 pt-6 mt-6">A well-planned addition can make an existing house significantly more functional without requiring a move. Contact Haven M Construction to discuss your Passaic County home addition project.</p>
           </>
         }
       />

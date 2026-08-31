@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -19,10 +20,10 @@ export default function VeterinaryHospitalBergenCountyPage() {
       <PremiumHero
         badge="BERGEN COUNTY, NJ"
         title={<>Veterinary Hospital Construction in <br /><span className="italic text-terracotta">Bergen County, NJ</span></>}
-        description="Build a Veterinary Facility Around Your Practice. A veterinary hospital needs to support clinical care, staff workflow, animal handling, client interaction, and the equipment used every day. Hevan M Constructions provides veterinary hospital construction and renovation services in Bergen County, NJ."
+        description="Build a Veterinary Facility Around Your Practice. A veterinary hospital needs to support clinical care, staff workflow, animal handling, client interaction, and the equipment used every day. Haven M Construction provides veterinary hospital construction and renovation services in Bergen County, NJ."
         servingLabel="Back to:"
         servingLinks={[
-          { name: 'All Veterinary Hospital', path: '/veterinary-hospital-construction-nj' }
+          { name: 'All Veterinary Hospital', path: '/services/veterinary-hospital-construction-nj' }
         ]}
       />
 
@@ -181,8 +182,8 @@ export default function VeterinaryHospitalBergenCountyPage() {
         title={<>Veterinary Hospital Construction in <br className="hidden sm:block" /><span className="italic text-terracotta">Bergen County</span></>}
         description={
           <>
-            <p>Hevan M Constructions is based in Verona, NJ and serves Bergen County as part of our North Jersey service area.</p>
-            <p className="font-medium text-linen/90 border-t border-white/10 pt-6 mt-6">Planning a veterinary clinic, animal hospital, renovation, or expansion? Contact Hevan M Constructions to discuss your project.</p>
+            <p>Haven M Construction is based in Verona, NJ and serves Bergen County as part of our North Jersey service area.</p>
+            <p className="font-medium text-linen/90 border-t border-white/10 pt-6 mt-6">Planning a veterinary clinic, animal hospital, renovation, or expansion? Contact Haven M Construction to discuss your project.</p>
           </>
         }
       />

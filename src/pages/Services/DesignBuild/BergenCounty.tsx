@@ -1,7 +1,8 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import Link from 'next/link';
+
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -21,129 +22,7 @@ export default function DesignBuildBergenCountyPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Design-Build Construction Contractors in Bergen County, NJ</title>
-        <meta name="description" content="Work with experienced design-build construction contractors in Bergen County, NJ for a seamless process from planning to final completion." />
-        <meta name="keywords" content="design-build construction Bergen County NJ, design-build contractor Bergen County NJ, design-build construction contractors Bergen County, design-build services Bergen County NJ, residential design-build contractor Bergen County NJ, design and build contractor NJ, design-build construction company Bergen County, custom home design-build Bergen County NJ, home renovation design-build Bergen County NJ, residential construction Bergen County NJ, design-build contractor near me, best design-build contractor Bergen County NJ, design-build construction company near Bergen County, home remodeling design-build Bergen County NJ, custom home builder Bergen County NJ, ChatGPT design-build contractor Bergen County NJ, Gemini design-build contractor Bergen County NJ, AI search design-build contractor NJ" />
-        <meta name="author" content="Haven M Construction" />
-        <link rel="canonical" href="https://www.havenmconstruction.com/design-build-bergen-county-nj" />
-        <meta name="robots" content="index,follow" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Design-Build Construction Contractors in Bergen County, NJ" />
-        <meta property="og:description" content="Work with experienced design-build construction contractors in Bergen County, NJ for a seamless process from planning to final completion." />
-        <meta property="og:url" content="https://www.havenmconstruction.com/design-build-bergen-county-nj" />
-        <meta property="og:site_name" content="Haven M Construction" />
-        <meta property="og:image" content="https://www.havenmconstruction.com/images/design-build-construction.jpg" />
-        <meta property="og:image:alt" content="Design-Build Construction Contractors in Bergen County, NJ" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Design-Build Construction Contractors in Bergen County, NJ" />
-        <meta name="twitter:description" content="Work with experienced design-build construction contractors in Bergen County, NJ for a seamless process from planning to final completion." />
-        <meta name="twitter:image" content="https://www.havenmconstruction.com/images/design-build-construction.jpg" />
-        <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "GeneralContractor",
-                  "@id": "https://www.havenmconstruction.com/#organization",
-                  "name": "Haven M Construction",
-                  "url": "https://www.havenmconstruction.com/",
-                  "description": "Haven M Construction provides professional design-build construction services for residential projects throughout Bergen County, New Jersey.",
-                  "areaServed": {
-                    "@type": "AdministrativeArea",
-                    "name": "Bergen County",
-                    "containedInPlace": {
-                      "@type": "State",
-                      "name": "New Jersey"
-                    }
-                  },
-                  "knowsAbout": [
-                    "Design-Build Construction",
-                    "Residential Construction",
-                    "Home Remodeling",
-                    "Home Renovation",
-                    "Custom Home Construction",
-                    "Residential Design and Build"
-                  ]
-                },
-                {
-                  "@type": "Service",
-                  "@id": "https://www.havenmconstruction.com/design-build-bergen-county-nj#service",
-                  "name": "Design-Build Construction Services in Bergen County, NJ",
-                  "serviceType": "Design-Build Construction",
-                  "description": "Experienced design-build construction services in Bergen County, NJ, providing a seamless process from initial planning and design through construction and final completion.",
-                  "provider": {
-                    "@id": "https://www.havenmconstruction.com/#organization"
-                  },
-                  "areaServed": {
-                    "@type": "AdministrativeArea",
-                    "name": "Bergen County",
-                    "containedInPlace": {
-                      "@type": "State",
-                      "name": "New Jersey"
-                    }
-                  },
-                  "url": "https://www.havenmconstruction.com/design-build-bergen-county-nj"
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "https://www.havenmconstruction.com/design-build-bergen-county-nj#webpage",
-                  "url": "https://www.havenmconstruction.com/design-build-bergen-county-nj",
-                  "name": "Design-Build Construction Contractors in Bergen County, NJ",
-                  "headline": "Design-Build Construction Contractors in Bergen County, NJ",
-                  "description": "Work with experienced design-build construction contractors in Bergen County, NJ for a seamless process from initial planning to final completion.",
-                  "inLanguage": "en-US",
-                  "isPartOf": {
-                    "@type": "WebSite",
-                    "@id": "https://www.havenmconstruction.com/#website",
-                    "name": "Haven M Construction",
-                    "url": "https://www.havenmconstruction.com/"
-                  },
-                  "about": {
-                    "@id": "https://www.havenmconstruction.com/design-build-bergen-county-nj#service"
-                  },
-                  "mainEntity": {
-                    "@id": "https://www.havenmconstruction.com/design-build-bergen-county-nj#service"
-                  },
-                  "publisher": {
-                    "@id": "https://www.havenmconstruction.com/#organization"
-                  },
-                  "breadcrumb": {
-                    "@id": "https://www.havenmconstruction.com/design-build-bergen-county-nj#breadcrumb"
-                  }
-                },
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": "https://www.havenmconstruction.com/design-build-bergen-county-nj#breadcrumb",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": 1,
-                      "name": "Home",
-                      "item": "https://www.havenmconstruction.com/"
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": 2,
-                      "name": "Design-Build Construction",
-                      "item": "https://www.havenmconstruction.com/design-build-construction-nj"
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": 3,
-                      "name": "Bergen County, NJ",
-                      "item": "https://www.havenmconstruction.com/design-build-bergen-county-nj"
-                    }
-                  ]
-                }
-              ]
-            }
-          `}
-        </script>
-      </Helmet>
+      
       <main className="bg-[#F6F4EE] min-h-screen selection:bg-terracotta/20 selection:text-forest-deep">
         {/* --- HERO SECTION --- */}
       <section className="relative overflow-hidden pt-40 pb-24 sm:pt-64 sm:pb-40 bg-[#F6F4EE]">
@@ -159,7 +38,7 @@ export default function DesignBuildBergenCountyPage() {
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-4xl">
             
             <motion.div variants={fadeIn} className="mb-6 flex justify-start">
-               <Link to="/design-build-construction-nj" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-forest hover:text-terracotta transition-colors font-medium bg-white/40 backdrop-blur-sm px-5 py-2.5 rounded-full border border-forest/10 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
+               <Link href="/services/design-build" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-forest hover:text-terracotta transition-colors font-medium bg-white/40 backdrop-blur-sm px-5 py-2.5 rounded-full border border-forest/10 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                  Back to Main Service
                </Link>
@@ -180,7 +59,7 @@ export default function DesignBuildBergenCountyPage() {
             </motion.h2>
 
             <motion.p variants={fadeIn} className="text-[17px] sm:text-[19px] leading-[1.7] text-forest-deep/85 font-light mb-6">
-              Hevan M Constructions provides design-build construction services to homeowners in Bergen County, NJ, from our base in Verona.
+              Haven M Construction provides design-build construction services to homeowners in Bergen County, NJ, from our base in Verona.
             </motion.p>
 
             <motion.p variants={fadeIn} className="text-[16px] sm:text-[17px] leading-[1.7] text-forest-deep/75 font-light">
@@ -419,19 +298,19 @@ export default function DesignBuildBergenCountyPage() {
               Design-Build Services <br className="hidden sm:block" /><span className="italic text-terracotta">in Bergen County, NJ</span>
             </motion.h2>
             <motion.div variants={fadeIn} className="space-y-6 text-[18px] sm:text-[20px] leading-[1.7] text-linen/70 mb-10 max-w-2xl mx-auto font-light">
-              <p>Hevan M Constructions serves Bergen County from Verona, New Jersey.</p>
+              <p>Haven M Construction serves Bergen County from Verona, New Jersey.</p>
               <p>If you are considering a home addition, major renovation, or custom residential project, start with a conversation about what you want to accomplish.</p>
-              <p>Contact Hevan M Constructions to discuss your Bergen County design-build project.</p>
+              <p>Contact Haven M Construction to discuss your Bergen County design-build project.</p>
             </motion.div>
 
             <motion.div variants={fadeIn}>
-              <Link to="/contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-terracotta px-10 py-5 text-[16px] font-medium text-white transition-transform hover:scale-[1.03] shadow-[0_10px_30px_rgba(210,125,85,0.3)]">
+              <Link href="/contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-terracotta px-10 py-5 text-[16px] font-medium text-white transition-transform hover:scale-[1.03] shadow-[0_10px_30px_rgba(210,125,85,0.3)]">
                 Contact Us to Discuss Your Project →
               </Link>
             </motion.div>
 
             <motion.div variants={fadeIn} className="pt-12 mt-12 border-t border-linen/10 flex justify-center">
-               <Link to="/design-build-construction-nj" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-linen/50 hover:text-terracotta transition-colors font-medium bg-[#233528] hover:bg-[#2e4735] px-6 py-3 rounded-full border border-linen/10 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.2)]">
+               <Link href="/services/design-build" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-linen/50 hover:text-terracotta transition-colors font-medium bg-[#233528] hover:bg-[#2e4735] px-6 py-3 rounded-full border border-linen/10 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.2)]">
                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                  Back to Main Service
                </Link>

@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -17,7 +18,7 @@ export default function AdditionsEssexCountyPage() {
       <PremiumHero 
         badge="ESSEX COUNTY, NJ"
         title={<>Additions in <br /><span className="italic text-terracotta">Essex County, NJ</span></>}
-        description="Your home may have the right location but no longer have enough room. Hevan M Constructions provides home additions in Essex County, NJ, helping homeowners expand existing properties with thoughtfully planned additional living space."
+        description="Your home may have the right location but no longer have enough room. Haven M Construction provides home additions in Essex County, NJ, helping homeowners expand existing properties with thoughtfully planned additional living space."
         servingLabel="Back to:"
         servingLinks={[
           { name: 'All Additions', path: '/services/additions' }
@@ -137,7 +138,7 @@ export default function AdditionsEssexCountyPage() {
               Exterior materials, rooflines, windows, transitions, floor levels, interior circulation, and finishes all influence whether the completed addition feels integrated.
             </motion.p>
             <motion.p variants={fadeIn} className="text-[18px] leading-[1.8] text-forest-deep font-light italic border-t border-forest/10 pt-8 max-w-2xl mx-auto">
-              Hevan M Constructions focuses on the relationship between the existing structure and the proposed expansion rather than treating the addition as an isolated construction project.
+              Haven M Construction focuses on the relationship between the existing structure and the proposed expansion rather than treating the addition as an isolated construction project.
             </motion.p>
           </div>
         </motion.div>
@@ -149,7 +150,7 @@ export default function AdditionsEssexCountyPage() {
         description={
           <>
             <p>We serve homeowners throughout Essex County, including Verona, Montclair, Livingston, West Orange, Maplewood, South Orange, Short Hills, Bloomfield, and surrounding communities, depending on project scope.</p>
-            <p className="font-medium text-linen/90 border-t border-white/10 pt-6 mt-6">Before committing to a design, it is important to understand what the property can realistically accommodate and what construction requirements may apply. Contact Hevan M Constructions to discuss your Essex County addition project and the space you want to create.</p>
+            <p className="font-medium text-linen/90 border-t border-white/10 pt-6 mt-6">Before committing to a design, it is important to understand what the property can realistically accommodate and what construction requirements may apply. Contact Haven M Construction to discuss your Essex County addition project and the space you want to create.</p>
           </>
         }
       />

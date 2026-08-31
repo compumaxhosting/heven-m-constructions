@@ -1,6 +1,8 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -17,12 +19,14 @@ const staggerContainer = {
 
 export default function ValueEngineeringUnionCountyPage() {
   return (
-    <main className="bg-[#F6F4EE] min-h-screen selection:bg-terracotta/20 selection:text-forest-deep">
-      {/* --- HERO SECTION --- */}
-      <section className="relative overflow-hidden pt-40 pb-24 sm:pt-64 sm:pb-40 bg-[#F6F4EE]">
-        {/* Subtle Architectural Grid Background */}
-        <div className="absolute inset-0 pointer-events-none opacity-[0.04]"
-          style={{ backgroundImage: 'linear-gradient(to right, #233528 1px, transparent 1px), linear-gradient(to bottom, #233528 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+    <>
+      
+      <main className="bg-[#F6F4EE] min-h-screen selection:bg-terracotta/20 selection:text-forest-deep">
+        {/* --- HERO SECTION --- */}
+        <section className="relative overflow-hidden pt-40 pb-24 sm:pt-64 sm:pb-40 bg-[#F6F4EE]">
+          {/* Subtle Architectural Grid Background */}
+          <div className="absolute inset-0 pointer-events-none opacity-[0.04]"
+            style={{ backgroundImage: 'linear-gradient(to right, #233528 1px, transparent 1px), linear-gradient(to bottom, #233528 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
         {/* Ambient Glows */}
         <div className="pointer-events-none absolute -top-[10%] -left-[10%] w-[60vw] h-[100%] bg-gradient-to-r from-[#d27d55]/60 via-[#e58a5b]/20 to-transparent blur-[100px]" />
@@ -32,7 +36,7 @@ export default function ValueEngineeringUnionCountyPage() {
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-4xl">
             
             <motion.div variants={fadeIn} className="mb-6 flex justify-start">
-               <Link to="/services/value-engineering" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-forest hover:text-terracotta transition-colors font-medium bg-[#F6F4EE] hover:bg-white/40 backdrop-blur-sm px-5 py-2.5 rounded-full border border-forest/10 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
+               <Link href="/services/value-engineering" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-forest hover:text-terracotta transition-colors font-medium bg-[#F6F4EE] hover:bg-white/40 backdrop-blur-sm px-5 py-2.5 rounded-full border border-forest/10 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                  Back to Main Service
                </Link>
@@ -49,7 +53,7 @@ export default function ValueEngineeringUnionCountyPage() {
             </motion.h1>
 
             <motion.p variants={fadeIn} className="text-[18px] sm:text-[22px] leading-[1.6] text-forest-deep/80 font-light mb-6">
-              Construction budgets can change quickly when material selections, labor requirements, design complexity, and site conditions interact. Hevan M Constructions provides value engineering in Union County, NJ to help project owners and construction teams identify practical ways to improve project value while maintaining the required result.
+              Construction budgets can change quickly when material selections, labor requirements, design complexity, and site conditions interact. Haven M Construction provides value engineering in Union County, NJ to help project owners and construction teams identify practical ways to improve project value while maintaining the required result.
             </motion.p>
 
             <motion.p variants={fadeIn} className="text-[16px] sm:text-[18px] leading-[1.8] text-forest-deep/80 font-light italic border-t border-forest/10 pt-4">
@@ -187,7 +191,7 @@ export default function ValueEngineeringUnionCountyPage() {
               A Construction-Focused <span className="italic text-terracotta">Perspective</span>
             </motion.h2>
             <motion.p variants={fadeIn} className="text-[18px] leading-[1.8] text-forest-deep/80 font-light mb-6">
-              Hevan M Constructions evaluates value engineering from the standpoint of what can realistically be executed in the field. That means looking at more than drawings and unit prices.
+              Haven M Construction evaluates value engineering from the standpoint of what can realistically be executed in the field. That means looking at more than drawings and unit prices.
             </motion.p>
             <motion.p variants={fadeIn} className="text-[18px] leading-[1.8] text-forest-deep/80 font-light mb-8">
               The review can consider how an option will be procured, delivered, installed, coordinated, maintained, and ultimately perform.
@@ -210,18 +214,18 @@ export default function ValueEngineeringUnionCountyPage() {
               Discuss Your <br className="hidden sm:block" /><span className="italic text-terracotta">Project Needs</span>
             </motion.h2>
             <motion.div variants={fadeIn} className="space-y-6 text-[18px] sm:text-[20px] leading-[1.7] text-linen/70 mb-10 max-w-2xl mx-auto font-light">
-              <p>Hevan M Constructions provides value engineering services for projects throughout Union County, including areas such as Union, Elizabeth, Linden, Rahway, Westfield, Cranford, Plainfield, Scotch Plains, and surrounding communities, subject to project scope and service availability.</p>
-              <p>If your Union County construction project needs cost optimization, constructability review, or an evaluation of design and material alternatives, contact Hevan M Constructions for a project-specific discussion.</p>
+              <p>Haven M Construction provides value engineering services for projects throughout Union County, including areas such as Union, Elizabeth, Linden, Rahway, Westfield, Cranford, Plainfield, Scotch Plains, and surrounding communities, subject to project scope and service availability.</p>
+              <p>If your Union County construction project needs cost optimization, constructability review, or an evaluation of design and material alternatives, contact Haven M Construction for a project-specific discussion.</p>
             </motion.div>
 
             <motion.div variants={fadeIn}>
-              <Link to="/contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-terracotta px-10 py-5 text-[16px] font-medium text-white transition-transform hover:scale-[1.03] shadow-[0_10px_30px_rgba(210,125,85,0.3)]">
+              <Link href="/contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-terracotta px-10 py-5 text-[16px] font-medium text-white transition-transform hover:scale-[1.03] shadow-[0_10px_30px_rgba(210,125,85,0.3)]">
                 Contact Us to Discuss Your Project →
               </Link>
             </motion.div>
 
             <motion.div variants={fadeIn} className="pt-12 mt-12 border-t border-linen/10 flex justify-center">
-               <Link to="/services/value-engineering" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-linen/50 hover:text-terracotta transition-colors font-medium bg-[#233528] hover:bg-[#2e4735] px-6 py-3 rounded-full border border-linen/10 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.2)]">
+               <Link href="/services/value-engineering" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-linen/50 hover:text-terracotta transition-colors font-medium bg-[#233528] hover:bg-[#2e4735] px-6 py-3 rounded-full border border-linen/10 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.2)]">
                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                  Back to Main Service
                </Link>
@@ -230,5 +234,6 @@ export default function ValueEngineeringUnionCountyPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

@@ -1,7 +1,8 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import Link from 'next/link';
+
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -21,124 +22,7 @@ export default function HomeAdditionsEssexCountyPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Whole-Home Additions in Essex County, NJ | Haven M Construction</title>
-        <meta name="description" content="Planning a whole-home addition in Essex County, NJ? Haven M Construction provides custom design-build solutions for more space, comfort and value." />
-        <meta name="keywords" content="whole-home additions Essex County NJ, whole-home addition contractor Essex County NJ, best whole-home addition contractor near me, who builds whole-home additions in Essex County, how much does a whole-home addition cost in NJ, whole-home addition ideas for Essex County homes, how to plan a whole-home addition in Essex County NJ, custom home additions Essex County NJ, residential addition contractor Essex County NJ, home expansion contractor Essex County NJ, design-build home addition contractor Essex County, whole-house renovation and addition NJ, second-story addition contractor Essex County NJ, home addition construction near me, residential construction contractor Essex County NJ, general contractor for home additions in Essex County, home addition contractor serving Essex County NJ, whole-home remodeling and additions Essex County, construction company for home additions near me, custom residential construction Essex County NJ" />
-        <meta name="author" content="Haven M Construction" />
-        <link rel="canonical" href="https://www.havenmconstruction.com/whole-home-additions-essex-county-nj" />
-        <meta name="robots" content="index,follow" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Whole-Home Additions in Essex County, NJ | Haven M Construction" />
-        <meta property="og:description" content="Planning a whole-home addition in Essex County, NJ? Haven M Construction provides custom design-build solutions for more space, comfort and value." />
-        <meta property="og:url" content="https://www.havenmconstruction.com/whole-home-additions-essex-county-nj" />
-        <meta property="og:site_name" content="Haven M Construction" />
-        <meta property="og:image" content="https://www.havenmconstruction.com/images/og-image.jpg" />
-        <meta property="og:image:alt" content="Whole-home additions in Essex County, NJ by Haven M Construction" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Whole-Home Additions in Essex County, NJ | Haven M Construction" />
-        <meta name="twitter:description" content="Planning a whole-home addition in Essex County, NJ? Haven M Construction provides custom design-build solutions for more space, comfort and value." />
-        <meta name="twitter:image" content="https://www.havenmconstruction.com/images/og-image.jpg" />
-        <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "GeneralContractor",
-                  "@id": "https://www.havenmconstruction.com/#organization",
-                  "name": "Haven M Construction",
-                  "url": "https://www.havenmconstruction.com/",
-                  "description": "Haven M Construction provides custom whole-home additions and residential design-build construction for homeowners throughout Essex County, New Jersey.",
-                  "areaServed": {
-                    "@type": "AdministrativeArea",
-                    "name": "Essex County, New Jersey"
-                  },
-                  "knowsAbout": [
-                    "Whole-Home Additions",
-                    "Custom Home Additions",
-                    "Residential Design-Build",
-                    "Home Expansion",
-                    "Second-Story Additions",
-                    "Whole-House Renovation",
-                    "Residential Construction"
-                  ]
-                },
-                {
-                  "@type": "Service",
-                  "@id": "https://www.havenmconstruction.com/whole-home-additions-essex-county-nj#service",
-                  "name": "Whole-Home Additions in Essex County, NJ",
-                  "serviceType": "Whole-Home Additions",
-                  "description": "Custom whole-home addition and design-build solutions for Essex County homeowners seeking more space, comfort, functionality and long-term value.",
-                  "provider": {
-                    "@id": "https://www.havenmconstruction.com/#organization"
-                  },
-                  "areaServed": {
-                    "@type": "AdministrativeArea",
-                    "name": "Essex County, New Jersey"
-                  },
-                  "url": "https://www.havenmconstruction.com/whole-home-additions-essex-county-nj"
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "https://www.havenmconstruction.com/whole-home-additions-essex-county-nj#webpage",
-                  "url": "https://www.havenmconstruction.com/whole-home-additions-essex-county-nj",
-                  "name": "Whole-Home Additions in Essex County, NJ | Haven M Construction",
-                  "description": "Planning a whole-home addition in Essex County, NJ? Haven M Construction provides custom design-build solutions for more space, comfort and value.",
-                  "isPartOf": {
-                    "@id": "https://www.havenmconstruction.com/#website"
-                  },
-                  "about": {
-                    "@id": "https://www.havenmconstruction.com/whole-home-additions-essex-county-nj#service"
-                  },
-                  "mainEntity": {
-                    "@id": "https://www.havenmconstruction.com/whole-home-additions-essex-county-nj#service"
-                  },
-                  "publisher": {
-                    "@id": "https://www.havenmconstruction.com/#organization"
-                  },
-                  "inLanguage": "en-US"
-                },
-                {
-                  "@type": "WebSite",
-                  "@id": "https://www.havenmconstruction.com/#website",
-                  "url": "https://www.havenmconstruction.com/",
-                  "name": "Haven M Construction",
-                  "publisher": {
-                    "@id": "https://www.havenmconstruction.com/#organization"
-                  }
-                },
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": "https://www.havenmconstruction.com/whole-home-additions-essex-county-nj#breadcrumb",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": 1,
-                      "name": "Home",
-                      "item": "https://www.havenmconstruction.com/"
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": 2,
-                      "name": "Whole-Home Additions",
-                      "item": "https://www.havenmconstruction.com/services/whole-home-additions"
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": 3,
-                      "name": "Essex County, NJ",
-                      "item": "https://www.havenmconstruction.com/whole-home-additions-essex-county-nj"
-                    }
-                  ]
-                }
-              ]
-            }
-          `}
-        </script>
-      </Helmet>
+      
       <main className="bg-[#F6F4EE] min-h-screen selection:bg-terracotta/20 selection:text-forest-deep">
         {/* --- HERO SECTION --- */}
       <section className="relative overflow-hidden pt-40 pb-24 sm:pt-64 sm:pb-40 bg-[#F6F4EE]">
@@ -154,7 +38,7 @@ export default function HomeAdditionsEssexCountyPage() {
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-4xl">
             
             <motion.div variants={fadeIn} className="mb-6 flex justify-start">
-               <Link to="/services/whole-home-additions" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-forest hover:text-terracotta transition-colors font-medium bg-white/40 backdrop-blur-sm px-5 py-2.5 rounded-full border border-forest/10 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
+               <Link href="/services/whole-home-additions" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-forest hover:text-terracotta transition-colors font-medium bg-white/40 backdrop-blur-sm px-5 py-2.5 rounded-full border border-forest/10 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                  Back to Main Service
                </Link>
@@ -355,13 +239,13 @@ export default function HomeAdditionsEssexCountyPage() {
             </motion.div>
 
             <motion.div variants={fadeIn} className="mb-10">
-              <Link to="/contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-terracotta px-10 py-5 text-[16px] font-medium text-white transition-transform hover:scale-[1.03] shadow-[0_10px_30px_rgba(210,125,85,0.3)]">
+              <Link href="/contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-terracotta px-10 py-5 text-[16px] font-medium text-white transition-transform hover:scale-[1.03] shadow-[0_10px_30px_rgba(210,125,85,0.3)]">
                 Contact Us to Discuss Your Project →
               </Link>
             </motion.div>
 
             <motion.div variants={fadeIn} className="pt-12 mt-12 border-t border-linen/10 flex justify-center">
-               <Link to="/services/whole-home-additions" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-linen/50 hover:text-terracotta transition-colors font-medium bg-[#233528] hover:bg-[#2e4735] px-6 py-3 rounded-full border border-linen/10 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.2)]">
+               <Link href="/services/whole-home-additions" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-linen/50 hover:text-terracotta transition-colors font-medium bg-[#233528] hover:bg-[#2e4735] px-6 py-3 rounded-full border border-linen/10 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.2)]">
                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                  Back to Main Service
                </Link>

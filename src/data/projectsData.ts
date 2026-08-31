@@ -10,6 +10,7 @@ import addition2 from '../assets/2.webp';
 import addition3 from '../assets/3.webp';
 import addition4 from '../assets/4.webp';
 import addition5 from '../assets/5.webp';
+import comm31 from '../assets/31.webp';
 
 export interface Project {
   id: string;
@@ -29,6 +30,26 @@ export interface Project {
 }
 
 const legacyProjects: Project[] = [
+  {
+    id: 'premium-commercial-build',
+    title: 'Premium Commercial Build',
+    location: 'Verona, NJ',
+    year: 2026,
+    category: 'Commercial',
+    tag: 'Commercial · Build-Out',
+    description: 'A striking commercial space crafted for modern business needs with premium materials.',
+    longDescription: 'This commercial build represents the pinnacle of modern workspace design. Integrating state-of-the-art construction techniques with luxurious, high-performance materials, the space serves as both a functional hub and a visual statement for the brand.',
+    sqft: '4,500',
+    duration: '6 months',
+    scope: 'Full commercial build-out, custom finishes, mechanical integration',
+    heroImage: comm31,
+    galleryImages: [
+      asset2,
+      asset4,
+      asset6,
+    ],
+    color: 'terracotta',
+  },
   {
     id: 'ridgemont-architectural-villa',
     title: 'Ridgemont Architectural Villa',
@@ -259,5 +280,5 @@ export const projects: Project[] = [
   ...addedProjects.filter((project) => project.id === 'ridgewood-timber-frame-build'),
 ];
 
-export const categories = ['All', 'Residential', 'Commercial', 'Veterinary'] as const;
+export const categories = ['All'] as const;
 export type Category = typeof categories[number];

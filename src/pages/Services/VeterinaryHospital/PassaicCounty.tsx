@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -22,7 +23,7 @@ export default function VeterinaryHospitalPassaicCountyPage() {
         description="Build a Veterinary Facility for Efficient Patient Care. Veterinary hospitals combine medical treatment, animal handling, diagnostics, surgery, recovery, client service, and administrative work. The construction needs to accommodate all of these functions without making the facility unnecessarily complicated."
         servingLabel="Back to:"
         servingLinks={[
-          { name: 'All Veterinary Hospital', path: '/veterinary-hospital-construction-nj' }
+          { name: 'All Veterinary Hospital', path: '/services/veterinary-hospital-construction-nj' }
         ]}
       />
 
@@ -40,7 +41,7 @@ export default function VeterinaryHospitalPassaicCountyPage() {
               </motion.h2>
               <div className="space-y-6 text-[17px] leading-[1.8] text-linen/70 font-light">
                 <motion.p variants={fadeIn}>
-                  Hevan M Constructions provides veterinary hospital construction and renovation services in Passaic County, NJ, serving veterinary practices from Verona, New Jersey. A veterinary facility should be planned around movement and relationships between spaces.
+                  Haven M Construction provides veterinary hospital construction and renovation services in Passaic County, NJ, serving veterinary practices from Verona, New Jersey. A veterinary facility should be planned around movement and relationships between spaces.
                 </motion.p>
                 <motion.p variants={fadeIn} className="text-[16px] leading-[1.8] text-linen/90 font-medium border-t border-white/10 pt-6">
                   Key spatial relationships to consider:
@@ -200,8 +201,8 @@ export default function VeterinaryHospitalPassaicCountyPage() {
         title={<>Veterinary Hospital Construction in <br className="hidden sm:block" /><span className="italic text-terracotta">Passaic County, NJ</span></>}
         description={
           <>
-            <p>Based in Verona, New Jersey, Hevan M Constructions serves veterinary practices in Passaic County and throughout its North Jersey service area.</p>
-            <p className="font-medium text-linen/90 border-t border-white/10 pt-6 mt-6">Planning a veterinary clinic, animal hospital, renovation, or expansion? Contact Hevan M Constructions to discuss your project and property.</p>
+            <p>Based in Verona, New Jersey, Haven M Construction serves veterinary practices in Passaic County and throughout its North Jersey service area.</p>
+            <p className="font-medium text-linen/90 border-t border-white/10 pt-6 mt-6">Planning a veterinary clinic, animal hospital, renovation, or expansion? Contact Haven M Construction to discuss your project and property.</p>
           </>
         }
       />

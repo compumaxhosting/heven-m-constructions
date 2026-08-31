@@ -1,6 +1,8 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -17,12 +19,14 @@ const staggerContainer = {
 
 export default function ValueEngineeringPage() {
   return (
-    <main className="bg-[#F6F4EE] min-h-screen selection:bg-terracotta/20 selection:text-forest-deep">
-      {/* --- HERO SECTION --- */}
-      <section className="relative overflow-hidden pt-40 pb-24 sm:pt-64 sm:pb-40 bg-[#F6F4EE]">
-        {/* Subtle Architectural Grid Background */}
-        <div className="absolute inset-0 pointer-events-none opacity-[0.04]"
-          style={{ backgroundImage: 'linear-gradient(to right, #233528 1px, transparent 1px), linear-gradient(to bottom, #233528 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+    <>
+      
+      <main className="bg-[#F6F4EE] min-h-screen selection:bg-terracotta/20 selection:text-forest-deep">
+        {/* --- HERO SECTION --- */}
+        <section className="relative overflow-hidden pt-40 pb-24 sm:pt-64 sm:pb-40 bg-[#F6F4EE]">
+          {/* Subtle Architectural Grid Background */}
+          <div className="absolute inset-0 pointer-events-none opacity-[0.04]"
+            style={{ backgroundImage: 'linear-gradient(to right, #233528 1px, transparent 1px), linear-gradient(to bottom, #233528 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
         {/* Ambient Glows */}
         <div className="pointer-events-none absolute -top-[10%] -left-[10%] w-[60vw] h-[100%] bg-gradient-to-r from-[#d27d55]/60 via-[#e58a5b]/20 to-transparent blur-[100px]" />
@@ -49,9 +53,8 @@ export default function ValueEngineeringPage() {
                 { name: 'Passaic', path: '/value-engineering-passaic-county-nj' },
                 { name: 'Union', path: '/value-engineering-union-county-nj' },
               ].map((county) => (
-                <Link
-                  key={county.name}
-                  to={county.path}
+                <Link key={county.name}
+                  href={county.path}
                   className="group flex items-center gap-2 rounded-full border border-forest/15 bg-white/40 backdrop-blur-sm px-5 py-2.5 text-[14px] font-medium text-forest transition-all hover:bg-forest hover:text-linen hover:border-forest shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_20px_rgba(35,53,40,0.15)]"
                 >
                   {county.name}
@@ -232,9 +235,8 @@ export default function ValueEngineeringPage() {
                   { name: 'Union County', path: '/value-engineering-union-county-nj' },
                   { name: 'Passaic County', path: '/value-engineering-passaic-county-nj' },
                 ].map((county) => (
-                  <Link
-                    key={county.name}
-                    to={county.path}
+                  <Link key={county.name}
+                    href={county.path}
                     className="group relative overflow-hidden rounded-[24px] border border-forest/10 bg-[#F6F4EE]/50 backdrop-blur-sm p-6 transition-all hover:bg-white hover:border-terracotta/30 hover:shadow-[0_8px_30px_rgba(210,125,85,0.08)] flex items-center justify-between"
                   >
                     <span className="relative z-10 text-[19px] font-display text-forest group-hover:text-terracotta transition-colors">
@@ -266,7 +268,7 @@ export default function ValueEngineeringPage() {
             </motion.div>
 
             <motion.div variants={fadeIn}>
-              <Link to="/contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-terracotta px-10 py-5 text-[16px] font-medium text-white transition-transform hover:scale-[1.03] shadow-[0_10px_30px_rgba(210,125,85,0.3)]">
+              <Link href="/contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-terracotta px-10 py-5 text-[16px] font-medium text-white transition-transform hover:scale-[1.03] shadow-[0_10px_30px_rgba(210,125,85,0.3)]">
                 Contact Us to Discuss Your Project →
               </Link>
             </motion.div>
@@ -278,7 +280,7 @@ export default function ValueEngineeringPage() {
             </motion.div>
 
             <motion.div variants={fadeIn} className="pt-8 flex justify-center">
-               <Link to="/services" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-linen/50 hover:text-terracotta transition-colors font-medium bg-[#233528] hover:bg-[#2e4735] px-6 py-3 rounded-full border border-linen/10 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.2)]">
+               <Link href="/services" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-linen/50 hover:text-terracotta transition-colors font-medium bg-[#233528] hover:bg-[#2e4735] px-6 py-3 rounded-full border border-linen/10 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.2)]">
                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                  Back to All Services
                </Link>
@@ -287,5 +289,6 @@ export default function ValueEngineeringPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

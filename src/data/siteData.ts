@@ -55,9 +55,9 @@ export const services = [
   {
     num: '02',
     category: 'Process',
-    title: 'Design Build',
+    title: 'Design-Build',
     description: 'Integrated architecture, engineering, and construction under one roof from concept to final walkthrough.',
-    link: '/design-build-construction-nj',
+    link: '/services/design-build',
   },
   {
     num: '03',
@@ -82,10 +82,10 @@ export const services = [
   },
   {
     num: '06',
-    category: 'Specialty',
-    title: 'Construct Veterinary Hospital',
+    category: 'Specialty Healthcare',
+    title: 'Veterinary Hospital',
     description: 'State-of-the-art animal hospitals, clinical surgical suites, and specialized veterinary care facilities.',
-    link: '/veterinary-hospital-construction-nj',
+    link: '/services/veterinary-hospital-construction-nj',
   },
 ];
 

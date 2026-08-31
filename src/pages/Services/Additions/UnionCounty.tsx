@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -124,7 +125,7 @@ export default function AdditionsUnionCountyPage() {
               Adding a room isn't always enough. A successful project considers how people enter, move through, and use the home. Expanding one area may create an opportunity to improve adjoining rooms, increase natural light, open up circulation, or create a more practical connection between indoor spaces.
             </p>
             <p className="font-medium italic">
-              Hevan M Constructions approaches each project individually rather than starting with a one-size-fits-all addition package.
+              Haven M Construction approaches each project individually rather than starting with a one-size-fits-all addition package.
             </p>
           </motion.div>
         </div>

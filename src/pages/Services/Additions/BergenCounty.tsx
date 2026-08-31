@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -104,7 +105,7 @@ export default function AdditionsBergenCountyPage() {
             </motion.h2>
             <motion.div variants={fadeIn} className="space-y-6 text-[18px] leading-[1.8] text-forest-deep/80 font-light mb-12">
               <p>Every property is different. Lot dimensions, existing construction, setbacks, zoning requirements, access, utilities, and the configuration of the existing home can influence what type of addition is practical.</p>
-              <p className="font-medium italic">Hevan M Constructions approaches each project individually rather than starting with a one-size-fits-all addition package.</p>
+              <p className="font-medium italic">Haven M Construction approaches each project individually rather than starting with a one-size-fits-all addition package.</p>
             </motion.div>
 
             <motion.div variants={fadeIn} className="bg-white/40 border border-white p-8 rounded-[24px] shadow-[0_4px_20px_rgb(0,0,0,0.02)] text-left">
@@ -133,7 +134,7 @@ export default function AdditionsBergenCountyPage() {
         title={<>Start Planning Your <br className="hidden sm:block" /><span className="italic text-terracotta">Bergen County Addition</span></>}
         description={
           <>
-            <p>Homeowners considering additions in Hackensack, Fort Lee, Paramus, Ridgewood, Teaneck, and surrounding communities can contact Hevan M Constructions to discuss their project.</p>
+            <p>Homeowners considering additions in Hackensack, Fort Lee, Paramus, Ridgewood, Teaneck, and surrounding communities can contact Haven M Construction to discuss their project.</p>
             <p className="font-medium text-linen/90">Whether you are considering a modest living-space extension or a major second-story expansion, early planning helps establish realistic expectations for design, construction, approvals, and budget.</p>
           </>
         }

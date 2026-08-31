@@ -1,7 +1,8 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import Link from 'next/link';
+
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -21,120 +22,7 @@ export default function DesignBuildEssexCountyPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Design-Build Contractors in Essex County, NJ | Haven M Construction</title>
-        <meta name="description" content="Plan, design, and build with experienced design-build contractors in Essex County, NJ. Haven M Construction delivers a streamlined process from concept to completion." />
-        <meta name="keywords" content="design-build contractors Essex County NJ, design-build construction Essex County NJ, design-build construction contractors Essex County NJ, design-build company Essex County NJ, construction contractors Essex County NJ" />
-        <meta name="author" content="Haven M Construction" />
-        <link rel="canonical" href="https://www.havenmconstruction.com/design-build-essex-county-nj" />
-        <meta name="robots" content="index,follow" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Design-Build Contractors in Essex County, NJ | Haven M Construction" />
-        <meta property="og:description" content="Plan, design, and build with experienced design-build contractors in Essex County, NJ. Haven M Construction delivers a streamlined process from concept to completion." />
-        <meta property="og:url" content="https://www.havenmconstruction.com/design-build-essex-county-nj" />
-        <meta property="og:site_name" content="Haven M Construction" />
-        <meta property="og:image" content="https://www.havenmconstruction.com/wp-content/uploads/og-image.jpg" />
-        <meta property="og:image:alt" content="Haven M Construction design-build services in Essex County, NJ" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Design-Build Contractors in Essex County, NJ | Haven M Construction" />
-        <meta name="twitter:description" content="Plan, design, and build with experienced design-build contractors in Essex County, NJ. Haven M Construction delivers a streamlined process from concept to completion." />
-        <meta name="twitter:image" content="https://www.havenmconstruction.com/wp-content/uploads/og-image.jpg" />
-        <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "WebPage",
-                  "@id": "https://www.havenmconstruction.com/design-build-essex-county-nj#webpage",
-                  "url": "https://www.havenmconstruction.com/design-build-essex-county-nj",
-                  "name": "Design-Build Contractors in Essex County, NJ | Haven M Construction",
-                  "description": "Plan, design, and build with experienced design-build contractors in Essex County, NJ. Haven M Construction delivers a streamlined process from concept to completion.",
-                  "isPartOf": {
-                    "@id": "https://www.havenmconstruction.com/#website"
-                  },
-                  "about": {
-                    "@id": "https://www.havenmconstruction.com/design-build-essex-county-nj#service"
-                  },
-                  "breadcrumb": {
-                    "@id": "https://www.havenmconstruction.com/design-build-essex-county-nj#breadcrumb"
-                  },
-                  "inLanguage": "en-US"
-                },
-                {
-                  "@type": "Service",
-                  "@id": "https://www.havenmconstruction.com/design-build-essex-county-nj#service",
-                  "name": "Design-Build Construction Services in Essex County, NJ",
-                  "serviceType": "Design-Build Construction",
-                  "description": "Design-build construction services for residential and construction projects in Essex County, New Jersey, providing an integrated approach from planning and design through construction and completion.",
-                  "areaServed": {
-                    "@type": "AdministrativeArea",
-                    "name": "Essex County, New Jersey",
-                    "containedInPlace": {
-                      "@type": "State",
-                      "name": "New Jersey",
-                      "containedInPlace": {
-                        "@type": "Country",
-                        "name": "United States"
-                      }
-                    }
-                  },
-                  "provider": {
-                    "@id": "https://www.havenmconstruction.com/#business"
-                  },
-                  "url": "https://www.havenmconstruction.com/design-build-essex-county-nj"
-                },
-                {
-                  "@type": "HomeAndConstructionBusiness",
-                  "@id": "https://www.havenmconstruction.com/#business",
-                  "name": "Haven M Construction",
-                  "url": "https://www.havenmconstruction.com/",
-                  "description": "Haven M Construction provides construction and design-build services.",
-                  "areaServed": {
-                    "@type": "AdministrativeArea",
-                    "name": "Essex County, New Jersey"
-                  }
-                },
-                {
-                  "@type": "WebSite",
-                  "@id": "https://www.havenmconstruction.com/#website",
-                  "url": "https://www.havenmconstruction.com/",
-                  "name": "Haven M Construction",
-                  "publisher": {
-                    "@id": "https://www.havenmconstruction.com/#business"
-                  },
-                  "inLanguage": "en-US"
-                },
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": "https://www.havenmconstruction.com/design-build-essex-county-nj#breadcrumb",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": 1,
-                      "name": "Home",
-                      "item": "https://www.havenmconstruction.com/"
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": 2,
-                      "name": "Design-Build Construction",
-                      "item": "https://www.havenmconstruction.com/design-build-essex-county-nj"
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": 3,
-                      "name": "Essex County, NJ"
-                    }
-                  ]
-                }
-              ]
-            }
-          `}
-        </script>
-      </Helmet>
+      
       <main className="bg-[#F6F4EE] min-h-screen selection:bg-terracotta/20 selection:text-forest-deep">
         {/* --- HERO SECTION --- */}
       <section className="relative overflow-hidden pt-40 pb-24 sm:pt-64 sm:pb-40 bg-[#F6F4EE]">
@@ -150,7 +38,7 @@ export default function DesignBuildEssexCountyPage() {
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-4xl">
             
             <motion.div variants={fadeIn} className="mb-6 flex justify-start">
-               <Link to="/design-build-construction-nj" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-forest hover:text-terracotta transition-colors font-medium bg-white/40 backdrop-blur-sm px-5 py-2.5 rounded-full border border-forest/10 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
+               <Link href="/services/design-build" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-forest hover:text-terracotta transition-colors font-medium bg-white/40 backdrop-blur-sm px-5 py-2.5 rounded-full border border-forest/10 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                  Back to Main Service
                </Link>
@@ -171,7 +59,7 @@ export default function DesignBuildEssexCountyPage() {
             </motion.h2>
 
             <motion.p variants={fadeIn} className="text-[17px] sm:text-[19px] leading-[1.7] text-forest-deep/85 font-light mb-6">
-              Planning to expand, remodel, or transform your home in Essex County? Hevan M Constructions provides design-build construction services from Verona, NJ, bringing project planning, design coordination, engineering coordination, and construction together through one coordinated process.
+              Planning to expand, remodel, or transform your home in Essex County? Haven M Construction provides design-build construction services from Verona, NJ, bringing project planning, design coordination, engineering coordination, and construction together through one coordinated process.
             </motion.p>
 
             <motion.p variants={fadeIn} className="text-[16px] sm:text-[17px] leading-[1.7] text-forest-deep/75 font-light">
@@ -406,19 +294,19 @@ export default function DesignBuildEssexCountyPage() {
               Design-Build Construction <br className="hidden sm:block" /><span className="italic text-terracotta">in Essex County</span>
             </motion.h2>
             <motion.div variants={fadeIn} className="space-y-6 text-[18px] sm:text-[20px] leading-[1.7] text-linen/70 mb-10 max-w-2xl mx-auto font-light">
-              <p>Hevan M Constructions is based in Verona, New Jersey and serves homeowners throughout Essex County and surrounding North Jersey communities.</p>
+              <p>Haven M Construction is based in Verona, New Jersey and serves homeowners throughout Essex County and surrounding North Jersey communities.</p>
               <p>If you are planning an addition, renovation, or major residential construction project, we can help you evaluate the project and determine the next steps.</p>
-              <p>Ready to discuss your project? Contact Hevan M Constructions to schedule a consultation.</p>
+              <p>Ready to discuss your project? Contact Haven M Construction to schedule a consultation.</p>
             </motion.div>
 
             <motion.div variants={fadeIn}>
-              <Link to="/contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-terracotta px-10 py-5 text-[16px] font-medium text-white transition-transform hover:scale-[1.03] shadow-[0_10px_30px_rgba(210,125,85,0.3)]">
+              <Link href="/contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-terracotta px-10 py-5 text-[16px] font-medium text-white transition-transform hover:scale-[1.03] shadow-[0_10px_30px_rgba(210,125,85,0.3)]">
                 Contact Us to Discuss Your Project →
               </Link>
             </motion.div>
 
             <motion.div variants={fadeIn} className="pt-12 mt-12 border-t border-linen/10 flex justify-center">
-               <Link to="/design-build-construction-nj" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-linen/50 hover:text-terracotta transition-colors font-medium bg-[#233528] hover:bg-[#2e4735] px-6 py-3 rounded-full border border-linen/10 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.2)]">
+               <Link href="/services/design-build" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-linen/50 hover:text-terracotta transition-colors font-medium bg-[#233528] hover:bg-[#2e4735] px-6 py-3 rounded-full border border-linen/10 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.2)]">
                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                  Back to Main Service
                </Link>

@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -19,10 +20,10 @@ export default function VeterinaryHospitalMorrisCountyPage() {
       <PremiumHero
         badge="MORRIS COUNTY, NJ"
         title={<>Veterinary Hospital Construction in <br /><span className="italic text-terracotta">Morris County, NJ</span></>}
-        description="Construction That Supports Veterinary Care. A veterinary facility has to work as a healthcare environment and a practical workplace. Hevan M Constructions provides veterinary hospital construction and renovation services in Morris County, NJ, serving veterinary practices from our Verona, New Jersey location."
+        description="Construction That Supports Veterinary Care. A veterinary facility has to work as a healthcare environment and a practical workplace. Haven M Construction provides veterinary hospital construction and renovation services in Morris County, NJ, serving veterinary practices from our Verona, New Jersey location."
         servingLabel="Back to:"
         servingLinks={[
-          { name: 'All Veterinary Hospital', path: '/veterinary-hospital-construction-nj' }
+          { name: 'All Veterinary Hospital', path: '/services/veterinary-hospital-construction-nj' }
         ]}
       />
 
@@ -184,8 +185,8 @@ export default function VeterinaryHospitalMorrisCountyPage() {
         title={<>Veterinary Hospital Construction in <br className="hidden sm:block" /><span className="italic text-terracotta">Morris County</span></>}
         description={
           <>
-            <p>Hevan M Constructions serves Morris County, NJ from Verona.</p>
-            <p className="font-medium text-linen/90 border-t border-white/10 pt-6 mt-6">Planning a new veterinary facility, clinic renovation, or hospital expansion? Contact Hevan M Constructions to discuss your project requirements.</p>
+            <p>Haven M Construction serves Morris County, NJ from Verona.</p>
+            <p className="font-medium text-linen/90 border-t border-white/10 pt-6 mt-6">Planning a new veterinary facility, clinic renovation, or hospital expansion? Contact Haven M Construction to discuss your project requirements.</p>
           </>
         }
       />

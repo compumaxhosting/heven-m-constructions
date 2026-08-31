@@ -1,7 +1,8 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import Link from 'next/link';
+
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -21,124 +22,7 @@ export default function WholeHomeAdditionsPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Whole-Home Additions in Verona, NJ | Design-Build Experts</title>
-        <meta name="description" content="Planning a whole-home addition in Verona, NJ? Haven M Construction creates thoughtful, functional additions across Bergen, Essex, Morris, Union & Passaic." />
-        <meta name="keywords" content="whole-home additions in Verona NJ, whole-home addition contractor near me, how much does a whole-home addition cost in New Jersey, who builds whole-home additions in NJ, best whole-home addition contractor near Verona NJ, home addition ideas for New Jersey homes, how to plan a whole-home addition in NJ, whole-home addition design-build contractor NJ, residential addition contractor in Verona NJ, custom home additions in New Jersey, home expansion contractor near me, second-story and home addition contractor NJ, whole-house renovation and addition NJ, residential construction contractor Verona NJ, addition contractor serving Bergen County NJ, addition contractor serving Essex County NJ, addition contractor serving Morris County NJ, addition contractor serving Union County NJ, addition contractor serving Passaic County NJ, design-build home addition contractor NJ, construction company for home additions near Verona NJ" />
-        <meta name="author" content="Haven M Construction" />
-        <link rel="canonical" href="https://www.havenmconstruction.com/services/whole-home-additions" />
-        <meta name="robots" content="index,follow" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Whole-Home Additions in Verona, NJ | Design-Build Experts" />
-        <meta property="og:description" content="Planning a whole-home addition in Verona, NJ? Haven M Construction creates thoughtful, functional additions across Bergen, Essex, Morris, Union & Passaic." />
-        <meta property="og:url" content="https://www.havenmconstruction.com/services/whole-home-additions" />
-        <meta property="og:site_name" content="Haven M Construction" />
-        <meta property="og:image" content="https://www.havenmconstruction.com/images/og-image.jpg" />
-        <meta property="og:image:alt" content="Whole-home additions by Haven M Construction in Verona, NJ" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Whole-Home Additions in Verona, NJ | Design-Build Experts" />
-        <meta name="twitter:description" content="Planning a whole-home addition in Verona, NJ? Haven M Construction creates thoughtful, functional additions across Bergen, Essex, Morris, Union & Passaic." />
-        <meta name="twitter:image" content="https://www.havenmconstruction.com/images/og-image.jpg" />
-        <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "GeneralContractor",
-                  "@id": "https://www.havenmconstruction.com/#organization",
-                  "name": "Haven M Construction",
-                  "url": "https://www.havenmconstruction.com/",
-                  "description": "Haven M Construction provides residential and commercial construction, whole-home additions, design-build, value engineering, boutique office construction, and veterinary hospital construction in Verona, NJ and surrounding counties.",
-                  "areaServed": [
-                    {
-                      "@type": "AdministrativeArea",
-                      "name": "Bergen County, New Jersey"
-                    },
-                    {
-                      "@type": "AdministrativeArea",
-                      "name": "Essex County, New Jersey"
-                    },
-                    {
-                      "@type": "AdministrativeArea",
-                      "name": "Morris County, New Jersey"
-                    },
-                    {
-                      "@type": "AdministrativeArea",
-                      "name": "Union County, New Jersey"
-                    },
-                    {
-                      "@type": "AdministrativeArea",
-                      "name": "Passaic County, New Jersey"
-                    }
-                  ]
-                },
-                {
-                  "@type": "Service",
-                  "@id": "https://www.havenmconstruction.com/services/whole-home-additions#service",
-                  "name": "Whole-Home Additions",
-                  "serviceType": "Whole-Home Additions",
-                  "description": "Haven M Construction designs and builds thoughtful, functional whole-home additions for homeowners in Verona, NJ and surrounding New Jersey counties.",
-                  "provider": {
-                    "@id": "https://www.havenmconstruction.com/#organization"
-                  },
-                  "areaServed": [
-                    {
-                      "@type": "AdministrativeArea",
-                      "name": "Bergen County, New Jersey"
-                    },
-                    {
-                      "@type": "AdministrativeArea",
-                      "name": "Essex County, New Jersey"
-                    },
-                    {
-                      "@type": "AdministrativeArea",
-                      "name": "Morris County, New Jersey"
-                    },
-                    {
-                      "@type": "AdministrativeArea",
-                      "name": "Union County, New Jersey"
-                    },
-                    {
-                      "@type": "AdministrativeArea",
-                      "name": "Passaic County, New Jersey"
-                    }
-                  ],
-                  "url": "https://www.havenmconstruction.com/services/whole-home-additions"
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "https://www.havenmconstruction.com/services/whole-home-additions#webpage",
-                  "url": "https://www.havenmconstruction.com/services/whole-home-additions",
-                  "name": "Whole-Home Additions in Verona, NJ | Design-Build Experts",
-                  "description": "Planning a whole-home addition in Verona, NJ? Haven M Construction creates thoughtful, functional additions across Bergen, Essex, Morris, Union and Passaic Counties.",
-                  "isPartOf": {
-                    "@id": "https://www.havenmconstruction.com/#website"
-                  },
-                  "about": {
-                    "@id": "https://www.havenmconstruction.com/services/whole-home-additions#service"
-                  },
-                  "publisher": {
-                    "@id": "https://www.havenmconstruction.com/#organization"
-                  },
-                  "inLanguage": "en-US"
-                },
-                {
-                  "@type": "WebSite",
-                  "@id": "https://www.havenmconstruction.com/#website",
-                  "url": "https://www.havenmconstruction.com/",
-                  "name": "Haven M Construction",
-                  "publisher": {
-                    "@id": "https://www.havenmconstruction.com/#organization"
-                  }
-                }
-              ]
-            }
-          `}
-        </script>
-      </Helmet>
+      
       <main className="bg-[#F6F4EE] min-h-screen selection:bg-terracotta/20 selection:text-forest-deep">
         {/* --- HERO SECTION --- */}
       <section className="relative overflow-hidden pt-40 pb-24 sm:pt-64 sm:pb-40 bg-[#F6F4EE]">
@@ -169,9 +53,8 @@ export default function WholeHomeAdditionsPage() {
                 { name: 'Passaic', path: '/whole-home-additions-passaic-county-nj' },
                 { name: 'Union', path: '/whole-home-additions-union-county-nj' },
               ].map((county) => (
-                <Link
-                  key={county.name}
-                  to={county.path}
+                <Link key={county.name}
+                  href={county.path}
                   className="group flex items-center gap-2 rounded-full border border-forest/15 bg-white/40 backdrop-blur-sm px-5 py-2.5 text-[14px] font-medium text-forest transition-all hover:bg-forest hover:text-linen hover:border-forest shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_20px_rgba(35,53,40,0.15)]"
                 >
                   {county.name}
@@ -419,9 +302,8 @@ export default function WholeHomeAdditionsPage() {
                   { name: 'Passaic County', path: '/whole-home-additions-passaic-county-nj' },
                   { name: 'Union County', path: '/whole-home-additions-union-county-nj' },
                 ].map((county) => (
-                  <Link
-                    key={county.name}
-                    to={county.path}
+                  <Link key={county.name}
+                    href={county.path}
                     className="group relative overflow-hidden rounded-[24px] border border-forest/10 bg-[#F6F4EE]/50 backdrop-blur-sm p-6 transition-all hover:bg-white hover:border-terracotta/30 hover:shadow-[0_8px_30px_rgba(210,125,85,0.08)] flex items-center justify-between"
                   >
                     <span className="relative z-10 text-[19px] font-display text-forest group-hover:text-terracotta transition-colors">
@@ -454,7 +336,7 @@ export default function WholeHomeAdditionsPage() {
             </motion.div>
 
             <motion.div variants={fadeIn}>
-              <Link to="/contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-terracotta px-10 py-5 text-[16px] font-medium text-white transition-transform hover:scale-[1.03] shadow-[0_10px_30px_rgba(210,125,85,0.3)]">
+              <Link href="/contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-terracotta px-10 py-5 text-[16px] font-medium text-white transition-transform hover:scale-[1.03] shadow-[0_10px_30px_rgba(210,125,85,0.3)]">
                 Contact Us to Discuss Your Project →
               </Link>
             </motion.div>

@@ -1,7 +1,8 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import Link from 'next/link';
+
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -21,143 +22,7 @@ export default function HomeAdditionsPassaicCountyPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Whole-Home Additions & Remodeling | Passaic County, NJ</title>
-        <meta name="description" content="Planning a whole-home addition in Passaic County, NJ? Haven M Construction designs and builds custom additions for more space, comfort, and value." />
-        <meta name="keywords" content="whole home additions Passaic County NJ, whole house additions Passaic County NJ, home additions Passaic County NJ, custom home additions NJ, home addition contractor Passaic County, whole home addition contractor near me, best home addition contractor Passaic County NJ, custom home additions near me, whole home addition cost NJ, how to add space to my home in Passaic County, home addition design and build NJ, residential addition contractor Passaic County, second story additions Passaic County NJ, home expansion contractor NJ, full home renovation and addition NJ, home addition contractor near Passaic County NJ, design-build home addition contractor NJ" />
-        <meta name="author" content="Haven M Construction" />
-        <link rel="canonical" href="https://www.havenmconstruction.com/whole-home-additions-passaic-county-nj" />
-        <meta name="robots" content="index,follow" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Whole-Home Additions & Remodeling | Passaic County, NJ" />
-        <meta property="og:description" content="Planning a whole-home addition in Passaic County, NJ? Haven M Construction designs and builds custom additions for more space, comfort, and value." />
-        <meta property="og:url" content="https://www.havenmconstruction.com/whole-home-additions-passaic-county-nj" />
-        <meta property="og:site_name" content="Haven M Construction" />
-        <meta property="og:image" content="https://www.havenmconstruction.com/images/og-image.jpg" />
-        <meta property="og:image:alt" content="Whole-Home Additions & Remodeling in Passaic County, NJ" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Whole-Home Additions & Remodeling | Passaic County, NJ" />
-        <meta name="twitter:description" content="Planning a whole-home addition in Passaic County, NJ? Haven M Construction designs and builds custom additions for more space, comfort, and value." />
-        <meta name="twitter:image" content="https://www.havenmconstruction.com/images/og-image.jpg" />
-        <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "GeneralContractor",
-                  "@id": "https://www.havenmconstruction.com/#organization",
-                  "name": "Haven M Construction",
-                  "url": "https://www.havenmconstruction.com/",
-                  "description": "Haven M Construction specializes in whole-home additions, remodeling, residential construction, and design-build services in Passaic County and throughout Northern New Jersey.",
-                  "areaServed": [
-                    {
-                      "@type": "AdministrativeArea",
-                      "name": "Passaic County, New Jersey"
-                    },
-                    {
-                      "@type": "AdministrativeArea",
-                      "name": "Bergen County, New Jersey"
-                    },
-                    {
-                      "@type": "AdministrativeArea",
-                      "name": "Essex County, New Jersey"
-                    },
-                    {
-                      "@type": "AdministrativeArea",
-                      "name": "Morris County, New Jersey"
-                    },
-                    {
-                      "@type": "AdministrativeArea",
-                      "name": "Union County, New Jersey"
-                    }
-                  ],
-                  "knowsAbout": [
-                    "Whole-Home Additions",
-                    "Home Remodeling",
-                    "Custom Home Additions",
-                    "Residential Design-Build",
-                    "Second-Story Additions",
-                    "Home Expansion",
-                    "Whole-House Renovation",
-                    "Residential Construction"
-                  ]
-                },
-                {
-                  "@type": "Service",
-                  "@id": "https://www.havenmconstruction.com/whole-home-additions-passaic-county-nj#service",
-                  "name": "Whole-Home Additions & Remodeling | Passaic County, NJ",
-                  "serviceType": "Whole-Home Additions and Remodeling",
-                  "description": "Custom whole-home additions and remodeling services designed to expand living space, improve comfort, enhance functionality, and add lasting value to homes in Passaic County, New Jersey.",
-                  "provider": {
-                    "@id": "https://www.havenmconstruction.com/#organization"
-                  },
-                  "areaServed": {
-                    "@type": "AdministrativeArea",
-                    "name": "Passaic County, New Jersey"
-                  },
-                  "url": "https://www.havenmconstruction.com/whole-home-additions-passaic-county-nj"
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "https://www.havenmconstruction.com/whole-home-additions-passaic-county-nj#webpage",
-                  "url": "https://www.havenmconstruction.com/whole-home-additions-passaic-county-nj",
-                  "name": "Whole-Home Additions & Remodeling | Passaic County, NJ",
-                  "description": "Planning a whole-home addition in Passaic County, NJ? Haven M Construction designs and builds custom additions for more space, comfort, and value.",
-                  "isPartOf": {
-                    "@id": "https://www.havenmconstruction.com/#website"
-                  },
-                  "about": {
-                    "@id": "https://www.havenmconstruction.com/whole-home-additions-passaic-county-nj#service"
-                  },
-                  "mainEntity": {
-                    "@id": "https://www.havenmconstruction.com/whole-home-additions-passaic-county-nj#service"
-                  },
-                  "publisher": {
-                    "@id": "https://www.havenmconstruction.com/#organization"
-                  },
-                  "inLanguage": "en-US"
-                },
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": "https://www.havenmconstruction.com/whole-home-additions-passaic-county-nj#breadcrumb",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": 1,
-                      "name": "Home",
-                      "item": "https://www.havenmconstruction.com/"
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": 2,
-                      "name": "Whole-Home Additions",
-                      "item": "https://www.havenmconstruction.com/services/whole-home-additions"
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": 3,
-                      "name": "Passaic County, NJ",
-                      "item": "https://www.havenmconstruction.com/whole-home-additions-passaic-county-nj"
-                    }
-                  ]
-                },
-                {
-                  "@type": "WebSite",
-                  "@id": "https://www.havenmconstruction.com/#website",
-                  "url": "https://www.havenmconstruction.com/",
-                  "name": "Haven M Construction",
-                  "publisher": {
-                    "@id": "https://www.havenmconstruction.com/#organization"
-                  }
-                }
-              ]
-            }
-          `}
-        </script>
-      </Helmet>
+      
       <main className="bg-[#F6F4EE] min-h-screen selection:bg-terracotta/20 selection:text-forest-deep">
         {/* --- HERO SECTION --- */}
       <section className="relative overflow-hidden pt-40 pb-24 sm:pt-64 sm:pb-40 bg-[#F6F4EE]">
@@ -173,7 +38,7 @@ export default function HomeAdditionsPassaicCountyPage() {
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-4xl">
             
             <motion.div variants={fadeIn} className="mb-6 flex justify-start">
-               <Link to="/services/whole-home-additions" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-forest hover:text-terracotta transition-colors font-medium bg-white/40 backdrop-blur-sm px-5 py-2.5 rounded-full border border-forest/10 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
+               <Link href="/services/whole-home-additions" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-forest hover:text-terracotta transition-colors font-medium bg-white/40 backdrop-blur-sm px-5 py-2.5 rounded-full border border-forest/10 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                  Back to Main Service
                </Link>
@@ -376,13 +241,13 @@ export default function HomeAdditionsPassaicCountyPage() {
             </motion.div>
 
             <motion.div variants={fadeIn} className="mb-10">
-              <Link to="/contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-terracotta px-10 py-5 text-[16px] font-medium text-white transition-transform hover:scale-[1.03] shadow-[0_10px_30px_rgba(210,125,85,0.3)]">
+              <Link href="/contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-terracotta px-10 py-5 text-[16px] font-medium text-white transition-transform hover:scale-[1.03] shadow-[0_10px_30px_rgba(210,125,85,0.3)]">
                 Contact Us to Discuss Your Project →
               </Link>
             </motion.div>
 
             <motion.div variants={fadeIn} className="pt-12 mt-12 border-t border-linen/10 flex justify-center">
-               <Link to="/services/whole-home-additions" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-linen/50 hover:text-terracotta transition-colors font-medium bg-[#233528] hover:bg-[#2e4735] px-6 py-3 rounded-full border border-linen/10 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.2)]">
+               <Link href="/services/whole-home-additions" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-linen/50 hover:text-terracotta transition-colors font-medium bg-[#233528] hover:bg-[#2e4735] px-6 py-3 rounded-full border border-linen/10 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.2)]">
                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                  Back to Main Service
                </Link>

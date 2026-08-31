@@ -1,7 +1,8 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import Link from 'next/link';
+
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -21,143 +22,7 @@ export default function HomeAdditionsUnionCountyPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Whole-Home Additions & Remodeling in Union County, NJ</title>
-        <meta name="description" content="Looking for a whole-home addition in Union County, NJ? Haven M Construction creates custom additions to expand your space, comfort, and lifestyle." />
-        <meta name="keywords" content="whole home additions Union County NJ, whole house additions Union County NJ, home additions Union County NJ, custom home additions Union County NJ, home addition contractor Union County NJ, whole home addition contractor near me, home addition company Union County NJ, custom home expansion Union County NJ, residential additions Union County NJ, home addition design and build NJ, best home addition contractor in Union County NJ, whole home addition cost NJ, how to add more living space to my Union County home, home expansion contractor near me, full home addition and renovation NJ, AI home addition ideas for Union County NJ, whole home addition ideas for NJ homes, custom house addition near me, home remodeling and additions Union County NJ" />
-        <meta name="author" content="Haven M Construction" />
-        <link rel="canonical" href="https://www.havenmconstruction.com/whole-home-additions-union-county-nj" />
-        <meta name="robots" content="index,follow" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Whole-Home Additions & Remodeling in Union County, NJ" />
-        <meta property="og:description" content="Looking for a whole-home addition in Union County, NJ? Haven M Construction creates custom additions to expand your space, comfort, and lifestyle." />
-        <meta property="og:url" content="https://www.havenmconstruction.com/whole-home-additions-union-county-nj" />
-        <meta property="og:site_name" content="Haven M Construction" />
-        <meta property="og:image" content="https://www.havenmconstruction.com/images/og-image.jpg" />
-        <meta property="og:image:alt" content="Whole-Home Additions & Remodeling in Union County, NJ by Haven M Construction" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Whole-Home Additions & Remodeling in Union County, NJ" />
-        <meta name="twitter:description" content="Looking for a whole-home addition in Union County, NJ? Haven M Construction creates custom additions to expand your space, comfort, and lifestyle." />
-        <meta name="twitter:image" content="https://www.havenmconstruction.com/images/og-image.jpg" />
-        <meta name="referrer" content="strict-origin-when-cross-origin" />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "GeneralContractor",
-                  "@id": "https://www.havenmconstruction.com/#organization",
-                  "name": "Haven M Construction",
-                  "url": "https://www.havenmconstruction.com/",
-                  "description": "Haven M Construction provides custom whole-home additions, remodeling, residential construction, and design-build services for homeowners in Union County and throughout Northern New Jersey.",
-                  "areaServed": [
-                    {
-                      "@type": "AdministrativeArea",
-                      "name": "Union County, New Jersey"
-                    },
-                    {
-                      "@type": "AdministrativeArea",
-                      "name": "Bergen County, New Jersey"
-                    },
-                    {
-                      "@type": "AdministrativeArea",
-                      "name": "Essex County, New Jersey"
-                    },
-                    {
-                      "@type": "AdministrativeArea",
-                      "name": "Morris County, New Jersey"
-                    },
-                    {
-                      "@type": "AdministrativeArea",
-                      "name": "Passaic County, New Jersey"
-                    }
-                  ],
-                  "knowsAbout": [
-                    "Whole-Home Additions",
-                    "Home Remodeling",
-                    "Custom Home Additions",
-                    "Residential Design-Build",
-                    "Home Expansion",
-                    "Second-Story Additions",
-                    "Whole-House Renovation",
-                    "Residential Construction"
-                  ]
-                },
-                {
-                  "@type": "Service",
-                  "@id": "https://www.havenmconstruction.com/whole-home-additions-union-county-nj#service",
-                  "name": "Whole-Home Additions & Remodeling in Union County, NJ",
-                  "serviceType": "Whole-Home Additions and Remodeling",
-                  "description": "Custom whole-home additions and remodeling solutions designed to expand living space, improve comfort, enhance functionality, and support the lifestyle of Union County homeowners.",
-                  "provider": {
-                    "@id": "https://www.havenmconstruction.com/#organization"
-                  },
-                  "areaServed": {
-                    "@type": "AdministrativeArea",
-                    "name": "Union County, New Jersey"
-                  },
-                  "url": "https://www.havenmconstruction.com/whole-home-additions-union-county-nj"
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "https://www.havenmconstruction.com/whole-home-additions-union-county-nj#webpage",
-                  "url": "https://www.havenmconstruction.com/whole-home-additions-union-county-nj",
-                  "name": "Whole-Home Additions & Remodeling in Union County, NJ",
-                  "description": "Looking for a whole-home addition in Union County, NJ? Haven M Construction creates custom home additions designed to expand your space, comfort, and lifestyle.",
-                  "isPartOf": {
-                    "@id": "https://www.havenmconstruction.com/#website"
-                  },
-                  "about": {
-                    "@id": "https://www.havenmconstruction.com/whole-home-additions-union-county-nj#service"
-                  },
-                  "mainEntity": {
-                    "@id": "https://www.havenmconstruction.com/whole-home-additions-union-county-nj#service"
-                  },
-                  "publisher": {
-                    "@id": "https://www.havenmconstruction.com/#organization"
-                  },
-                  "inLanguage": "en-US"
-                },
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": "https://www.havenmconstruction.com/whole-home-additions-union-county-nj#breadcrumb",
-                  "itemListElement": [
-                    {
-                      "@type": "ListItem",
-                      "position": 1,
-                      "name": "Home",
-                      "item": "https://www.havenmconstruction.com/"
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": 2,
-                      "name": "Whole-Home Additions",
-                      "item": "https://www.havenmconstruction.com/services/whole-home-additions"
-                    },
-                    {
-                      "@type": "ListItem",
-                      "position": 3,
-                      "name": "Union County, NJ",
-                      "item": "https://www.havenmconstruction.com/whole-home-additions-union-county-nj"
-                    }
-                  ]
-                },
-                {
-                  "@type": "WebSite",
-                  "@id": "https://www.havenmconstruction.com/#website",
-                  "url": "https://www.havenmconstruction.com/",
-                  "name": "Haven M Construction",
-                  "publisher": {
-                    "@id": "https://www.havenmconstruction.com/#organization"
-                  }
-                }
-              ]
-            }
-          `}
-        </script>
-      </Helmet>
+      
       <main className="bg-[#F6F4EE] min-h-screen selection:bg-terracotta/20 selection:text-forest-deep">
         {/* --- HERO SECTION --- */}
       <section className="relative overflow-hidden pt-40 pb-24 sm:pt-64 sm:pb-40 bg-[#F6F4EE]">
@@ -173,7 +38,7 @@ export default function HomeAdditionsUnionCountyPage() {
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-4xl">
             
             <motion.div variants={fadeIn} className="mb-6 flex justify-start">
-               <Link to="/services/whole-home-additions" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-forest hover:text-terracotta transition-colors font-medium bg-white/40 backdrop-blur-sm px-5 py-2.5 rounded-full border border-forest/10 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
+               <Link href="/services/whole-home-additions" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-forest hover:text-terracotta transition-colors font-medium bg-white/40 backdrop-blur-sm px-5 py-2.5 rounded-full border border-forest/10 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                  Back to Main Service
                </Link>
@@ -388,13 +253,13 @@ export default function HomeAdditionsUnionCountyPage() {
             </motion.div>
 
             <motion.div variants={fadeIn}>
-              <Link to="/contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-terracotta px-10 py-5 text-[16px] font-medium text-white transition-transform hover:scale-[1.03] shadow-[0_10px_30px_rgba(210,125,85,0.3)]">
+              <Link href="/contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-terracotta px-10 py-5 text-[16px] font-medium text-white transition-transform hover:scale-[1.03] shadow-[0_10px_30px_rgba(210,125,85,0.3)]">
                 Contact Us to Discuss Your Project →
               </Link>
             </motion.div>
 
             <motion.div variants={fadeIn} className="pt-12 mt-12 border-t border-linen/10 flex justify-center">
-               <Link to="/services/whole-home-additions" className="inline-flex items-center gap-2 text-linen/50 hover:text-terracotta transition-colors font-medium bg-[#233528] hover:bg-[#2e4735] px-6 py-3 rounded-full border border-linen/10 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.2)]">
+               <Link href="/services/whole-home-additions" className="inline-flex items-center gap-2 text-linen/50 hover:text-terracotta transition-colors font-medium bg-[#233528] hover:bg-[#2e4735] px-6 py-3 rounded-full border border-linen/10 shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_25px_rgba(0,0,0,0.2)]">
                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                  Back to Main Service
                </Link>

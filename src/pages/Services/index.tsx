@@ -1,7 +1,7 @@
 import { services } from '../../data/siteData';
-import ProcessSection from '../../components/ProcessSection';
-import { Link } from 'react-router-dom';
-import SEOMetadata from '../../components/SEOMetadata';
+import ProcessSection from '../../components/Home/ProcessSection';
+import Link from 'next/link';
+
 import asset2 from '../../assets/asset-2.webp';
 import asset4 from '../../assets/asset-4.webp';
 import asset5 from '../../assets/asset-5.webp';
@@ -20,11 +20,11 @@ const serviceDetails = [
   },
   {
     num: '02',
-    title: 'Design Build',
+    title: 'Design-Build',
     description: 'Integrated architecture, engineering, and construction under one roof from concept to final walkthrough.',
     img: asset2,
     tag: 'Process',
-    link: '/design-build-construction-nj',
+    link: '/services/design-build',
   },
   {
     num: '03',
@@ -52,12 +52,12 @@ const serviceDetails = [
   },
   {
     num: '06',
-    title: 'Construct Veterinary Hospital',
+    title: 'Veterinary Hospital',
     description: 'State-of-the-art animal hospitals, clinical surgical suites, and specialized veterinary care facilities.',
     img: asset6,
-    tag: 'Specialty',
-    link: '/veterinary-hospital-construction-nj',
-  },
+    tag: 'Specialty Healthcare',
+    link: '/services/veterinary-hospital-construction-nj',
+  }
 ];
 
 const servicesSchema = {
@@ -108,14 +108,7 @@ const servicesSchema = {
 export default function ServicesPage() {
   return (
     <main>
-      <SEOMetadata
-        title="Construction Services in Verona, NJ | Residential & Commercial"
-        description="Haven M Construction offers residential and commercial construction services in Verona, NJ, serving Bergen, Essex, Morris, Union & Passaic Counties."
-        keywords="construction services Verona NJ, residential construction Verona NJ, commercial construction Verona NJ, general contractor Verona NJ, whole-home additions NJ, home additions Verona NJ, design-build contractor NJ, value engineering NJ, boutique office construction NJ, veterinary hospital construction NJ, construction contractor Bergen County NJ, construction contractor Essex County NJ, construction contractor Morris County NJ, construction contractor Union County NJ, construction contractor Passaic County NJ, construction company Verona New Jersey, construction services Bergen County NJ, construction services Essex County NJ, construction services Morris County NJ, construction services Union County NJ, construction services Passaic County NJ"
-        url="https://www.havenmconstruction.com/services"
-        image="https://www.havenmconstruction.com/images/og-image.webp"
-        schema={servicesSchema}
-      />
+      
       {/* Page Header */}
       <section
         className="relative overflow-hidden pt-44 pb-20 sm:pt-52"
@@ -142,7 +135,14 @@ export default function ServicesPage() {
           <h1 className="font-display text-[clamp(2.2rem,9vw,9rem)] leading-[0.92] tracking-[-0.03em] text-forest max-w-4xl">
             Six practices,<br /><span className="italic text-terracotta">one hand.</span>
           </h1>
-          <p className="mt-8 max-w-xl text-lg leading-relaxed text-forest-deep">
+
+          <div className="mt-6 sm:mt-8">
+            <h2 className="font-display text-[clamp(1.8rem,4vw,3.5rem)] uppercase tracking-[0.05em] text-forest/90">
+              Residential <span className="mx-2 inline-block normal-case italic text-terracotta">&</span> Commercial
+            </h2>
+          </div>
+
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-forest-deep">
             Every project is led by a Haven M principal from first conversation to final walkthrough. No franchised sub-contractors. No anonymous site crews.
           </p>
 
@@ -151,8 +151,8 @@ export default function ServicesPage() {
               Serving:
             </span>
             {['Bergen', 'Essex', 'Morris', 'Passaic', 'Union'].map((county) => (
-              <div key={county} className="flex items-center gap-2 rounded-full border border-forest/15 bg-white/40 backdrop-blur-sm px-6 py-2.5 text-[15px] font-medium text-forest transition-colors hover:bg-white/60">
-                {county} <span className="text-terracotta text-[14px]">↗</span>
+              <div key={county} className="flex items-center gap-2 rounded-full border border-forest/15 bg-white/40 backdrop-blur-sm px-6 py-2.5 text-[15px] font-medium text-forest">
+                {county}
               </div>
             ))}
           </div>
@@ -166,9 +166,9 @@ export default function ServicesPage() {
             {serviceDetails.map((service, i) => (
               <div key={service.num} className={`grid grid-cols-1 lg:grid-cols-12 gap-8 items-center ${i % 2 !== 0 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
                 <div className="col-span-1 lg:col-span-6">
-                  <Link to={service.link || "/contact"} className="block overflow-hidden rounded-[24px]">
+                  <Link href={service.link || "/contact"} className="block overflow-hidden rounded-[24px]">
                     <figure className="aspect-[16/10] overflow-hidden">
-                      <img src={service.img} alt={service.title} className="h-full w-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" />
+                      <img src={(typeof service.img === 'object' && service.img !== null ? ((service.img as any).default?.src || (service.img as any).src || (service.img as any).default || service.img) : service.img)} alt={service.title} className="h-full w-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" />
                     </figure>
                   </Link>
                 </div>
@@ -177,11 +177,11 @@ export default function ServicesPage() {
                     <span className="rounded-full border border-forest/15 px-3 py-1 text-[10px] uppercase tracking-[0.24em] text-forest-deep">{service.tag}</span>
                     <span className="font-mono text-xs text-clay">{service.num}</span>
                   </div>
-                  <Link to={service.link || "/contact"} className="block group/title">
+                  <Link href={service.link || "/contact"} className="block group/title">
                     <h2 className="font-display text-3xl sm:text-4xl leading-tight text-forest mb-4 group-hover/title:text-clay transition-colors">{service.title}</h2>
                   </Link>
                   <p className="text-[15px] leading-relaxed text-forest-deep mb-6">{service.description}</p>
-                  <Link to={service.link || "/contact"} className="inline-flex items-center gap-2 text-sm font-medium text-forest hover:text-clay transition-colors">
+                  <Link href={service.link || "/contact"} className="inline-flex items-center gap-2 text-sm font-medium text-forest hover:text-clay transition-colors">
                     {service.link ? "View service" : "Start this project"} <span aria-hidden="true">→</span>
                   </Link>
                 </div>
@@ -201,7 +201,7 @@ export default function ServicesPage() {
             Ready to <span className="italic text-terracotta">begin</span>?
           </h2>
           <p className="text-forest-deep mb-8 max-w-md mx-auto">We take on a small number of new projects each season. Reach out and let us know what you're imagining.</p>
-          <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-forest px-8 py-4 text-sm font-medium text-linen transition-transform hover:scale-[1.02]">
+          <Link href="/contact" className="inline-flex items-center gap-2 rounded-full bg-forest px-8 py-4 text-sm font-medium text-linen transition-transform hover:scale-[1.02]">
             Begin a project →
           </Link>
         </div>

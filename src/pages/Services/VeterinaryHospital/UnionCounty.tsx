@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -22,7 +23,7 @@ export default function VeterinaryHospitalUnionCountyPage() {
         description="Create a Veterinary Facility That Works for Staff, Patients, and Clients. A veterinary hospital must accommodate more than medical rooms. The facility also needs to support staff movement, patient handling, equipment, storage, sanitation, and client interaction."
         servingLabel="Back to:"
         servingLinks={[
-          { name: 'All Veterinary Hospital', path: '/veterinary-hospital-construction-nj' }
+          { name: 'All Veterinary Hospital', path: '/services/veterinary-hospital-construction-nj' }
         ]}
       />
 
@@ -242,8 +243,8 @@ export default function VeterinaryHospitalUnionCountyPage() {
         title={<>Veterinary Hospital Construction in <br className="hidden sm:block" /><span className="italic text-terracotta">Union County, NJ</span></>}
         description={
           <>
-            <p>Hevan M Constructions is based in Verona, New Jersey and serves veterinary practices in Union County and surrounding North Jersey communities.</p>
-            <p className="font-medium text-linen/90 border-t border-white/10 pt-6 mt-6">Planning a veterinary clinic, animal hospital, renovation, or expansion? Contact Hevan M Constructions to discuss your facility.</p>
+            <p>Haven M Construction is based in Verona, New Jersey and serves veterinary practices in Union County and surrounding North Jersey communities.</p>
+            <p className="font-medium text-linen/90 border-t border-white/10 pt-6 mt-6">Planning a veterinary clinic, animal hospital, renovation, or expansion? Contact Haven M Construction to discuss your facility.</p>
           </>
         }
       />

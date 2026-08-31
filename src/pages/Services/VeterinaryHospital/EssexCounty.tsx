@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -19,10 +20,10 @@ export default function VeterinaryHospitalEssexCountyPage() {
       <PremiumHero
         badge="ESSEX COUNTY, NJ"
         title={<>Veterinary Hospital Construction in <br /><span className="italic text-terracotta">Essex County, NJ</span></>}
-        description="Purpose-Built Construction for Veterinary Practices. A veterinary hospital must bring clinical areas, patient care, staff workflow, equipment, client spaces, and building systems together in one functional environment. Hevan M Constructions provides veterinary hospital construction, clinic build-outs, renovations, and facility improvements in Essex County, NJ."
+        description="Purpose-Built Construction for Veterinary Practices. A veterinary hospital must bring clinical areas, patient care, staff workflow, equipment, client spaces, and building systems together in one functional environment. Haven M Construction provides veterinary hospital construction, clinic build-outs, renovations, and facility improvements in Essex County, NJ."
         servingLabel="Back to:"
         servingLinks={[
-          { name: 'All Veterinary Hospital', path: '/veterinary-hospital-construction-nj' }
+          { name: 'All Veterinary Hospital', path: '/services/veterinary-hospital-construction-nj' }
         ]}
       />
 
@@ -198,8 +199,8 @@ export default function VeterinaryHospitalEssexCountyPage() {
         title={<>Veterinary Hospital Construction in <br className="hidden sm:block" /><span className="italic text-terracotta">Essex County</span></>}
         description={
           <>
-            <p>Hevan M Constructions is located in Verona, New Jersey and serves veterinary practices throughout Essex County.</p>
-            <p className="font-medium text-linen/90 border-t border-white/10 pt-6 mt-6">Planning a new veterinary hospital, clinic build-out, renovation, or expansion? Contact Hevan M Constructions to discuss your project.</p>
+            <p>Haven M Construction is located in Verona, New Jersey and serves veterinary practices throughout Essex County.</p>
+            <p className="font-medium text-linen/90 border-t border-white/10 pt-6 mt-6">Planning a new veterinary hospital, clinic build-out, renovation, or expansion? Contact Haven M Construction to discuss your project.</p>
           </>
         }
       />

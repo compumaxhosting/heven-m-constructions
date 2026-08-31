@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -17,7 +18,7 @@ export default function AdditionsMorrisCountyPage() {
       <PremiumHero 
         badge="MORRIS COUNTY, NJ"
         title={<>Additions in <br /><span className="italic text-terracotta">Morris County, NJ</span></>}
-        description="A growing family, changing lifestyle, or need for dedicated space can make an existing Morris County home feel too small. Hevan M Constructions builds home additions in Morris County, NJ, helping homeowners increase usable space while maintaining the character and function of the existing property."
+        description="A growing family, changing lifestyle, or need for dedicated space can make an existing Morris County home feel too small. Haven M Construction builds home additions in Morris County, NJ, helping homeowners increase usable space while maintaining the character and function of the existing property."
         servingLabel="Back to:"
         servingLinks={[
           { name: 'All Additions', path: '/services/additions' }
@@ -172,7 +173,7 @@ export default function AdditionsMorrisCountyPage() {
               Morris County <span className="italic text-terracotta">Home Additions</span>
             </motion.h2>
             <motion.p variants={fadeIn} className="text-[18px] leading-[1.8] text-forest-deep/80 font-light mb-6">
-              Hevan M Constructions serves homeowners in communities throughout Morris County, including Morristown, Madison, Morris Township, Denville, Parsippany-Troy Hills, Randolph, Chatham, Montville, and surrounding areas, subject to project scope.
+              Haven M Construction serves homeowners in communities throughout Morris County, including Morristown, Madison, Morris Township, Denville, Parsippany-Troy Hills, Randolph, Chatham, Montville, and surrounding areas, subject to project scope.
             </motion.p>
             <motion.p variants={fadeIn} className="text-[16px] leading-[1.8] text-forest-deep font-medium italic border-t border-forest/10 pt-8 max-w-2xl mx-auto">
               Local zoning and building requirements vary, so each addition should be evaluated according to its specific property.
@@ -187,7 +188,7 @@ export default function AdditionsMorrisCountyPage() {
         description={
           <>
             <p>An addition should solve a real space problem while supporting the way your household will use the home for years to come.</p>
-            <p className="font-medium text-linen/90">Contact Hevan M Constructions to discuss your Morris County home addition.</p>
+            <p className="font-medium text-linen/90">Contact Haven M Construction to discuss your Morris County home addition.</p>
           </>
         }
       />

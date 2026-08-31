@@ -1,6 +1,7 @@
+"use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -35,7 +36,7 @@ export default function BoutiqueOfficeConstructionPage() {
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="max-w-4xl">
 
             <motion.div variants={fadeIn} className="mb-6 flex justify-start">
-              <Link to="/services" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-forest hover:text-terracotta transition-colors font-medium bg-[#F6F4EE] hover:bg-white/40 backdrop-blur-sm px-5 py-2.5 rounded-full border border-forest/10 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
+              <Link href="/services" className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.1em] text-forest hover:text-terracotta transition-colors font-medium bg-[#F6F4EE] hover:bg-white/40 backdrop-blur-sm px-5 py-2.5 rounded-full border border-forest/10 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)]">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
                 Back to Services
               </Link>
@@ -68,9 +69,8 @@ export default function BoutiqueOfficeConstructionPage() {
                 { name: 'Passaic', path: '/boutique-office-construction-passaic-county-nj' },
                 { name: 'Union', path: '/boutique-office-construction-union-county-nj' },
               ].map((county) => (
-                <Link
-                  key={county.name}
-                  to={county.path}
+                <Link key={county.name}
+                  href={county.path}
                   className="group flex items-center gap-2 rounded-full border border-forest/15 bg-white/40 backdrop-blur-sm px-5 py-2.5 text-[14px] font-medium text-forest transition-all hover:bg-forest hover:text-linen hover:border-forest shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_20px_rgba(35,53,40,0.15)]"
                 >
                   {county.name}
@@ -340,9 +340,8 @@ export default function BoutiqueOfficeConstructionPage() {
                   { title: 'Passaic County', link: '/boutique-office-construction-passaic-county-nj' },
                   { title: 'Union County', link: '/boutique-office-construction-union-county-nj' },
                 ].map((item, i) => (
-                  <Link
-                    key={i}
-                    to={item.link}
+                  <Link key={i}
+                    href={item.link}
                     className="group relative overflow-hidden rounded-[24px] border border-forest/10 bg-[#F6F4EE]/50 backdrop-blur-sm p-6 sm:p-7 transition-all hover:bg-white hover:border-terracotta/30 hover:shadow-[0_8px_30px_rgba(210,125,85,0.08)] flex items-center justify-between"
                   >
                     <span className="relative z-10 text-[18px] sm:text-[19px] font-display text-forest group-hover:text-terracotta transition-colors">
@@ -376,17 +375,17 @@ export default function BoutiqueOfficeConstructionPage() {
             </motion.h2>
             <motion.div variants={fadeIn} className="space-y-6 text-[18px] sm:text-[20px] leading-[1.7] text-linen/70 mb-10 max-w-2xl mx-auto font-light">
               <p>Your workspace should feel like it belongs to your business—not like a generic office.</p>
-              <p>Contact Hevan M Constructions to discuss your boutique office project in Verona or elsewhere in North Jersey.</p>
+              <p>Contact Haven M Construction to discuss your boutique office project in Verona or elsewhere in North Jersey.</p>
             </motion.div>
 
             <motion.div variants={fadeIn}>
-              <Link to="/contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-terracotta px-10 py-5 text-[16px] font-medium text-white transition-transform hover:scale-[1.03] shadow-[0_10px_30px_rgba(210,125,85,0.3)]">
+              <Link href="/contact" className="inline-flex items-center justify-center gap-3 rounded-full bg-terracotta px-10 py-5 text-[16px] font-medium text-white transition-transform hover:scale-[1.03] shadow-[0_10px_30px_rgba(210,125,85,0.3)]">
                 Contact Us to Discuss Your Project →
               </Link>
             </motion.div>
 
             <motion.div variants={fadeIn} className="pt-12 mt-12 border-t border-linen/10 flex flex-col items-center gap-4 text-linen/40 text-[14px]">
-              <p className="font-medium text-linen/80">Hevan M Constructions</p>
+              <p className="font-medium text-linen/80">Haven M Construction</p>
               <p>Verona, New Jersey</p>
               <p className="italic">Serving Bergen, Essex, Morris, Union & Passaic Counties</p>
             </motion.div>
