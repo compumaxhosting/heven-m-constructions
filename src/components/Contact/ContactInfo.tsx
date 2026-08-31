@@ -1,5 +1,5 @@
 "use client";
-import { MapPin, Mail, Phone, Clock, Star } from 'lucide-react';
+import { MapPin, Mail, Phone, Clock } from 'lucide-react';
 
 const contactInfo = [
   { icon: MapPin, label: 'Studio', value: 'Verona, NJ 07044', sub: 'By appointment only' },
