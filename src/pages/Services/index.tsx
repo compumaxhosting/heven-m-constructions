@@ -12,6 +12,14 @@ import addition5 from '../../assets/5.webp';
 const serviceDetails = [
   {
     num: '01',
+    title: 'Construct Veterinary Hospital',
+    description: 'State-of-the-art animal hospitals, clinical surgical suites, and specialized veterinary care facilities.',
+    img: asset6,
+    tag: 'Specialty Healthcare',
+    link: '/services/veterinary-hospital-construction-nj',
+  },
+  {
+    num: '02',
     title: 'Whole-Home Additions',
     description: 'Full-scope primary residence expansions, expanding overall footprint and adding new levels to existing luxury homes.',
     img: addition4,
@@ -19,7 +27,7 @@ const serviceDetails = [
     link: '/services/whole-home-additions',
   },
   {
-    num: '02',
+    num: '03',
     title: 'Design-Build',
     description: 'Integrated architecture, engineering, and construction under one roof from concept to final walkthrough.',
     img: asset2,
@@ -27,7 +35,7 @@ const serviceDetails = [
     link: '/services/design-build',
   },
   {
-    num: '03',
+    num: '04',
     title: 'Value Engineering',
     description: 'Strategic material selection, cost analysis, and structural optimization to maximize architectural impact within budget.',
     img: addition5,
@@ -35,7 +43,7 @@ const serviceDetails = [
     link: '/services/value-engineering',
   },
   {
-    num: '04',
+    num: '05',
     title: 'Additions',
     description: 'Second stories, sunrooms, extended living spaces, and guest house units seamlessly joined to your home.',
     img: asset4,
@@ -43,20 +51,12 @@ const serviceDetails = [
     link: '/services/additions',
   },
   {
-    num: '05',
+    num: '06',
     title: 'Boutique Offices',
     description: 'Owner-run creative studios, executive suites, and small firm headquarters built to elevate brand presence.',
     img: asset5,
     tag: 'Commercial',
     link: '/services/boutique-office-construction',
-  },
-  {
-    num: '06',
-    title: 'Veterinary Hospital',
-    description: 'State-of-the-art animal hospitals, clinical surgical suites, and specialized veterinary care facilities.',
-    img: asset6,
-    tag: 'Specialty Healthcare',
-    link: '/services/veterinary-hospital-construction-nj',
   }
 ];
 
@@ -108,7 +108,7 @@ const servicesSchema = {
 export default function ServicesPage() {
   return (
     <main>
-      
+
       {/* Page Header */}
       <section
         className="relative overflow-hidden pt-44 pb-20 sm:pt-52"

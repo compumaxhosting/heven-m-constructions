@@ -22,46 +22,46 @@ export interface MainServiceItem {
 export const mainServices: MainServiceItem[] = [
   {
     num: "01",
+    title: "Construct Veterinary Hospital",
+    category: "Specialty Healthcare",
+    description: "Custom clinical workflows, surgery suites & animal hospitals.",
+    href: "/services/veterinary-hospital-construction-nj",
+    badge: "Featured",
+  },
+  {
+    num: "02",
     title: "Whole-Home Additions",
     category: "Residential",
     description: "Full-scope residence expansions & new architectural levels.",
     href: "/services/whole-home-additions",
   },
   {
-    num: "02",
+    num: "03",
     title: "Design-Build",
     category: "Process",
     description: "Unified architecture, engineering, and turnkey construction.",
     href: "/services/design-build",
   },
   {
-    num: "03",
+    num: "04",
     title: "Value Engineering",
     category: "Consulting",
     description: "Strategic cost and structural optimization without compromise.",
     href: "/services/value-engineering",
   },
   {
-    num: "04",
+    num: "05",
     title: "Additions",
     category: "Expansion",
     description: "Second stories, wings, and custom living space extensions.",
     href: "/services/additions",
   },
   {
-    num: "05",
+    num: "06",
     title: "Boutique Offices",
     category: "Commercial",
     description: "Executive commercial suites and high-end creative studios.",
     href: "/services/boutique-office-construction",
-  },
-  {
-    num: "06",
-    title: "Veterinary Hospital",
-    category: "Specialty Healthcare",
-    description: "Custom clinical workflows, surgery suites & animal hospitals.",
-    href: "/services/veterinary-hospital-construction-nj",
-    badge: "Featured",
   },
 ];
 

@@ -279,7 +279,7 @@ export default function Page() {
             "name": "How long does veterinary hospital construction take in New Jersey?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The construction timeline depends on project size, design complexity, permitting, site conditions, materials, specialized building requirements and construction scope. Each veterinary hospital requires an individual project schedule." 
+              "text": "The construction timeline depends on project size, design complexity, permitting, site conditions, materials, specialized building requirements and construction scope. Each veterinary hospital requires an individual project schedule."
             }
           },
           {

@@ -47,45 +47,45 @@ export const processSteps = [
 export const services = [
   {
     num: '01',
+    category: 'Specialty Healthcare',
+    title: 'Veterinary Hospital',
+    description: 'State-of-the-art animal hospitals, clinical surgical suites, and specialized veterinary care facilities.',
+    link: '/services/veterinary-hospital-construction-nj',
+  },
+  {
+    num: '02',
     category: 'Residential',
     title: 'Whole-Home Additions',
     description: 'Full-scope primary residence expansions, expanding overall footprint and adding new levels to existing luxury homes.',
     link: '/services/whole-home-additions',
   },
   {
-    num: '02',
+    num: '03',
     category: 'Process',
     title: 'Design-Build',
     description: 'Integrated architecture, engineering, and construction under one roof from concept to final walkthrough.',
     link: '/services/design-build',
   },
   {
-    num: '03',
+    num: '04',
     category: 'Consulting',
     title: 'Value Engineering',
     description: 'Strategic material selection, cost analysis, and structural optimization to maximize architectural impact within budget.',
     link: '/services/value-engineering',
   },
   {
-    num: '04',
+    num: '05',
     category: 'Expansion',
     title: 'Additions',
     description: 'Second stories, sunrooms, extended living spaces, and guest house units seamlessly joined to your home.',
     link: '/services/additions',
   },
   {
-    num: '05',
+    num: '06',
     category: 'Commercial',
     title: 'Boutique Offices',
     description: 'Owner-run creative studios, executive suites, and small firm headquarters built to elevate brand presence.',
     link: '/services/boutique-office-construction',
-  },
-  {
-    num: '06',
-    category: 'Specialty Healthcare',
-    title: 'Veterinary Hospital',
-    description: 'State-of-the-art animal hospitals, clinical surgical suites, and specialized veterinary care facilities.',
-    link: '/services/veterinary-hospital-construction-nj',
   },
 ];
 
