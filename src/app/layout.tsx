@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   },
   robots: 'index,follow',
   referrer: 'strict-origin-when-cross-origin',
+  verification: {
+    google: '7QyE5LMZVOUGOqUcQnlwSnUCq037KwLSC-1hux2Tnvs',
+  },
   openGraph: {
     type: 'website',
     title: 'Haven M Construction | Design-Build & Construction in Verona, NJ',
@@ -169,6 +172,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="7QyE5LMZVOUGOqUcQnlwSnUCq037KwLSC-1hux2Tnvs" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

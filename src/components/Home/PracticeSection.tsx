@@ -33,11 +33,11 @@ export default function PracticeSection() {
             01 — Our practice
           </div>
 
-          <h2 className="font-display text-[clamp(2.4rem,2.6vw,5rem)] leading-[0.98] tracking-[-0.02em] text-forest">
+          <h1 className="font-display text-[clamp(2.4rem,2.6vw,5rem)] leading-[0.98] tracking-[-0.02em] text-forest">
             A quieter kind of construction — where{' '}
             <span className="italic text-terracotta">material</span>, light, and use are considered{' '}
             <span className="italic text-teal">together</span>.
-          </h2>
+          </h1>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2">
             {pillars.map((pillar) => (

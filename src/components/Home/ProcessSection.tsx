@@ -29,9 +29,9 @@ export default function ProcessSection() {
             <span className="inline-block h-px w-10 bg-clay/70" />
             03 — Process
           </div>
-          <h2 className="font-display col-span-12 text-[clamp(2.4rem,7vw,6rem)] leading-[0.95] tracking-[-0.02em] lg:col-span-10">
+          <h3 className="font-display col-span-12 text-[clamp(2.4rem,7vw,6rem)] leading-[0.95] tracking-[-0.02em] lg:col-span-10">
             Four movements from <span className="italic text-clay">first sketch</span> to final walkthrough.
-          </h2>
+          </h3>
         </header>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
