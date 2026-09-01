@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="pointer-events-none absolute right-0 top-10 h-[420px] w-[420px] rounded-full bg-clay/20 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-40 left-0 h-[420px] w-[420px] rounded-full bg-teal/20 blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-16 lg:pt-12 pb-8 lg:pb-6">
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-16 lg:pt-12 pb-24 sm:pb-8 lg:pb-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14">
           <div className="min-w-0 lg:col-span-4">
             <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-clay">
@@ -27,6 +27,26 @@ export default function Footer() {
               build
               <br />
               <span className="italic text-clay">a haven.</span>
+            </div>
+
+            <div className="mt-8">
+              <a
+                href="https://g.page/r/havenmconstruction/review"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-3 rounded-full bg-white/10 backdrop-blur-md border border-white/15 px-5 py-2.5 text-xs font-medium text-linen transition-all hover:bg-white hover:text-forest shadow-md group"
+              >
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white p-1 shadow">
+                  <svg className="h-4 w-4" viewBox="0 0 24 24">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05" />
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335" />
+                  </svg>
+                </span>
+                <span>Review us on Google</span>
+                <span className="text-terracotta group-hover:translate-x-0.5 transition-transform">→</span>
+              </a>
             </div>
           </div>
 
@@ -83,25 +103,23 @@ export default function Footer() {
         </div>
 
         <div className="mt-6 lg:mt-4 border-t border-linen/15 pt-6 lg:pt-4 text-xs text-linen/60">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
-              <span>
-                © 2026 Haven M Construction, LLC. All rights reserved.
-              </span>
-              <div className="flex gap-3">
-                {socials.map(({ label, href, svg, bgClass }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={label}
-                    className={`flex h-10 w-10 items-center justify-center rounded-full transition-all duration-300 hover:scale-110 hover:brightness-110 ${bgClass}`}
-                  >
-                    {svg}
-                  </a>
-                ))}
-              </div>
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span>
+              © 2026 Haven M Construction, LLC. All rights reserved.
+            </span>
+            <div className="flex items-center gap-2.5 shrink-0 pr-14 sm:pr-0">
+              {socials.map(({ label, href, svg, bgClass }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={label}
+                  className={`flex h-9 w-9 items-center justify-center rounded-full transition-all duration-300 hover:scale-110 hover:brightness-110 ${bgClass}`}
+                >
+                  {svg}
+                </a>
+              ))}
             </div>
           </div>
         </div>

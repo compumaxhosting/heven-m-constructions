@@ -24,7 +24,7 @@ export default function TopContactBar() {
         <div className="flex items-center gap-2 sm:gap-3.5 flex-wrap">
           <a
             href="tel:+12012643506"
-            className="group flex sm:inline-flex items-center justify-center sm:gap-2 h-10 w-10 sm:h-auto sm:w-auto rounded-full bg-gradient-to-tr from-terracotta to-amber-600 sm:bg-none sm:bg-white/[0.1] hover:bg-white/[0.2] shadow-[0_4px_12px_rgba(0,0,0,0.4)] sm:shadow-xs border border-white/40 sm:border sm:border-white/20 sm:pl-1.5 sm:pr-3 sm:py-1 text-xs font-sans text-linen transition-all duration-300 hover:border-forest active:scale-95 hover:shadow-[0_0_16px_rgba(42,75,60,0.5)]"
+            className="group hidden sm:inline-flex items-center justify-center sm:gap-2 h-auto w-auto rounded-full bg-white/[0.1] hover:bg-white/[0.2] shadow-xs border border-white/20 sm:pl-1.5 sm:pr-3 sm:py-1 text-xs font-sans text-linen transition-all duration-300 hover:border-forest active:scale-95 hover:shadow-[0_0_16px_rgba(42,75,60,0.5)]"
             title="Call Haven M Construction: (201) 264-3506"
           >
             <div className="flex sm:h-6 sm:w-6 items-center justify-center rounded-full text-white sm:bg-terracotta sm:text-white sm:shadow-xs group-hover:bg-forest group-hover:text-white transition-all duration-300 shrink-0 animate-[pulse_2s_ease-in-out_infinite] sm:animate-none">

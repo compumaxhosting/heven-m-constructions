@@ -22,7 +22,7 @@ export default function MobileMenu({ pathname, setOpen }: MobileMenuProps) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -12 }}
       transition={{ duration: 0.2, ease: "easeOut" }}
-      className="pointer-events-auto mx-auto mt-3 max-w-7xl max-h-[calc(100dvh-160px)] overflow-y-auto rounded-3xl bg-[#F5F2EC] border border-forest/20 p-6 text-forest shadow-[0_25px_60px_-15px_rgba(35,67,58,0.25)] lg:hidden"
+      className="pointer-events-auto mx-auto mt-3 mb-16 max-w-7xl max-h-[calc(100dvh-200px)] overflow-y-auto rounded-3xl bg-[#F5F2EC] border border-forest/20 p-6 pb-20 text-forest shadow-[0_25px_60px_-15px_rgba(35,67,58,0.25)] lg:hidden"
       id="mobile-menu-drawer"
       data-lenis-prevent
     >

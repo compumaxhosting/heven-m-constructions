@@ -83,7 +83,7 @@ export default function ScrollUpButton() {
             hover: { scale: 1.1 },
             tap: { scale: 0.9 }
           }}
-          className={`fixed bottom-6 right-5 z-[998] flex h-12 w-12 items-center justify-center rounded-full transition-colors duration-500 sm:bottom-8 sm:right-8 ${btnClass}`}
+          className={`fixed bottom-24 right-5 z-[998] flex h-12 w-12 items-center justify-center rounded-full transition-colors duration-500 sm:bottom-8 sm:right-8 ${btnClass}`}
         >
           {/* Scroll progress ring */}
           <svg className="absolute inset-0 h-full w-full -rotate-90 p-[2px]" viewBox="0 0 100 100">

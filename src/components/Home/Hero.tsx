@@ -20,7 +20,7 @@ export default function Hero() {
     <section
       id="top"
       ref={ref}
-      className="relative overflow-hidden pt-48 pb-28 sm:pt-60 sm:pb-36 lg:pt-64"
+      className="relative overflow-hidden pt-48 pb-20 sm:pt-56 sm:pb-36 lg:pt-64"
       style={{
         backgroundColor: '#F6F4EE',
         backgroundImage: [

@@ -3,6 +3,7 @@ import '../index.css'; // Make sure this path points to your global css
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ScrollUpButton from '../components/shared/ScrollUpButton';
+import MobileBottomBar from '../components/shared/MobileBottomBar';
 import { PageTransition } from '../components/shared/PageTransition';
 
 export const metadata: Metadata = {
@@ -191,6 +192,7 @@ export default function RootLayout({
             {children}
           </PageTransition>
           <ScrollUpButton />
+          <MobileBottomBar />
           <Footer />
         </div>
       </body>
