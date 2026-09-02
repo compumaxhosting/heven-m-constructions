@@ -1,5 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/veterinary-hospital-construction-nj',
+        destination: '/services/veterinary-hospital-construction-nj',
+        permanent: true,
+      },
+      {
+        source: '/design-build-construction-nj',
+        destination: '/services/design-build',
+        permanent: true,
+      },
+    ];
+  },
   async rewrites() {
     return [
       {
