@@ -115,7 +115,7 @@ export default function ContactInfo() {
             </svg>
           </a>
           <a
-            href="https://g.page/r/havenmconstruction/review"
+            href="https://g.page/r/CbQEE19GUtZAEBI/review"
             target="_blank"
             rel="noreferrer"
             aria-label="Google Review"
@@ -130,7 +130,7 @@ export default function ContactInfo() {
           </a>
         </div>
         <a
-          href="https://g.page/r/havenmconstruction/review"
+          href="https://g.page/r/CbQEE19GUtZAEBI/review"
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-2 text-xs font-medium text-forest hover:text-terracotta transition-colors group"

@@ -123,7 +123,7 @@ export const socialLinks = [
     ),
   },
   {
-    href: "https://g.page/r/havenmconstruction/review",
+    href: "https://g.page/r/CbQEE19GUtZAEBI/review",
     label: "Google Review",
     bgClass: "",
     whileHover: { scale: 1.18, y: -2, rotate: 6 },

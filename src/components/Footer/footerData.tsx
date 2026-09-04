@@ -71,7 +71,7 @@ export const socials = [
   },
   {
     label: "Google Review",
-    href: "https://g.page/r/havenmconstruction/review",
+    href: "https://g.page/r/CbQEE19GUtZAEBI/review",
     bgClass: "bg-white text-[#4285F4]",
     svg: (
       <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">

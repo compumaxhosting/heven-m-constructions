@@ -138,7 +138,7 @@ export default function ContactSection() {
                     </svg>
                   </a>
                   <a
-                    href="https://g.page/r/havenmconstruction/review"
+                    href="https://g.page/r/CbQEE19GUtZAEBI/review"
                     target="_blank"
                     rel="noreferrer"
                     aria-label="Google Review"

@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import type { Metadata } from 'next';
 import '../index.css'; // Make sure this path points to your global css
 import Header from '../components/Header';
@@ -173,6 +174,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="p:domain_verify" content="3428d9b7d31d903253d085a215d9bbc2" />
         <meta name="google-site-verification" content="7QyE5LMZVOUGOqUcQnlwSnUCq037KwLSC-1hux2Tnvs" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -184,6 +186,19 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-ZKF8ZPZ226"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-ZKF8ZPZ226');
+          `}
+        </Script>
       </head>
       <body suppressHydrationWarning>
         <div className="relative min-h-screen bg-background text-foreground">
