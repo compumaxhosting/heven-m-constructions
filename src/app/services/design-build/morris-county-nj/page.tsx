@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/wp-content/uploads/og-image.jpg',
+        url: 'https://www.havenmconstruction.com/wp-content/uploads/og-image.webp',
         alt: 'Haven M Construction design-build construction services in Morris County, NJ',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Design-Build Construction Services in Morris County, NJ',
     description: 'Explore design-build construction services in Morris County, NJ, from planning and design through construction for a seamless project from start to finish.',
-    images: ['https://www.havenmconstruction.com/wp-content/uploads/og-image.jpg'],
+    images: ['https://www.havenmconstruction.com/wp-content/uploads/og-image.webp'],
   },
 };
 

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/veterinary-hospital-construction-nj.jpg',
+        url: 'https://www.havenmconstruction.com/images/veterinary-hospital-construction-nj.webp',
         alt: 'Veterinary hospital construction services in New Jersey',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Veterinary Hospital Construction in New Jersey | Haven M Construction',
     description: 'Veterinary hospital construction in New Jersey for Bergen, Essex, Morris, Union & Passaic counties. Expert North Jersey design-build services.',
-    images: ['https://www.havenmconstruction.com/images/veterinary-hospital-construction-nj.jpg'],
+    images: ['https://www.havenmconstruction.com/images/veterinary-hospital-construction-nj.webp'],
   },
 };
 

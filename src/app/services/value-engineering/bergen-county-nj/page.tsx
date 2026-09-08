@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/value-engineering-bergen-county-nj.jpg',
+        url: 'https://www.havenmconstruction.com/images/value-engineering-bergen-county-nj.webp',
         alt: 'Construction value engineering services in Bergen County, NJ',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Construction Value Engineering Services in Bergen County, NJ | Haven M Construction',
     description: 'Expert construction value engineering services in Bergen County, NJ to optimize costs, materials, design, and project performance without compromising quality.',
-    images: ['https://www.havenmconstruction.com/images/value-engineering-bergen-county-nj.jpg'],
+    images: ['https://www.havenmconstruction.com/images/value-engineering-bergen-county-nj.webp'],
   },
 };
 

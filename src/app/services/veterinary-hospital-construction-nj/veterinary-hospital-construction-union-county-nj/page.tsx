@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/veterinary-hospital-construction-union-county-nj.jpg',
+        url: 'https://www.havenmconstruction.com/images/veterinary-hospital-construction-union-county-nj.webp',
         alt: 'Professional veterinary hospital construction services in Union County, NJ',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Professional Veterinary Hospital Construction Services in Union County, NJ | Haven M Construction',
     description: 'Planning a veterinary hospital in Union County, NJ? Haven M Construction provides custom veterinary facility construction and design-build solutions.',
-    images: ['https://www.havenmconstruction.com/images/veterinary-hospital-construction-union-county-nj.jpg'],
+    images: ['https://www.havenmconstruction.com/images/veterinary-hospital-construction-union-county-nj.webp'],
   },
 };
 

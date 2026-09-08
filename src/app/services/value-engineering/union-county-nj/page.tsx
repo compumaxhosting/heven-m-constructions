@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/value-engineering-union-county-nj.jpg',
+        url: 'https://www.havenmconstruction.com/images/value-engineering-union-county-nj.webp',
         alt: 'Value engineering solutions for construction projects in Union County, NJ',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Value Engineering Solutions in Union County, NJ',
     description: 'Professional value engineering solutions in Union County, NJ to optimize construction costs, evaluate design and materials, and improve project value without compromising quality.',
-    images: ['https://www.havenmconstruction.com/images/value-engineering-union-county-nj.jpg'],
+    images: ['https://www.havenmconstruction.com/images/value-engineering-union-county-nj.webp'],
   },
 };
 

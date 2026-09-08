@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/veterinary-hospital-construction.jpg',
+        url: 'https://www.havenmconstruction.com/images/veterinary-hospital-construction.webp',
         alt: 'Custom veterinary hospital construction in Bergen County, NJ by Haven M Construction',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Custom Veterinary Hospital Construction in Bergen County, NJ',
     description: 'Veterinary hospital construction in Bergen County, NJ by Haven M Construction. Expert design-build and renovation services for North Jersey practices.',
-    images: ['https://www.havenmconstruction.com/images/veterinary-hospital-construction.jpg'],
+    images: ['https://www.havenmconstruction.com/images/veterinary-hospital-construction.webp'],
   },
 };
 

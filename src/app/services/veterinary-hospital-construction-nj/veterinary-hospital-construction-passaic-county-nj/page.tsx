@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/veterinary-hospital-construction-passaic-county-nj.jpg',
+        url: 'https://www.havenmconstruction.com/images/veterinary-hospital-construction-passaic-county-nj.webp',
         alt: 'Expert veterinary hospital construction contractor in Passaic County, NJ',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Expert Veterinary Hospital Construction Contractor in Passaic County, NJ | Haven M Construction',
     description: 'Planning a veterinary hospital in Passaic County, NJ? Haven M Construction provides custom veterinary facility construction and design-build solutions.',
-    images: ['https://www.havenmconstruction.com/images/veterinary-hospital-construction-passaic-county-nj.jpg'],
+    images: ['https://www.havenmconstruction.com/images/veterinary-hospital-construction-passaic-county-nj.webp'],
   },
 };
 

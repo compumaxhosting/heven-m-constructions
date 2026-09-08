@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/boutique-office-construction-passaic-county-nj.jpg',
+        url: 'https://www.havenmconstruction.com/images/boutique-office-construction-passaic-county-nj.webp',
         alt: 'Professional boutique office construction in Passaic County, NJ by Haven M Construction',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Professional Boutique Office Construction | Passaic County, NJ',
     description: 'Custom boutique office design, construction and build-out services in Passaic County, NJ by Haven M Construction.',
-    images: ['https://www.havenmconstruction.com/images/boutique-office-construction-passaic-county-nj.jpg'],
+    images: ['https://www.havenmconstruction.com/images/boutique-office-construction-passaic-county-nj.webp'],
   },
 };
 

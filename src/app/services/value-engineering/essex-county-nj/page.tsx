@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/value-engineering-essex-county-nj.jpg',
+        url: 'https://www.havenmconstruction.com/images/value-engineering-essex-county-nj.webp',
         alt: 'Value engineering services for construction projects in Essex County, NJ',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'How Can Value Engineering Improve Construction Projects in Essex County, NJ?',
     description: 'Discover how value engineering can improve construction projects in Essex County, NJ by optimizing costs, materials, design, quality, and project performance.',
-    images: ['https://www.havenmconstruction.com/images/value-engineering-essex-county-nj.jpg'],
+    images: ['https://www.havenmconstruction.com/images/value-engineering-essex-county-nj.webp'],
   },
 };
 

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/boutique-office-construction-bergen-county-nj.jpg',
+        url: 'https://www.havenmconstruction.com/images/boutique-office-construction-bergen-county-nj.webp',
         alt: 'Boutique office design and construction in Bergen County, NJ by Haven M Construction',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Boutique Office Design, Construction & Build-Out | Bergen County, NJ',
     description: 'Custom boutique office design, construction and build-out services in Bergen County, NJ by Haven M Construction.',
-    images: ['https://www.havenmconstruction.com/images/boutique-office-construction-bergen-county-nj.jpg'],
+    images: ['https://www.havenmconstruction.com/images/boutique-office-construction-bergen-county-nj.webp'],
   },
 };
 

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/value-engineering-verona-nj.jpg',
+        url: 'https://www.havenmconstruction.com/images/value-engineering-verona-nj.webp',
         alt: 'Professional value engineering services in Verona, NJ by Haven M Construction',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Professional Value Engineering Services in Verona, NJ | Haven M Construction',
     description: 'Professional value engineering services in Verona, NJ by Haven M Construction, helping optimize construction costs, materials, design, and project performance.',
-    images: ['https://www.havenmconstruction.com/images/value-engineering-verona-nj.jpg'],
+    images: ['https://www.havenmconstruction.com/images/value-engineering-verona-nj.webp'],
   },
 };
 

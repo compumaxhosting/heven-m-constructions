@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/design-build-construction.jpg',
+        url: 'https://www.havenmconstruction.com/images/design-build-construction.webp',
         alt: 'Design-Build Construction Contractors in Bergen County, NJ',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Design-Build Construction Contractors in Bergen County, NJ',
     description: 'Work with experienced design-build construction contractors in Bergen County, NJ for a seamless process from planning to final completion.',
-    images: ['https://www.havenmconstruction.com/images/design-build-construction.jpg'],
+    images: ['https://www.havenmconstruction.com/images/design-build-construction.webp'],
   },
 };
 

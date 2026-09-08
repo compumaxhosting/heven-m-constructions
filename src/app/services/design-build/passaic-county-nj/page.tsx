@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/wp-content/uploads/og-image.jpg',
+        url: 'https://www.havenmconstruction.com/wp-content/uploads/og-image.webp',
         alt: 'Haven M Construction design-build services in Passaic County, NJ',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Expert Design Build Construction in Passaic County, NJ',
     description: 'Trusted design-build contractors in Passaic County, NJ, providing custom home design, planning, and construction from concept through completion.',
-    images: ['https://www.havenmconstruction.com/wp-content/uploads/og-image.jpg'],
+    images: ['https://www.havenmconstruction.com/wp-content/uploads/og-image.webp'],
   },
 };
 

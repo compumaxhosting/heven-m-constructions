@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/wp-content/uploads/og-image.jpg',
+        url: 'https://www.havenmconstruction.com/wp-content/uploads/og-image.webp',
         alt: 'Haven M Construction design-build services in Essex County, NJ',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Design-Build Contractors in Essex County, NJ | Haven M Construction',
     description: 'Plan, design, and build with experienced design-build contractors in Essex County, NJ. Haven M Construction delivers a streamlined process from concept to completion.',
-    images: ['https://www.havenmconstruction.com/wp-content/uploads/og-image.jpg'],
+    images: ['https://www.havenmconstruction.com/wp-content/uploads/og-image.webp'],
   },
 };
 

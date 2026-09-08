@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/value-engineering-morris-county-nj.jpg',
+        url: 'https://www.havenmconstruction.com/images/value-engineering-morris-county-nj.webp',
         alt: 'Construction value engineering services in Morris County, NJ',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'How Can Value Engineering Improve Construction Projects in Morris County, NJ?',
     description: 'Learn how value engineering improves construction projects in Morris County, NJ through cost optimization, smarter design, materials, and efficient planning.',
-    images: ['https://www.havenmconstruction.com/images/value-engineering-morris-county-nj.jpg'],
+    images: ['https://www.havenmconstruction.com/images/value-engineering-morris-county-nj.webp'],
   },
 };
 

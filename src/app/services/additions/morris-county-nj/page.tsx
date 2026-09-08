@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/home-additions.jpg',
+        url: 'https://www.havenmconstruction.com/images/home-additions.webp',
         alt: 'Custom home additions and design-build services in Morris County, NJ',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Home Addition Contractor & Design-Build Experts in Morris County, NJ',
     description: 'Looking for a home addition contractor in Morris County, NJ? Our design-build experts create custom additions that expand space, enhance function, and complement your home.',
-    images: ['https://www.havenmconstruction.com/images/home-additions.jpg'],
+    images: ['https://www.havenmconstruction.com/images/home-additions.webp'],
   },
 };
 

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/boutique-office-construction.jpg',
+        url: 'https://www.havenmconstruction.com/images/boutique-office-construction.webp',
         alt: 'Boutique office construction by Haven M Construction in North Jersey',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Best Boutique Office Construction Company in North Jersey Counties',
     description: 'Custom boutique office construction by Haven M Construction, serving Bergen, Essex, Morris, Passaic & Union counties.',
-    images: ['https://www.havenmconstruction.com/images/boutique-office-construction.jpg'],
+    images: ['https://www.havenmconstruction.com/images/boutique-office-construction.webp'],
   },
 };
 

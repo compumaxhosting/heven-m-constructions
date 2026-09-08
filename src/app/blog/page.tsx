@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/og-image.jpg',
+        url: 'https://www.havenmconstruction.com/images/og-image.webp',
         alt: 'Haven M Construction construction blog and insights in Verona, NJ',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Construction Blog & Insights in Verona, NJ | Haven M Construction',
     description: "Explore Haven M Construction's blog for residential and commercial construction insights, home additions, design-build, and project ideas in New Jersey.",
-    images: ['https://www.havenmconstruction.com/images/og-image.jpg'],
+    images: ['https://www.havenmconstruction.com/images/og-image.webp'],
   },
 };
 

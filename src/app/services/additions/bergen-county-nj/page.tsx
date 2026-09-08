@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/home-additions.jpg',
+        url: 'https://www.havenmconstruction.com/images/home-additions.webp',
         alt: 'Home additions and remodeling in Bergen County, NJ by Haven M Construction',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Home Additions & Remodeling Contractor in Bergen County, NJ',
     description: 'Plan a seamless home addition or remodel with an experienced Bergen County, NJ contractor. Create more space, improve function, and complement your home.',
-    images: ['https://www.havenmconstruction.com/images/home-additions.jpg'],
+    images: ['https://www.havenmconstruction.com/images/home-additions.webp'],
   },
 };
 

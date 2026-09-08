@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/home-additions.jpg',
+        url: 'https://www.havenmconstruction.com/images/home-additions.webp',
         alt: 'Home additions and remodeling in Union County, NJ',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Home Additions & Remodeling Contractor in Union County, NJ',
     description: 'Planning a home addition or remodel in Union County, NJ? Our experienced contractors create custom spaces that complement your home, improve function, and fit your lifestyle.',
-    images: ['https://www.havenmconstruction.com/images/home-additions.jpg'],
+    images: ['https://www.havenmconstruction.com/images/home-additions.webp'],
   },
 };
 

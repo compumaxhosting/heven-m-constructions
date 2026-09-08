@@ -28,9 +28,11 @@ export default function DesktopNav({ pathname }: { pathname: string }) {
     <nav className="hidden items-center gap-1 lg:flex relative">
       {links.map((l) => {
         const isServices = l.hasDropdown;
+        const isBlog = l.to === '/blog';
         const isActive =
-          pathname === l.to ||
-          (isServices && (pathname.startsWith('/services') || pathname.includes('construction') || pathname.includes('additions') || pathname.includes('engineering')));
+          (isBlog && pathname.startsWith('/blog')) ||
+          (isServices && !pathname.startsWith('/blog') && (pathname.startsWith('/services') || pathname.includes('additions') || pathname.includes('engineering') || (pathname.includes('construction') && !pathname.startsWith('/blog')))) ||
+          (!isBlog && !isServices && pathname === l.to);
 
         return (
           <div

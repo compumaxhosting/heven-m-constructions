@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/design-build-construction.jpg',
+        url: 'https://www.havenmconstruction.com/images/design-build-construction.webp',
         alt: 'Design-Build Construction Services in Verona, NJ',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Design-Build Construction Services in Verona, NJ',
     description: 'Explore expert design-build construction services in Verona, NJ, serving Bergen, Essex, Morris, Union, and Passaic counties.',
-    images: ['https://www.havenmconstruction.com/images/design-build-construction.jpg'],
+    images: ['https://www.havenmconstruction.com/images/design-build-construction.webp'],
   },
 };
 

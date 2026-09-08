@@ -8,6 +8,7 @@ import MobileBottomBar from '../components/shared/MobileBottomBar';
 import { PageTransition } from '../components/shared/PageTransition';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.havenmconstruction.com'),
   title: 'Haven M Construction | Design-Build & Construction in Verona, NJ',
   description: 'Haven M Construction provides residential and commercial design-build services, additions, offices and veterinary hospitals in Verona, NJ.',
   keywords: 'Haven M Construction, design-build contractor, residential construction, commercial construction, home additions, value engineering, boutique office construction, veterinary hospital construction, Bergen County NJ, Essex County NJ, Morris County NJ, Passaic County NJ, Union County NJ',
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/og-image.jpg',
+        url: 'https://www.havenmconstruction.com/images/og-image.webp',
         alt: 'Haven M Construction design-build and construction services in Verona, NJ',
       },
     ],
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Haven M Construction | Design-Build & Construction in Verona, NJ',
     description: 'Haven M Construction provides residential and commercial design-build services, additions, offices and veterinary hospitals in Verona, NJ.',
-    images: ['https://www.havenmconstruction.com/images/og-image.jpg'],
+    images: ['https://www.havenmconstruction.com/images/og-image.webp'],
   },
 };
 

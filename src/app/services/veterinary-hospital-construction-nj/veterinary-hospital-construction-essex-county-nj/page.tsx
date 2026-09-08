@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/veterinary-hospital-construction-essex-county-nj.jpg',
+        url: 'https://www.havenmconstruction.com/images/veterinary-hospital-construction-essex-county-nj.webp',
         alt: 'Modern veterinary hospital construction in Essex County, NJ',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Modern Veterinary Hospital Construction in Essex County, NJ | Haven M Construction',
     description: 'Planning a veterinary hospital in Essex County, NJ? Haven M Construction provides veterinary facility construction and design-build services.',
-    images: ['https://www.havenmconstruction.com/images/veterinary-hospital-construction-essex-county-nj.jpg'],
+    images: ['https://www.havenmconstruction.com/images/veterinary-hospital-construction-essex-county-nj.webp'],
   },
 };
 

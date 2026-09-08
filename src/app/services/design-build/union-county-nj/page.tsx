@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/wp-content/uploads/og-image.jpg',
+        url: 'https://www.havenmconstruction.com/wp-content/uploads/og-image.webp',
         alt: 'Haven M Construction design-build construction services in Union County, NJ',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Design-Build Construction Services in Union County, New Jersey',
     description: 'Explore custom design-build construction in Union County, NJ, with expert planning, design, and construction services tailored to your vision.',
-    images: ['https://www.havenmconstruction.com/wp-content/uploads/og-image.jpg'],
+    images: ['https://www.havenmconstruction.com/wp-content/uploads/og-image.webp'],
   },
 };
 

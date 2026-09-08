@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/og-image.jpg',
+        url: 'https://www.havenmconstruction.com/images/og-image.webp',
         alt: 'Haven M Construction residential and commercial construction services in Verona, NJ',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Residential & Commercial Construction Services in Verona, NJ | Haven M Construction',
     description: 'Residential and commercial construction services in Verona, NJ, including additions and design-build, serving Bergen, Essex, Morris, Union & Passaic counties.',
-    images: ['https://www.havenmconstruction.com/images/og-image.jpg'],
+    images: ['https://www.havenmconstruction.com/images/og-image.webp'],
   },
 };
 

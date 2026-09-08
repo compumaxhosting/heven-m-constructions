@@ -1,5 +1,5 @@
 "use client";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import havenLogo from "../../assets/haven-logo.png";
@@ -13,8 +13,21 @@ import {
 export function PageTransition({ children }: { children: ReactNode }) {
   const pathname = usePathname();
 
+  // Bypass transition ONLY when opening an individual blog article (/blog/[slug])
+  const isBlogArticle = pathname ? pathname.startsWith("/blog/") : false;
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname]);
+
+  if (isBlogArticle) {
+    return <div className="w-full min-h-screen">{children}</div>;
+  }
+
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative min-h-screen">
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
           key={pathname}
@@ -34,7 +47,7 @@ export function PageTransition({ children }: { children: ReactNode }) {
           {/* Architectural Top Panel Wipe */}
           <motion.div
             variants={topPanelVariants}
-            className="fixed inset-x-0 top-0 z-[100] h-[50vh] bg-[#091512] shadow-2xl overflow-hidden pointer-events-none border-b border-[#D4B886]/20 transform-gpu will-change-transform"
+            className="fixed inset-x-0 top-0 z-[9999] h-[51vh] bg-[#091512] shadow-2xl overflow-hidden pointer-events-none border-b border-[#D4B886]/20 transform-gpu will-change-transform"
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(212,184,134,0.12),transparent_60%)]" />
           </motion.div>
@@ -42,7 +55,7 @@ export function PageTransition({ children }: { children: ReactNode }) {
           {/* Architectural Bottom Panel Wipe */}
           <motion.div
             variants={bottomPanelVariants}
-            className="fixed inset-x-0 bottom-0 z-[100] h-[50vh] bg-[#091512] shadow-2xl overflow-hidden pointer-events-none border-t border-[#D4B886]/20 transform-gpu will-change-transform"
+            className="fixed inset-x-0 bottom-0 z-[9999] h-[51vh] bg-[#091512] shadow-2xl overflow-hidden pointer-events-none border-t border-[#D4B886]/20 transform-gpu will-change-transform"
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,184,134,0.12),transparent_60%)]" />
           </motion.div>
@@ -50,12 +63,12 @@ export function PageTransition({ children }: { children: ReactNode }) {
           {/* Center Logo Fade & Scale */}
           <motion.div
             variants={logoVariants}
-            className="fixed inset-0 z-[102] flex items-center justify-center pointer-events-none p-4 transform-gpu"
+            className="fixed inset-0 z-[10000] flex items-center justify-center pointer-events-none p-4 transform-gpu"
           >
             <img
               src={(typeof havenLogo === 'object' && havenLogo !== null ? ((havenLogo as any).default?.src || (havenLogo as any).src || (havenLogo as any).default || havenLogo) : havenLogo)}
               alt="Haven M Logo"
-              className="h-28 sm:h-36 md:h-44 lg:h-52 w-auto object-contain brightness-200 drop-shadow-[0_10px_35px_rgba(212,184,134,0.3)]"
+              className="h-24 sm:h-36 md:h-44 lg:h-52 w-auto object-contain brightness-200 drop-shadow-[0_10px_35px_rgba(212,184,134,0.3)]"
             />
           </motion.div>
         </motion.div>

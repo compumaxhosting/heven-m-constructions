@@ -16,9 +16,9 @@ export default function TopContactBar() {
   };
 
   return (
-    <div className="pointer-events-auto relative w-full bg-[linear-gradient(to_right,#9e462a,#1c3c2b,#0d1f16)] sm:bg-[linear-gradient(to_right,#0d1f16,#1c3c2b,#9e462a,#1c3c2b,#0d1f16)] text-linen px-3 sm:px-8 py-2.5 shadow-md backdrop-blur-xl border-b border-white/15 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/10 via-amber-400/15 to-emerald-400/10 pointer-events-none mix-blend-screen" />
-      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-amber-200/70 to-transparent pointer-events-none" />
+    <div className="pointer-events-auto relative w-full bg-forest-deep text-linen px-3 sm:px-8 py-2.5 shadow-md backdrop-blur-xl border-b border-white/10 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-forest via-forest-deep to-forest opacity-40 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-sage/30 to-transparent pointer-events-none" />
 
       <div className="relative mx-auto flex max-w-7xl flex-wrap items-center justify-center sm:justify-between gap-y-2.5 gap-x-3 text-xs">
         <div className="flex items-center gap-2 sm:gap-3.5 flex-wrap">

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/home-additions.jpg',
+        url: 'https://www.havenmconstruction.com/images/home-additions.webp',
         alt: 'Custom home additions by Haven M Construction in Verona, NJ',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Haven M Construction | Custom Home Additions in Verona, NJ',
     description: 'Expert home additions in Verona, NJ by Haven M Construction. Serving Bergen, Essex, Morris, Union & Passaic counties. Get a custom estimate.',
-    images: ['https://www.havenmconstruction.com/images/home-additions.jpg'],
+    images: ['https://www.havenmconstruction.com/images/home-additions.webp'],
   },
 };
 

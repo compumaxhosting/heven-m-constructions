@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/value-engineering-passaic-county-nj.jpg',
+        url: 'https://www.havenmconstruction.com/images/value-engineering-passaic-county-nj.webp',
         alt: 'Value engineering for construction projects in Passaic County, NJ',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Value Engineering for Construction Projects in Passaic, NJ',
     description: 'Expert value engineering for construction projects in Passaic, NJ, helping optimize budgets, evaluate materials, improve design, and maintain project quality.',
-    images: ['https://www.havenmconstruction.com/images/value-engineering-passaic-county-nj.jpg'],
+    images: ['https://www.havenmconstruction.com/images/value-engineering-passaic-county-nj.webp'],
   },
 };
 

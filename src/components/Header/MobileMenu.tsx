@@ -12,9 +12,7 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ pathname, setOpen }: MobileMenuProps) {
-  const [servicesExpanded, setServicesExpanded] = useState(
-    pathname.startsWith('/services') || pathname.includes('construction') || pathname.includes('additions') || pathname.includes('engineering')
-  );
+  const [servicesExpanded, setServicesExpanded] = useState(false);
 
   return (
     <motion.div
@@ -38,9 +36,11 @@ export default function MobileMenu({ pathname, setOpen }: MobileMenuProps) {
       <nav className="grid gap-2">
         {links.map((l) => {
           const isServices = l.hasDropdown;
+          const isBlog = l.to === '/blog';
           const isActive =
-            pathname === l.to ||
-            (isServices && (pathname.startsWith('/services') || pathname.includes('construction') || pathname.includes('additions') || pathname.includes('engineering')));
+            (isBlog && pathname.startsWith('/blog')) ||
+            (isServices && !pathname.startsWith('/blog') && (pathname.startsWith('/services') || pathname.includes('additions') || pathname.includes('engineering') || (pathname.includes('construction') && !pathname.startsWith('/blog')))) ||
+            (!isBlog && !isServices && pathname === l.to);
 
           if (isServices) {
             return (

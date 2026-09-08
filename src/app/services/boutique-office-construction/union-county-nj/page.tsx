@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/boutique-office-construction-union-county-nj.jpg',
+        url: 'https://www.havenmconstruction.com/images/boutique-office-construction-union-county-nj.webp',
         alt: 'Boutique office design and construction in Union County, NJ by Haven M Construction',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Boutique Office Design & Construction Services | Union County, NJ',
     description: 'Custom boutique office design, construction and build-out services in Union County, NJ by Haven M Construction.',
-    images: ['https://www.havenmconstruction.com/images/boutique-office-construction-union-county-nj.jpg'],
+    images: ['https://www.havenmconstruction.com/images/boutique-office-construction-union-county-nj.webp'],
   },
 };
 

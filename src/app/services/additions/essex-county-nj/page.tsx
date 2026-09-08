@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: 'Haven M Construction',
     images: [
       {
-        url: 'https://www.havenmconstruction.com/images/home-additions.jpg',
+        url: 'https://www.havenmconstruction.com/images/home-additions.webp',
         alt: 'Home additions and extensions in Essex County, NJ',
       },
     ],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Home Addition & Extension Contractors in Essex County, NJ',
     description: 'Looking for a home addition contractor in Essex County, NJ? Create more space with custom home additions and extensions designed around your home, needs, and lifestyle.',
-    images: ['https://www.havenmconstruction.com/images/home-additions.jpg'],
+    images: ['https://www.havenmconstruction.com/images/home-additions.webp'],
   },
 };
 
