@@ -40,7 +40,7 @@ export default function Page() {
         "@type": "WebPage",
         "@id": "https://www.havenmconstruction.com/design-build-passaic-county-nj#webpage",
         "url": "https://www.havenmconstruction.com/design-build-passaic-county-nj",
-        "name": "Design-Build Contractors in Passaic County, NJ | Haven M",
+        "name": "Design-Build Contractors in Passaic County, NJ | Haven M Construction",
         "description": "Trusted design-build contractors in Passaic County, NJ, providing custom home design, planning, and construction from concept through completion.",
         "isPartOf": {
           "@id": "https://www.havenmconstruction.com/#website"

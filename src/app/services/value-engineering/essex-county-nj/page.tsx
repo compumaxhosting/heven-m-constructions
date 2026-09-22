@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://www.havenmconstruction.com/images/value-engineering-essex-county-nj.webp',
-        alt: 'Value engineering services for construction projects in Essex County, NJ',
+        alt: 'Value engineering services for construction projects in Essex County, NJ by Haven M Construction',
       },
     ],
   },

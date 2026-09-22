@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://www.havenmconstruction.com/images/value-engineering-bergen-county-nj.webp',
-        alt: 'Construction value engineering services in Bergen County, NJ',
+        alt: 'Construction value engineering services in Bergen County, NJ by Haven M Construction',
       },
     ],
   },

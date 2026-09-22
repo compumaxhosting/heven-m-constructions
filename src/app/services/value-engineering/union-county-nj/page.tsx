@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://www.havenmconstruction.com/images/value-engineering-union-county-nj.webp',
-        alt: 'Value engineering solutions for construction projects in Union County, NJ',
+        alt: 'Value engineering solutions for construction projects in Union County, NJ by Haven M Construction',
       },
     ],
   },

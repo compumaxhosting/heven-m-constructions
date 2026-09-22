@@ -2,7 +2,7 @@ import ContactPage from '../../components/Contact';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contact a Construction Contractor in Verona, NJ | Haven M',
+  title: 'Contact a Construction Contractor in Verona, NJ | Haven M Construction',
   description: 'Contact Haven M Construction in Verona, NJ for residential and commercial construction, additions, design-build, and project inquiries across five NJ counties.',
   keywords: 'how to contact a construction contractor in Verona NJ, construction contractor near Verona New Jersey, how can I get a construction quote in NJ, request a construction consultation in Verona NJ, where can I find a construction company in New Jersey, residential construction contractor near me, commercial construction contractor near me, home addition contractor in Verona NJ, whole-home addition contractor in NJ, design-build contractor near Verona NJ, value engineering contractor in NJ, boutique office construction contractor NJ, veterinary hospital construction contractor NJ, construction company serving Bergen County NJ, construction company serving Essex County NJ, construction company serving Morris County NJ, construction company serving Union County NJ, construction company serving Passaic County NJ, contact a general contractor in New Jersey, get a construction project estimate in NJ, construction consultation near Verona NJ',
   authors: [{ name: 'Haven M Construction' }],
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   referrer: 'strict-origin-when-cross-origin',
   openGraph: {
     type: 'website',
-    title: 'Contact a Construction Contractor in Verona, NJ | Haven M',
+    title: 'Contact a Construction Contractor in Verona, NJ | Haven M Construction',
     description: 'Contact Haven M Construction in Verona, NJ for residential and commercial construction, additions, design-build, and project inquiries across five NJ counties.',
     url: 'https://www.havenmconstruction.com/contact',
     siteName: 'Haven M Construction',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact a Construction Contractor in Verona, NJ | Haven M',
+    title: 'Contact a Construction Contractor in Verona, NJ | Haven M Construction',
     description: 'Contact Haven M Construction in Verona, NJ for residential and commercial construction, additions, design-build, and project inquiries across five NJ counties.',
     images: ['https://www.havenmconstruction.com/images/og-image.webp'],
   },
@@ -73,7 +73,7 @@ export default function Page() {
         "@type": "ContactPage",
         "@id": "https://www.havenmconstruction.com/contact#webpage",
         "url": "https://www.havenmconstruction.com/contact",
-        "name": "Contact a Construction Contractor in Verona, NJ | Haven M",
+        "name": "Contact a Construction Contractor in Verona, NJ | Haven M Construction",
         "description": "Contact Haven M Construction in Verona, NJ for residential and commercial construction, additions, design-build, and project inquiries across five NJ counties.",
         "isPartOf": {
           "@id": "https://www.havenmconstruction.com/#website"

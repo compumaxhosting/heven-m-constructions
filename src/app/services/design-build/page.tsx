@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://www.havenmconstruction.com/images/design-build-construction.webp',
-        alt: 'Design-Build Construction Services in Verona, NJ',
+        alt: 'Design-Build Construction Services in Verona, NJ by Haven M Construction',
       },
     ],
   },

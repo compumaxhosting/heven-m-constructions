@@ -75,7 +75,7 @@ export default function AboutValues() {
           >
             <figure className="aspect-[4/3] overflow-hidden rounded-[24px] shadow-2xl shadow-black/40 relative group">
               <div className="absolute inset-0 bg-forest/20 group-hover:bg-transparent transition-colors duration-700 z-10" />
-              <img src={(typeof MATERIAL_IMG === 'object' && MATERIAL_IMG !== null ? ((MATERIAL_IMG as any).default?.src || (MATERIAL_IMG as any).src || (MATERIAL_IMG as any).default || MATERIAL_IMG) : MATERIAL_IMG)} alt="Natural stone and wood materials" className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-1000" loading="lazy" />
+              <img src={(typeof MATERIAL_IMG === 'object' && MATERIAL_IMG !== null ? ((MATERIAL_IMG as any).default?.src || (MATERIAL_IMG as any).src || (MATERIAL_IMG as any).default || MATERIAL_IMG) : MATERIAL_IMG)} alt="Natural stone, woodwork, and premium materials crafted by Haven M Construction" className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-1000" loading="lazy" />
             </figure>
           </motion.div>
         </div>

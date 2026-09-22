@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://www.havenmconstruction.com/images/veterinary-hospital-construction-nj.webp',
-        alt: 'Veterinary hospital construction services in New Jersey',
+        alt: 'Veterinary hospital construction services in New Jersey by Haven M Construction',
       },
     ],
   },

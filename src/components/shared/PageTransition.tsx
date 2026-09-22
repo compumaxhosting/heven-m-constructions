@@ -67,7 +67,7 @@ export function PageTransition({ children }: { children: ReactNode }) {
           >
             <img
               src={(typeof havenLogo === 'object' && havenLogo !== null ? ((havenLogo as any).default?.src || (havenLogo as any).src || (havenLogo as any).default || havenLogo) : havenLogo)}
-              alt="Haven M Logo"
+              alt="Haven M Construction"
               className="h-24 sm:h-36 md:h-44 lg:h-52 w-auto object-contain brightness-200 drop-shadow-[0_10px_35px_rgba(212,184,134,0.3)]"
             />
           </motion.div>

@@ -43,10 +43,18 @@ export default function ContactSection() {
               few details — we reply personally within two business days.
             </p>
 
-            <dl className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <dl className="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-3 gap-5">
               <div>
                 <dt className="text-[10px] uppercase tracking-[0.28em] text-olive">Studio</dt>
                 <dd className="font-display mt-1 text-base sm:text-lg text-forest">Verona, NJ 07044</dd>
+              </div>
+              <div>
+                <dt className="text-[10px] uppercase tracking-[0.28em] text-olive">Phone</dt>
+                <dd className="font-display mt-1 text-base sm:text-lg text-forest">
+                  <a href="tel:+12012643506" className="hover:text-terracotta transition-colors">
+                    201 264-3506
+                  </a>
+                </dd>
               </div>
               <div>
                 <dt className="text-[10px] uppercase tracking-[0.28em] text-olive">Direct</dt>
@@ -54,7 +62,9 @@ export default function ContactSection() {
                   className="font-display mt-1 text-base sm:text-lg text-forest"
                   style={{ wordBreak: 'break-word', overflowWrap: 'anywhere' }}
                 >
-                  gus@havenmconstruction.com
+                  <a href="mailto:gus@havenmconstruction.com" className="hover:text-terracotta transition-colors">
+                    gus@havenmconstruction.com
+                  </a>
                 </dd>
               </div>
             </dl>

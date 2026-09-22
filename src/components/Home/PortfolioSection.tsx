@@ -3,10 +3,10 @@ import addition6 from "../../assets/6.webp";
 import beforeImage from "../../assets/before.webp";
 import afterImage from "../../assets/after.webp";
 
-const featuredImage = { src: addition6, alt: 'Completed residential project' };
+const featuredImage = { src: addition6, alt: 'Completed luxury residential home addition in New Jersey by Haven M Construction' };
 const beforeAfterImages = [
-  { src: beforeImage, alt: 'Home before the addition project' },
-  { src: afterImage, alt: 'Home after the addition project' },
+  { src: beforeImage, alt: 'New Jersey home before whole-home addition by Haven M Construction' },
+  { src: afterImage, alt: 'New Jersey home after architectural addition by Haven M Construction' },
 ];
 
 export default function PortfolioSection() {

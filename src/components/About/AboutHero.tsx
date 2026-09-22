@@ -43,7 +43,7 @@ export default function AboutHero() {
             <motion.div variants={scaleIn} className="lg:col-span-6">
               <figure className="relative aspect-[4/3] overflow-hidden rounded-[24px] shadow-2xl shadow-forest/10">
                 <div className="absolute inset-0 bg-forest/5 z-10 pointer-events-none mix-blend-multiply" />
-                <img src={(typeof asset4 === 'object' && asset4 !== null ? ((asset4 as any).default?.src || (asset4 as any).src || (asset4 as any).default || asset4) : asset4)} alt="Automart building" className="h-full w-full object-cover transition-transform duration-1000 hover:scale-105" />
+                <img src={(typeof asset4 === 'object' && asset4 !== null ? ((asset4 as any).default?.src || (asset4 as any).src || (asset4 as any).default || asset4) : asset4)} alt="Haven M Construction architectural project in Verona, NJ" className="h-full w-full object-cover transition-transform duration-1000 hover:scale-105" />
               </figure>
             </motion.div>
           </div>

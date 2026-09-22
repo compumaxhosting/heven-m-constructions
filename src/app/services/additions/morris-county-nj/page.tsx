@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://www.havenmconstruction.com/images/home-additions.webp',
-        alt: 'Custom home additions and design-build services in Morris County, NJ',
+        alt: 'Custom home additions and design-build services in Morris County, NJ by Haven M Construction',
       },
     ],
   },

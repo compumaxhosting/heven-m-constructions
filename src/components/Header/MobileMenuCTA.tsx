@@ -84,7 +84,7 @@ export default function MobileMenuCTA({ setOpen }: MobileMenuCTAProps) {
                 Call Us Directly
               </span>
               <span className="font-mono text-[11px] sm:text-sm font-bold tracking-tight whitespace-nowrap">
-                (201) 264-3506
+                201 264-3506
               </span>
             </div>
           </div>

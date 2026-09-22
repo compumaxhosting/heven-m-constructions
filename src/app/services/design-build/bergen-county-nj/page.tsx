@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://www.havenmconstruction.com/images/design-build-construction.webp',
-        alt: 'Design-Build Construction Contractors in Bergen County, NJ',
+        alt: 'Design-Build Construction Contractors in Bergen County, NJ by Haven M Construction',
       },
     ],
   },

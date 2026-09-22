@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import WholeHomeAdditionsBergenCountyPage from '../../../../pages/Services/WholeHomeAdditions/BergenCounty';
 
 export const metadata: Metadata = {
-  title: 'Whole-Home Additions in Bergen County, NJ | Haven M',
+  title: 'Whole-Home Additions in Bergen County, NJ | Haven M Construction',
   description: 'Planning a whole-home addition in Bergen County, NJ? Haven M Construction provides custom design-build solutions for more space, comfort and value.',
   keywords: 'whole-home additions Bergen County NJ, whole-home addition contractor Bergen County NJ, best whole-home addition contractor near me, who builds whole-home additions in Bergen County, how much does a whole-home addition cost in NJ, whole-home addition ideas for Bergen County homes, how to plan a whole-home addition in Bergen County NJ, custom home additions Bergen County NJ, residential addition contractor near Bergen County, home expansion contractor Bergen County NJ, design-build home addition contractor Bergen County, whole-house renovation and addition NJ, second-story addition contractor Bergen County NJ, home addition construction near me, residential construction contractor Bergen County NJ, general contractor for home additions in Bergen County, home addition contractor serving Bergen County NJ, whole-home remodeling and additions Bergen County, construction company for home additions near me, custom residential construction Bergen County NJ',
   authors: [{ name: 'Haven M Construction' }],
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   referrer: 'strict-origin-when-cross-origin',
   openGraph: {
     type: 'website',
-    title: 'Whole-Home Additions in Bergen County, NJ | Haven M',
+    title: 'Whole-Home Additions in Bergen County, NJ | Haven M Construction',
     description: 'Planning a whole-home addition in Bergen County, NJ? Haven M Construction provides custom design-build solutions for more space, comfort and value.',
     url: 'https://www.havenmconstruction.com/whole-home-additions-bergen-county-nj',
     siteName: 'Haven M Construction',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Whole-Home Additions in Bergen County, NJ | Haven M',
+    title: 'Whole-Home Additions in Bergen County, NJ | Haven M Construction',
     description: 'Planning a whole-home addition in Bergen County, NJ? Haven M Construction provides custom design-build solutions for more space, comfort and value.',
     images: ['https://www.havenmconstruction.com/images/og-image.webp'],
   },
@@ -74,7 +74,7 @@ export default function Page() {
         "@type": "WebPage",
         "@id": "https://www.havenmconstruction.com/whole-home-additions-bergen-county-nj#webpage",
         "url": "https://www.havenmconstruction.com/whole-home-additions-bergen-county-nj",
-        "name": "Whole-Home Additions in Bergen County, NJ | Haven M",
+        "name": "Whole-Home Additions in Bergen County, NJ | Haven M Construction",
         "description": "Planning a whole-home addition in Bergen County, NJ? Haven M Construction provides custom design-build solutions for more space, comfort and value.",
         "isPartOf": {
           "@id": "https://www.havenmconstruction.com/#website"

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://www.havenmconstruction.com/images/value-engineering-morris-county-nj.webp',
-        alt: 'Construction value engineering services in Morris County, NJ',
+        alt: 'Construction value engineering services in Morris County, NJ by Haven M Construction',
       },
     ],
   },

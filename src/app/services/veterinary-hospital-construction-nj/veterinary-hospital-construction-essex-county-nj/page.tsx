@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://www.havenmconstruction.com/images/veterinary-hospital-construction-essex-county-nj.webp',
-        alt: 'Modern veterinary hospital construction in Essex County, NJ',
+        alt: 'Modern veterinary hospital construction in Essex County, NJ by Haven M Construction',
       },
     ],
   },

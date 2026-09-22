@@ -67,7 +67,7 @@ export default function ContactForm() {
             >
               <img
                 src="/images/review-qr.png"
-                alt="Scan or click QR code to review Haven M Construction"
+                alt="Scan or click QR code to leave a review for Haven M Construction"
                 className="w-44 h-44 object-contain rounded-xl"
                 loading="lazy"
               />

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://www.havenmconstruction.com/images/veterinary-hospital-construction-union-county-nj.webp',
-        alt: 'Professional veterinary hospital construction services in Union County, NJ',
+        alt: 'Professional veterinary hospital construction services in Union County, NJ by Haven M Construction',
       },
     ],
   },

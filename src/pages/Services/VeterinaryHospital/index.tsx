@@ -57,7 +57,7 @@ export default function VeterinaryHospitalConstructionPage() {
             </motion.p>
 
             <motion.p variants={fadeIn} className="text-[16px] sm:text-[18px] leading-[1.8] text-forest-deep/80 font-light mb-10">
-              Hevan M Constructions provides veterinary hospital and veterinary facility construction services from Verona, New Jersey, serving Bergen, Essex, Morris, Union, and Passaic Counties. We help develop veterinary spaces around the needs of veterinarians, staff, patients, and pet owners—from initial planning through construction and final completion.
+              Haven M Construction provides veterinary hospital and veterinary facility construction services from Verona, New Jersey, serving Bergen, Essex, Morris, Union, and Passaic Counties. We help develop veterinary spaces around the needs of veterinarians, staff, patients, and pet owners—from initial planning through construction and final completion.
             </motion.p>
 
             <motion.div variants={fadeIn} className="flex flex-wrap items-center gap-3">
@@ -327,7 +327,7 @@ export default function VeterinaryHospitalConstructionPage() {
                 Serving New Jersey's <br /><span className="italic text-terracotta">Premier Communities</span>
               </motion.h2>
               <motion.p variants={fadeIn} className="text-[17px] leading-[1.8] text-forest-deep/80 font-light mb-6">
-                Hevan M Constructions provides veterinary hospital construction services throughout Northern New Jersey:
+                Haven M Construction provides veterinary hospital construction services throughout Northern New Jersey:
               </motion.p>
             </div>
 
@@ -376,7 +376,7 @@ export default function VeterinaryHospitalConstructionPage() {
             </motion.h2>
             <motion.div variants={fadeIn} className="space-y-6 text-[18px] sm:text-[20px] leading-[1.7] text-linen/70 mb-10 max-w-2xl mx-auto font-light">
               <p>Whether you are planning a new veterinary hospital, clinic build-out, surgical facility, renovation, or expansion, the construction should begin with a clear understanding of how your practice will operate.</p>
-              <p>Contact Hevan M Constructions to discuss your facility, location, and construction goals.</p>
+              <p>Contact Haven M Construction to discuss your facility, location, and construction goals.</p>
             </motion.div>
 
             <motion.div variants={fadeIn}>
@@ -386,7 +386,7 @@ export default function VeterinaryHospitalConstructionPage() {
             </motion.div>
 
             <motion.div variants={fadeIn} className="pt-12 mt-12 border-t border-linen/10 flex flex-col items-center gap-4 text-linen/40 text-[14px]">
-              <p className="font-medium text-linen/80">Hevan M Constructions</p>
+              <p className="font-medium text-linen/80">Haven M Construction</p>
               <p>Verona, New Jersey</p>
               <p className="italic">Serving Bergen, Essex, Morris, Union & Passaic Counties</p>
             </motion.div>

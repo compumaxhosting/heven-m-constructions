@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://www.havenmconstruction.com/images/value-engineering-passaic-county-nj.webp',
-        alt: 'Value engineering for construction projects in Passaic County, NJ',
+        alt: 'Value engineering for construction projects in Passaic County, NJ by Haven M Construction',
       },
     ],
   },

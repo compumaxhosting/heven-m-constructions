@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://www.havenmconstruction.com/images/og-image.webp',
-        alt: 'Whole-Home Additions & Remodeling in Passaic County, NJ',
+        alt: 'Whole-Home Additions & Remodeling in Passaic County, NJ by Haven M Construction',
       },
     ],
   },

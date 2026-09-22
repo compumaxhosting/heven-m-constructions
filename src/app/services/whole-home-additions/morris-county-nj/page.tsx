@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import WholeHomeAdditionsMorrisCountyPage from '../../../../pages/Services/WholeHomeAdditions/MorrisCounty';
 
 export const metadata: Metadata = {
-  title: 'Whole-Home Additions in Morris County, NJ | Haven M',
+  title: 'Whole-Home Additions in Morris County, NJ | Haven M Construction',
   description: 'Planning a whole-home addition in Morris County, NJ? Haven M Construction provides custom design-build solutions for more space, comfort, and lasting value.',
   keywords: 'whole-home additions Morris County NJ, whole-home addition contractor Morris County NJ, best whole-home addition contractor near me, who builds whole-home additions in Morris County, how much does a whole-home addition cost in NJ, whole-home addition ideas for Morris County homes, how to plan a whole-home addition in Morris County NJ, custom home additions Morris County NJ, residential addition contractor Morris County NJ, home expansion contractor Morris County NJ, design-build home addition contractor Morris County, whole-house renovation and addition NJ, second-story addition contractor Morris County NJ, home addition construction near me, residential construction contractor Morris County NJ, general contractor for home additions in Morris County, home addition contractor serving Morris County NJ, whole-home remodeling and additions Morris County, construction company for home additions near me, custom residential construction Morris County NJ',
   authors: [{ name: 'Haven M Construction' }],
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   referrer: 'strict-origin-when-cross-origin',
   openGraph: {
     type: 'website',
-    title: 'Whole-Home Additions in Morris County, NJ | Haven M',
+    title: 'Whole-Home Additions in Morris County, NJ | Haven M Construction',
     description: 'Planning a whole-home addition in Morris County, NJ? Haven M Construction provides custom design-build solutions for more space, comfort, and lasting value.',
     url: 'https://www.havenmconstruction.com/whole-home-additions-morris-county-nj',
     siteName: 'Haven M Construction',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Whole-Home Additions in Morris County, NJ | Haven M',
+    title: 'Whole-Home Additions in Morris County, NJ | Haven M Construction',
     description: 'Planning a whole-home addition in Morris County, NJ? Haven M Construction provides custom design-build solutions for more space, comfort, and lasting value.',
     images: ['https://www.havenmconstruction.com/images/og-image.webp'],
   },
@@ -75,7 +75,7 @@ export default function Page() {
         "@type": "WebPage",
         "@id": "https://www.havenmconstruction.com/whole-home-additions-morris-county-nj#webpage",
         "url": "https://www.havenmconstruction.com/whole-home-additions-morris-county-nj",
-        "name": "Whole-Home Additions in Morris County, NJ | Haven M",
+        "name": "Whole-Home Additions in Morris County, NJ | Haven M Construction",
         "description": "Planning a whole-home addition in Morris County, NJ? Haven M Construction provides custom design-build solutions for more space, comfort and lasting value.",
         "isPartOf": {
           "@id": "https://www.havenmconstruction.com/#website"

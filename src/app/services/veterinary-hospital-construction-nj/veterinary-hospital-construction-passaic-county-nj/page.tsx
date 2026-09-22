@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://www.havenmconstruction.com/images/veterinary-hospital-construction-passaic-county-nj.webp',
-        alt: 'Expert veterinary hospital construction contractor in Passaic County, NJ',
+        alt: 'Expert veterinary hospital construction contractor in Passaic County, NJ by Haven M Construction',
       },
     ],
   },

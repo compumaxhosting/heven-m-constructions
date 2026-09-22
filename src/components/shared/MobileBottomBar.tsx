@@ -7,7 +7,7 @@ export default function MobileBottomBar() {
     {
       label: 'Call',
       title: 'Contact Us',
-      href: 'tel:9732070689',
+      href: 'tel:+12012643506',
       isExternal: true,
       btnClass: 'bg-white/95 text-slate-950 font-extrabold shadow-[0_0_16px_rgba(255,255,255,0.45)] border border-white/60 hover:bg-white',
       icon: (

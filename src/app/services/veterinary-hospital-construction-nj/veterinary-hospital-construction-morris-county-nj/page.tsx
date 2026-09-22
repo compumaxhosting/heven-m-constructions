@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://www.havenmconstruction.com/images/veterinary-hospital-construction-morris-county-nj.webp',
-        alt: 'Veterinary hospital construction contractor in Morris County, NJ',
+        alt: 'Veterinary hospital construction contractor in Morris County, NJ by Haven M Construction',
       },
     ],
   },
