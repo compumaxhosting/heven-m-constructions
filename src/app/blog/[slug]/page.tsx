@@ -31,6 +31,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const title = post.metaTitle || `${post.title} | Haven M Construction Blog`;
   const description = post.metaDescription || post.summary;
+  const ogTitle = post.ogTitle || title;
+  const ogDescription = post.ogDescription || description;
   const canonical = post.canonicalUrl || `https://www.havenmconstruction.com/blog/${post.id}`;
   const imageUrl = post.ogImage || (typeof post.image === 'string' ? post.image : (post.image?.src || 'https://www.havenmconstruction.com/images/asset-4.webp'));
   const imageAlt = post.ogImageAlt || post.title;
@@ -46,13 +48,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     robots: 'index,follow',
     openGraph: {
-      type: 'article',
-      title,
-      description,
+      type: 'website',
+      title: ogTitle,
+      description: ogDescription,
       url: canonical,
       siteName: 'Haven M Construction',
-      publishedTime: post.date,
-      authors: ['Haven M Construction'],
       images: [
         {
           url: imageUrl,
@@ -62,8 +62,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: 'summary_large_image',
-      title,
-      description,
+      title: ogTitle,
+      description: ogDescription,
       images: [imageUrl],
     },
   };

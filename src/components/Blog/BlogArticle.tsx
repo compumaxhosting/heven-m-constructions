@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -27,6 +27,62 @@ export default function BlogArticle({ activePost, nextPost, setSelectedPostId }:
   const [showToc, setShowToc] = useState(false);
   const [openFaqIndices, setOpenFaqIndices] = useState<number[]>([0]);
 
+  const tocRef = useRef<HTMLDivElement>(null);
+  const railRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!showToc) return;
+
+    // Lock page background scroll while Table of Contents is open
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        (tocRef.current && tocRef.current.contains(event.target as Node)) ||
+        (railRef.current && railRef.current.contains(event.target as Node))
+      ) {
+        return;
+      }
+      setShowToc(false);
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setShowToc(false);
+      }
+    };
+
+    // Prevent site scrolling outside TOC while allowing scrolling inside TOC
+    const blockWheelOutside = (e: WheelEvent) => {
+      if (tocRef.current && tocRef.current.contains(e.target as Node)) {
+        return;
+      }
+      e.preventDefault();
+    };
+
+    const blockTouchOutside = (e: TouchEvent) => {
+      if (tocRef.current && tocRef.current.contains(e.target as Node)) {
+        return;
+      }
+      e.preventDefault();
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("wheel", blockWheelOutside, { passive: false });
+    window.addEventListener("touchmove", blockTouchOutside, { passive: false });
+
+    return () => {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("wheel", blockWheelOutside);
+      window.removeEventListener("touchmove", blockTouchOutside);
+    };
+  }, [showToc]);
+
   useEffect(() => {
     const handleScroll = () => {
       const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -43,6 +99,30 @@ export default function BlogArticle({ activePost, nextPost, setSelectedPostId }:
       navigator.clipboard.writeText(window.location.href);
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
+    }
+  };
+
+  const handleJumpToSection = (sectionIndex: number) => {
+    setShowToc(false);
+
+    // Unblock page scrolling immediately
+    document.documentElement.style.overflow = "";
+    document.body.style.overflow = "";
+    if (typeof window !== "undefined" && (window as any).lenis) {
+      (window as any).lenis.start();
+    }
+
+    const targetId = `section-${sectionIndex}`;
+    const targetEl = document.getElementById(targetId);
+
+    if (targetEl) {
+      if (typeof window !== "undefined" && (window as any).lenis) {
+        (window as any).lenis.scrollTo(targetEl, { offset: -140, duration: 1.2 });
+      } else {
+        const yOffset = -140;
+        const y = targetEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+      }
     }
   };
 
@@ -124,29 +204,51 @@ export default function BlogArticle({ activePost, nextPost, setSelectedPostId }:
         style={{ width: `${scrollProgress}%` }}
       />
 
+      {/* Invisible Click-Anywhere-to-Close Backdrop when Index is Open */}
+      {showToc && (
+        <div
+          style={{ zIndex: 998 }}
+          className="fixed inset-0 cursor-default"
+          onClick={() => setShowToc(false)}
+          aria-label="Close Table of Contents"
+        />
+      )}
+
       {/* Floating Reader Action Rail (Desktop only) */}
-      <div className="hidden xl:flex fixed left-8 top-1/2 -translate-y-1/2 z-40 flex-col items-center gap-3 p-3 rounded-2xl bg-white/90 backdrop-blur-xl border border-forest/15 shadow-[0_15px_35px_rgba(0,0,0,0.08)] transition-all hover:shadow-[0_20px_45px_rgba(0,0,0,0.12)]">
+      <div
+        ref={railRef}
+        style={{ backgroundColor: "#133321ff", zIndex: 1005 }}
+        className="hidden xl:flex fixed left-8 top-1/2 -translate-y-1/2 flex-col items-center gap-3 p-3 rounded-2xl bg-forest-deep text-sand border border-white/15 shadow-[0_15px_35px_rgba(0,0,0,0.35)] transition-all hover:border-terracotta/40 hover:shadow-[0_20px_45px_rgba(0,0,0,0.45)]"
+      >
         <Link
           href="/blog"
           onClick={() => setSelectedPostId?.(null)}
-          className="p-2.5 rounded-xl hover:bg-forest/10 text-forest hover:text-terracotta transition-all group relative"
-          title="Back to Journal"
+          className="p-2.5 rounded-xl hover:bg-white/10 text-sand hover:text-terracotta transition-all group relative cursor-pointer"
         >
           <ArrowLeft className="h-4 w-4" />
-          <span className="absolute left-14 top-1/2 -translate-y-1/2 px-3 py-1.5 rounded-xl bg-forest-deep text-sand text-[11px] font-mono font-bold tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 shadow-xl pointer-events-none">
+          <span
+            style={{ backgroundColor: "#102419", color: "#f28e67", borderColor: "rgba(181, 89, 58, 0.45)" }}
+            className="absolute left-14 top-1/2 -translate-y-1/2 px-3 py-1.5 rounded-xl text-[11px] font-mono font-bold tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 shadow-[0_10px_25px_rgba(0,0,0,0.5)] pointer-events-none border"
+          >
             Back to Journal
           </span>
         </Link>
 
-        <span className="w-4 h-px bg-forest/10" />
+        <span className="w-4 h-px bg-white/15" />
 
         <button
           onClick={handleCopyLink}
-          className="p-2.5 rounded-xl hover:bg-forest/10 text-forest/70 hover:text-terracotta transition-all group relative"
-          title="Share Article"
+          className="p-2.5 rounded-xl hover:bg-white/10 text-sand hover:text-terracotta transition-all group relative cursor-pointer"
         >
-          {copied ? <CheckCircle2 className="h-4 w-4 text-green-600" /> : <Share2 className="h-4 w-4" />}
-          <span className="absolute left-14 top-1/2 -translate-y-1/2 px-3 py-1.5 rounded-xl bg-forest-deep text-sand text-[11px] font-mono font-bold tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 shadow-xl pointer-events-none">
+          {copied ? <CheckCircle2 className="h-4 w-4 text-emerald-400" /> : <Share2 className="h-4 w-4" />}
+          <span
+            style={{
+              backgroundColor: "#102419",
+              color: copied ? "#34d399" : "#f28e67",
+              borderColor: copied ? "rgba(52, 211, 153, 0.45)" : "rgba(181, 89, 58, 0.45)",
+            }}
+            className="absolute left-14 top-1/2 -translate-y-1/2 px-3 py-1.5 rounded-xl text-[11px] font-mono font-bold tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 shadow-[0_10px_25px_rgba(0,0,0,0.5)] pointer-events-none border"
+          >
             {copied ? "Link Copied!" : "Copy Link"}
           </span>
         </button>
@@ -154,11 +256,15 @@ export default function BlogArticle({ activePost, nextPost, setSelectedPostId }:
         {headings.length > 0 && (
           <button
             onClick={() => setShowToc(!showToc)}
-            className={`p-2.5 rounded-xl transition-all group relative ${showToc ? "bg-terracotta text-white shadow-md" : "hover:bg-forest/10 text-forest/70 hover:text-terracotta"}`}
-            title="Toggle Index"
+            className={`p-2.5 rounded-xl transition-all group relative cursor-pointer ${
+              showToc ? "bg-terracotta text-white shadow-md" : "hover:bg-white/10 text-sand hover:text-terracotta"
+            }`}
           >
             <ListOrdered className="h-4 w-4" />
-            <span className="absolute left-14 top-1/2 -translate-y-1/2 px-3 py-1.5 rounded-xl bg-forest-deep text-sand text-[11px] font-mono font-bold tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 shadow-xl pointer-events-none">
+            <span
+              style={{ backgroundColor: "#102419", color: "#f28e67", borderColor: "rgba(181, 89, 58, 0.45)" }}
+              className="absolute left-14 top-1/2 -translate-y-1/2 px-3 py-1.5 rounded-xl text-[11px] font-mono font-bold tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 shadow-[0_10px_25px_rgba(0,0,0,0.5)] pointer-events-none border"
+            >
               Article Index ({headings.length})
             </span>
           </button>
@@ -166,33 +272,57 @@ export default function BlogArticle({ activePost, nextPost, setSelectedPostId }:
 
         {/* Desktop Side Article Index Popover */}
         {showToc && headings.length > 0 && (
-          <div className="absolute left-24 top-1/2 -translate-y-1/2 w-80 p-6 rounded-3xl bg-gradient-to-br from-forest-deep via-forest to-[#0d1b11] text-sand shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-white/20 space-y-4 animate-in fade-in slide-in-from-left-4 duration-300 z-50">
+          <div
+            ref={tocRef}
+            data-lenis-prevent="true"
+            onWheel={(e) => e.stopPropagation()}
+            style={{
+              backgroundColor: "#14261c",
+              left: "calc(100% + 16px)",
+              top: "50%",
+              transform: "translateY(-50%)",
+              zIndex: 1010,
+            }}
+            className="absolute w-80 p-6 rounded-3xl text-sand shadow-[0_25px_60px_rgba(0,0,0,0.55)] border border-white/20 space-y-4"
+          >
             <div className="flex items-center justify-between border-b border-white/15 pb-3">
               <div className="flex items-center gap-2">
                 <ListOrdered className="h-4 w-4 text-terracotta" />
                 <span className="text-xs font-mono font-bold uppercase tracking-wider text-sand">Article Index</span>
               </div>
               <button
-                onClick={() => setShowToc(false)}
-                className="w-6 h-6 rounded-full bg-white/10 hover:bg-terracotta transition-colors flex items-center justify-center text-[11px] text-sand font-bold"
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowToc(false);
+                }}
+                className="w-6 h-6 rounded-full bg-white/10 hover:bg-terracotta transition-colors flex items-center justify-center text-[11px] text-sand font-bold cursor-pointer"
+                title="Close Index"
               >
                 ✕
               </button>
             </div>
 
-            <div className="space-y-2 max-h-[60vh] overflow-y-auto pr-1">
+            <div
+              data-lenis-prevent="true"
+              className="space-y-2 max-h-[50vh] overflow-y-auto pr-1 overscroll-contain"
+              style={{
+                scrollbarWidth: "thin",
+                scrollbarColor: "rgba(181, 89, 58, 0.7) rgba(255, 255, 255, 0.08)",
+              }}
+            >
               {headings.map((heading, idx) => (
-                <a
+                <button
+                  type="button"
                   key={idx}
-                  href={`#section-${idx}`}
-                  onClick={() => setShowToc(false)}
-                  className="group flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-white/10 text-xs font-mono text-sand/80 hover:text-white transition-all"
+                  onClick={() => handleJumpToSection(idx)}
+                  className="w-full text-left group flex items-start gap-2.5 p-2.5 rounded-xl hover:bg-white/10 text-xs font-mono text-sand/85 hover:text-white transition-all cursor-pointer"
                 >
                   <span className="w-5 h-5 rounded-md bg-terracotta/20 text-terracotta font-bold text-[10px] flex items-center justify-center shrink-0 group-hover:bg-terracotta group-hover:text-white transition-colors">
                     {idx + 1}
                   </span>
                   <span className="pt-0.5 line-clamp-2 leading-relaxed">{heading.replace(/^\d+\.\s*/, "")}</span>
-                </a>
+                </button>
               ))}
             </div>
           </div>
@@ -377,8 +507,8 @@ export default function BlogArticle({ activePost, nextPost, setSelectedPostId }:
                   <div
                     key={i}
                     className={`my-3.5 rounded-2xl transition-all duration-300 overflow-hidden border ${isOpen
-                        ? "bg-white/95 border-terracotta/50 shadow-lg ring-1 ring-terracotta/20"
-                        : "bg-white/80 border-forest/15 hover:border-terracotta/40 hover:bg-white shadow-xs"
+                      ? "bg-white/95 border-terracotta/50 shadow-lg ring-1 ring-terracotta/20"
+                      : "bg-white/80 border-forest/15 hover:border-terracotta/40 hover:bg-white shadow-xs"
                       }`}
                   >
                     <button
@@ -390,8 +520,8 @@ export default function BlogArticle({ activePost, nextPost, setSelectedPostId }:
                       <div className="flex items-center gap-3.5 min-w-0">
                         <span
                           className={`w-7 h-7 sm:w-8 sm:h-8 rounded-xl font-mono font-bold text-xs sm:text-sm flex items-center justify-center shrink-0 transition-colors ${isOpen
-                              ? "bg-terracotta text-white shadow-sm"
-                              : "bg-terracotta/15 text-terracotta group-hover:bg-terracotta group-hover:text-white"
+                            ? "bg-terracotta text-white shadow-sm"
+                            : "bg-terracotta/15 text-terracotta group-hover:bg-terracotta group-hover:text-white"
                             }`}
                         >
                           Q
@@ -402,8 +532,8 @@ export default function BlogArticle({ activePost, nextPost, setSelectedPostId }:
                       </div>
                       <div
                         className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${isOpen
-                            ? "bg-terracotta/15 text-terracotta rotate-180"
-                            : "bg-forest/5 text-forest/70 group-hover:bg-terracotta/15 group-hover:text-terracotta"
+                          ? "bg-terracotta/15 text-terracotta rotate-180"
+                          : "bg-forest/5 text-forest/70 group-hover:bg-terracotta/15 group-hover:text-terracotta"
                           }`}
                       >
                         <ChevronDown className="h-4 w-4" />
