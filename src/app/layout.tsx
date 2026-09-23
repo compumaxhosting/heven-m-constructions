@@ -1,6 +1,26 @@
 import Script from 'next/script';
 import type { Metadata } from 'next';
+import { Fraunces, Inter_Tight, JetBrains_Mono } from 'next/font/google';
 import '../index.css'; // Make sure this path points to your global css
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-fraunces',
+  display: 'swap',
+});
+
+const interTight = Inter_Tight({
+  subsets: ['latin'],
+  variable: '--font-inter-tight',
+  display: 'swap',
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
+  display: 'swap',
+});
+
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ScrollUpButton from '../components/shared/ScrollUpButton';
@@ -177,21 +197,15 @@ export default function RootLayout({
       <head>
         <meta name="p:domain_verify" content="3428d9b7d31d903253d085a215d9bbc2" />
         <meta name="google-site-verification" content="7QyE5LMZVOUGOqUcQnlwSnUCq037KwLSC-1hux2Tnvs" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ZKF8ZPZ226"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -200,8 +214,9 @@ export default function RootLayout({
             gtag('config', 'G-ZKF8ZPZ226');
           `}
         </Script>
+
       </head>
-      <body suppressHydrationWarning>
+      <body className={`${fraunces.variable} ${interTight.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
         <div className="relative min-h-screen bg-background text-foreground">
           <Header />
           <PageTransition>

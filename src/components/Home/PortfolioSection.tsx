@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import addition6 from "../../assets/6.webp";
 import beforeImage from "../../assets/before.webp";
 import afterImage from "../../assets/after.webp";
@@ -48,24 +49,29 @@ export default function PortfolioSection() {
 
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-12 lg:auto-rows-[190px]">
           <figure className="group relative overflow-hidden rounded-[24px] aspect-[4/3] lg:col-span-8 lg:row-span-4 lg:aspect-auto bg-forest/10">
-            <img
-              src={(typeof featuredImage.src === 'object' && featuredImage.src !== null ? ((featuredImage.src as any).default?.src || (featuredImage.src as any).src || (featuredImage.src as any).default || featuredImage.src) : featuredImage.src)}
+            <Image
+              src={featuredImage.src}
               alt={featuredImage.alt}
+              fill
               loading="lazy"
+              sizes="(max-width: 768px) 100vw, 66vw"
               className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
             />
           </figure>
 
           {beforeAfterImages.map((image, index) => (
             <figure key={index} className="group relative overflow-hidden rounded-[20px] aspect-[4/3] lg:col-span-4 lg:row-span-2 lg:aspect-auto bg-forest/10">
-              <img
-                src={(typeof image.src === 'object' && image.src !== null ? ((image.src as any).default?.src || (image.src as any).src || (image.src as any).default || image.src) : image.src)}
+              <Image
+                src={image.src}
                 alt={image.alt}
+                fill
                 loading="lazy"
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.06]"
               />
             </figure>
           ))}
+
         </div>
 
         <div className="mt-12 flex justify-center">

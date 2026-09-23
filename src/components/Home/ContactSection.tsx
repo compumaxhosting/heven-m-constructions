@@ -71,9 +71,9 @@ export default function ContactSection() {
 
             {/* Review QR Code Badge */}
             <div className="mt-8 rounded-[24px] border border-forest/15 bg-white/60 backdrop-blur-sm p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6 sm:gap-8 shadow-[0_8px_30px_rgba(35,53,40,0.06)]">
-              <a 
+              <a
                 href="https://g.page/r/CbQEE19GUtZAEBI/review"
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white rounded-[20px] border border-forest/10 shadow-sm shrink-0 block hover:scale-105 transition-transform"
                 title="Click to leave a review"
@@ -184,8 +184,9 @@ export default function ContactSection() {
                   { label: 'Project location', name: 'location', type: 'text', placeholder: 'City, state', required: false },
                 ].map((field) => (
                   <div key={field.label}>
-                    <label className="text-[10px] uppercase tracking-[0.28em] text-olive">{field.label}</label>
+                    <label htmlFor={`contact-${field.name}`} className="text-[10px] uppercase tracking-[0.28em] text-forest/75 font-medium">{field.label}</label>
                     <input
+                      id={`contact-${field.name}`}
                       type={field.type}
                       name={field.name}
                       required={field.required}
@@ -195,8 +196,9 @@ export default function ContactSection() {
                   </div>
                 ))}
                 <div>
-                  <label className="text-[10px] uppercase tracking-[0.28em] text-olive">A few words</label>
+                  <label htmlFor="contact-message" className="text-[10px] uppercase tracking-[0.28em] text-forest/75 font-medium">A few words</label>
                   <textarea
+                    id="contact-message"
                     rows={4}
                     name="message"
                     required
@@ -204,6 +206,7 @@ export default function ContactSection() {
                     className="mt-3 w-full resize-none rounded-2xl border border-forest/15 bg-linen/60 p-4 text-sm text-forest placeholder:text-forest/40 focus:border-clay focus:outline-none transition-colors"
                   />
                 </div>
+
                 <button
                   type="submit"
                   className="mt-1 w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-forest px-6 py-4 text-sm font-medium text-linen transition-transform hover:scale-[1.01]"

@@ -35,11 +35,12 @@ export default function TopContactBar() {
             </span>
           </a>
 
-          <div className="relative hidden sm:inline-flex items-center">
+          <div className="relative hidden sm:inline-flex items-center rounded-full bg-white/[0.1] hover:bg-white/[0.2] border border-white/20 pl-1.5 pr-1.5 py-1 text-xs font-sans text-linen transition-all duration-300 hover:border-forest shadow-xs hover:shadow-[0_0_16px_rgba(42,75,60,0.5)]">
             <a
               href="mailto:gus@havenmconstruction.com"
-              className="group inline-flex items-center gap-2 rounded-full bg-white/[0.1] hover:bg-white/[0.2] border border-white/20 pl-1.5 pr-1.5 py-1 text-xs font-sans text-linen transition-all duration-300 hover:border-forest active:scale-95 shadow-xs hover:shadow-[0_0_16px_rgba(42,75,60,0.5)]"
+              className="group inline-flex items-center gap-2"
               title="Email Haven M Construction: gus@havenmconstruction.com"
+              aria-label="Email Haven M Construction at gus@havenmconstruction.com"
             >
               <div className="flex h-6 w-6 items-center justify-center rounded-full bg-terracotta text-white shadow-xs group-hover:bg-forest group-hover:text-white transition-all duration-300 shrink-0">
                 <Mail className="h-3.5 w-3.5 group-hover:-translate-y-0.5 transition-transform shrink-0" />
@@ -47,24 +48,27 @@ export default function TopContactBar() {
               <span className="font-semibold tracking-tight text-linen group-hover:text-white">
                 gus@havenmconstruction.com
               </span>
-              <button
-                type="button"
-                onClick={copyEmailToClipboard}
-                className="ml-1 px-1.5 py-0.5 rounded-full text-white/70 hover:text-white hover:bg-white/20 transition-colors flex items-center gap-1"
-                title="Copy email to clipboard"
-              >
-                {copiedEmail ? (
-                  <span className="inline-flex items-center gap-1 text-[10px] text-sage font-medium">
-                    <Check className="h-3 w-3 text-sage" />
-                    <span>Copied</span>
-                  </span>
-                ) : (
-                  <Copy className="h-3.5 w-3.5" />
-                )}
-              </button>
             </a>
+            <button
+              type="button"
+              onClick={copyEmailToClipboard}
+              aria-label="Copy email address to clipboard"
+              className="ml-1 px-1.5 py-0.5 rounded-full text-white/70 hover:text-white hover:bg-white/20 transition-colors flex items-center gap-1"
+              title="Copy email to clipboard"
+            >
+              {copiedEmail ? (
+                <span className="inline-flex items-center gap-1 text-[10px] text-sage font-medium">
+                  <Check className="h-3 w-3 text-sage" />
+                  <span>Copied</span>
+                </span>
+              ) : (
+                <Copy className="h-3.5 w-3.5" />
+              )}
+            </button>
           </div>
         </div>
+
+
 
         <div className="flex items-center gap-3 sm:gap-3">
           {socialLinks.map(({ href, label, icon, bgClass, whileHover }) => (

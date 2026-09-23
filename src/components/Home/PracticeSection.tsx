@@ -1,6 +1,7 @@
 "use client";
 import { useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { pillars } from '../../data/siteData';
 
 import asset6 from '../../assets/asset-6.webp';
@@ -15,10 +16,12 @@ export default function PracticeSection() {
 
         <div className="col-span-1 lg:col-span-5">
           <figure className="relative aspect-[4/5] overflow-hidden rounded-[24px]">
-            <img
-              src={(typeof CRAFT_IMG === 'object' && CRAFT_IMG !== null ? ((CRAFT_IMG as any).default?.src || (CRAFT_IMG as any).src || (CRAFT_IMG as any).default || CRAFT_IMG) : CRAFT_IMG)}
+            <Image
+              src={CRAFT_IMG}
               alt="Craftsman shaping fine woodwork by hand"
+              fill
               loading="lazy"
+              sizes="(max-width: 768px) 100vw, 40vw"
               className="h-full w-full object-cover"
             />
             <div className="absolute left-4 top-4 glass-dark rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-linen">
@@ -26,6 +29,7 @@ export default function PracticeSection() {
             </div>
           </figure>
         </div>
+
 
         <div className="col-span-1 lg:col-span-7 lg:pl-10">
           <div className="mb-8 flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-olive">
@@ -60,7 +64,6 @@ export default function PracticeSection() {
             </Link>
           </div>
         </div>
-
       </div>
     </section>
   );

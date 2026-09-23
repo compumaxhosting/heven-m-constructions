@@ -23,23 +23,24 @@ export default function ContactForm() {
           <form onSubmit={handleSubmit} className="flex-1 glass w-full rounded-[28px] p-6 sm:p-12 space-y-6">
             <div className="grid sm:grid-cols-2 gap-6">
               {[
-                { label: 'Your name', type: 'text', placeholder: 'Ada Lovelace' },
-                { label: 'Email address', type: 'email', placeholder: 'ada@studio.com' },
+                { label: 'Your name', name: 'name', type: 'text', placeholder: 'Ada Lovelace' },
+                { label: 'Email address', name: 'email', type: 'email', placeholder: 'ada@studio.com' },
               ].map((f) => (
                 <div key={f.label}>
-                  <label className="text-[10px] uppercase tracking-[0.28em] text-olive">{f.label}</label>
-                  <input type={f.type} placeholder={f.placeholder} required className="mt-3 w-full rounded-full border border-forest/15 bg-linen/60 px-5 py-4 text-sm text-forest placeholder:text-forest/40 focus:border-clay focus:outline-none transition-colors" />
+                  <label htmlFor={`cf-${f.name}`} className="text-[10px] uppercase tracking-[0.28em] text-forest/75 font-medium">{f.label}</label>
+                  <input id={`cf-${f.name}`} type={f.type} placeholder={f.placeholder} required className="mt-3 w-full rounded-full border border-forest/15 bg-linen/60 px-5 py-4 text-sm text-forest placeholder:text-forest/40 focus:border-clay focus:outline-none transition-colors" />
                 </div>
               ))}
             </div>
             <div>
-              <label className="text-[10px] uppercase tracking-[0.28em] text-olive">Project location</label>
-              <input type="text" placeholder="City, state" className="mt-3 w-full rounded-full border border-forest/15 bg-linen/60 px-5 py-4 text-sm text-forest placeholder:text-forest/40 focus:border-clay focus:outline-none transition-colors" />
+              <label htmlFor="cf-location" className="text-[10px] uppercase tracking-[0.28em] text-forest/75 font-medium">Project location</label>
+              <input id="cf-location" type="text" placeholder="City, state" className="mt-3 w-full rounded-full border border-forest/15 bg-linen/60 px-5 py-4 text-sm text-forest placeholder:text-forest/40 focus:border-clay focus:outline-none transition-colors" />
             </div>
             <div>
-              <label className="text-[10px] uppercase tracking-[0.28em] text-olive">Tell us about the space</label>
-              <textarea rows={5} placeholder="The timeline, the feeling you want, anything that feels important." className="mt-3 w-full resize-none rounded-2xl border border-forest/15 bg-linen/60 p-4 text-sm text-forest placeholder:text-forest/40 focus:border-clay focus:outline-none transition-colors" />
+              <label htmlFor="cf-message" className="text-[10px] uppercase tracking-[0.28em] text-forest/75 font-medium">Tell us about the space</label>
+              <textarea id="cf-message" rows={5} placeholder="The timeline, the feeling you want, anything that feels important." className="mt-3 w-full resize-none rounded-2xl border border-forest/15 bg-linen/60 p-4 text-sm text-forest placeholder:text-forest/40 focus:border-clay focus:outline-none transition-colors" />
             </div>
+
 
             <button type="submit" className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-forest px-6 py-4 text-sm font-medium text-linen transition-transform hover:scale-[1.01]">
               Send inquiry <span aria-hidden="true">→</span>
@@ -57,10 +58,10 @@ export default function ContactForm() {
             <p className="text-sm text-forest-deep leading-relaxed mb-6">
               Point your smartphone camera at the code to share your project experience.
             </p>
-            
-            <a 
+
+            <a
               href="https://g.page/r/CbQEE19GUtZAEBI/review"
-              target="_blank" 
+              target="_blank"
               rel="noopener noreferrer"
               className="relative p-3 bg-white rounded-[20px] border border-forest/15 shadow-sm block hover:scale-105 transition-transform"
               title="Click to leave a review"
@@ -72,7 +73,7 @@ export default function ContactForm() {
                 loading="lazy"
               />
             </a>
-            
+
             <div className="mt-6 flex items-center gap-1 text-amber-500 text-sm">
               ★★★★★
             </div>

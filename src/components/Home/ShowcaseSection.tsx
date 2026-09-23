@@ -31,7 +31,7 @@ export default function ShowcaseSection() {
     <section className="bg-forest-deep bg-mesh-forest text-linen py-24 sm:py-32 relative overflow-hidden">
       {/* Cinematic Vignette Overlay to darken edges and make the center pop */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(20,39,28,0.8)_100%)] pointer-events-none" />
-      
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
@@ -45,9 +45,9 @@ export default function ShowcaseSection() {
               Experience our work in motion.
             </h2>
           </div>
-          
+
           <div>
-            <Link href="/showcase" 
+            <Link href="/showcase"
               className="group flex items-center gap-3 text-linen hover:text-clay transition-colors"
             >
               <span className="font-medium text-lg border-b border-transparent group-hover:border-clay pb-1 transition-all">View Full Showcase</span>
@@ -64,27 +64,31 @@ export default function ShowcaseSection() {
               key={item.id}
               className="relative group rounded-3xl overflow-hidden cursor-pointer break-inside-avoid transform-gpu aspect-[4/3]"
             >
-              <Link href="/showcase" className="absolute inset-0 z-20" />
+              <Link href="/showcase" aria-label={`View showcase project: ${item.title}`} className="absolute inset-0 z-20">
+                <span className="sr-only">View showcase project: {item.title}</span>
+              </Link>
+
+
               {item.type === 'video' ? (
-                <video 
+                <video
                   src={(typeof item.src === 'object' && item.src !== null ? ((item.src as any).default?.src || (item.src as any).src || (item.src as any).default || item.src) : item.src)}
                   muted
                   loop
                   playsInline
-                   preload="metadata"
+                  preload="metadata"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               ) : (
-                <img 
-                  src={(typeof item.src === 'object' && item.src !== null ? ((item.src as any).default?.src || (item.src as any).src || (item.src as any).default || item.src) : item.src)} 
-                  alt={item.title} 
+                <img
+                  src={(typeof item.src === 'object' && item.src !== null ? ((item.src as any).default?.src || (item.src as any).src || (item.src as any).default || item.src) : item.src)}
+                  alt={item.title}
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               )}
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-              
+
               <div className="absolute inset-0 p-8 flex flex-col justify-between pointer-events-none">
                 <div className="self-end opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <div className="h-12 w-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white">

@@ -60,18 +60,20 @@ export default function Header() {
 
       <div className={`relative z-50 transition-all duration-500 ${showSolidBackground ? "px-2 sm:px-4 pt-0" : "px-3 sm:px-6 pt-2.5 sm:pt-3"}`}>
         <div
-          className={`pointer-events-auto mx-auto flex items-center justify-between gap-3 max-w-7xl px-4 py-2 sm:px-7 transition-all duration-500 ${
-            showSolidBackground
+          className={`pointer-events-auto mx-auto flex items-center justify-between gap-3 max-w-7xl px-4 py-2 sm:px-7 transition-all duration-500 ${showSolidBackground
               ? "rounded-t-none rounded-b-[2.5rem] bg-white/30 border border-transparent border-t-0 text-forest shadow-[0_8px_32px_-8px_rgba(35,67,58,0.12)] backdrop-blur-xl"
               : "rounded-[2.5rem] bg-transparent border-transparent text-forest shadow-none backdrop-blur-none"
-          }`}
+            }`}
         >
           <Link href="/" className="flex min-w-0 items-center gap-3 shrink-0 py-0.5">
             <img
               src={(typeof havenLogo === 'object' && havenLogo !== null ? ((havenLogo as any).default?.src || (havenLogo as any).src || (havenLogo as any).default || havenLogo) : havenLogo)}
               alt="Haven M Construction"
+              width={200}
+              height={80}
               className="h-16 w-auto sm:h-20 lg:h-24 object-contain filter drop-shadow-xs transition-all hover:scale-105"
             />
+
           </Link>
 
           <div className="flex items-center gap-2 sm:gap-3">
@@ -80,9 +82,8 @@ export default function Header() {
             <button
               onClick={() => setOpen((v) => !v)}
               aria-label="Toggle Menu"
-              className={`pointer-events-auto relative flex items-center justify-center h-10 w-10 rounded-full border transition-all duration-500 overflow-hidden active:scale-95 lg:hidden shrink-0 ${
-                open ? "bg-forest border-forest text-linen" : "bg-forest/10 border-forest/20 text-forest"
-              }`}
+              className={`pointer-events-auto relative flex items-center justify-center h-10 w-10 rounded-full border transition-all duration-500 overflow-hidden active:scale-95 lg:hidden shrink-0 ${open ? "bg-forest border-forest text-linen" : "bg-forest/10 border-forest/20 text-forest"
+                }`}
             >
               <div className="flex flex-col gap-[6px] items-center justify-center w-full h-full">
                 <span className={`block h-[2px] w-5 rounded-full transition-all duration-500 ease-[cubic-bezier(0.87,0,0.13,1)] ${open ? "translate-y-[8px] rotate-[225deg] bg-linen" : "bg-forest"}`} />

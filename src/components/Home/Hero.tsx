@@ -1,6 +1,7 @@
 "use client";
 import { useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import img31 from '../../assets/31.webp';
 import asset5 from '../../assets/asset-5.webp';
@@ -71,9 +72,13 @@ export default function Hero() {
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-4">
           <div className="col-span-12 lg:col-span-8">
             <figure className="relative overflow-hidden rounded-[24px] aspect-[16/9] lg:aspect-[4/3] shadow-[0_32px_80px_-24px_rgba(28,58,42,0.35)] bg-[#1C3A2A]/10">
-              <img
-                src={(typeof HERO_IMG === 'object' && HERO_IMG !== null ? ((HERO_IMG as any).default?.src || (HERO_IMG as any).src || (HERO_IMG as any).default || HERO_IMG) : HERO_IMG)}
+              <Image
+                src={HERO_IMG}
                 alt="Sunlit residence interior — Ridgemont Residence"
+                fill
+                priority
+                fetchPriority="high"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 800px"
                 className="h-full w-full object-cover origin-center"
               />
             </figure>
@@ -81,18 +86,22 @@ export default function Hero() {
 
           <div className="col-span-12 grid grid-cols-2 gap-4 lg:col-span-4 lg:grid-cols-1">
             <figure className="relative overflow-hidden rounded-[18px] aspect-[4/3] lg:aspect-[4/3] bg-[#1C3A2A]/10">
-              <img
-                src={(typeof CLINIC_IMG === 'object' && CLINIC_IMG !== null ? ((CLINIC_IMG as any).default?.src || (CLINIC_IMG as any).src || (CLINIC_IMG as any).default || CLINIC_IMG) : CLINIC_IMG)}
+              <Image
+                src={CLINIC_IMG}
                 alt="Pine Grove Animal Hospital interior"
+                fill
                 loading="lazy"
+                sizes="(max-width: 768px) 50vw, 33vw"
                 className="h-full w-full object-cover origin-center"
               />
             </figure>
             <figure className="relative overflow-hidden rounded-[18px] aspect-[4/3] lg:aspect-[4/3] bg-[#1C3A2A]/10">
-              <img
-                src={(typeof OFFICE_IMG === 'object' && OFFICE_IMG !== null ? ((OFFICE_IMG as any).default?.src || (OFFICE_IMG as any).src || (OFFICE_IMG as any).default || OFFICE_IMG) : OFFICE_IMG)}
+              <Image
+                src={OFFICE_IMG}
                 alt="Cedar & Stone boutique office interior"
+                fill
                 loading="lazy"
+                sizes="(max-width: 768px) 50vw, 33vw"
                 className="h-full w-full object-cover origin-center"
               />
             </figure>

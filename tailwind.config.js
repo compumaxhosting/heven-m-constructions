@@ -6,11 +6,12 @@ export default {
       colors: {
         forest: '#2a4b3c',
         'forest-deep': '#14271c',
-        clay: '#C8714A',
+        clay: '#9E4B28',
         terracotta: '#B5593A',
         linen: '#F6F4EE',
         sand: '#EDE9DF',
-        olive: '#6B7056',
+        olive: '#545B44',
+
         sage: '#8FA882',
         'pale-sage': '#EDF2EC',
         teal: '#3D7A6F',
@@ -19,9 +20,9 @@ export default {
         card: '#EFEDE6',
       },
       fontFamily: {
-        display: ['Fraunces', 'Georgia', 'serif'],
-        sans: ['Inter Tight', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+        display: ['var(--font-fraunces)', 'Fraunces', 'Georgia', 'serif'],
+        sans: ['var(--font-inter-tight)', 'Inter Tight', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-jetbrains-mono)', 'JetBrains Mono', 'monospace'],
       },
       keyframes: {
         marquee: {

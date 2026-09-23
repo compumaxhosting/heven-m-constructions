@@ -42,10 +42,14 @@ export default function ScrollUpButton() {
 
   useEffect(() => {
     const update = () => {
-      setVisible(window.scrollY > 400);
-      const color = getBgColorAtButton();
-      setOverGreen(color ? isGreenBackground(color) : false);
+      const isScrolled = window.scrollY > 400;
+      setVisible(isScrolled);
+      if (isScrolled) {
+        const color = getBgColorAtButton();
+        setOverGreen(color ? isGreenBackground(color) : false);
+      }
     };
+
     update();
     window.addEventListener('scroll', update, { passive: true });
     window.addEventListener('resize', update, { passive: true });
@@ -113,9 +117,9 @@ export default function ScrollUpButton() {
             strokeLinecap="round"
             strokeLinejoin="round"
             variants={{
-              hover: { 
-                y: [0, -4, 0], 
-                transition: { repeat: Infinity, duration: 1.2, ease: "easeInOut" } 
+              hover: {
+                y: [0, -4, 0],
+                transition: { repeat: Infinity, duration: 1.2, ease: "easeInOut" }
               }
             }}
           >
