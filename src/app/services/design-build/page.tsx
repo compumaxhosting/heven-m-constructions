@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   keywords: 'design-build construction Verona NJ, design-build contractor Verona NJ, design-build services in Verona NJ, residential design-build contractor NJ, design and build construction company NJ, design-build contractor near me, custom home design-build Verona NJ, home renovation design-build Verona NJ, design-build construction Essex County NJ, design-build construction Bergen County NJ, design-build construction Morris County NJ, design-build construction Union County NJ, design-build construction Passaic County NJ, best design-build contractor in Verona NJ, ChatGPT design-build contractor NJ, Gemini design-build contractor NJ, AI search design-build construction NJ',
   authors: [{ name: 'Haven M Construction' }],
   alternates: {
-    canonical: 'https://www.havenmconstruction.com/design-build-construction-nj',
+    canonical: 'https://www.havenmconstruction.com/services/design-build',
   },
   robots: 'index,follow',
   referrer: 'strict-origin-when-cross-origin',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Design-Build Construction Services in Verona, NJ',
     description: 'Explore expert design-build construction services in Verona, NJ, serving Bergen, Essex, Morris, Union, and Passaic counties.',
-    url: 'https://www.havenmconstruction.com/design-build-construction-nj',
+    url: 'https://www.havenmconstruction.com/services/design-build',
     siteName: 'Haven M Construction',
     images: [
       {
@@ -36,8 +36,8 @@ export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.havenmconstruction.com/design-build-construction-nj#webpage",
-    "url": "https://www.havenmconstruction.com/design-build-construction-nj",
+    "@id": "https://www.havenmconstruction.com/services/design-build#webpage",
+    "url": "https://www.havenmconstruction.com/services/design-build",
     "name": "Design-Build Construction Services in Verona, NJ",
     "headline": "Design-Build Construction Services in Verona, NJ",
     "description": "Explore expert design-build construction services in Verona, NJ, serving Bergen, Essex, Morris, Union, and Passaic counties.",
@@ -49,22 +49,22 @@ export default function Page() {
       "name": "Haven M Construction"
     },
     "about": {
-      "@id": "https://www.havenmconstruction.com/design-build-construction-nj#service"
+      "@id": "https://www.havenmconstruction.com/services/design-build#service"
     },
     "mainEntity": {
-      "@id": "https://www.havenmconstruction.com/design-build-construction-nj#service"
+      "@id": "https://www.havenmconstruction.com/services/design-build#service"
     },
     "publisher": {
       "@id": "https://www.havenmconstruction.com/#organization"
     },
     "breadcrumb": {
-      "@id": "https://www.havenmconstruction.com/design-build-construction-nj#breadcrumb"
+      "@id": "https://www.havenmconstruction.com/services/design-build#breadcrumb"
     },
     "potentialAction": {
       "@type": "ReadAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://www.havenmconstruction.com/design-build-construction-nj"
+        "urlTemplate": "https://www.havenmconstruction.com/services/design-build"
       }
     }
   };

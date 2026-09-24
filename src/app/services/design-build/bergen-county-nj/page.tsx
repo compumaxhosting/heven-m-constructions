@@ -119,7 +119,7 @@ export default function Page() {
             "@type": "ListItem",
             "position": 2,
             "name": "Design-Build Construction",
-            "item": "https://www.havenmconstruction.com/design-build-construction-nj"
+            "item": "https://www.havenmconstruction.com/services/design-build"
           },
           {
             "@type": "ListItem",
