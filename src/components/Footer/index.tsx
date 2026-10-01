@@ -87,14 +87,17 @@ export default function Footer() {
 
         <div aria-hidden="true" className="mt-12 lg:mt-6 select-none w-full overflow-hidden">
           <div
-            className="font-display leading-[0.85] tracking-[0.35em] text-linen/10 whitespace-nowrap"
-            style={{ fontSize: "clamp(2.5rem, 12vw, 12rem)" }}
+            className="font-display leading-[0.85] text-linen/10 uppercase whitespace-nowrap flex justify-between w-full"
+            style={{ fontSize: "clamp(2rem, 10vw, 9.5rem)" }}
           >
-            HAVEN <span className="text-clay">M</span>
+            {"HAVEN".split("").map((char, i) => (
+              <span key={i}>{char}</span>
+            ))}
+            <span className="text-clay">M</span>
           </div>
           <div
-            className="mt-1.5 font-display leading-[0.85] text-linen/10 uppercase whitespace-nowrap flex justify-between w-full"
-            style={{ fontSize: "clamp(1.2rem, 6.5vw, 6.5rem)" }}
+            className="mt-2 font-display leading-[0.85] text-linen/10 uppercase whitespace-nowrap flex justify-between w-full"
+            style={{ fontSize: "clamp(1.2rem, 6vw, 5.8rem)" }}
           >
             {"CONSTRUCTION".split("").map((char, i) => (
               <span key={i}>{char}</span>

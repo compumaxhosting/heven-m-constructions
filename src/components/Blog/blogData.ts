@@ -1,5 +1,6 @@
-import { newHomeConstructionTrends2026 } from './posts/new-home-construction-trends-2026';
+import { designBuildConstructionNewJerseyGuide } from './posts/design-build-construction-new-jersey-guide';
 import { whoBuildsWholeHomeAdditionsNj } from './posts/who-builds-whole-home-additions-nj';
+import { newHomeConstructionTrends2026 } from './posts/new-home-construction-trends-2026';
 
 export interface BlogPost {
   id: string;
@@ -22,6 +23,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  designBuildConstructionNewJerseyGuide,
   whoBuildsWholeHomeAdditionsNj,
   newHomeConstructionTrends2026,
 ];

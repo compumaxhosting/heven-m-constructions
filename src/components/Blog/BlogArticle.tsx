@@ -556,6 +556,51 @@ export default function BlogArticle({ activePost, nextPost, setSelectedPostId }:
                 );
               }
 
+              if (para.startsWith("|") || para.includes("\n|")) {
+                const lines = para.trim().split("\n").map((l) => l.trim()).filter((l) => l.length > 0);
+                const headerLine = lines[0];
+                const bodyLines = lines.slice(1).filter((l) => !l.replace(/\s/g, "").includes("---"));
+                const headers = headerLine.split("|").map((s) => s.trim()).filter(Boolean);
+                const rows = bodyLines.map((line) => line.split("|").map((s) => s.trim()).filter(Boolean));
+
+                return (
+                  <div key={i} className="my-8 overflow-x-auto rounded-2xl border border-forest/15 bg-white/90 shadow-md backdrop-blur-sm">
+                    <table className="w-full text-left text-sm text-forest-deep/90">
+                      <thead className="bg-forest text-sand text-xs font-mono uppercase tracking-wider">
+                        <tr>
+                          {headers.map((h, hIdx) => (
+                            <th key={hIdx} className="px-5 py-3.5 font-semibold border-b border-white/10">
+                              {renderTextWithLinks(h)}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-forest/10 font-normal">
+                        {rows.map((row, rIdx) => (
+                          <tr
+                            key={rIdx}
+                            className={`transition-colors hover:bg-forest/5 ${
+                              rIdx % 2 === 0 ? "bg-transparent" : "bg-sand/30"
+                            }`}
+                          >
+                            {row.map((cell, cIdx) => (
+                              <td
+                                key={cIdx}
+                                className={`px-5 py-4 ${
+                                  cIdx === 0 ? "font-semibold text-forest font-display text-[15px]" : ""
+                                }`}
+                              >
+                                {renderTextWithLinks(cell)}
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                );
+              }
+
               if (para.startsWith("- ")) {
                 return (
                   <div key={i} className="flex items-start gap-3 pl-2 py-1">
