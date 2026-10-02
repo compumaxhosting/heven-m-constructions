@@ -24,8 +24,10 @@ export default function ContactPage() {
           <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-olive mb-8">
             <span className="inline-block h-px w-10 bg-olive/60" /> Begin
           </div>
-          <h1 className="font-display text-[clamp(2.2rem,9vw,9rem)] leading-[0.92] tracking-[-0.03em] text-forest max-w-4xl">
-            Tell us about the <span className="italic text-terracotta">project</span><br />you're imagining.
+          <h1 className="font-display text-[clamp(2.2rem,6.8vw,6.5rem)] leading-[0.95] tracking-[-0.03em] text-forest max-w-5xl">
+            Tell us about<br />
+            <span className="whitespace-nowrap">the <span className="italic text-terracotta">project</span> you&apos;re</span><br />
+            imagining.
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-forest-deep">
             We take on a small number of new projects each season. Share a few details and we'll reply personally within two business days.
@@ -33,8 +35,8 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-linen py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <section className="bg-linen py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           <ContactInfo />
           <ContactForm />
         </div>

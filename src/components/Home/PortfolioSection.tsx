@@ -75,10 +75,10 @@ export default function PortfolioSection() {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <Link href="/portfolio"
+          <Link href="/showcase"
             className="inline-flex items-center justify-center gap-4 rounded-full !bg-forest px-10 py-4 min-w-[260px] text-lg font-semibold !text-white !opacity-100 transition-all duration-300 hover:scale-105 hover:shadow-2xl active:scale-95"
           >
-            View full portfolio
+            View full showcase
           </Link>
         </div>
       </div>

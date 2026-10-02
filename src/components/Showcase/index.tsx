@@ -69,7 +69,7 @@ export default function ShowcasePage() {
 
   return (
     <main
-      className="relative min-h-screen overflow-hidden pt-32 pb-24"
+      className="relative min-h-screen overflow-hidden pt-44 pb-24 sm:pt-52"
       style={{
         backgroundColor: "#F6F4EE",
         backgroundImage: [

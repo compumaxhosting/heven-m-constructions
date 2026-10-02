@@ -62,7 +62,7 @@ export default function Hero() {
               <Link href="/contact" className="inline-flex items-center gap-2 rounded-full bg-forest px-6 py-3 text-sm font-medium text-linen transition-transform hover:scale-[1.03] active:scale-[0.97]">
                 Begin a project <span aria-hidden="true">→</span>
               </Link>
-              <Link href="/portfolio" className="inline-flex items-center gap-1 text-sm font-medium text-forest-deep hover:text-forest transition-colors">
+              <Link href="/showcase" className="inline-flex items-center gap-1 text-sm font-medium text-forest-deep hover:text-forest transition-colors">
                 See the work →
               </Link>
             </div>

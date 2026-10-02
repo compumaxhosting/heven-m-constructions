@@ -35,62 +35,133 @@ export const metadata: Metadata = {
 export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://www.havenmconstruction.com/services/additions#webpage",
-    "url": "https://www.havenmconstruction.com/services/additions",
-    "name": "Haven M Construction | Custom Home Additions in Verona, NJ",
-    "description": "Expert home additions in Verona, NJ by Haven M Construction. Serving Bergen, Essex, Morris, Union & Passaic counties. Get a custom estimate.",
-    "isPartOf": {
-      "@type": "WebSite",
-      "@id": "https://www.havenmconstruction.com/#website",
-      "url": "https://www.havenmconstruction.com/",
-      "name": "Haven M Construction"
-    },
-    "about": {
-      "@type": "Service",
-      "@id": "https://www.havenmconstruction.com/services/additions#service",
-      "name": "Custom Home Additions",
-      "serviceType": "Home Addition Construction",
-      "description": "Custom home addition design and construction services in Verona, NJ and surrounding New Jersey counties.",
-      "provider": {
-        "@type": "Organization",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.havenmconstruction.com/services/additions#webpage",
+        "url": "https://www.havenmconstruction.com/services/additions",
+        "name": "Haven M Construction | Custom Home Additions in Verona, NJ",
+        "description": "Expert home additions in Verona, NJ by Haven M Construction. Serving Bergen, Essex, Morris, Union & Passaic counties. Get a custom estimate.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://www.havenmconstruction.com/#website",
+          "url": "https://www.havenmconstruction.com/",
+          "name": "Haven M Construction"
+        },
+        "about": {
+          "@id": "https://www.havenmconstruction.com/services/additions#service"
+        },
+        "breadcrumb": {
+          "@id": "https://www.havenmconstruction.com/services/additions#breadcrumb"
+        },
+        "publisher": {
+          "@id": "https://www.havenmconstruction.com/#organization"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.havenmconstruction.com/#website",
+        "url": "https://www.havenmconstruction.com/",
+        "name": "Haven M Construction",
+        "publisher": {
+          "@id": "https://www.havenmconstruction.com/#organization"
+        }
+      },
+      {
+        "@type": "GeneralContractor",
         "@id": "https://www.havenmconstruction.com/#organization",
         "name": "Haven M Construction",
-        "url": "https://www.havenmconstruction.com/"
+        "url": "https://www.havenmconstruction.com/",
+        "description": "Custom home addition design and construction services in Verona, NJ and surrounding New Jersey counties.",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Verona, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Bergen County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Essex County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Morris County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Union County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Passaic County, New Jersey"
+          }
+        ]
       },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Verona, New Jersey"
+      {
+        "@type": "Service",
+        "@id": "https://www.havenmconstruction.com/services/additions#service",
+        "name": "Custom Home Additions",
+        "serviceType": "Home Addition Construction",
+        "description": "Custom home addition design and construction services in Verona, NJ and surrounding New Jersey counties.",
+        "provider": {
+          "@id": "https://www.havenmconstruction.com/#organization"
         },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Bergen County, New Jersey"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Essex County, New Jersey"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Morris County, New Jersey"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Union County, New Jersey"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Passaic County, New Jersey"
-        }
-      ]
-    },
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://www.havenmconstruction.com/#organization",
-      "name": "Haven M Construction",
-      "url": "https://www.havenmconstruction.com/"
-    }
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Verona, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Bergen County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Essex County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Morris County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Union County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Passaic County, New Jersey"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.havenmconstruction.com/services/additions#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.havenmconstruction.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://www.havenmconstruction.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Home Additions",
+            "item": "https://www.havenmconstruction.com/services/additions"
+          }
+        ]
+      }
+    ]
   };
 
   return (

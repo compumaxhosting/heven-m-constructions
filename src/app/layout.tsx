@@ -193,7 +193,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="p:domain_verify" content="3428d9b7d31d903253d085a215d9bbc2" />
         <meta name="google-site-verification" content="7QyE5LMZVOUGOqUcQnlwSnUCq037KwLSC-1hux2Tnvs" />
@@ -217,7 +217,7 @@ export default function RootLayout({
 
       </head>
       <body className={`${fraunces.variable} ${interTight.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
-        <div className="relative min-h-screen bg-background text-foreground">
+        <div className="relative min-h-screen bg-background text-foreground" suppressHydrationWarning>
           <Header />
           <PageTransition>
             {children}

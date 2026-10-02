@@ -145,6 +145,9 @@ export default function Page() {
         },
         "about": {
           "@id": "https://www.havenmconstruction.com/#organization"
+        },
+        "breadcrumb": {
+          "@id": "https://www.havenmconstruction.com/services#breadcrumb"
         }
       },
       {
@@ -155,6 +158,24 @@ export default function Page() {
         "publisher": {
           "@id": "https://www.havenmconstruction.com/#organization"
         }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.havenmconstruction.com/services#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.havenmconstruction.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://www.havenmconstruction.com/services"
+          }
+        ]
       }
     ]
   };

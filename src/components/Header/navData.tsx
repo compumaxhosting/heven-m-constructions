@@ -4,10 +4,9 @@ export const links = [
   { num: "01", label: "Home", to: "/" },
   { num: "02", label: "About", to: "/about" },
   { num: "03", label: "Services", to: "/services", hasDropdown: true },
-  { num: "04", label: "Portfolio", to: "/portfolio" },
-  { num: "05", label: "Showcase", to: "/showcase" },
-  { num: "06", label: "Blog", to: "/blog" },
-  { num: "07", label: "Contact", to: "/contact" },
+  { num: "04", label: "Showcase", to: "/showcase" },
+  { num: "05", label: "Blog", to: "/blog" },
+  { num: "06", label: "Contact", to: "/contact" },
 ];
 
 export interface MainServiceItem {

@@ -33,5 +33,137 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <ValueEngineeringPage />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.havenmconstruction.com/services/value-engineering#webpage",
+        "url": "https://www.havenmconstruction.com/services/value-engineering",
+        "name": "Professional Value Engineering Services in Verona, NJ | Haven M Construction",
+        "description": "Professional value engineering services in Verona, NJ by Haven M Construction, helping optimize construction costs, materials, design, and project performance.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://www.havenmconstruction.com/#website",
+          "url": "https://www.havenmconstruction.com/",
+          "name": "Haven M Construction"
+        },
+        "about": {
+          "@id": "https://www.havenmconstruction.com/services/value-engineering#service"
+        },
+        "breadcrumb": {
+          "@id": "https://www.havenmconstruction.com/services/value-engineering#breadcrumb"
+        },
+        "publisher": {
+          "@id": "https://www.havenmconstruction.com/#organization"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.havenmconstruction.com/#website",
+        "url": "https://www.havenmconstruction.com/",
+        "name": "Haven M Construction",
+        "publisher": {
+          "@id": "https://www.havenmconstruction.com/#organization"
+        }
+      },
+      {
+        "@type": "GeneralContractor",
+        "@id": "https://www.havenmconstruction.com/#organization",
+        "name": "Haven M Construction",
+        "url": "https://www.havenmconstruction.com/",
+        "description": "Haven M Construction provides value engineering and construction optimization services.",
+        "areaServed": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "Bergen County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Essex County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Morris County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Union County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Passaic County, New Jersey"
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.havenmconstruction.com/services/value-engineering#service",
+        "name": "Value Engineering Services",
+        "serviceType": "Value Engineering",
+        "url": "https://www.havenmconstruction.com/services/value-engineering",
+        "description": "Professional value engineering services helping owners and developers optimize construction costs, materials, and project performance.",
+        "provider": {
+          "@id": "https://www.havenmconstruction.com/#organization"
+        },
+        "areaServed": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "Bergen County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Essex County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Morris County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Union County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Passaic County, New Jersey"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.havenmconstruction.com/services/value-engineering#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.havenmconstruction.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://www.havenmconstruction.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Value Engineering",
+            "item": "https://www.havenmconstruction.com/services/value-engineering"
+          }
+        ]
+      }
+    ]
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <ValueEngineeringPage />
+    </>
+  );
 }

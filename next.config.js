@@ -8,6 +8,16 @@ const nextConfig = {
 
     return [
       {
+        source: '/portfolio',
+        destination: '/showcase',
+        permanent: true,
+      },
+      {
+        source: '/portfolio/:slug*',
+        destination: '/showcase',
+        permanent: true,
+      },
+      {
         source: '/veterinary-hospital-construction-nj',
         destination: '/services/veterinary-hospital-construction-nj',
         permanent: true,

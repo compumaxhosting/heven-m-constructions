@@ -35,38 +35,186 @@ export const metadata: Metadata = {
 export default function Page() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://www.havenmconstruction.com/services/design-build#webpage",
-    "url": "https://www.havenmconstruction.com/services/design-build",
-    "name": "Design-Build Construction Services in Verona, NJ",
-    "headline": "Design-Build Construction Services in Verona, NJ",
-    "description": "Explore expert design-build construction services in Verona, NJ, serving Bergen, Essex, Morris, Union, and Passaic counties.",
-    "inLanguage": "en-US",
-    "isPartOf": {
-      "@type": "WebSite",
-      "@id": "https://www.havenmconstruction.com/#website",
-      "url": "https://www.havenmconstruction.com/",
-      "name": "Haven M Construction"
-    },
-    "about": {
-      "@id": "https://www.havenmconstruction.com/services/design-build#service"
-    },
-    "mainEntity": {
-      "@id": "https://www.havenmconstruction.com/services/design-build#service"
-    },
-    "publisher": {
-      "@id": "https://www.havenmconstruction.com/#organization"
-    },
-    "breadcrumb": {
-      "@id": "https://www.havenmconstruction.com/services/design-build#breadcrumb"
-    },
-    "potentialAction": {
-      "@type": "ReadAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://www.havenmconstruction.com/services/design-build"
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.havenmconstruction.com/services/design-build#webpage",
+        "url": "https://www.havenmconstruction.com/services/design-build",
+        "name": "Design-Build Construction Services in Verona, NJ",
+        "headline": "Design-Build Construction Services in Verona, NJ",
+        "description": "Explore expert design-build construction services in Verona, NJ, serving Bergen, Essex, Morris, Union, and Passaic counties.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://www.havenmconstruction.com/#website",
+          "url": "https://www.havenmconstruction.com/",
+          "name": "Haven M Construction"
+        },
+        "about": {
+          "@id": "https://www.havenmconstruction.com/services/design-build#service"
+        },
+        "mainEntity": {
+          "@id": "https://www.havenmconstruction.com/services/design-build#service"
+        },
+        "publisher": {
+          "@id": "https://www.havenmconstruction.com/#organization"
+        },
+        "breadcrumb": {
+          "@id": "https://www.havenmconstruction.com/services/design-build#breadcrumb"
+        },
+        "potentialAction": {
+          "@type": "ReadAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.havenmconstruction.com/services/design-build"
+          }
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.havenmconstruction.com/#website",
+        "url": "https://www.havenmconstruction.com/",
+        "name": "Haven M Construction",
+        "publisher": {
+          "@id": "https://www.havenmconstruction.com/#organization"
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.havenmconstruction.com/#organization",
+        "name": "Haven M Construction",
+        "url": "https://www.havenmconstruction.com/",
+        "description": "Haven M Construction provides professional design-build, custom home additions, and commercial construction services throughout New Jersey.",
+        "areaServed": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "Bergen County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Essex County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Morris County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Union County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Passaic County, New Jersey"
+          }
+        ]
+      },
+      {
+        "@type": "GeneralContractor",
+        "@id": "https://www.havenmconstruction.com/#contractor",
+        "name": "Haven M Construction",
+        "url": "https://www.havenmconstruction.com/",
+        "parentOrganization": {
+          "@id": "https://www.havenmconstruction.com/#organization"
+        },
+        "areaServed": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "Bergen County, NJ"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Essex County, NJ"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Morris County, NJ"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Union County, NJ"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Passaic County, NJ"
+          },
+          {
+            "@type": "City",
+            "name": "Verona",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "New Jersey"
+            }
+          }
+        ],
+        "knowsAbout": [
+          "Design-Build Construction",
+          "Residential Design-Build",
+          "Commercial Construction",
+          "Custom Home Construction",
+          "Home Renovations & Additions",
+          "Value Engineering"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.havenmconstruction.com/services/design-build#service",
+        "name": "Design-Build Construction Services",
+        "serviceType": "Design-Build Construction",
+        "url": "https://www.havenmconstruction.com/services/design-build",
+        "description": "Comprehensive design-build construction services from concept and architectural planning through full construction and completion in Verona, NJ and surrounding North Jersey counties.",
+        "provider": {
+          "@id": "https://www.havenmconstruction.com/#contractor"
+        },
+        "areaServed": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "Bergen County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Essex County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Morris County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Union County, New Jersey"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Passaic County, New Jersey"
+          }
+        ],
+        "category": "Design-Build Construction"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.havenmconstruction.com/services/design-build#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.havenmconstruction.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://www.havenmconstruction.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Design-Build Construction",
+            "item": "https://www.havenmconstruction.com/services/design-build"
+          }
+        ]
       }
-    }
+    ]
   };
 
   return (

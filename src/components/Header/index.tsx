@@ -51,8 +51,7 @@ export default function Header() {
     };
   }, [open]);
 
-  const isProjectDetail = pathname?.startsWith("/portfolio/") && pathname !== "/portfolio";
-  const showSolidBackground = scrolled || isTransitioning || isProjectDetail;
+  const showSolidBackground = scrolled || isTransitioning;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-[999] pointer-events-none">

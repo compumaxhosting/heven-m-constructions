@@ -2,7 +2,6 @@ import Hero from './Hero';
 import Marquee from './Marquee';
 import PracticeSection from './PracticeSection';
 import PortfolioSection from './PortfolioSection';
-import ShowcaseSection from './ShowcaseSection';
 import ProcessSection from './ProcessSection';
 import ServicesSection from './ServicesSection';
 import TestimonialsSection from './TestimonialsSection';
@@ -43,7 +42,6 @@ export default function HomePage() {
       <Marquee />
       <PracticeSection />
       <PortfolioSection />
-      <ShowcaseSection />
       <ProcessSection />
       <ServicesSection />
       <TestimonialsSection />

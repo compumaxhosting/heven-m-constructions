@@ -14,18 +14,19 @@ export default function ShowcaseHeader({ categories, filter, setFilter }: Showca
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="max-w-3xl"
+          className="max-w-5xl"
         >
-          <div className="flex items-center gap-3 mb-6">
-            <div className="h-px w-12 bg-forest/30" />
-            <span className="font-mono text-sm tracking-[0.2em] uppercase text-forest/70">
-            </span>
+          <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-forest/70 mb-8">
+            <span className="inline-block h-px w-10 bg-forest/40" />
+            <b>Our Showcase</b>
           </div>
-          <h1 className="font-display text-5xl sm:text-7xl text-forest pt-12 sm:pt-16 mb-10 leading-tight">
-            Our Showcase
+          <h1 className="font-display text-[clamp(2.5rem,8.5vw,7.5rem)] leading-[0.93] tracking-[-0.03em] text-forest mb-8">
+            A portfolio measured in{" "}
+            <span className="italic text-clay">rooms</span>,<br />
+            not square feet.
           </h1>
-          <p className="text-xl text-forest/70 font-light">
-            Explore our curated collection of images and cinematic videos showcasing the finest details of our construction and design projects.
+          <p className="text-lg sm:text-xl text-forest/70 font-light max-w-2xl leading-relaxed">
+            <b>Recent projects demonstrating our commitment to craft, material, and purposeful design across all our practices.</b>
           </p>
         </motion.div>
       </section>
