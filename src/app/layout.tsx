@@ -72,7 +72,43 @@ const jsonLd = {
   "@id": "https://www.havenmconstruction.com/#organization",
   "name": "Haven M Construction",
   "url": "https://www.havenmconstruction.com/",
+  "logo": "https://www.havenmconstruction.com/images/og-image.webp",
+  "image": "https://www.havenmconstruction.com/images/og-image.webp",
+  "telephone": "+1-201-264-3506",
+  "email": "gus@havenmconstruction.com",
   "description": "Haven M Construction designs and builds residential and commercial spaces, specializing in additions, design-build, boutique offices, value engineering, and veterinary hospitals in Verona, NJ and surrounding counties.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Verona",
+    "addressRegion": "NJ",
+    "postalCode": "07044",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 40.8259,
+    "longitude": -74.2407
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/havenmconstruction/",
+    "https://www.facebook.com/profile.php?id=61592782718700",
+    "https://x.com/HavenMconst",
+    "https://www.tiktok.com/@havenmconstruction?lang=en"
+  ],
   "areaServed": [
     {
       "@type": "AdministrativeArea",
@@ -196,7 +232,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="p:domain_verify" content="3428d9b7d31d903253d085a215d9bbc2" />
-        <meta name="google-site-verification" content="7QyE5LMZVOUGOqUcQnlwSnUCq037KwLSC-1hux2Tnvs" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

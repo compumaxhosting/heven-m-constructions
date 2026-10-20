@@ -139,6 +139,8 @@ export const whoBuildsWholeHomeAdditionsNj: BlogPost = {
           "contentUrl": "https://www.havenmconstruction.com/images/whole-home-additions-nj.jpg",
           "caption": "Whole-home additions in New Jersey by Haven M Construction"
         },
+        "datePublished": "2026-09-23",
+        "dateModified": "2026-09-23",
         "author": {
           "@type": "Organization",
           "@id": "https://www.havenmconstruction.com/#organization",

@@ -33,7 +33,7 @@ const nextConfig = {
     return [
       {
         source: '/veterinary-hospital-construction-:county-county-nj',
-        destination: '/services/veterinary-hospital-construction-nj/veterinary-hospital-construction-:county-county-nj',
+        destination: '/services/veterinary-hospital-construction-nj/:county-county-nj',
       },
       {
         source: '/whole-home-additions-:county-county-nj',
