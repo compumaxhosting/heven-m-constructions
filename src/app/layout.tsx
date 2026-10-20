@@ -238,15 +238,14 @@ export default function RootLayout({
         />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ZKF8ZPZ226"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="lazyOnload">
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
-            gtag('config', 'G-ZKF8ZPZ226');
+            gtag('config', 'G-ZKF8ZPZ226', { page_path: window.location.pathname });
           `}
         </Script>
 

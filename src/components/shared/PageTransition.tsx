@@ -28,10 +28,10 @@ export function PageTransition({ children }: { children: ReactNode }) {
 
   return (
     <div className="relative min-h-screen">
-      <AnimatePresence mode="wait" initial={false}>
+      <AnimatePresence mode="popLayout" initial={false}>
         <motion.div
           key={pathname}
-          initial="initial"
+          initial={false}
           animate="animate"
           exit="exit"
           className="w-full"
