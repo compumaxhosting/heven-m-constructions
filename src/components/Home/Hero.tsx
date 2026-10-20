@@ -78,7 +78,8 @@ export default function Hero() {
                 fill
                 priority
                 fetchPriority="high"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 800px"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 70vw, 850px"
+                quality={80}
                 className="h-full w-full object-cover origin-center"
               />
             </figure>
