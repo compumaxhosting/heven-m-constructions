@@ -1,3 +1,4 @@
+import { whoBuildsVeterinaryClinicsAndAnimalHospitals } from './posts/who-builds-veterinary-clinics-and-animal-hospitals';
 import { designBuildConstructionNewJerseyGuide } from './posts/design-build-construction-new-jersey-guide';
 import { whoBuildsWholeHomeAdditionsNj } from './posts/who-builds-whole-home-additions-nj';
 import { newHomeConstructionTrends2026 } from './posts/new-home-construction-trends-2026';
@@ -24,6 +25,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  whoBuildsVeterinaryClinicsAndAnimalHospitals,
   valueEngineeringReducesConstructionCosts,
   designBuildConstructionNewJerseyGuide,
   whoBuildsWholeHomeAdditionsNj,
