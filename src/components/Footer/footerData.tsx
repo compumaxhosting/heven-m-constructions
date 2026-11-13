@@ -17,7 +17,7 @@ export const footerLinks = {
   Contact: [
     {
       label: "gus@havenmconstruction.com",
-      href: "mailto:gus@havenmconstruction.com",
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=gus@havenmconstruction.com",
     },
     { label: "201 264-3506", href: "tel:+12012643506" },
     { label: "Verona, NJ 07044", href: "/contact" },

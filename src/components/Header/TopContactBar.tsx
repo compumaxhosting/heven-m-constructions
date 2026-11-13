@@ -37,9 +37,11 @@ export default function TopContactBar() {
 
           <div className="relative hidden sm:inline-flex items-center rounded-full bg-white/[0.1] hover:bg-white/[0.2] border border-white/20 pl-1.5 pr-1.5 py-1 text-xs font-sans text-linen transition-all duration-300 hover:border-forest shadow-xs hover:shadow-[0_0_16px_rgba(42,75,60,0.5)]">
             <a
-              href="mailto:gus@havenmconstruction.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=gus@havenmconstruction.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2"
-              title="Email Haven M Construction: gus@havenmconstruction.com"
+              title="Email Haven M Construction on Gmail: gus@havenmconstruction.com"
               aria-label="Email Haven M Construction at gus@havenmconstruction.com"
             >
               <div className="flex h-6 w-6 items-center justify-center rounded-full bg-terracotta text-white shadow-xs group-hover:bg-forest group-hover:text-white transition-all duration-300 shrink-0">

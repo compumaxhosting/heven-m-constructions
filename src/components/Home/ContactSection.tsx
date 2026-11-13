@@ -58,7 +58,13 @@ export default function ContactSection() {
                 <div>
                   <dt className="text-[10px] uppercase tracking-[0.28em] text-olive font-medium">Email</dt>
                   <dd className="font-display mt-1 text-base sm:text-lg text-forest">
-                    <a href="mailto:gus@havenmconstruction.com" className="hover:text-terracotta transition-colors whitespace-nowrap inline-block">
+                    <a
+                      href="https://mail.google.com/mail/?view=cm&fs=1&to=gus@havenmconstruction.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-terracotta transition-colors whitespace-nowrap inline-block"
+                      title="Email Haven M Construction on Gmail"
+                    >
                       gus@havenmconstruction.com
                     </a>
                   </dd>

@@ -65,9 +65,12 @@ export default function Footer() {
                       {item.href === "#" ? (
                         item.label
                       ) : item.href.startsWith("mailto:") ||
-                        item.href.startsWith("tel:") ? (
+                        item.href.startsWith("tel:") ||
+                        item.href.startsWith("http") ? (
                         <a
                           href={item.href}
+                          target={item.href.startsWith("http") ? "_blank" : undefined}
+                          rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                           className="hover:text-linen transition-colors"
                         >
                           {item.label}

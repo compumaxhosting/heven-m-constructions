@@ -3,7 +3,7 @@ import { MapPin, Mail, Phone, Clock } from 'lucide-react';
 
 const contactInfo = [
   { icon: MapPin, label: 'Studio', value: 'Verona, NJ 07044', sub: 'By appointment only' },
-  { icon: Mail, label: 'Email', value: 'gus@havenmconstruction.com', href: 'mailto:gus@havenmconstruction.com', sub: 'We reply within 2 business days' },
+  { icon: Mail, label: 'Email', value: 'gus@havenmconstruction.com', href: 'https://mail.google.com/mail/?view=cm&fs=1&to=gus@havenmconstruction.com', sub: 'We reply within 2 business days' },
   { icon: Phone, label: 'Phone', value: '201 264-3506', href: 'tel:+12012643506' },
   { icon: Clock, label: 'Season', value: 'Now booking for 2026', sub: 'Limited availability' },
 ];
@@ -18,6 +18,8 @@ export default function ContactInfo() {
             {href ? (
               <a
                 href={href}
+                target={href.startsWith('http') ? '_blank' : undefined}
+                rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
                 className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-forest/5 border border-forest/10 group-hover:bg-forest transition-colors duration-300"
                 title={`Connect via ${label}`}
               >
@@ -33,6 +35,8 @@ export default function ContactInfo() {
               {href ? (
                 <a
                   href={href}
+                  target={href.startsWith('http') ? '_blank' : undefined}
+                  rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   className="font-display text-base sm:text-[17px] text-forest hover:text-clay transition-colors hover:underline underline-offset-4 truncate block"
                 >
                   {value}
