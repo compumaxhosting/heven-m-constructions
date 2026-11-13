@@ -105,7 +105,7 @@ export const whoBuildsVeterinaryClinicsAndAnimalHospitals: BlogPost = {
   ogDescription: "Explore veterinary clinic and animal hospital construction services in New Jersey. Learn about specialized facility design, construction, and planning across five counties.",
   keywords: "veterinary clinic construction NJ, veterinary hospital construction NJ, animal hospital construction, veterinary clinic builders, veterinary facility construction, veterinary office construction, animal hospital contractors, veterinary medical facility design, veterinary construction company New Jersey, veterinary hospital builders Bergen County, veterinary construction Essex County, Morris County veterinary construction, Passaic County veterinary construction, Union County veterinary construction",
   canonicalUrl: "https://www.havenmconstruction.com/blog/who-builds-veterinary-clinics-and-animal-hospitals",
-  ogImage: "https://www.havenmconstruction.com/images/veterinary-hospital-construction-nj.jpg",
+  ogImage: "https://www.havenmconstruction.com/images/veterinary-hospital-construction-nj.webp",
   ogImageAlt: "Modern veterinary clinic and animal hospital construction in New Jersey",
   schema: {
     "@context": "https://schema.org",
@@ -116,6 +116,13 @@ export const whoBuildsVeterinaryClinicsAndAnimalHospitals: BlogPost = {
         "headline": "Who Builds Veterinary Clinics and Animal Hospitals in New Jersey?",
         "description": "Discover veterinary clinic and animal hospital construction services in New Jersey, including specialized facility planning and construction across Bergen, Essex, Morris, Passaic, and Union counties.",
         "url": "https://www.havenmconstruction.com/blog/who-builds-veterinary-clinics-and-animal-hospitals",
+        "image": {
+          "@type": "ImageObject",
+          "@id": "https://www.havenmconstruction.com/images/veterinary-hospital-construction-nj.webp#image",
+          "url": "https://www.havenmconstruction.com/images/veterinary-hospital-construction-nj.webp",
+          "contentUrl": "https://www.havenmconstruction.com/images/veterinary-hospital-construction-nj.webp",
+          "caption": "Modern veterinary clinic and animal hospital construction in New Jersey"
+        },
         "datePublished": "2026-11-13",
         "dateModified": "2026-11-13",
         "mainEntityOfPage": {
