@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const ogDescription = post.ogDescription || description;
   const canonical = post.canonicalUrl || `https://www.havenmconstruction.com/blog/${post.id}`;
   const imageUrl = post.ogImage || (typeof post.image === 'string' ? post.image : (post.image?.src || 'https://www.havenmconstruction.com/images/asset-4.webp'));
-  const imageAlt = post.ogImageAlt || post.title;
+  const imageAlt = post.imageAlt || post.ogImageAlt || post.title;
 
   return {
     title,

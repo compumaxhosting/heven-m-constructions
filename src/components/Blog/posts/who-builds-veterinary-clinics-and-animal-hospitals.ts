@@ -9,6 +9,7 @@ export const whoBuildsVeterinaryClinicsAndAnimalHospitals: BlogPost = {
   readTime: "8 min read",
   summary: "Veterinary clinics and animal hospitals are built by specialized commercial construction companies. Learn what goes into animal hospital planning, essential medical features, cost factors, and zoning across Bergen, Essex, Morris, Passaic, and Union counties.",
   image: blogImage,
+  imageAlt: "Modern veterinary clinic and animal hospital construction in New Jersey",
   content: [
     "Veterinary clinics and animal hospitals are built by specialized commercial construction companies that understand the unique requirements of animal healthcare facilities. These projects require more than standard office construction: they involve treatment rooms, surgical suites, diagnostic imaging areas, kennels, ventilation, plumbing, sanitation, and carefully planned patient and staff circulation.",
     "If you are planning a new veterinary practice or expanding an existing animal hospital in New Jersey, choosing an experienced veterinary construction contractor is an important first step. A well-designed facility supports veterinary professionals, improves workflow, and creates a safer, more comfortable environment for animals and their owners.",

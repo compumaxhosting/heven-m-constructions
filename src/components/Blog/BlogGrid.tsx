@@ -53,7 +53,7 @@ export default function BlogGrid({ setSelectedPostId }: BlogGridProps) {
                         post.image
                       : post.image
                   }
-                  alt={post.ogImageAlt || post.title}
+                  alt={post.imageAlt || post.ogImageAlt || post.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                 />
               </div>

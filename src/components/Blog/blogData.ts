@@ -21,6 +21,7 @@ export interface BlogPost {
   canonicalUrl?: string;
   ogImage?: string;
   ogImageAlt?: string;
+  imageAlt?: string;
   schema?: any;
 }
 

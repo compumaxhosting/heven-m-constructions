@@ -343,7 +343,7 @@ export default function BlogArticle({ activePost, nextPost, setSelectedPostId }:
                 activePost.image
                 : activePost.image
             }
-            alt={activePost.ogImageAlt || activePost.title}
+            alt={activePost.imageAlt || activePost.ogImageAlt || activePost.title}
             className="w-full h-full object-cover"
           />
         </div>
@@ -667,7 +667,7 @@ export default function BlogArticle({ activePost, nextPost, setSelectedPostId }:
                       nextPost.image
                       : nextPost.image
                   }
-                  alt={nextPost.ogImageAlt || nextPost.title}
+                  alt={nextPost.imageAlt || nextPost.ogImageAlt || nextPost.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
